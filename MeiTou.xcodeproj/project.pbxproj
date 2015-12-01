@@ -65,12 +65,6 @@
 		F27D673C1C0B49A900EE6C4F /* HT_HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27D673A1C0B49A900EE6C4F /* HT_HomePageViewController.xib */; };
 		F280268E1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F280268C1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m */; };
 		F280268F1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F280268D1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib */; };
-		F29944631C0822ED00823E75 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F29944561C0822ED00823E75 /* LICENSE */; };
-		F29944641C0822ED00823E75 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F29944581C0822ED00823E75 /* MMDrawerBarButtonItem.m */; };
-		F29944651C0822ED00823E75 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F299445B1C0822ED00823E75 /* MMDrawerController.m */; };
-		F29944661C0822ED00823E75 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = F299445D1C0822ED00823E75 /* MMDrawerVisualState.m */; };
-		F29944671C0822ED00823E75 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F299445F1C0822ED00823E75 /* UIViewController+MMDrawerController.m */; };
-		F29944681C0822ED00823E75 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F29944611C0822ED00823E75 /* README.md */; };
 		F29944701C08254600823E75 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F299446F1C08254600823E75 /* MMExampleDrawerVisualStateManager.m */; };
 		F299447F1C082A0600823E75 /* HT_HomePage_LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F299447E1C082A0600823E75 /* HT_HomePage_LeftViewController.m */; };
 		F29944821C082B0D00823E75 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29944811C082B0D00823E75 /* RootViewController.m */; };
@@ -84,6 +78,12 @@
 		F2A019391C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A019311C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib */; };
 		F2C9F8481C0C576500FC454B /* HT_HomePage_LeftBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C9F8461C0C576500FC454B /* HT_HomePage_LeftBottomView.m */; };
 		F2C9F8491C0C576500FC454B /* HT_HomePage_LeftBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C9F8471C0C576500FC454B /* HT_HomePage_LeftBottomView.xib */; };
+		F2FF7E921C0D90A80014FB79 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F2FF7E861C0D90A80014FB79 /* LICENSE */; };
+		F2FF7E931C0D90A80014FB79 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF7E891C0D90A80014FB79 /* MMDrawerBarButtonItem.m */; };
+		F2FF7E941C0D90A80014FB79 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF7E8C1C0D90A80014FB79 /* MMDrawerController.m */; };
+		F2FF7E951C0D90A80014FB79 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF7E8E1C0D90A80014FB79 /* MMDrawerVisualState.m */; };
+		F2FF7E961C0D90A80014FB79 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF7E901C0D90A80014FB79 /* UIViewController+MMDrawerController.m */; };
+		F2FF7E971C0D90A80014FB79 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F2FF7E911C0D90A80014FB79 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,17 +197,6 @@
 		F280268B1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_PersonTableViewCell.h; sourceTree = "<group>"; };
 		F280268C1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_PersonTableViewCell.m; sourceTree = "<group>"; };
 		F280268D1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_PersonTableViewCell.xib; sourceTree = "<group>"; };
-		F29944561C0822ED00823E75 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		F29944571C0822ED00823E75 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		F29944581C0822ED00823E75 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		F29944591C0822ED00823E75 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		F299445A1C0822ED00823E75 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
-		F299445B1C0822ED00823E75 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
-		F299445C1C0822ED00823E75 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
-		F299445D1C0822ED00823E75 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
-		F299445E1C0822ED00823E75 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		F299445F1C0822ED00823E75 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		F29944611C0822ED00823E75 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F299446E1C08254600823E75 /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
 		F299446F1C08254600823E75 /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
 		F299447D1C082A0600823E75 /* HT_HomePage_LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_LeftViewController.h; sourceTree = "<group>"; };
@@ -232,6 +221,17 @@
 		F2C9F8451C0C576500FC454B /* HT_HomePage_LeftBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_LeftBottomView.h; sourceTree = "<group>"; };
 		F2C9F8461C0C576500FC454B /* HT_HomePage_LeftBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_LeftBottomView.m; sourceTree = "<group>"; };
 		F2C9F8471C0C576500FC454B /* HT_HomePage_LeftBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_LeftBottomView.xib; sourceTree = "<group>"; };
+		F2FF7E861C0D90A80014FB79 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F2FF7E881C0D90A80014FB79 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		F2FF7E891C0D90A80014FB79 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		F2FF7E8A1C0D90A80014FB79 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		F2FF7E8B1C0D90A80014FB79 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		F2FF7E8C1C0D90A80014FB79 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		F2FF7E8D1C0D90A80014FB79 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		F2FF7E8E1C0D90A80014FB79 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		F2FF7E8F1C0D90A80014FB79 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		F2FF7E901C0D90A80014FB79 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		F2FF7E911C0D90A80014FB79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,36 +593,9 @@
 		F29944551C0822C700823E75 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				F29944621C0822ED00823E75 /* MMDrawerController */,
+				F2FF7E851C0D90A80014FB79 /* MMDrawerController */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		F29944601C0822ED00823E75 /* MMDrawerController */ = {
-			isa = PBXGroup;
-			children = (
-				F29944571C0822ED00823E75 /* MMDrawerBarButtonItem.h */,
-				F29944581C0822ED00823E75 /* MMDrawerBarButtonItem.m */,
-				F29944591C0822ED00823E75 /* MMDrawerController+Subclass.h */,
-				F299445A1C0822ED00823E75 /* MMDrawerController.h */,
-				F299445B1C0822ED00823E75 /* MMDrawerController.m */,
-				F299445C1C0822ED00823E75 /* MMDrawerVisualState.h */,
-				F299445D1C0822ED00823E75 /* MMDrawerVisualState.m */,
-				F299445E1C0822ED00823E75 /* UIViewController+MMDrawerController.h */,
-				F299445F1C0822ED00823E75 /* UIViewController+MMDrawerController.m */,
-			);
-			path = MMDrawerController;
-			sourceTree = "<group>";
-		};
-		F29944621C0822ED00823E75 /* MMDrawerController */ = {
-			isa = PBXGroup;
-			children = (
-				F29944561C0822ED00823E75 /* LICENSE */,
-				F29944601C0822ED00823E75 /* MMDrawerController */,
-				F29944611C0822ED00823E75 /* README.md */,
-			);
-			name = MMDrawerController;
-			path = ../../../../iOS_HuobanMall_Buyer/HuoBanMallBuy/Classes/lib/MMDrawerController;
 			sourceTree = "<group>";
 		};
 		F299446C1C08245A00823E75 /* Other */ = {
@@ -640,6 +613,32 @@
 				F299446F1C08254600823E75 /* MMExampleDrawerVisualStateManager.m */,
 			);
 			path = MMDrawer;
+			sourceTree = "<group>";
+		};
+		F2FF7E851C0D90A80014FB79 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				F2FF7E861C0D90A80014FB79 /* LICENSE */,
+				F2FF7E871C0D90A80014FB79 /* MMDrawerController */,
+				F2FF7E911C0D90A80014FB79 /* README.md */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		F2FF7E871C0D90A80014FB79 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				F2FF7E881C0D90A80014FB79 /* MMDrawerBarButtonItem.h */,
+				F2FF7E891C0D90A80014FB79 /* MMDrawerBarButtonItem.m */,
+				F2FF7E8A1C0D90A80014FB79 /* MMDrawerController+Subclass.h */,
+				F2FF7E8B1C0D90A80014FB79 /* MMDrawerController.h */,
+				F2FF7E8C1C0D90A80014FB79 /* MMDrawerController.m */,
+				F2FF7E8D1C0D90A80014FB79 /* MMDrawerVisualState.h */,
+				F2FF7E8E1C0D90A80014FB79 /* MMDrawerVisualState.m */,
+				F2FF7E8F1C0D90A80014FB79 /* UIViewController+MMDrawerController.h */,
+				F2FF7E901C0D90A80014FB79 /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -770,9 +769,9 @@
 				F280268F1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib in Resources */,
 				F27261F41C07FE9E0081EC95 /* HT_News_HeadTableViewCell.xib in Resources */,
 				F27D67341C0B30D100EE6C4F /* 1.png in Resources */,
-				F29944631C0822ED00823E75 /* LICENSE in Resources */,
 				F27261E01C07FE530081EC95 /* HT_Cpn_IteSubListTableViewCell.xib in Resources */,
 				F27261F01C07FE9E0081EC95 /* HT_News_MainTableViewCell.xib in Resources */,
+				F2FF7E921C0D90A80014FB79 /* LICENSE in Resources */,
 				F27261D41C07FE3B0081EC95 /* HT_Cpn_IteProjectDoingHeaderViewTableViewCell.xib in Resources */,
 				F27261F21C07FE9E0081EC95 /* HT_News_CommentCell.xib in Resources */,
 				F214A6D61C0D46D90096D523 /* 3.png in Resources */,
@@ -806,12 +805,10 @@
 				F27D673B1C0B49A900EE6C4F /* HT_HomePageViewController.m in Sources */,
 				F27261B21C07FDD00081EC95 /* HT_Cpn_BuyPayTableViewCell.m in Sources */,
 				F27261A81C07FDA50081EC95 /* HT_Cpn_BuyListTableViewCell.m in Sources */,
-				F29944661C0822ED00823E75 /* MMDrawerVisualState.m in Sources */,
 				F27261DF1C07FE530081EC95 /* HT_Cpn_IteSubListTableViewCell.m in Sources */,
 				F2A019381C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m in Sources */,
 				F272615F1C07E61B0081EC95 /* ViewController.m in Sources */,
 				F272615C1C07E61B0081EC95 /* AppDelegate.m in Sources */,
-				F29944681C0822ED00823E75 /* README.md in Sources */,
 				F27261C11C07FE240081EC95 /* HT_Cpn_IteResult_HeadView.m in Sources */,
 				F29944A11C084D9600823E75 /* HT_Information_ShareView.m in Sources */,
 				F27261BC1C07FE1B0081EC95 /* HT_Cpn_IteResultTableViewCell.m in Sources */,
@@ -824,26 +821,28 @@
 				F27261B71C07FDFE0081EC95 /* HT_Cpn_IteListTableViewCell.m in Sources */,
 				F27261F31C07FE9E0081EC95 /* HT_News_HeadTableViewCell.m in Sources */,
 				F2C9F8481C0C576500FC454B /* HT_HomePage_LeftBottomView.m in Sources */,
+				F2FF7E951C0D90A80014FB79 /* MMDrawerVisualState.m in Sources */,
 				F27261EF1C07FE9E0081EC95 /* HT_News_MainTableViewCell.m in Sources */,
 				F27261AD1C07FDC60081EC95 /* HT_Cpn_BuyBoundTableViewCell.m in Sources */,
 				F27261A31C07FD510081EC95 /* HT_Cpn_IteTopViewTableViewCell.m in Sources */,
+				F2FF7E971C0D90A80014FB79 /* README.md in Sources */,
 				F27261D51C07FE3B0081EC95 /* HT_Cpn_IteCooperationTableViewCell.m in Sources */,
 				F27261CB1C07FE320081EC95 /* HT_Cpn_IteProjectDoneHeaderViewTableViewCell.m in Sources */,
 				F27261D31C07FE3B0081EC95 /* HT_Cpn_IteProjectDoingHeaderViewTableViewCell.m in Sources */,
 				F27D67311C0B30A900EE6C4F /* HT_HomePageLayout.m in Sources */,
 				F29944821C082B0D00823E75 /* RootViewController.m in Sources */,
-				F29944671C0822ED00823E75 /* UIViewController+MMDrawerController.m in Sources */,
 				F2A019321C0B2F6A0017234F /* HT_HomePageCollectionViewCell.m in Sources */,
 				F21A4B791C0D7F6B00C1F098 /* HT_BaseViewController.m in Sources */,
 				F21A4B851C0D84C600C1F098 /* HT_HomePage_PhoneViewController.m in Sources */,
-				F29944651C0822ED00823E75 /* MMDrawerController.m in Sources */,
+				F2FF7E941C0D90A80014FB79 /* MMDrawerController.m in Sources */,
 				F206B36B1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m in Sources */,
 				F27261591C07E61B0081EC95 /* main.m in Sources */,
-				F29944641C0822ED00823E75 /* MMDrawerBarButtonItem.m in Sources */,
 				F27261E41C07FE810081EC95 /* HT_About_MessageTableViewCell.m in Sources */,
 				F21A4B7F1C0D7FD300C1F098 /* HT_InformationViewController.m in Sources */,
 				F27261DD1C07FE530081EC95 /* HT_Cpn_IteSubscriptionTableViewCell.m in Sources */,
 				F29944701C08254600823E75 /* MMExampleDrawerVisualStateManager.m in Sources */,
+				F2FF7E931C0D90A80014FB79 /* MMDrawerBarButtonItem.m in Sources */,
+				F2FF7E961C0D90A80014FB79 /* UIViewController+MMDrawerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
