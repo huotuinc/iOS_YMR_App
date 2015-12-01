@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="228" id="KGk-i7-Jjw" customClass="HT_HomePage_LeftHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dua-px-M0G" userLabel="BaseView">
+                        <rect key="frame" x="8" y="8" width="304" height="211"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-AX-4Bx" userLabel="HeadView">
+                                <rect key="frame" x="96" y="65" width="113" height="113"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bkq-AX-4Bx" secondAttribute="height" multiplier="1:1" id="9r0-dA-sjo"/>
+                                    <constraint firstAttribute="width" secondItem="Bkq-AX-4Bx" secondAttribute="height" multiplier="1:1" id="UhI-NO-bg6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UhI-NO-bg6"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SU-tk-5Yh" userLabel="NameView">
+                                <rect key="frame" x="0.0" y="183" width="304" height="23"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJl-oz-iXR" userLabel="NameLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="UJl-oz-iXR" firstAttribute="leading" secondItem="8SU-tk-5Yh" secondAttribute="leading" id="7e1-lF-2Lb"/>
+                                    <constraint firstItem="UJl-oz-iXR" firstAttribute="top" secondItem="8SU-tk-5Yh" secondAttribute="top" id="Mkf-DI-xH5"/>
+                                    <constraint firstAttribute="trailing" secondItem="UJl-oz-iXR" secondAttribute="trailing" id="dB4-Jg-hrG"/>
+                                    <constraint firstAttribute="bottom" secondItem="UJl-oz-iXR" secondAttribute="bottom" id="qog-FD-pla"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8SU-tk-5Yh" firstAttribute="leading" secondItem="dua-px-M0G" secondAttribute="leading" id="2sH-ri-4ZM"/>
+                            <constraint firstAttribute="trailing" secondItem="8SU-tk-5Yh" secondAttribute="trailing" id="5lU-yL-pdx"/>
+                            <constraint firstItem="Bkq-AX-4Bx" firstAttribute="centerX" secondItem="dua-px-M0G" secondAttribute="centerX" id="FSz-t8-N5A"/>
+                            <constraint firstItem="Bkq-AX-4Bx" firstAttribute="width" secondItem="dua-px-M0G" secondAttribute="width" id="Sg2-zE-pxK"/>
+                            <constraint firstItem="Bkq-AX-4Bx" firstAttribute="height" secondItem="dua-px-M0G" secondAttribute="height" multiplier="263:465" id="UU1-Y2-K84"/>
+                            <constraint firstItem="8SU-tk-5Yh" firstAttribute="top" secondItem="Bkq-AX-4Bx" secondAttribute="bottom" constant="5" id="Wma-Kj-Kwr"/>
+                            <constraint firstItem="Bkq-AX-4Bx" firstAttribute="height" secondItem="dua-px-M0G" secondAttribute="height" multiplier="250:470" id="dMz-He-BoM"/>
+                            <constraint firstItem="Bkq-AX-4Bx" firstAttribute="centerY" secondItem="dua-px-M0G" secondAttribute="centerY" multiplier="265:230" id="rEQ-mf-fRF"/>
+                            <constraint firstItem="8SU-tk-5Yh" firstAttribute="height" secondItem="dua-px-M0G" secondAttribute="height" multiplier="50:465" id="vMD-OM-7Kx"/>
+                            <constraint firstItem="Bkq-AX-4Bx" firstAttribute="centerX" secondItem="dua-px-M0G" secondAttribute="centerX" id="zPe-mO-rnn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FSz-t8-N5A"/>
+                                <exclude reference="Sg2-zE-pxK"/>
+                                <exclude reference="UU1-Y2-K84"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="dua-px-M0G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4hZ-Wc-ZIh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dua-px-M0G" secondAttribute="bottom" id="Hme-VF-EoK"/>
+                    <constraint firstItem="dua-px-M0G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ZXO-6n-gLJ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dua-px-M0G" secondAttribute="trailing" id="d7D-D1-DCv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="LabelName" destination="UJl-oz-iXR" id="zm8-2d-9fm"/>
+                <outlet property="headView" destination="Bkq-AX-4Bx" id="4gn-is-lIv"/>
+            </connections>
+            <point key="canvasLocation" x="367" y="304"/>
+        </tableViewCell>
+    </objects>
+</document>
