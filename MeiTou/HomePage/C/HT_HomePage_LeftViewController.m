@@ -29,6 +29,7 @@
 @implementation HT_HomePage_LeftViewController{
     UITableView *_tableView;
     UIView *_baseView;
+//    HT_HomePage_LeftHeadView *_headView;
     
     NSMutableArray *_titleArray;
     
@@ -54,8 +55,7 @@
 }
 
 -(void)createHeadView{
-    
-    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_LeftHeadView" owner:nil options:nil];
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_LeftHeadView" owner:nil options:nil];
     UIView *headView=[nib firstObject];
     headView.frame=CGRectMake(0, 0, SCREEN_WITH * SplitScreenRate, SCREEN_HEIGHT/1100*460);
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHeadView)];

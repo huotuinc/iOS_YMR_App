@@ -14,14 +14,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="250" height="350"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="NaC-37-BeP">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="NaC-37-BeP">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="250" id="4CX-VA-0wf"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Mr-Ze-K1J">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Mr-Ze-K1J">
                         <rect key="frame" x="75" y="184" width="100" height="100"/>
                         <animations/>
                         <constraints>
@@ -56,15 +56,15 @@
                 <constraint firstItem="NaC-37-BeP" firstAttribute="leading" secondItem="lyD-Ym-rZC" secondAttribute="leading" id="r9W-Sg-ipM"/>
             </constraints>
             <connections>
-                <outlet property="follow" destination="Z7F-6q-FlN" id="3oG-8B-Ec1"/>
-                <outlet property="headImage" destination="5Mr-Ze-K1J" id="dz4-Go-fCs"/>
-                <outlet property="topImage" destination="NaC-37-BeP" id="Pbf-90-Tdg"/>
+                <outlet property="follow" destination="Z7F-6q-FlN" id="YW4-rH-bUO"/>
+                <outlet property="headImage" destination="5Mr-Ze-K1J" id="ERy-ql-0Ti"/>
+                <outlet property="topImage" destination="NaC-37-BeP" id="1iJ-kB-eWn"/>
             </connections>
             <point key="canvasLocation" x="663" y="239"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="1.png" width="494" height="324"/>
-        <image name="2.png" width="491" height="473"/>
+        <image name="1" width="494" height="324"/>
+        <image name="2" width="491" height="473"/>
     </resources>
 </document>

@@ -46,7 +46,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eYR-KM-HUF" userLabel="NiceImage View">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="eYR-KM-HUF" userLabel="NiceImage View">
                                                 <rect key="frame" x="255" y="1" width="18" height="18"/>
                                                 <animations/>
                                                 <constraints>
@@ -93,10 +93,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePX-W5-phf" userLabel="BView">
                                 <rect key="frame" x="0.0" y="49" width="360" height="198"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-qP-VuO" userLabel="MainImage View">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="142"/>
-                                        <animations/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuU-7I-WaC" userLabel="ContentLabel">
                                         <rect key="frame" x="0.0" y="142" width="360" height="56"/>
                                         <animations/>
@@ -104,6 +100,10 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-qP-VuO" userLabel="MainImage View">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="142"/>
+                                        <animations/>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,4 +151,8 @@
             <point key="canvasLocation" x="261" y="335"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="1" width="494" height="324"/>
+        <image name="Main" width="650" height="352"/>
+    </resources>
 </document>

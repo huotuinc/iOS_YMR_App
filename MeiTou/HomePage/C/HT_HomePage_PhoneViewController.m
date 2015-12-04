@@ -7,6 +7,8 @@
 //
 
 #import "HT_HomePage_PhoneViewController.h"
+#import "HT_HomePage_PhoneCView.h"
+
 
 @interface HT_HomePage_PhoneViewController ()
 
@@ -22,7 +24,7 @@
 }
 -(void)createMainView{
     
-    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Cpn_BuyBoundTableViewCell" owner:nil options:nil];
+    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_PhoneCView" owner:nil options:nil];
     UIView *mainView=[nib firstObject];
     mainView.frame=CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT);
 

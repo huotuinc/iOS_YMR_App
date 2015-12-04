@@ -23,7 +23,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBD-kq-LCc" userLabel="AView">
                                 <rect key="frame" x="10" y="20" width="433" height="92.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LuY-Gi-egT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="LuY-Gi-egT">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="92.5"/>
                                         <animations/>
                                         <constraints>
@@ -43,7 +43,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="efI-Sf-LVK" userLabel="NextImage View">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="efI-Sf-LVK" userLabel="NextImage View">
                                                         <rect key="frame" x="288" y="0.0" width="51.5" height="51.5"/>
                                                         <animations/>
                                                         <constraints>
@@ -142,4 +142,8 @@
             <point key="canvasLocation" x="269.5" y="383.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="1" width="494" height="324"/>
+        <image name="head" width="180" height="180"/>
+    </resources>
 </document>

@@ -7,20 +7,21 @@
 //
 
 #import "HT_HomePage_LeftHeadView.h"
-#import "HT_Cpn_IteResult_HeadView.h"
+#import "HT_Par_IteResult_HeadView.h"
 
 @implementation HT_HomePage_LeftHeadView
 
 - (void)awakeFromNib {
     // Initialization code
-    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Cpn_IteResult_HeadView" owner:nil options:nil];
+    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
     UIView *headV=[nib firstObject];
    
     
     _LabelName.textAlignment=NSTextAlignmentCenter;
-    _LabelName.text=@"11111";
+    _LabelName.text=@"小车";
     
     [self.headView addSubview:headV];
+//    self.headView.backgroundColor=[UIColor redColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

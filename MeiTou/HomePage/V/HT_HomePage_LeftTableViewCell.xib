@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="397" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="397" height="88"/>
+                <rect key="frame" x="0.0" y="0.0" width="397" height="88.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S63-ah-kAW">
@@ -24,10 +24,10 @@
                                 <rect key="frame" x="67" y="14" width="314" height="45"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ENS-i8-GeC" userLabel="TypeImage View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="ENS-i8-GeC" userLabel="TypeImage View">
                                 <rect key="frame" x="17" y="14" width="45" height="45"/>
                                 <animations/>
                                 <constraints>
@@ -64,13 +64,13 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="imageVType" destination="ENS-i8-GeC" id="ksx-ll-d3n"/>
-                <outlet property="labelName" destination="JnX-kY-kVc" id="djA-ZX-vfx"/>
+                <outlet property="imageVType" destination="ENS-i8-GeC" id="LsL-Hy-eUR"/>
+                <outlet property="labelName" destination="JnX-kY-kVc" id="cUt-Cp-wdG"/>
             </connections>
             <point key="canvasLocation" x="404.5" y="331.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="1.png" width="494" height="324"/>
+        <image name="head" width="180" height="180"/>
     </resources>
 </document>

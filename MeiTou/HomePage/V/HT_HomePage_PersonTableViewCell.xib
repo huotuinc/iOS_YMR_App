@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWT-FK-VII" userLabel="BaseView">
@@ -23,7 +23,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJK-n4-7gp" userLabel="AView">
                                 <rect key="frame" x="131" y="28" width="173" height="58"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JE3-xs-qae" userLabel="levelImage View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="JE3-xs-qae" userLabel="levelImage View">
                                         <rect key="frame" x="0.0" y="33" width="33" height="25"/>
                                         <animations/>
                                         <constraints>
@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="173" height="33"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Sc4-EV-ZXn" secondAttribute="trailing" id="yb8-8E-iHq"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfY-OU-nqJ" userLabel="HeadImage View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="jfY-OU-nqJ" userLabel="HeadImage View">
                                 <rect key="frame" x="31" y="12" width="90" height="90"/>
                                 <animations/>
                                 <constraints>
@@ -113,7 +113,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="1.png" width="494" height="324"/>
-        <image name="2.jpg" width="650" height="352"/>
+        <image name="3" width="64" height="52"/>
+        <image name="head" width="180" height="180"/>
     </resources>
 </document>

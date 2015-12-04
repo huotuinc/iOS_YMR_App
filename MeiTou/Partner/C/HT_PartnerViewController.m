@@ -7,7 +7,10 @@
 //
 
 #import "HT_PartnerViewController.h"
-#import "HT_Cpn_MainTableViewCell.h"
+#import "HT_Par_BuyViewController.h"
+#import "HT_Par_IteViewController.h"
+#import "HT_Par_SubViewController.h"
+#import "HT_Par_MainTableViewCell.h"
 
 
 static NSString *cellMain = @"cellMain";
@@ -26,7 +29,8 @@ static NSString *cellMain = @"cellMain";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
+
     
     
     
@@ -37,8 +41,8 @@ static NSString *cellMain = @"cellMain";
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor cyanColor];
     
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_Cpn_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
-     
+//    [_tableView registerNib:[UINib nibWithNibName:@"HT_Cpn_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
+    
     [self createTableView];
 }
 
@@ -46,6 +50,7 @@ static NSString *cellMain = @"cellMain";
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+//    _tableView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:_tableView];
     
     
@@ -53,23 +58,80 @@ static NSString *cellMain = @"cellMain";
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *_cell;
     if (indexPath.section==0) {
-        HT_Cpn_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
+        HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
+        cell.imageVTop.image=[UIImage imageNamed:@"1"];
+        cell.labelDate.text=@"10-10";
+        cell.LabelTitle.text=@"11111111111111111111";
+        cell.labelContent.text=@"12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）";
+        
+        cell.labelRight.text=@"5W";
+        cell.labelLeft.text=@"10W";
+        
+        [cell.ButtonGo setTitle:@"我要购买" forState:UIControlStateNormal];
+        [cell.ButtonGo setBackgroundColor:[UIColor cyanColor]];
+//        cell.labelSurfaceProgress.frame.size.width=(30/100)*cell.labelBottomProgress.frame.size.width;
+        
+        _cell=cell;
         
 
     }
-    
+    if (indexPath.section==1) {
+        HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
+        cell.imageVTop.image=[UIImage imageNamed:@"1"];
+        cell.labelDate.text=@"10-10";
+        cell.LabelTitle.text=@"2222222222222222222";
+        [cell.ButtonGo setTitle:@"我要发起" forState:UIControlStateNormal];
+        [cell.ButtonGo setBackgroundColor:[UIColor redColor]];
+        _cell=cell;
+        
+    }
+    if (indexPath.section==2) {
+        HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
+        cell.imageVTop.image=[UIImage imageNamed:@"1"];
+        cell.labelDate.text=@"10-10";
+        cell.LabelTitle.text=@"3333333333333";
+        [cell.ButtonGo setTitle:@"我要认购" forState:UIControlStateNormal];
+        [cell.ButtonGo setBackgroundColor:[UIColor yellowColor]];
+        _cell=cell;
+        
+    }
+    return _cell;
 
-
     
     
-    return nil;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 1;
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return SCREEN_HEIGHT/1150*515;
+    
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==0) {
+        HT_Par_BuyViewController *buy=[[HT_Par_BuyViewController alloc]init];
+        [self.navigationController pushViewController:buy animated:YES];
+    }
+    if (indexPath.section==1) {
+        HT_Par_IteViewController *ite=[[HT_Par_IteViewController alloc]init];
+        [self.navigationController pushViewController:ite animated:YES];
+    }
+    if (indexPath.section==2) {
+        HT_Par_SubViewController *sub=[[HT_Par_SubViewController alloc]init];
+        [self.navigationController pushViewController:sub animated:YES];
+    }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 10;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

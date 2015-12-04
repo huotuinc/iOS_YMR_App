@@ -11,6 +11,7 @@
 
 #import "HT_HomePageViewController.h"
 #import "HT_HomePage_LeftViewController.h"
+#import "HT_LeftViewController.h"
 
 #import "UIViewController+MMDrawerController.h"//第三方封装的头文件
 #import "MMDrawerBarButtonItem.h"//第三方封装的头文件
@@ -36,6 +37,8 @@
     //设置左侧视图控制器
     HT_HomePage_LeftViewController * left = [[HT_HomePage_LeftViewController alloc] init];
     self.leftDrawerViewController = left;
+//    HT_LeftViewController * left = [[HT_LeftViewController alloc] init];
+//    self.leftDrawerViewController = left;
     
     
     //设置中间视图控制器
