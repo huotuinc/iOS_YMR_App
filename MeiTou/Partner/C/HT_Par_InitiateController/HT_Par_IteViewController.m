@@ -9,6 +9,8 @@
 #import "HT_Par_IteViewController.h"
 #import "HT_Par_IteListViewController.h"
 #import "HT_Par_IteResultViewController.h"
+#import "HT_Par_IteCooperationViewController.h"
+#import "HT_Par_IteOrderViewController.h"
 
 #import "HT_Par_MainTopView.h"
 #import "HT_Par_IteProjectDoingHeaderCView.h"
@@ -95,17 +97,13 @@ static NSString *cellIte = @"cellIte";
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteBottomCView" owner:nil options:nil];
     HT_Par_IteBottomCView *bottomView=[nib firstObject];
     bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*100)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*100);
-//    [bottomView.buttonSubscription addTarget:self action:@selector(clickButtonSubscription) forControlEvents:UIControlEventTouchUpInside];
+    [bottomView.buttonCooperation addTarget:self action:@selector(clickButtonCooperation) forControlEvents:UIControlEventTouchUpInside];
+    [bottomView.buttonOrder addTarget:self action:@selector(clickButtonOrder) forControlEvents:UIControlEventTouchUpInside];
     
     _bottomView=bottomView;
-    //    [self.view insertSubview:_bottomView aboveSubview:_tableView];
-    
     [self.view addSubview:_bottomView];
-    
-    
-    //    NSLog(@"%f",SCREEN_HEIGHT);
-    //    NSLog(@"%f",SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*100));
-    //    NSLog(@"%f",SCREEN_HEIGHT/1100*100);
+//    [self.view bringSubviewToFront:_bottomView];
+
     
 }
 /**
@@ -119,8 +117,19 @@ static NSString *cellIte = @"cellIte";
 -(void)tapTheHeadGroup{
     HT_Par_IteResultViewController *result=[[HT_Par_IteResultViewController alloc]init];
     [self.navigationController pushViewController:result animated:YES];
-
 }
+/**
+ *  点击事件
+ */
+-(void)clickButtonCooperation{
+    HT_Par_IteCooperationViewController *cooperation=[[HT_Par_IteCooperationViewController alloc]init];
+    [self.navigationController pushViewController:cooperation animated:YES];
+}
+-(void)clickButtonOrder{
+    HT_Par_IteOrderViewController *order=[[HT_Par_IteOrderViewController alloc]init];
+    [self.navigationController pushViewController:order animated:YES];
+}
+
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *_cell;

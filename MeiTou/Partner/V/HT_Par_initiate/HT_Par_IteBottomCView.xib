@@ -29,20 +29,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-rf-KzY" userLabel="MainView">
                                 <rect key="frame" x="0.0" y="0.0" width="344" height="104.5"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-LY-XV5" userLabel="CooperationButton">
+                                        <rect key="frame" x="11" y="21" width="155.5" height="64"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.84347264841886072" blue="0.36958841238803797" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="我要合作">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fK-zj-UuT" userLabel="InitiateButton">
-                                        <rect key="frame" x="177.5" y="21" width="156" height="64"/>
+                                        <rect key="frame" x="177.5" y="21" width="155.5" height="64"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.5565014935" blue="0.51036055700000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="我要发起">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-LY-XV5" userLabel="CooperationButton">
-                                        <rect key="frame" x="8" y="21" width="155.5" height="64"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="1" green="0.84347264841886072" blue="0.36958841238803797" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="我要合作">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -52,16 +52,22 @@
                                 <constraints>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="width" secondItem="OuD-LY-XV5" secondAttribute="width" id="1VN-sH-nQm"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="centerX" secondItem="bpk-rf-KzY" secondAttribute="centerX" multiplier="475:320" id="4Hc-fS-XwL"/>
+                                    <constraint firstItem="3fK-zj-UuT" firstAttribute="leading" secondItem="OuD-LY-XV5" secondAttribute="trailing" constant="20" id="5Rq-ik-qlN"/>
                                     <constraint firstItem="OuD-LY-XV5" firstAttribute="centerY" secondItem="bpk-rf-KzY" secondAttribute="centerY" id="AyC-3j-B2W"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="centerY" secondItem="OuD-LY-XV5" secondAttribute="centerY" id="HvH-UQ-1Ed"/>
                                     <constraint firstItem="OuD-LY-XV5" firstAttribute="height" secondItem="bpk-rf-KzY" secondAttribute="height" multiplier="55:90" id="NC8-8X-32w"/>
+                                    <constraint firstItem="3fK-zj-UuT" firstAttribute="centerX" secondItem="bpk-rf-KzY" secondAttribute="centerX" multiplier="475:320" id="TTO-y2-wxA"/>
                                     <constraint firstItem="OuD-LY-XV5" firstAttribute="centerX" secondItem="bpk-rf-KzY" secondAttribute="centerX" multiplier="165:320" id="aSN-Td-RmU"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="centerY" secondItem="bpk-rf-KzY" secondAttribute="centerY" id="fXA-Tj-DfH"/>
                                     <constraint firstItem="OuD-LY-XV5" firstAttribute="width" secondItem="bpk-rf-KzY" secondAttribute="width" multiplier="290:640" id="mzq-zR-KAW"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="height" secondItem="OuD-LY-XV5" secondAttribute="height" id="vrY-da-W7c"/>
+                                    <constraint firstItem="3fK-zj-UuT" firstAttribute="width" secondItem="OuD-LY-XV5" secondAttribute="width" id="xpI-qy-fOp"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="1VN-sH-nQm"/>
+                                        <exclude reference="4Hc-fS-XwL"/>
+                                        <exclude reference="5Rq-ik-qlN"/>
                                         <exclude reference="HvH-UQ-1Ed"/>
                                     </mask>
                                 </variation>
@@ -90,8 +96,8 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="ButtonCooperation" destination="OuD-LY-XV5" id="2LW-6h-pB8"/>
-                <outlet property="buttonInitiate" destination="3fK-zj-UuT" id="H3D-6C-j5f"/>
+                <outlet property="buttonCooperation" destination="OuD-LY-XV5" id="kTc-r5-RUc"/>
+                <outlet property="buttonOrder" destination="3fK-zj-UuT" id="kYD-9A-JHc"/>
             </connections>
             <point key="canvasLocation" x="258" y="181.5"/>
         </tableViewCell>

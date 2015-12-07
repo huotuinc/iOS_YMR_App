@@ -110,6 +110,7 @@ static NSString *RFIdentifier = @"RFIdentifier";
         HT_HomePage_PersonViewTableViewController * home = [storyboard instantiateViewControllerWithIdentifier:@"HT_HomePage_PersonViewTableViewController"];
         [self.navigationController pushViewController:home animated:YES];
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -23,9 +23,9 @@ static NSString *cellBuy = @"cellBuy";
 
 @implementation HT_Par_BuyViewController{
     UITableView *_tableView;
-    UIView *_topView;
-    UIView *_headerView;
-    UIView *_bottomView;
+    UIView *_topView;//顶部视图
+    UIView *_headerView;//_tableV 的headerV
+    UIView *_bottomView;//底部视图
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

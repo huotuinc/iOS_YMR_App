@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HT_Par_IteBottomCView : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIButton *ButtonCooperation;
-@property (weak, nonatomic) IBOutlet UIButton *buttonInitiate;
+@property (weak, nonatomic) IBOutlet UIButton *buttonCooperation;
+@property (weak, nonatomic) IBOutlet UIButton *buttonOrder
+;
 
 @end

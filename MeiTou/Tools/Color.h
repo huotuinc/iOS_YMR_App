@@ -9,5 +9,6 @@
 #ifndef Color_h
 #define Color_h
 
+#define colorBackground  [UIColor colorWithRed:242 green:242 blue:242 alpha:1]
 
 #endif /* Color_h */

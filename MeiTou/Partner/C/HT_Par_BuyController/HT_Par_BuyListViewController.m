@@ -25,10 +25,7 @@ static NSString *cellMain = @"cellMain";
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyListTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
-    
-    
-    
-    
+  
 }
 
 - (void)viewDidLoad {
