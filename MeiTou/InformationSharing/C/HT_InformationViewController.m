@@ -7,6 +7,9 @@
 //
 
 #import "HT_InformationViewController.h"
+#import "HT_Infor_NewsViewController.h"
+#import "HT_Infor_CommentViewController.h"
+#import "HT_Infor_GroupViewController.h"
 
 #import "HT_Infor_MainTableViewCell.h"
 
@@ -84,6 +87,18 @@ static NSString *cellIMain = @"cellIMain";
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==0) {
+        HT_Infor_NewsViewController *news=[[HT_Infor_NewsViewController alloc]init];
+        [self.navigationController pushViewController:news animated:YES];
+    }
+    if (indexPath.section==1) {
+        HT_Infor_CommentViewController *comment=[[HT_Infor_CommentViewController alloc]init];
+        [self.navigationController pushViewController:comment animated:YES];
+    }
+    if (indexPath.section==2) {
+        HT_Infor_GroupViewController *group=[[HT_Infor_GroupViewController alloc]init];
+        [self.navigationController pushViewController:group animated:YES];
+    }
 
 
 }

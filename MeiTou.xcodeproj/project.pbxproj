@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A11C15B70000ED2017 /* HT_Infor_CommentViewController.m */; };
+		F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A41C15B71800ED2017 /* HT_Infor_GroupViewController.m */; };
+		F20697A81C15B72900ED2017 /* HT_Infor_NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A71C15B72900ED2017 /* HT_Infor_NewsViewController.m */; };
 		F206B36B1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F206B36A1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m */; };
 		F214A6DA1C0D4BC40096D523 /* HT_Par_MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F214A6D81C0D4BC40096D523 /* HT_Par_MainTableViewCell.m */; };
 		F214A6DB1C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F214A6D91C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib */; };
@@ -96,6 +99,10 @@
 		F29944821C082B0D00823E75 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29944811C082B0D00823E75 /* RootViewController.m */; };
 		F29944A11C084D9600823E75 /* HT_Infor_ShareCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F299449F1C084D9600823E75 /* HT_Infor_ShareCView.m */; };
 		F29944A21C084D9600823E75 /* HT_Infor_ShareCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29944A01C084D9600823E75 /* HT_Infor_ShareCView.xib */; };
+		F29C69531C166653000A8C29 /* HT_News_HeadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29C69511C166653000A8C29 /* HT_News_HeadTableViewCell.m */; };
+		F29C69541C166653000A8C29 /* HT_News_HeadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29C69521C166653000A8C29 /* HT_News_HeadTableViewCell.xib */; };
+		F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29C69561C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m */; };
+		F29C69591C166B16000A8C29 /* HT_Infor_GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29C69571C166B16000A8C29 /* HT_Infor_GroupTableViewCell.xib */; };
 		F2A019321C0B2F6A0017234F /* HT_HomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A019271C0B2F6A0017234F /* HT_HomePageCollectionViewCell.m */; };
 		F2A019331C0B2F6A0017234F /* HT_HomePageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A019281C0B2F6A0017234F /* HT_HomePageCollectionViewCell.xib */; };
 		F2A019381C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A019301C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m */; };
@@ -136,6 +143,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F20697A01C15B70000ED2017 /* HT_Infor_CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_CommentViewController.h; sourceTree = "<group>"; };
+		F20697A11C15B70000ED2017 /* HT_Infor_CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_CommentViewController.m; sourceTree = "<group>"; };
+		F20697A31C15B71800ED2017 /* HT_Infor_GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_GroupViewController.h; sourceTree = "<group>"; };
+		F20697A41C15B71800ED2017 /* HT_Infor_GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_GroupViewController.m; sourceTree = "<group>"; };
+		F20697A61C15B72900ED2017 /* HT_Infor_NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_NewsViewController.h; sourceTree = "<group>"; };
+		F20697A71C15B72900ED2017 /* HT_Infor_NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_NewsViewController.m; sourceTree = "<group>"; };
 		F206B3691C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_PersonViewTableViewController.h; sourceTree = "<group>"; };
 		F206B36A1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_PersonViewTableViewController.m; sourceTree = "<group>"; };
 		F214A6D71C0D4BC40096D523 /* HT_Par_MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_MainTableViewCell.h; sourceTree = "<group>"; };
@@ -174,7 +187,7 @@
 		F21E44FE1C1039D900657249 /* HT_HomePage_LeftHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_LeftHeadView.m; sourceTree = "<group>"; };
 		F21E44FF1C1039D900657249 /* HT_HomePage_LeftHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_LeftHeadView.xib; sourceTree = "<group>"; };
 		F224535F1C0EE37100A12AF8 /* HT_Par_BuyMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyMainTableViewCell.h; sourceTree = "<group>"; };
-		F22453601C0EE37100A12AF8 /* HT_Par_BuyMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HT_Par_BuyMainTableViewCell.m; path = Partner/V/HT_Par_Buy/HT_Par_BuyMainTableViewCell.m; sourceTree = "<group>"; };
+		F22453601C0EE37100A12AF8 /* HT_Par_BuyMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyMainTableViewCell.m; sourceTree = "<group>"; };
 		F22453611C0EE37100A12AF8 /* HT_Par_BuyMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_BuyMainTableViewCell.xib; sourceTree = "<group>"; };
 		F22453641C0EEF8100A12AF8 /* HT_Par_BuyBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyBottomView.h; sourceTree = "<group>"; };
 		F22453651C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyBottomView.m; sourceTree = "<group>"; };
@@ -291,6 +304,12 @@
 		F299449E1C084D9600823E75 /* HT_Infor_ShareCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_ShareCView.h; sourceTree = "<group>"; };
 		F299449F1C084D9600823E75 /* HT_Infor_ShareCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_ShareCView.m; sourceTree = "<group>"; };
 		F29944A01C084D9600823E75 /* HT_Infor_ShareCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_ShareCView.xib; sourceTree = "<group>"; };
+		F29C69501C166653000A8C29 /* HT_News_HeadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_News_HeadTableViewCell.h; sourceTree = "<group>"; };
+		F29C69511C166653000A8C29 /* HT_News_HeadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_News_HeadTableViewCell.m; sourceTree = "<group>"; };
+		F29C69521C166653000A8C29 /* HT_News_HeadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_News_HeadTableViewCell.xib; sourceTree = "<group>"; };
+		F29C69551C166B16000A8C29 /* HT_Infor_GroupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_GroupTableViewCell.h; sourceTree = "<group>"; };
+		F29C69561C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_GroupTableViewCell.m; sourceTree = "<group>"; };
+		F29C69571C166B16000A8C29 /* HT_Infor_GroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_GroupTableViewCell.xib; sourceTree = "<group>"; };
 		F2A019261C0B2F6A0017234F /* HT_HomePageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePageCollectionViewCell.h; sourceTree = "<group>"; };
 		F2A019271C0B2F6A0017234F /* HT_HomePageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePageCollectionViewCell.m; sourceTree = "<group>"; };
 		F2A019281C0B2F6A0017234F /* HT_HomePageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -349,6 +368,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F206979D1C15B6E100ED2017 /* HT_Infor_Comment */ = {
+			isa = PBXGroup;
+			children = (
+				F20697A01C15B70000ED2017 /* HT_Infor_CommentViewController.h */,
+				F20697A11C15B70000ED2017 /* HT_Infor_CommentViewController.m */,
+			);
+			path = HT_Infor_Comment;
+			sourceTree = "<group>";
+		};
+		F206979E1C15B6E100ED2017 /* HT_Infor_Group */ = {
+			isa = PBXGroup;
+			children = (
+				F20697A31C15B71800ED2017 /* HT_Infor_GroupViewController.h */,
+				F20697A41C15B71800ED2017 /* HT_Infor_GroupViewController.m */,
+			);
+			path = HT_Infor_Group;
+			sourceTree = "<group>";
+		};
+		F206979F1C15B6E100ED2017 /* HT_Infor_News */ = {
+			isa = PBXGroup;
+			children = (
+				F20697A61C15B72900ED2017 /* HT_Infor_NewsViewController.h */,
+				F20697A71C15B72900ED2017 /* HT_Infor_NewsViewController.m */,
+			);
+			path = HT_Infor_News;
+			sourceTree = "<group>";
+		};
 		F21E44E71C102F0100657249 /* MMDrawerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,7 +482,6 @@
 				F299446C1C08245A00823E75 /* Other */,
 				F29944551C0822C700823E75 /* Lib */,
 				F272615A1C07E61B0081EC95 /* AppDelegate.h */,
-				F22453601C0EE37100A12AF8 /* HT_Par_BuyMainTableViewCell.m */,
 				F272615B1C07E61B0081EC95 /* AppDelegate.m */,
 				F272615D1C07E61B0081EC95 /* ViewController.h */,
 				F272615E1C07E61B0081EC95 /* ViewController.m */,
@@ -592,6 +637,9 @@
 			children = (
 				F21A4B7D1C0D7FD300C1F098 /* HT_InformationViewController.h */,
 				F21A4B7E1C0D7FD300C1F098 /* HT_InformationViewController.m */,
+				F206979F1C15B6E100ED2017 /* HT_Infor_News */,
+				F206979D1C15B6E100ED2017 /* HT_Infor_Comment */,
+				F206979E1C15B6E100ED2017 /* HT_Infor_Group */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -618,6 +666,12 @@
 				F299449E1C084D9600823E75 /* HT_Infor_ShareCView.h */,
 				F299449F1C084D9600823E75 /* HT_Infor_ShareCView.m */,
 				F29944A01C084D9600823E75 /* HT_Infor_ShareCView.xib */,
+				F29C69501C166653000A8C29 /* HT_News_HeadTableViewCell.h */,
+				F29C69511C166653000A8C29 /* HT_News_HeadTableViewCell.m */,
+				F29C69521C166653000A8C29 /* HT_News_HeadTableViewCell.xib */,
+				F29C69551C166B16000A8C29 /* HT_Infor_GroupTableViewCell.h */,
+				F29C69561C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m */,
+				F29C69571C166B16000A8C29 /* HT_Infor_GroupTableViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -692,6 +746,7 @@
 				F29085101C0EBD9200F779FA /* HT_Par_BuyHeaderView.m */,
 				F29085111C0EBD9200F779FA /* HT_Par_BuyHeaderView.xib */,
 				F224535F1C0EE37100A12AF8 /* HT_Par_BuyMainTableViewCell.h */,
+				F22453601C0EE37100A12AF8 /* HT_Par_BuyMainTableViewCell.m */,
 				F22453611C0EE37100A12AF8 /* HT_Par_BuyMainTableViewCell.xib */,
 				F22453641C0EEF8100A12AF8 /* HT_Par_BuyBottomView.h */,
 				F22453651C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m */,
@@ -941,6 +996,7 @@
 				F2F9685A1C158511000045B1 /* HT_Par_SubBottomView.xib in Resources */,
 				F29944A21C084D9600823E75 /* HT_Infor_ShareCView.xib in Resources */,
 				F27261B81C07FDFE0081EC95 /* HT_Par_IteListTableViewCell.xib in Resources */,
+				F29C69591C166B16000A8C29 /* HT_Infor_GroupTableViewCell.xib in Resources */,
 				F27261641C07E61B0081EC95 /* Assets.xcassets in Resources */,
 				F27261621C07E61B0081EC95 /* Main.storyboard in Resources */,
 				F280268F1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib in Resources */,
@@ -951,6 +1007,7 @@
 				F27261E01C07FE530081EC95 /* HT_Par_SubListTableViewCell.xib in Resources */,
 				F263CA171C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.xib in Resources */,
 				F27261F01C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.xib in Resources */,
+				F29C69541C166653000A8C29 /* HT_News_HeadTableViewCell.xib in Resources */,
 				F27261D41C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.xib in Resources */,
 				F27261F21C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.xib in Resources */,
 				F27D673C1C0B49A900EE6C4F /* HT_HomePageViewController.xib in Resources */,
@@ -983,6 +1040,8 @@
 				F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */,
 				F27D673B1C0B49A900EE6C4F /* HT_HomePageViewController.m in Sources */,
 				F27261A81C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.m in Sources */,
+				F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */,
+				F20697A81C15B72900ED2017 /* HT_Infor_NewsViewController.m in Sources */,
 				F27261DF1C07FE530081EC95 /* HT_Par_SubListTableViewCell.m in Sources */,
 				F2F968591C158511000045B1 /* HT_Par_SubBottomView.m in Sources */,
 				F2A019381C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m in Sources */,
@@ -1002,6 +1061,7 @@
 				F299447F1C082A0600823E75 /* HT_HomePage_LeftViewController.m in Sources */,
 				F214A6DA1C0D4BC40096D523 /* HT_Par_MainTableViewCell.m in Sources */,
 				F21E44F61C102F0100657249 /* MMDrawerController.m in Sources */,
+				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,
 				F263CA231C157D5300EE78CA /* HT_Par_SubListViewController.m in Sources */,
 				F2F9684A1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */,
 				F263CA161C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.m in Sources */,
@@ -1026,7 +1086,9 @@
 				F2F9684F1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.m in Sources */,
 				F27261CB1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.m in Sources */,
 				F27261D31C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.m in Sources */,
+				F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */,
 				F27D67311C0B30A900EE6C4F /* HT_HomePageLayout.m in Sources */,
+				F29C69531C166653000A8C29 /* HT_News_HeadTableViewCell.m in Sources */,
 				F263CA0D1C15284C00EE78CA /* HT_Par_ItePaymentResultsViewController.m in Sources */,
 				F29944821C082B0D00823E75 /* RootViewController.m in Sources */,
 				F263CA261C157E6500EE78CA /* HT_Par_SubViewController.m in Sources */,

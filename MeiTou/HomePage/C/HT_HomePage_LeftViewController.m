@@ -29,6 +29,8 @@
 @implementation HT_HomePage_LeftViewController{
     UITableView *_tableView;
     UIView *_baseView;
+    
+    NSMutableArray *_iconArray;
 //    HT_HomePage_LeftHeadView *_headView;
     
     NSMutableArray *_titleArray;
@@ -45,13 +47,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _titleArray=[NSMutableArray arrayWithArray:@[@"首页",@"账户",@"关于美投",@"合伙人",@"爱美容"]];
     
-
+    
+    [self createLocalData];
     [self createHeadView];
     [self createTableView];
     [self createButtonBottom];
     
+}
+/**
+ *  创建数据
+ */
+-(void)createLocalData{
+    _iconArray=[NSMutableArray arrayWithArray:@[@"SlidingMenu_content_left_home@2x",@"SlidingMenu_content_left_account@2x",@"SlidingMenu_content_left_meitou@2x",@"SlidingMenu_content_left_partner@2x",@"SlidingMenu_content_left_partner@2x"]];
+    _titleArray=[NSMutableArray arrayWithArray:@[@"首页",@"账户",@"关于美投",@"合伙人",@"爱美容"]];
 }
 
 -(void)createHeadView{
@@ -104,7 +113,7 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_LeftTableViewCell" owner:nil options:nil] lastObject];
     }
-    
+    cell.imageVType.image=[UIImage imageNamed:[NSString stringWithFormat:@"%@",_iconArray[indexPath.row]]];
     cell.labelName.text=_titleArray[indexPath.row];
     cell.backgroundColor=[UIColor redColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
