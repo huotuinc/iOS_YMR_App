@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="190" id="KGk-i7-Jjw" customClass="HT_About_HeaderCView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-cn-aX7" userLabel="BaseView">
+                        <rect key="frame" x="8" y="8" width="304" height="173.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-fh-QVa" userLabel="HeadImage View">
+                                <rect key="frame" x="9.5" y="0.0" width="285" height="173.5"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0gh-fh-QVa" firstAttribute="centerY" secondItem="jbM-cn-aX7" secondAttribute="centerY" id="105-Av-OvO"/>
+                            <constraint firstItem="0gh-fh-QVa" firstAttribute="centerX" secondItem="jbM-cn-aX7" secondAttribute="centerX" id="BVN-ev-CWp"/>
+                            <constraint firstAttribute="trailing" secondItem="0gh-fh-QVa" secondAttribute="trailing" id="E9L-Lm-T3C"/>
+                            <constraint firstItem="0gh-fh-QVa" firstAttribute="width" secondItem="jbM-cn-aX7" secondAttribute="width" multiplier="600:640" id="Xwd-S7-IdH"/>
+                            <constraint firstItem="0gh-fh-QVa" firstAttribute="leading" secondItem="jbM-cn-aX7" secondAttribute="leading" id="ZV6-kT-sa7"/>
+                            <constraint firstAttribute="bottom" secondItem="0gh-fh-QVa" secondAttribute="bottom" id="bCA-f2-Hls"/>
+                            <constraint firstItem="0gh-fh-QVa" firstAttribute="top" secondItem="jbM-cn-aX7" secondAttribute="top" id="w5S-UG-uuC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="105-Av-OvO"/>
+                                <exclude reference="E9L-Lm-T3C"/>
+                                <exclude reference="ZV6-kT-sa7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="jbM-cn-aX7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Ckv-Z6-QMV"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jbM-cn-aX7" secondAttribute="bottom" id="FUp-mo-Gd3"/>
+                    <constraint firstItem="jbM-cn-aX7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="U4p-t5-8er"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jbM-cn-aX7" secondAttribute="trailing" id="zCG-50-gci"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="imageVHead" destination="0gh-fh-QVa" id="lLj-HR-HG5"/>
+            </connections>
+            <point key="canvasLocation" x="238" y="313"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Main" width="650" height="352"/>
+    </resources>
+</document>

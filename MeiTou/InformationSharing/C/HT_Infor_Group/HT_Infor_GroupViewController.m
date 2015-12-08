@@ -7,9 +7,11 @@
 //
 
 #import "HT_Infor_GroupViewController.h"
+#import "HT_Infor_GroupWebViewController.h"
 
 #import "HT_Infor_HeadCView.h"
 #import "HT_Infor_GroupTableViewCell.h"
+#import "HT_Infor_BottomCView.h"
 
 static NSString *cellGMain = @"cellGMain";
 
@@ -20,6 +22,7 @@ static NSString *cellGMain = @"cellGMain";
 @implementation HT_Infor_GroupViewController{
     UITableView *_tableView;
     UIView *_headerView;//tbV的headerView
+    UIView *_bottomView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -27,10 +30,8 @@ static NSString *cellGMain = @"cellGMain";
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_GroupTableViewCell" bundle:nil]forCellReuseIdentifier:cellGMain];
+    [self createBarButtonItem];
 
-    
-    
-    
 }
 
 - (void)viewDidLoad {
@@ -38,21 +39,59 @@ static NSString *cellGMain = @"cellGMain";
     // Do any additional setup after loading the view.
     [self createHeaderView];
     [self createTableView];
+    [self createBottomView];
+}
+
+-(void)createBarButtonItem{
+    UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
+    [buttonL addTarget:self action:@selector(clickLightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
+    self.navigationItem.leftBarButtonItem=bbiL;
+    
+    UIButton *buttonR=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonR setBackgroundImage:[UIImage imageNamed:@"common_title_top_more"]forState:UIControlStateNormal];
+    [buttonR addTarget:self action:@selector(clickRightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiR=[[UIBarButtonItem alloc]initWithCustomView:buttonR];
+    self.navigationItem.rightBarButtonItem=bbiR;
+}
+/**
+ *
+ */
+-(void)clickLightButton{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)clickRightButton{
+    
 }
 -(void)createHeaderView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_HeadCView" owner:nil options:nil];
-    HT_Infor_GroupViewController *headerView=[nib firstObject];
+    HT_Infor_HeadCView *headerView=[nib firstObject];
     _headerView=headerView;
-    
-
 }
+
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1150*(1150-90)) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
     [self.view addSubview:_tableView];
    
+}
+
+-(void)createBottomView{
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_BottomCView" owner:nil options:nil];
+    HT_Infor_BottomCView *bottomView=[nib firstObject];
+    bottomView.frame=CGRectMake(0, SCREEN_HEIGHT/1150*(1150-90)-64, SCREEN_WITH, SCREEN_HEIGHT/1150*90);
+    [bottomView.buttonGo addTarget:self action:@selector(clickButtonGo) forControlEvents:UIControlEventTouchUpInside];
+    _bottomView=bottomView;
+    [self.view addSubview:_bottomView];
+
+}
+-(void)clickButtonGo{
+    HT_Infor_GroupWebViewController *web=[[HT_Infor_GroupWebViewController alloc]init];
+    [self.navigationController pushViewController:web animated:YES];
+    NSLog(@"111");
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

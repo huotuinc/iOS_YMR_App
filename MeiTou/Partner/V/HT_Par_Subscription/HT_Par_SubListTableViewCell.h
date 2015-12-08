@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HT_Par_SubListTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UILabel *labelPrice;
+@property (weak, nonatomic) IBOutlet UILabel *labelDate;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageVHead;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVLevel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVState;
 @end

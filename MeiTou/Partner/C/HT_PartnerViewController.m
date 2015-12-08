@@ -11,6 +11,7 @@
 #import "HT_Par_IteViewController.h"
 #import "HT_Par_SubViewController.h"
 #import "HT_Par_MainTableViewCell.h"
+#import "HT_HomePageViewController.h"
 
 
 static NSString *cellMain = @"cellMain";
@@ -29,9 +30,11 @@ static NSString *cellMain = @"cellMain";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
+    self.navigationController.navigationBar.barTintColor = NAVBARCOLOR1;
+
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
 
-    
+    [self createBarButtonItem];
     
     
 }
@@ -44,6 +47,36 @@ static NSString *cellMain = @"cellMain";
 //    [_tableView registerNib:[UINib nibWithNibName:@"HT_Cpn_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
     
     [self createTableView];
+}
+-(void)createBarButtonItem{
+    UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
+    [buttonL addTarget:self action:@selector(clickLightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
+    self.navigationItem.leftBarButtonItem=bbiL;
+    
+    UIButton *buttonR=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonR setBackgroundImage:[UIImage imageNamed:@"common_title_top_more"]forState:UIControlStateNormal];
+    [buttonR addTarget:self action:@selector(clickRightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiR=[[UIBarButtonItem alloc]initWithCustomView:buttonR];
+    self.navigationItem.rightBarButtonItem=bbiR;
+}
+/**
+ *
+ */
+-(void)clickLightButton{
+//    HT_HomePageViewController *home=[[HT_HomePageViewController alloc]init];
+//    UINavigationController *centernav = [[UINavigationController alloc] initWithRootViewController:home];
+//    [self.navigationController popToViewController:centernav animated:YES];
+    for (UIViewController *temp in self.navigationController.viewControllers) {
+        if ([temp isKindOfClass:[HT_HomePageViewController class]]) {
+            [self.navigationController popToViewController:temp animated:YES];
+        }
+    }
+    NSLog(@"1111");
+}
+-(void)clickRightButton{
+    
 }
 
 -(void)createTableView{

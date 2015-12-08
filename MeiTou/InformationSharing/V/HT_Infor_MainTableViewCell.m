@@ -26,6 +26,23 @@
     _imageVHead.image=[UIImage imageNamed:@"head"];
     _imageVState.image=[UIImage imageNamed:@"3"];
     _viewHeadGroup.backgroundColor=[UIColor yellowColor];
+//    
+//    @property (weak, nonatomic) IBOutlet UIView *viewBase;
+//    @property (weak, nonatomic) IBOutlet UIImageView *imageVHead;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+//    @property (weak, nonatomic) IBOutlet UIImageView *imageVState;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelDate;
+//    @property (weak, nonatomic) IBOutlet UIImageView *imageVMain;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelContent;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelNice;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelComment;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelShare;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelScore;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelCount;
+//    @property (weak, nonatomic) IBOutlet UIView *viewHeadGroup;
+    _imageVNice.image=[UIImage imageNamed:@"common_zan_a"];
+    _imageVComment.image=[UIImage imageNamed:@"common_comment"];
+    _imageVShare.image=[UIImage imageNamed:@"common_share"];
     
 }
 

@@ -1,18 +1,17 @@
 //
-//  HT_HomePage_PersonTableViewCell.m
+//  HT_About_TopCView.m
 //  MeiTou
 //
-//  Created by che on 15/11/30.
+//  Created by che on 15/12/8.
 //  Copyright © 2015年 车. All rights reserved.
 //
 
-#import "HT_HomePage_PersonTableViewCell.h"
+#import "HT_About_TopCView.h"
 
-@implementation HT_HomePage_PersonTableViewCell
+@implementation HT_About_TopCView
 
 - (void)awakeFromNib {
     // Initialization code
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

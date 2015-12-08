@@ -15,6 +15,14 @@
 
 @implementation HT_Par_IteCooperationViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden=NO;
+    self.navigationController.navigationBar.translucent=NO;
+    [self createBarButtonItem];
+    
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -24,6 +32,21 @@
     [btn addTarget:self action:@selector(clickButtonPaying) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 }
+-(void)createBarButtonItem{
+    UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
+    [buttonL addTarget:self action:@selector(clickLightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
+    self.navigationItem.leftBarButtonItem=bbiL;
+    
+}
+/**
+ *
+ */
+-(void)clickLightButton{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(void)clickButtonPaying{
     HT_Par_ItePaymentOrderViewController *pay=[[HT_Par_ItePaymentOrderViewController alloc]init];
     [self.navigationController pushViewController:pay animated:YES];

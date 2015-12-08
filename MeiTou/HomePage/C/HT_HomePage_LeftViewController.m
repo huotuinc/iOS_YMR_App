@@ -39,7 +39,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
+    self.view.backgroundColor=[UIColor whiteColor];
 
 
 }
@@ -59,7 +59,7 @@
  *  创建数据
  */
 -(void)createLocalData{
-    _iconArray=[NSMutableArray arrayWithArray:@[@"SlidingMenu_content_left_home@2x",@"SlidingMenu_content_left_account@2x",@"SlidingMenu_content_left_meitou@2x",@"SlidingMenu_content_left_partner@2x",@"SlidingMenu_content_left_partner@2x"]];
+    _iconArray=[NSMutableArray arrayWithArray:@[@"SlidingMenu_content_left_home",@"SlidingMenu_content_left_account",@"SlidingMenu_content_left_meitou",@"SlidingMenu_content_left_partner",@"SlidingMenu_content_left_partner"]];
     _titleArray=[NSMutableArray arrayWithArray:@[@"首页",@"账户",@"关于美投",@"合伙人",@"爱美容"]];
 }
 
@@ -137,39 +137,29 @@
         [self.mm_drawerController setCenterViewController:centernav withCloseAnimation:YES completion:nil];
     }
     if (indexPath.row==1) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        HT_HomePage_PersonViewTableViewController * person = [storyboard instantiateViewControllerWithIdentifier:@"HT_HomePage_PersonViewTableViewController"];
-
-        UINavigationController *centernav = [[UINavigationController alloc] initWithRootViewController:person];
-        [self.mm_drawerController setCenterViewController:centernav withCloseAnimation:YES completion:nil];
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"person" object:nil userInfo:nil];
+        [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
+            
+        }];
     }
     if (indexPath.row==2) {
-//        HT_AboutMeiTouViewController *about=[[HT_AboutMeiTouViewController alloc ]init];
-//        [self.navigationController pushViewController:about animated:YES];
-//        NSLog(@"333");
-        HT_AboutMeiTouViewController *about = [[HT_AboutMeiTouViewController alloc] init];
-        UINavigationController *centernav = [[UINavigationController alloc] initWithRootViewController:about];
-        
-        [self.mm_drawerController setCenterViewController:centernav withCloseAnimation:YES completion:nil];
-
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"about" object:nil userInfo:nil];
+        [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
+            
+        }];
     }
     if (indexPath.row==3) {
-//        HT_PartnerViewController *partner=[[HT_PartnerViewController alloc ]init];
-//        [self.navigationController pushViewController:partner animated:YES];
-        HT_PartnerViewController *partner = [[HT_PartnerViewController alloc] init];
-        UINavigationController *centernav = [[UINavigationController alloc] initWithRootViewController:partner];
-        [self.mm_drawerController setCenterViewController:centernav withCloseAnimation:YES completion:nil];
 
-
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"partner" object:nil userInfo:nil];
+        [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
+            
+        }];
     }
     if (indexPath.row==4) {
-//        HT_InformationViewController *information=[[HT_InformationViewController alloc ]init];
-//        [self.navigationController pushViewController:information animated:YES];
-        HT_InformationViewController *information = [[HT_InformationViewController alloc] init];
-        UINavigationController *centernav = [[UINavigationController alloc] initWithRootViewController:information];
-        [self.mm_drawerController setCenterViewController:centernav withCloseAnimation:YES completion:nil];
-
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"information" object:nil userInfo:nil];
+        [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
+            
+        }];
     }
 }
 

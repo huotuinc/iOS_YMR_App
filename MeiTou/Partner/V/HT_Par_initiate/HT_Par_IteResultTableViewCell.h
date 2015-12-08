@@ -10,6 +10,8 @@
 
 @interface HT_Par_IteResultTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *ViewHead;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVHead;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVlevel;
 @property (weak, nonatomic) IBOutlet UILabel *labelDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UIView *ViewHeadGroup;

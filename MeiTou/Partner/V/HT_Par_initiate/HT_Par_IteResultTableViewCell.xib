@@ -22,10 +22,31 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-zV-JwQ" userLabel="HeadView">
                                 <rect key="frame" x="10" y="5" width="94" height="94"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ckd-C5-gZz" userLabel="HeadImage View">
+                                        <rect key="frame" x="11" y="11" width="72" height="72"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ckd-C5-gZz" secondAttribute="height" multiplier="1:1" id="PsY-zj-xCj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="36c-rq-L6j" userLabel="LevelImage View">
+                                        <rect key="frame" x="67.5" y="16" width="22" height="22"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="36c-rq-L6j" secondAttribute="height" multiplier="1:1" id="FCU-HV-6Jp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.34138342770000002" blue="0.28841900399999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="36c-rq-L6j" firstAttribute="height" secondItem="ckd-C5-gZz" secondAttribute="height" multiplier="13:42" id="2BB-5I-X5g"/>
+                                    <constraint firstItem="36c-rq-L6j" firstAttribute="centerY" secondItem="xyc-zV-JwQ" secondAttribute="centerY" multiplier="12:21" id="QgD-ed-f0l"/>
+                                    <constraint firstItem="ckd-C5-gZz" firstAttribute="centerY" secondItem="xyc-zV-JwQ" secondAttribute="centerY" id="aKy-Ij-0Ds"/>
+                                    <constraint firstItem="36c-rq-L6j" firstAttribute="centerX" secondItem="xyc-zV-JwQ" secondAttribute="centerX" multiplier="35:21" id="arY-uC-jrN"/>
+                                    <constraint firstItem="ckd-C5-gZz" firstAttribute="height" secondItem="xyc-zV-JwQ" secondAttribute="height" multiplier="32:42" id="hV1-dV-kNh"/>
                                     <constraint firstAttribute="width" secondItem="xyc-zV-JwQ" secondAttribute="height" multiplier="1:1" id="mdT-11-XDd"/>
+                                    <constraint firstItem="ckd-C5-gZz" firstAttribute="centerX" secondItem="xyc-zV-JwQ" secondAttribute="centerX" id="zTG-Vf-Qod"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-e8-yMJ" userLabel="ContentView">
@@ -153,6 +174,8 @@
             <connections>
                 <outlet property="ViewHead" destination="xyc-zV-JwQ" id="Zu1-1b-2oG"/>
                 <outlet property="ViewHeadGroup" destination="fJY-o4-L7d" id="Mwg-Ch-G3s"/>
+                <outlet property="imageVHead" destination="ckd-C5-gZz" id="oPZ-b0-ig2"/>
+                <outlet property="imageVlevel" destination="36c-rq-L6j" id="yJX-cp-qZx"/>
                 <outlet property="labelDate" destination="jwh-Sr-DDi" id="G1d-Wk-6MQ"/>
                 <outlet property="labelName" destination="ytE-4d-pqw" id="xfm-og-nnU"/>
             </connections>

@@ -18,12 +18,36 @@
     UIView *_mainView;
     
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden=NO;
+    self.navigationController.navigationBar.translucent=NO;
+    [self createBarButtonItem];
+    
+    
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createMainView];
 }
+-(void)createBarButtonItem{
+    UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
+    [buttonL addTarget:self action:@selector(clickLightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
+    self.navigationItem.leftBarButtonItem=bbiL;
+    
+    
+}
+/**
+ *
+ */
+-(void)clickLightButton{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(void)createMainView{
     NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_ItePaymentResultsCView" owner:nil options:nil];
     HT_Par_ItePaymentResultsCView *mainView=[nib firstObject];

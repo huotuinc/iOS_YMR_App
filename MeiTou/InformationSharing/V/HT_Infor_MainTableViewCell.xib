@@ -332,8 +332,11 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="imageVComment" destination="Uri-Ru-Kgp" id="nWL-Ho-Zrp"/>
                 <outlet property="imageVHead" destination="1x0-3K-Z1P" id="77Y-y6-t9d"/>
                 <outlet property="imageVMain" destination="iAq-G9-7HV" id="WRX-Vt-zT7"/>
+                <outlet property="imageVNice" destination="nVU-Ru-fOX" id="GBx-Qt-BFZ"/>
+                <outlet property="imageVShare" destination="Lu0-pU-HS8" id="16b-Ol-4v3"/>
                 <outlet property="imageVState" destination="fhW-3k-Z3o" id="0UU-6x-vye"/>
                 <outlet property="labelComment" destination="1Tj-ks-6vB" id="BnK-gg-w4z"/>
                 <outlet property="labelContent" destination="exz-aT-o1K" id="Bbg-c2-BZV"/>

@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface HT_Par_SubClaimCView : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UILabel *labelTel;
+@property (weak, nonatomic) IBOutlet UILabel *labelMoney;
+@property (weak, nonatomic) IBOutlet UILabel *labelMark;
+@property (weak, nonatomic) IBOutlet UILabel *labelNotice;
+@property (weak, nonatomic) IBOutlet UILabel *labelSelect;
+@property (weak, nonatomic) IBOutlet UITextField *textFname;
+@property (weak, nonatomic) IBOutlet UITextField *textFTel;
+@property (weak, nonatomic) IBOutlet UITextField *textFMark;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSubmit;
 
 @end

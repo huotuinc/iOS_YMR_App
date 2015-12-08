@@ -71,6 +71,25 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-ge-KOr" userLabel="BView">
+                                        <rect key="frame" x="0.0" y="70" width="392" height="467"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-RU-tbV" userLabel="ContentText Field">
+                                                <rect key="frame" x="0.0" y="0.0" width="392" height="467"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Q9C-RU-tbV" secondAttribute="trailing" id="POs-PH-Dg0"/>
+                                            <constraint firstItem="Q9C-RU-tbV" firstAttribute="leading" secondItem="wcl-ge-KOr" secondAttribute="leading" id="TGG-Vq-6Wt"/>
+                                            <constraint firstItem="Q9C-RU-tbV" firstAttribute="top" secondItem="wcl-ge-KOr" secondAttribute="top" id="eeA-ga-aXs"/>
+                                            <constraint firstAttribute="bottom" secondItem="Q9C-RU-tbV" secondAttribute="bottom" id="mRf-vM-uXN"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qz9-lD-8Nw" userLabel="CView">
                                         <rect key="frame" x="0.0" y="537" width="392" height="45"/>
                                         <subviews>
@@ -155,25 +174,6 @@
                                             <constraint firstItem="WqQ-tJ-tTr" firstAttribute="top" secondItem="Qz9-lD-8Nw" secondAttribute="top" id="zqj-hB-X7a"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-ge-KOr" userLabel="BView">
-                                        <rect key="frame" x="0.0" y="70" width="392" height="467"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-RU-tbV" userLabel="ContentText Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="392" height="467"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Q9C-RU-tbV" secondAttribute="trailing" id="POs-PH-Dg0"/>
-                                            <constraint firstItem="Q9C-RU-tbV" firstAttribute="leading" secondItem="wcl-ge-KOr" secondAttribute="leading" id="TGG-Vq-6Wt"/>
-                                            <constraint firstItem="Q9C-RU-tbV" firstAttribute="top" secondItem="wcl-ge-KOr" secondAttribute="top" id="eeA-ga-aXs"/>
-                                            <constraint firstAttribute="bottom" secondItem="Q9C-RU-tbV" secondAttribute="bottom" id="mRf-vM-uXN"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,6 +212,14 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="imageVEmotion" destination="AI8-PA-1Hw" id="DuR-ca-DfN"/>
+                <outlet property="imageVPhoto" destination="Slj-ka-C8I" id="cYa-Od-89I"/>
+                <outlet property="labelPoint" destination="JMU-4o-vNd" id="pMQ-89-Qd3"/>
+                <outlet property="labelTitle" destination="cSK-Dx-Io6" id="6qW-Y0-AMw"/>
+                <outlet property="textFContent" destination="Q9C-RU-tbV" id="OKw-kH-zEd"/>
+                <outlet property="textFTitle" destination="LdO-RE-doc" id="Tui-2z-zzh"/>
+            </connections>
             <point key="canvasLocation" x="425" y="405.5"/>
         </tableViewCell>
     </objects>

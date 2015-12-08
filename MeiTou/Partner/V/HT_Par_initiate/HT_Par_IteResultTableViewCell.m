@@ -17,15 +17,20 @@
 //    headV.frame = CGRectMake(0, 0, self.ViewHead.frame.size.width, self.ViewHead.frame.size.height);
 //    [self.ViewHead addSubview:headV];
 //    self.ViewHead.backgroundColor=[UIColor redColor];
+    _imageVHead.image=[UIImage imageNamed:@"head"];
+//    _imageVHead.layer.cornerRadius=_imageVHead.frame.size.width/2;
+    
+    _imageVlevel.image=[UIImage imageNamed:@"common_LV2"];
+    
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
-    HT_Par_IteResult_HeadView *headV=[nib firstObject];
-    
-    [self.ViewHead layoutIfNeeded];
-     [self.ViewHead addSubview:headV];
+//    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
+//    HT_Par_IteResult_HeadView *headV=[nib firstObject];
+//    
+//    [self.ViewHead layoutIfNeeded];
+//     [self.ViewHead addSubview:headV];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

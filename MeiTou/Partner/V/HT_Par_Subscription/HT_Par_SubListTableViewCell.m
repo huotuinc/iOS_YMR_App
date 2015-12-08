@@ -12,6 +12,15 @@
 
 - (void)awakeFromNib {
     // Initialization code
+//    @property (weak, nonatomic) IBOutlet UILabel *labelName;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelTel;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelPrice;
+//    
+//    @property (weak, nonatomic) IBOutlet UIImageView *imageVHead;
+//    @property (weak, nonatomic) IBOutlet UIImageView *imageVLevel;
+//    @property (weak, nonatomic) IBOutlet UIImageView *imageVState;
+    _imageVState.image=[UIImage imageNamed:@"rengou_content_right_fail"];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

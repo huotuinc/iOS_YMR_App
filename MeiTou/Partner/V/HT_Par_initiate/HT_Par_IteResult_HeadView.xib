@@ -20,19 +20,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biC-Oj-xnO" userLabel="BaseView">
                         <rect key="frame" x="8" y="8" width="139" height="157"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="gzu-sL-odI" userLabel="LevelImage View">
-                                <rect key="frame" x="97" y="26" width="38" height="38"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gzu-sL-odI" secondAttribute="height" multiplier="1:1" id="bSp-Ea-0bh"/>
-                                    <constraint firstAttribute="width" secondItem="gzu-sL-odI" secondAttribute="height" multiplier="1:1" id="gxs-nW-zNv"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="bSp-Ea-0bh"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="EWP-5g-DXO" userLabel="HeadImage View">
                                 <rect key="frame" x="9" y="19" width="120" height="120"/>
                                 <animations/>
@@ -43,6 +30,19 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="YN7-5l-YSw"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="gzu-sL-odI" userLabel="LevelImage View">
+                                <rect key="frame" x="97" y="26" width="38" height="38"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gzu-sL-odI" secondAttribute="height" multiplier="1:1" id="bSp-Ea-0bh"/>
+                                    <constraint firstAttribute="width" secondItem="gzu-sL-odI" secondAttribute="height" multiplier="1:1" id="gxs-nW-zNv"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bSp-Ea-0bh"/>
                                     </mask>
                                 </variation>
                             </imageView>
