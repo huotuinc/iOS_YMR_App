@@ -13,6 +13,8 @@
 #import "HT_Par_MainTableViewCell.h"
 #import "HT_HomePageViewController.h"
 
+#import "HT_Par_SearchCView.h"
+
 
 static NSString *cellMain = @"cellMain";
 
@@ -22,6 +24,7 @@ static NSString *cellMain = @"cellMain";
 @end
 
 @implementation HT_PartnerViewController{
+    UIView *_topView;
     UITableView *_tableView;
     
 }
@@ -45,7 +48,7 @@ static NSString *cellMain = @"cellMain";
     self.view.backgroundColor=[UIColor cyanColor];
     
 //    [_tableView registerNib:[UINib nibWithNibName:@"HT_Cpn_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
-    
+    [self createTopView];
     [self createTableView];
 }
 -(void)createBarButtonItem{
@@ -79,8 +82,21 @@ static NSString *cellMain = @"cellMain";
     
 }
 
+-(void)createTopView{
+    NSArray *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_SearchCView" owner:nil options:nil];
+    HT_Par_SearchCView *topView=[nib firstObject];
+    topView.frame=CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1100*70);
+    
+//    UITapGestureRecognizer * tapPerson = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapThePersonView)];
+//    [topView.ViewPerson addGestureRecognizer:tapPerson];
+    _topView=topView;
+    [self.view addSubview:_topView];
+    
+
+}
+
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
 //    _tableView.backgroundColor = [UIColor lightGrayColor];

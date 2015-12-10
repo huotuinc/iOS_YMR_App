@@ -10,6 +10,7 @@
 #import "HT_Infor_NewsViewController.h"
 #import "HT_Infor_CommentViewController.h"
 #import "HT_Infor_GroupViewController.h"
+#import "HT_Infor_ShareViewController.h"
 
 #import "HT_Infor_MainTableViewCell.h"
 
@@ -75,6 +76,8 @@ static NSString *cellIMain = @"cellIMain";
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)clickRightButton{
+    HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
+    [self.navigationController pushViewController:share animated:YES];
 
 }
 #pragma mark UITableViewDelegate

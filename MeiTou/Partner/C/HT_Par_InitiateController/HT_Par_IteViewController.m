@@ -91,7 +91,7 @@ static NSString *cellIte = @"cellIte";
         HT_Par_IteProjectDoneHeaderCView *headerView=[nib firstObject];
         headerView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1100*222/190*270);
         UITapGestureRecognizer * tapHeadGroup = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHeadGroup)];
-        [headerView.ViewHeadGroup addGestureRecognizer:tapHeadGroup];
+        [headerView.viewHeadGroup addGestureRecognizer:tapHeadGroup];
         _headerView=headerView;
         
     }else{

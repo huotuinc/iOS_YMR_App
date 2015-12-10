@@ -11,11 +11,26 @@
 @interface HT_Par_SubProjectDoneHeaderCView : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelTime;
-@property (weak, nonatomic) IBOutlet UILabel *labelInitical;
+@property (weak, nonatomic) IBOutlet UILabel *labelPrice;
 @property (weak, nonatomic) IBOutlet UILabel *labelScore;
 @property (weak, nonatomic) IBOutlet UILabel *labelAttend;
 @property (weak, nonatomic) IBOutlet UILabel *labelMoney;
 @property (weak, nonatomic) IBOutlet UIView *ViewHeadGroup;
 @property (weak, nonatomic) IBOutlet UILabel *labelSuccess;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (weak, nonatomic) IBOutlet UILabel *labelEnd;
+@property (weak, nonatomic) IBOutlet UILabel *labelStart;
+@property (weak, nonatomic) IBOutlet UILabel *labelBought;
+@property (weak, nonatomic) IBOutlet UILabel *labelRest;
 
+
+@property (weak, nonatomic) IBOutlet UIView *viewHeadGroup;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVRight;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imagevLine;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVLineB;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageVTop;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVState;
+@property (weak, nonatomic) IBOutlet UIProgressView *viewProgress;
 @end

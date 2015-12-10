@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="380" height="250"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="380" height="249.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="380" height="250"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYo-FQ-PFo">
@@ -43,15 +43,15 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-wq-8zV" userLabel="TimeLabel">
-                                                <rect key="frame" x="112" y="57" width="234" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFZ-M3-ZOs" userLabel="DateLabel">
+                                                <rect key="frame" x="56" y="57" width="54" height="40"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFZ-M3-ZOs" userLabel="DateLabel">
-                                                <rect key="frame" x="56" y="57" width="54" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-wq-8zV" userLabel="TimeLabel">
+                                                <rect key="frame" x="112" y="57" width="234" height="40"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,13 +95,6 @@
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiM-uu-7Z0" userLabel="PriceLabel">
-                                                                <rect key="frame" x="38" y="0.0" width="62" height="39"/>
-                                                                <animations/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="参与:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHh-NX-1Z8" userLabel="AttendLabel">
                                                                 <rect key="frame" x="0.0" y="39" width="38" height="39"/>
                                                                 <animations/>
@@ -111,6 +104,13 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnJ-DL-cGo" userLabel="PersonLabel">
                                                                 <rect key="frame" x="38" y="39" width="62" height="39"/>
+                                                                <animations/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiM-uu-7Z0" userLabel="PriceLabel">
+                                                                <rect key="frame" x="38" y="0.0" width="62" height="39"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -229,8 +229,20 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIZ-5G-y1i" userLabel="CView">
                                         <rect key="frame" x="0.0" y="175" width="346" height="29"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hJv-dC-E4d">
+                                                <rect key="frame" x="0.0" y="10" width="346" height="10"/>
+                                                <animations/>
+                                            </progressView>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="hJv-dC-E4d" firstAttribute="height" secondItem="mIZ-5G-y1i" secondAttribute="height" multiplier="20:60" id="7ir-Gp-x6X"/>
+                                            <constraint firstItem="hJv-dC-E4d" firstAttribute="centerX" secondItem="mIZ-5G-y1i" secondAttribute="centerX" id="CMt-FS-eNQ"/>
+                                            <constraint firstItem="hJv-dC-E4d" firstAttribute="centerY" secondItem="mIZ-5G-y1i" secondAttribute="centerY" id="VaW-pv-oLV"/>
+                                            <constraint firstItem="hJv-dC-E4d" firstAttribute="width" secondItem="mIZ-5G-y1i" secondAttribute="width" id="Zkg-bb-hmY"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -290,10 +302,27 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="imageVTop" destination="Emx-Q8-3Zf" id="gSf-dA-oMG"/>
+                <outlet property="imageVline" destination="XEV-Fe-ao4" id="L2o-Ed-Y5M"/>
+                <outlet property="labelAttend" destination="WHh-NX-1Z8" id="9hK-Rf-sxz"/>
+                <outlet property="labelDate" destination="LFZ-M3-ZOs" id="Xgv-Bg-fSD"/>
+                <outlet property="labelDone" destination="tyY-Wi-4FK" id="cVM-hN-KY4"/>
+                <outlet property="labelEnd" destination="jxI-EV-nfl" id="osw-3I-fj4"/>
+                <outlet property="labelMoney" destination="8Ov-W8-GTA" id="K7Z-Ca-qzr"/>
+                <outlet property="labelPerson" destination="ZnJ-DL-cGo" id="WKN-fx-nLP"/>
+                <outlet property="labelPrice" destination="XiM-uu-7Z0" id="qLD-2L-6AH"/>
+                <outlet property="labelStart" destination="lCv-OJ-L51" id="R3D-AT-45b"/>
+                <outlet property="labelTarget" destination="VW4-ce-oxo" id="Mii-Hj-qmJ"/>
+                <outlet property="labelTime" destination="Tid-wq-8zV" id="Ad2-CH-HUf"/>
+                <outlet property="labelTip" destination="B4a-9R-o5u" id="1aZ-HL-pYE"/>
+                <outlet property="labelTitle" destination="mQE-Re-jdg" id="EDV-sQ-LWb"/>
+                <outlet property="viewProgress" destination="hJv-dC-E4d" id="frU-Xs-elC"/>
+            </connections>
             <point key="canvasLocation" x="335" y="262"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="line" width="902" height="38"/>
+        <image name="line" width="180" height="180"/>
     </resources>
 </document>

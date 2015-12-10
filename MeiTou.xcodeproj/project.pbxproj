@@ -96,6 +96,9 @@
 		F280268E1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F280268C1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m */; };
 		F280268F1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F280268D1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib */; };
 		F288685D1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F288685C1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.m */; };
+		F28E88321C19285E00E75298 /* HT_Infor_ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28E88311C19285E00E75298 /* HT_Infor_ShareViewController.m */; };
+		F28E88361C192B3B00E75298 /* HT_Par_SearchCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28E88341C192B3B00E75298 /* HT_Par_SearchCView.m */; };
+		F28E88371C192B3B00E75298 /* HT_Par_SearchCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F28E88351C192B3B00E75298 /* HT_Par_SearchCView.xib */; };
 		F290850E1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290850D1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m */; };
 		F29085121C0EBD9200F779FA /* HT_Par_BuyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29085101C0EBD9200F779FA /* HT_Par_BuyHeaderView.m */; };
 		F29085131C0EBD9200F779FA /* HT_Par_BuyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29085111C0EBD9200F779FA /* HT_Par_BuyHeaderView.xib */; };
@@ -315,6 +318,11 @@
 		F280268D1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_PersonTableViewCell.xib; sourceTree = "<group>"; };
 		F288685B1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyPhoneViewController.h; sourceTree = "<group>"; };
 		F288685C1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyPhoneViewController.m; sourceTree = "<group>"; };
+		F28E88301C19285E00E75298 /* HT_Infor_ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_ShareViewController.h; sourceTree = "<group>"; };
+		F28E88311C19285E00E75298 /* HT_Infor_ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_ShareViewController.m; sourceTree = "<group>"; };
+		F28E88331C192B3A00E75298 /* HT_Par_SearchCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_SearchCView.h; sourceTree = "<group>"; };
+		F28E88341C192B3B00E75298 /* HT_Par_SearchCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_SearchCView.m; sourceTree = "<group>"; };
+		F28E88351C192B3B00E75298 /* HT_Par_SearchCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_SearchCView.xib; sourceTree = "<group>"; };
 		F290850C1C0E9E3F00F779FA /* HT_Par_BuyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyListViewController.h; sourceTree = "<group>"; };
 		F290850D1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyListViewController.m; sourceTree = "<group>"; };
 		F290850F1C0EBD9200F779FA /* HT_Par_BuyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyHeaderView.h; sourceTree = "<group>"; };
@@ -711,6 +719,8 @@
 			children = (
 				F21A4B7D1C0D7FD300C1F098 /* HT_InformationViewController.h */,
 				F21A4B7E1C0D7FD300C1F098 /* HT_InformationViewController.m */,
+				F28E88301C19285E00E75298 /* HT_Infor_ShareViewController.h */,
+				F28E88311C19285E00E75298 /* HT_Infor_ShareViewController.m */,
 				F206979F1C15B6E100ED2017 /* HT_Infor_NewsController */,
 				F206979D1C15B6E100ED2017 /* HT_Infor_CommentController */,
 				F206979E1C15B6E100ED2017 /* HT_Infor_GroupController */,
@@ -800,6 +810,9 @@
 				F2137BB51C17BBC10030E7D8 /* HT_Par_MainPickerCView.h */,
 				F2137BB61C17BBC10030E7D8 /* HT_Par_MainPickerCView.m */,
 				F2137BB71C17BBC10030E7D8 /* HT_Par_MainPickerCView.xib */,
+				F28E88331C192B3A00E75298 /* HT_Par_SearchCView.h */,
+				F28E88341C192B3B00E75298 /* HT_Par_SearchCView.m */,
+				F28E88351C192B3B00E75298 /* HT_Par_SearchCView.xib */,
 				F272619D1C07FCD30081EC95 /* HT_Par_Buy */,
 				F272619E1C07FCD30081EC95 /* HT_Par_initiate */,
 				F272619F1C07FCD30081EC95 /* HT_Par_Subscription */,
@@ -1087,6 +1100,7 @@
 				F27261C21C07FE240081EC95 /* HT_Par_IteResult_HeadView.xib in Resources */,
 				F2A019391C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib in Resources */,
 				F2C9F8491C0C576500FC454B /* HT_HomePage_LeftBottomView.xib in Resources */,
+				F28E88371C192B3B00E75298 /* HT_Par_SearchCView.xib in Resources */,
 				F27BFA951C18823E007D928A /* HT_Par_IteOrderCView.xib in Resources */,
 				F27261CC1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.xib in Resources */,
 				F27261A41C07FD510081EC95 /* HT_Par_MainTopView.xib in Resources */,
@@ -1163,6 +1177,7 @@
 				F272615C1C07E61B0081EC95 /* AppDelegate.m in Sources */,
 				F27261C11C07FE240081EC95 /* HT_Par_IteResult_HeadView.m in Sources */,
 				F263CA0A1C1527E100EE78CA /* HT_Par_ItePaymentOrderViewController.m in Sources */,
+				F28E88361C192B3B00E75298 /* HT_Par_SearchCView.m in Sources */,
 				F29944A11C084D9600823E75 /* HT_Infor_ShareCView.m in Sources */,
 				F21E44F81C102F0100657249 /* UIViewController+MMDrawerController.m in Sources */,
 				F21E45001C1039D900657249 /* HT_HomePage_LeftHeadView.m in Sources */,
@@ -1183,6 +1198,7 @@
 				F2137BB81C17BBC10030E7D8 /* HT_Par_MainPickerCView.m in Sources */,
 				F22B23EE1C116EC40009CCF4 /* HT_Par_IteListViewController.m in Sources */,
 				F290850E1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m in Sources */,
+				F28E88321C19285E00E75298 /* HT_Infor_ShareViewController.m in Sources */,
 				F2D7AED01C171D4B00725B4E /* HT_Infor_GroupWebViewController.m in Sources */,
 				F2C00D841C1075370008833B /* HT_Par_IteViewController.m in Sources */,
 				F21A4B821C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.m in Sources */,

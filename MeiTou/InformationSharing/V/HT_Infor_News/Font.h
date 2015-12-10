@@ -9,6 +9,5 @@
 #ifndef Font_h
 #define Font_h
 
-#define TITLEFONT [UIFont systemFontOfSize:(float)(30/640*SCREEN_WITH)]
-#define CONTENTFONT [UIFont systemFontOfSize:(float)(20/640*SCREEN_WITH)]
+#define FONT_SIZE(i) SCREEN_WITH*((i)/640.0f) 
 #endif /* Font_h */

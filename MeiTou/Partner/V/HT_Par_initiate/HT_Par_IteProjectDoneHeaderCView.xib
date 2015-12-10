@@ -14,12 +14,25 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="267"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="266.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="267"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3HP-eU-olZ" userLabel="BaseView">
                         <rect key="frame" x="8" y="8" width="304" height="250"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DM9-qk-Pr2" userLabel="TopImage View">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="A1M-kH-osg"/>
+                                    <constraint firstAttribute="height" constant="25" id="dSI-ol-Kc9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A1M-kH-osg"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="830-0L-hRb" userLabel="MainView">
                                 <rect key="frame" x="0.0" y="25" width="304" height="225"/>
                                 <subviews>
@@ -174,28 +187,28 @@
                                                                 <rect key="frame" x="83" y="0.0" width="83" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已筹集" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pd-kU-S1j" userLabel="DoneLabel">
-                                                                        <rect key="frame" x="0.0" y="36" width="37.5" height="35"/>
+                                                                        <rect key="frame" x="0.0" y="36" width="38" height="35"/>
                                                                         <animations/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150万" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYg-OY-M2o" userLabel="TipLabel">
-                                                                        <rect key="frame" x="37" y="36" width="45.5" height="35"/>
+                                                                        <rect key="frame" x="38" y="36" width="45" height="35"/>
                                                                         <animations/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目标金额:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YG-Zs-KoB" userLabel="TargetLabel">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="36"/>
                                                                         <animations/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq1-Vj-WST" userLabel="MoneyLabel">
-                                                                        <rect key="frame" x="37" y="0.0" width="45.5" height="36"/>
+                                                                        <rect key="frame" x="38" y="0.0" width="45" height="36"/>
                                                                         <animations/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -301,18 +314,18 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cu-pC-JNg" userLabel="A_BView">
                                                 <rect key="frame" x="2" y="132" width="286" height="17"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qw" translatesAutoresizingMaskIntoConstraints="NO" id="4ac-EW-D4O" userLabel="ProgressImage View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="286" height="17"/>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GMp-G3-w9e">
+                                                        <rect key="frame" x="96" y="7" width="150" height="2"/>
                                                         <animations/>
-                                                    </imageView>
+                                                    </progressView>
                                                 </subviews>
                                                 <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="4ac-EW-D4O" firstAttribute="leading" secondItem="0cu-pC-JNg" secondAttribute="leading" id="1WF-dt-vYD"/>
-                                                    <constraint firstAttribute="trailing" secondItem="4ac-EW-D4O" secondAttribute="trailing" id="6tE-f5-uvq"/>
-                                                    <constraint firstItem="4ac-EW-D4O" firstAttribute="top" secondItem="0cu-pC-JNg" secondAttribute="top" id="M0Z-lv-bvX"/>
-                                                    <constraint firstAttribute="bottom" secondItem="4ac-EW-D4O" secondAttribute="bottom" id="TIa-Q7-VQ3"/>
+                                                    <constraint firstItem="GMp-G3-w9e" firstAttribute="centerX" secondItem="0cu-pC-JNg" secondAttribute="centerX" id="1LF-UM-2z8"/>
+                                                    <constraint firstItem="GMp-G3-w9e" firstAttribute="centerY" secondItem="0cu-pC-JNg" secondAttribute="centerY" id="Bjy-cn-XxX"/>
+                                                    <constraint firstItem="GMp-G3-w9e" firstAttribute="width" secondItem="0cu-pC-JNg" secondAttribute="width" id="UYQ-7G-LS5"/>
+                                                    <constraint firstItem="GMp-G3-w9e" firstAttribute="height" secondItem="0cu-pC-JNg" secondAttribute="height" id="ken-Q6-hiP"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -490,19 +503,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="DM9-qk-Pr2" userLabel="TopImage View">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="25"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="A1M-kH-osg"/>
-                                    <constraint firstAttribute="height" constant="25" id="dSI-ol-Kc9"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="A1M-kH-osg"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -535,14 +535,26 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="ViewHeadGroup" destination="n6Y-dG-nL2" id="5xA-GR-Fx3"/>
-                <outlet property="labelAttend" destination="Mc8-k9-eVf" id="AKF-ee-Lxg"/>
-                <outlet property="labelDate" destination="fMQ-bI-8gq" id="g2G-Qa-BKI"/>
-                <outlet property="labelInitical" destination="Id1-Sk-d99" id="yef-lc-OrK"/>
-                <outlet property="labelMoney" destination="4Pd-kU-S1j" id="Ji1-8u-nc7"/>
-                <outlet property="labelScore" destination="1YG-Zs-KoB" id="Skf-15-z63"/>
-                <outlet property="labelSuccess" destination="V4o-8o-2cm" id="yFp-bm-Xx7"/>
-                <outlet property="labelTime" destination="hc8-4j-n4K" id="lfu-TM-aTP"/>
+                <outlet property="imageVRight" destination="8UH-jy-XdJ" id="H3u-KF-FbL"/>
+                <outlet property="imageVTop" destination="DM9-qk-Pr2" id="K06-6f-AJK"/>
+                <outlet property="imageVline" destination="37h-GD-hhE" id="dfz-IH-AVt"/>
+                <outlet property="imagevState" destination="hbc-7u-fa0" id="6g5-DA-jn1"/>
+                <outlet property="labelAttend" destination="tXz-CC-xpM" id="7R5-bt-dRv"/>
+                <outlet property="labelDate" destination="fMQ-bI-8gq" id="5Lu-ww-PRT"/>
+                <outlet property="labelDone" destination="4Pd-kU-S1j" id="6p9-95-fCH"/>
+                <outlet property="labelEnd" destination="ufT-Yq-mRp" id="ngr-zw-PUQ"/>
+                <outlet property="labelMoney" destination="fq1-Vj-WST" id="wm0-N5-hJF"/>
+                <outlet property="labelPerson" destination="Mc8-k9-eVf" id="Dze-Hm-xMV"/>
+                <outlet property="labelPrice" destination="Id1-Sk-d99" id="bbt-FP-B5a"/>
+                <outlet property="labelResult" destination="I1x-Rv-YEi" id="esL-bw-blx"/>
+                <outlet property="labelStart" destination="bY7-yb-BZw" id="o2Y-Lu-f7s"/>
+                <outlet property="labelSuccess" destination="V4o-8o-2cm" id="P0u-OJ-vPc"/>
+                <outlet property="labelTarget" destination="1YG-Zs-KoB" id="RKH-kM-ScX"/>
+                <outlet property="labelTime" destination="hc8-4j-n4K" id="QBJ-hn-Wav"/>
+                <outlet property="labelTip" destination="LYg-OY-M2o" id="ZgO-3y-2Gm"/>
+                <outlet property="labelTitle" destination="WZY-4z-nDi" id="IxC-Gh-62x"/>
+                <outlet property="viewHeadGroup" destination="n6Y-dG-nL2" id="hAf-XE-LUg"/>
+                <outlet property="viewProgress" destination="GMp-G3-w9e" id="2NH-PR-W4t"/>
             </connections>
             <point key="canvasLocation" x="341" y="265.5"/>
         </tableViewCell>
@@ -550,7 +562,5 @@
     <resources>
         <image name="1" width="494" height="324"/>
         <image name="head" width="180" height="180"/>
-        <image name="line" width="902" height="38"/>
-        <image name="qw" width="1272" height="102"/>
     </resources>
 </document>

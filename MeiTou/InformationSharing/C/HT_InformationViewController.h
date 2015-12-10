@@ -7,7 +7,9 @@
 //
 
 #import "HT_BaseViewController.h"
-
+/**
+ *  我要分享
+ */
 @interface HT_InformationViewController : HT_BaseViewController
 
 @end

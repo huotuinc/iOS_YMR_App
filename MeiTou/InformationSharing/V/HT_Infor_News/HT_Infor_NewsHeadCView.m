@@ -25,8 +25,9 @@
     
     _labelScore.textColor=REDCOLOR;
     
-//    _labelTitle.font=TITLEFONT;
-//    
+    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(32)];
+    NSLog(@"******** %f **********",FONT_SIZE(32));
+//
 //    _labelEnd.textColor=CONTENTFONT;
 //    _labelTime.textColor=CONTENTFONT;
 //    _labelEndTime.textColor=CONTENTFONT;
