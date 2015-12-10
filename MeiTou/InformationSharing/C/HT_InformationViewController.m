@@ -34,7 +34,6 @@ static NSString *cellIMain = @"cellIMain";
     
     
     
-    
 }
 
 - (void)viewDidLoad {

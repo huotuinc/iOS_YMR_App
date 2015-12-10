@@ -96,25 +96,33 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR7-le-mhl" userLabel="SelectLabel">
-                                                <rect key="frame" x="82.5" y="0.0" width="247.5" height="31.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择金额" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR7-le-mhl" userLabel="SelectLabel">
+                                                <rect key="frame" x="82" y="0.0" width="247.5" height="31.5"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.82321316519999999" green="0.85519255049999998" blue="0.84816209009999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufx-x4-LFx" userLabel="SelectView">
+                                                <rect key="frame" x="82" y="0.5" width="247.5" height="31.5"/>
+                                                <animations/>
+                                            </view>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="ufx-x4-LFx" firstAttribute="top" secondItem="mWT-xF-pUw" secondAttribute="top" id="986-j3-9Bf"/>
                                             <constraint firstItem="W2n-3y-5WR" firstAttribute="leading" secondItem="mWT-xF-pUw" secondAttribute="leading" id="D2k-9k-ra8"/>
                                             <constraint firstItem="W2n-3y-5WR" firstAttribute="top" secondItem="mWT-xF-pUw" secondAttribute="top" id="InV-vc-BNm"/>
                                             <constraint firstAttribute="bottom" secondItem="W2n-3y-5WR" secondAttribute="bottom" id="KMn-M2-fkK"/>
                                             <constraint firstAttribute="trailing" secondItem="dR7-le-mhl" secondAttribute="trailing" id="Ka1-O6-5YI"/>
                                             <constraint firstItem="dR7-le-mhl" firstAttribute="leading" secondItem="W2n-3y-5WR" secondAttribute="trailing" id="MaC-LA-0FP"/>
+                                            <constraint firstItem="ufx-x4-LFx" firstAttribute="leading" secondItem="W2n-3y-5WR" secondAttribute="trailing" id="UH4-kV-SMd"/>
+                                            <constraint firstAttribute="bottom" secondItem="ufx-x4-LFx" secondAttribute="bottom" id="aJj-4l-GyM"/>
                                             <constraint firstItem="dR7-le-mhl" firstAttribute="top" secondItem="mWT-xF-pUw" secondAttribute="top" id="avQ-fz-3lx"/>
                                             <constraint firstAttribute="bottom" secondItem="dR7-le-mhl" secondAttribute="bottom" id="lRN-Kc-PbW"/>
+                                            <constraint firstAttribute="trailing" secondItem="ufx-x4-LFx" secondAttribute="trailing" id="uPI-mX-0kr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xm-Wp-AHb" userLabel="MarkView">
@@ -233,6 +241,8 @@
                 <outlet property="textFMark" destination="wqq-EF-rEi" id="Ryi-gm-D9P"/>
                 <outlet property="textFTel" destination="oUt-cn-Tek" id="g5a-fW-QeB"/>
                 <outlet property="textFname" destination="UOm-C1-rAh" id="8GX-K0-Hbn"/>
+                <outlet property="viewMoney" destination="mWT-xF-pUw" id="3a2-v0-pGe"/>
+                <outlet property="viewSelect" destination="ufx-x4-LFx" id="HKs-Bq-1C9"/>
             </connections>
             <point key="canvasLocation" x="231" y="376"/>
         </tableViewCell>

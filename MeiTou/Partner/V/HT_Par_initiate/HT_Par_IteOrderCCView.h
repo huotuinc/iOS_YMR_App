@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HT_Par_SubClaimCView : UITableViewCell
+@interface HT_Par_IteOrderCCView : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelTel;
 @property (weak, nonatomic) IBOutlet UILabel *labelMoney;

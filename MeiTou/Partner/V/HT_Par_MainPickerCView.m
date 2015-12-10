@@ -1,14 +1,14 @@
 //
-//  HT_Cpn_IteSubscriptionTableViewCell.m
-//  HTTableViewCell
+//  HT_Par_MainPickerCView.m
+//  MeiTou
 //
-//  Created by che on 15/11/23.
+//  Created by che on 15/12/9.
 //  Copyright © 2015年 车. All rights reserved.
 //
 
-#import "HT_Par_IteCooperationCView.h"
+#import "HT_Par_MainPickerCView.h"
 
-@implementation HT_Par_IteCooperationCView
+@implementation HT_Par_MainPickerCView
 
 - (void)awakeFromNib {
     // Initialization code

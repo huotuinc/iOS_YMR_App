@@ -8,10 +8,11 @@
 
 #import "HT_HomePage_PersonViewTableViewController.h"
 #import "UIViewController+MMDrawerController.h"
-#import "MMDrawerBarButtonItem.h"
+#import "HT_HomePage_PointsViewController.h"
 #import "HT_HomePageViewController.h"
 #import "HT_HomePage_PhoneViewController.h"
 
+#import "MMDrawerBarButtonItem.h"
 @interface HT_HomePage_PersonViewTableViewController ()
 
 @end
@@ -93,6 +94,12 @@
 }
 #pragma mark - Table view data source
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==1) {
+        if (indexPath.row==0) {
+            HT_HomePage_PointsViewController *point=[[HT_HomePage_PointsViewController alloc]init];
+            [self.navigationController pushViewController:point animated:YES];
+        }
+    }
     if(indexPath.section==2){
         if (indexPath.row==2) {
             HT_HomePage_PhoneViewController *phone=[[HT_HomePage_PhoneViewController alloc]init];

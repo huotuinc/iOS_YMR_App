@@ -7,6 +7,7 @@
 //
 
 #import "HT_Par_SubClaimViewController.h"
+#import "AddressChoicePickerView.h"
 
 #import "HT_Par_SubClaimCView.h"
 
@@ -15,7 +16,9 @@
 @end
 
 @implementation HT_Par_SubClaimViewController{
-    UIView *_mainView;
+//    UIView *_mainView;
+    HT_Par_SubClaimCView *mainView;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -48,15 +51,26 @@
 
 -(void)createMainView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_SubClaimCView" owner:nil options:nil];
-    HT_Par_SubClaimCView *mainView=[nib firstObject];
-    //    [mainView.buttonBound addTarget:self action:@selector(goToPayView) forControlEvents:UIControlEventTouchUpInside];
+    mainView=[nib firstObject];
     mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
-    _mainView=mainView;
-    [self.view addSubview:_mainView];
+    mainView.viewSelect.userInteractionEnabled=YES;
+    UITapGestureRecognizer * tapMoney = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheLabelSelect)];
+    [mainView.viewSelect addGestureRecognizer:tapMoney];
+    [self.view addSubview:mainView];
+   
+}
+/**
+ *  tap事件
+ */
+-(void)tapTheLabelSelect{
+    AddressChoicePickerView *addressPickerView = [[AddressChoicePickerView alloc]init];
+    addressPickerView.block = ^(AddressChoicePickerView *view,UIButton *btn,AreaObject *locate){
+        mainView.labelSelect.text = [NSString stringWithFormat:@"%@",locate];
+
+    };
+    [addressPickerView show];
     
-    
-    
-    
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

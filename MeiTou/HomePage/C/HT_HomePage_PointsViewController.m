@@ -1,21 +1,20 @@
 //
-//  HT_Par_IteCooperationViewController.m
+//  HT_HomePage_PointsViewController.m
 //  MeiTou
 //
-//  Created by che on 15/12/7.
+//  Created by che on 15/12/9.
 //  Copyright © 2015年 车. All rights reserved.
 //
 
-#import "HT_Par_IteCooperationViewController.h"
-#import "HT_Par_ItePaymentOrderViewController.h"
+#import "HT_HomePage_PointsViewController.h"
 
-#import "HT_Par_IteCooperationCView.h"
+#import "HT_HomePage_PointsCView.h"
 
-@interface HT_Par_IteCooperationViewController ()
+@interface HT_HomePage_PointsViewController ()
 
 @end
 
-@implementation HT_Par_IteCooperationViewController{
+@implementation HT_HomePage_PointsViewController{
     UIView *_mainView;
 }
 
@@ -49,20 +48,14 @@
 
 -(void)createMainView{
     
-    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteCooperationCView" owner:nil options:nil];
-    HT_Par_IteCooperationCView *mainView=[nib firstObject];
-    [mainView.buttonSubmit addTarget:self action:@selector(goToPayView) forControlEvents:UIControlEventTouchUpInside];
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_PointsCView" owner:nil options:nil];
+    HT_HomePage_PointsCView *mainView=[nib firstObject];
     mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
     _mainView=mainView;
     [self.view addSubview:_mainView];
     
     
     
-    
-}
--(void)goToPayView{
-    HT_Par_ItePaymentOrderViewController *pay=[[HT_Par_ItePaymentOrderViewController alloc]init];
-    [self.navigationController pushViewController:pay animated:YES];
     
 }
 

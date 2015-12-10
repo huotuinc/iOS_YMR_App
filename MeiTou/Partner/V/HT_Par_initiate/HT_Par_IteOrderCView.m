@@ -1,8 +1,8 @@
 //
-//  HT_Par_IteOrderView.m
-//  MeiTou
+//  HT_Cpn_IteSubscriptionTableViewCell.m
+//  HTTableViewCell
 //
-//  Created by che on 15/12/3.
+//  Created by che on 15/11/23.
 //  Copyright © 2015年 车. All rights reserved.
 //
 

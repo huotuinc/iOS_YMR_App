@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="302" id="KGk-i7-Jjw" customClass="HT_Par_MainPickerCView">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="302"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="301.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jg-Zy-Jjw">
+                        <rect key="frame" x="8" y="8" width="332" height="285.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-8q-TfT">
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwE-ri-2wy">
+                                        <rect key="frame" x="247" y="0.0" width="85" height="60"/>
+                                        <animations/>
+                                        <state key="normal" title="确定"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3A-rH-ydq">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="60"/>
+                                        <animations/>
+                                        <state key="normal" title="取消"/>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dwE-ri-2wy" firstAttribute="top" secondItem="F2e-8q-TfT" secondAttribute="top" id="J08-XD-1rC"/>
+                                    <constraint firstItem="dwE-ri-2wy" firstAttribute="leading" secondItem="U3A-rH-ydq" secondAttribute="trailing" id="vGp-mK-zBp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Px-0g-Hcg">
+                                <rect key="frame" x="0.0" y="60" width="332" height="217.5"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vY-cY-4Gx">
+                                        <rect key="frame" x="0.0" y="0.0" width="332" height="216"/>
+                                        <animations/>
+                                    </pickerView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F2e-8q-TfT" secondAttribute="trailing" id="598-S8-6wc"/>
+                            <constraint firstAttribute="bottom" secondItem="1Px-0g-Hcg" secondAttribute="bottom" id="6BR-bw-paC"/>
+                            <constraint firstItem="1Px-0g-Hcg" firstAttribute="top" secondItem="F2e-8q-TfT" secondAttribute="bottom" id="9SM-40-FSY"/>
+                            <constraint firstItem="F2e-8q-TfT" firstAttribute="height" secondItem="1jg-Zy-Jjw" secondAttribute="height" multiplier="65:375" id="BdA-Nm-J9D"/>
+                            <constraint firstAttribute="trailing" secondItem="1Px-0g-Hcg" secondAttribute="trailing" id="NTY-dg-NNL"/>
+                            <constraint firstItem="F2e-8q-TfT" firstAttribute="top" secondItem="1jg-Zy-Jjw" secondAttribute="top" id="RZD-uT-3RT"/>
+                            <constraint firstItem="1Px-0g-Hcg" firstAttribute="leading" secondItem="1jg-Zy-Jjw" secondAttribute="leading" id="het-Px-3Qk"/>
+                            <constraint firstItem="F2e-8q-TfT" firstAttribute="leading" secondItem="1jg-Zy-Jjw" secondAttribute="leading" id="txt-TC-UcO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="1jg-Zy-Jjw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4JS-K4-Imr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1jg-Zy-Jjw" secondAttribute="trailing" id="83N-Vk-bhw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="1jg-Zy-Jjw" secondAttribute="bottom" id="NZz-co-Ucd"/>
+                    <constraint firstItem="1jg-Zy-Jjw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="dPb-Av-bJX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <point key="canvasLocation" x="310" y="344"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -8,24 +8,45 @@
 
 #import "HT_Infor_NewsViewController.h"
 
-@interface HT_Infor_NewsViewController ()
+#import "HT_Infor_NewsHeadCView.h"
+#import "HT_Infor_BottomCView.h"
+#import "HT_Par_BuyMainTableViewCell.h"
+
+static NSString *cellIBuy=@"cellIBuy";
+@interface HT_Infor_NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
-@implementation HT_Infor_NewsViewController
-
-
-
+@implementation HT_Infor_NewsViewController{
+    UITableView *_tableView;
+    UIView *_headerView;//_tableV 的headerV
+    UIView *_bottomView;//底部视图
+}
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
-    self.navigationController.navigationBar.translucent=NO;
+    self.navigationController.navigationBar.translucent = NO;
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIBuy];
     [self createBarButtonItem];
+    
+    
+    
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor=[UIColor whiteColor];
+    
+    [self createHeadView];
+    [self createTableView];
+    [self createBottomView];
+    
+    //    NSLog(@"*****************************");
+    //    NSLog(@"%f",SCREEN_HEIGHT/1100*1000);
+    
+    
+    
+    
 }
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
@@ -50,6 +71,51 @@
     
 }
 
+-(void)createHeadView{
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_NewsHeadCView" owner:nil options:nil];
+    HT_Infor_NewsHeadCView *headerView=[nib firstObject];
+    headerView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1100*170);
+    _headerView=headerView;
+}
+
+-(void)createBottomView{
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_BottomCView" owner:nil options:nil];
+    HT_Infor_BottomCView *bottomView=[nib firstObject];
+    bottomView.frame=CGRectMake(0, SCREEN_HEIGHT/1150*(1150-90)-64, SCREEN_WITH, SCREEN_HEIGHT/1150*90);
+    [bottomView.buttonGo addTarget:self action:@selector(clickButtonGo) forControlEvents:UIControlEventTouchUpInside];
+    _bottomView=bottomView;
+    [self.view addSubview:_bottomView];
+    
+}
+-(void)createTableView{
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1150*(1150-90)-64) style:UITableViewStylePlain];
+    _tableView.delegate=self;
+    _tableView.dataSource=self;
+    _tableView.tableHeaderView=_headerView;
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:_tableView];
+}
+-(void)clickButtonGo{
+
+}
+
+#pragma mark UITableViewDelegate
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HT_Par_BuyMainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIBuy forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return SCREEN_HEIGHT ;
+    
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

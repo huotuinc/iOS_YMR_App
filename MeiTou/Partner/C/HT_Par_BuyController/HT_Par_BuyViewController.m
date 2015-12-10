@@ -136,12 +136,12 @@ static NSString *cellBuy = @"cellBuy";
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *_cell;
+   
         HT_Par_BuyMainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellBuy forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    _cell=cell;
     
-    return _cell;
+    
+    return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

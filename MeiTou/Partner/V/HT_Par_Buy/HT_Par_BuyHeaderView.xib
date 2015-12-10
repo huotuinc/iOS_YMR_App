@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYo-FQ-PFo">
                         <rect key="frame" x="8" y="8" width="364" height="233"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Emx-Q8-3Zf" userLabel="TopImage View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xdd" translatesAutoresizingMaskIntoConstraints="NO" id="Emx-Q8-3Zf" userLabel="TopImage View">
                                 <rect key="frame" x="0.0" y="0.0" width="364" height="22"/>
                                 <animations/>
                                 <constraints>
@@ -175,7 +175,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="line" width="902" height="38"/>
         <image name="qw" width="1272" height="102"/>
+        <image name="xdd" width="640" height="22"/>
     </resources>
 </document>
