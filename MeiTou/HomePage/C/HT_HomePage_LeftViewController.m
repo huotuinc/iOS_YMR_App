@@ -9,7 +9,7 @@
 #import "HT_HomePage_LeftViewController.h"
 #import "HT_HomePage_PersonViewTableViewController.h"
 #import "HT_HomePageViewController.h"
-#import "HT_AboutMeiTouViewController.h"
+#import "HT_About_CompanyViewController.h"
 #import "HT_PartnerViewController.h"
 #import "HT_InformationViewController.h"
 #import "HT_HomePage_ChangeViewController.h"
