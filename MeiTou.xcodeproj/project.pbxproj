@@ -128,6 +128,8 @@
 		F2C00D841C1075370008833B /* HT_Par_IteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C00D831C1075370008833B /* HT_Par_IteViewController.m */; };
 		F2C9F8481C0C576500FC454B /* HT_HomePage_LeftBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C9F8461C0C576500FC454B /* HT_HomePage_LeftBottomView.m */; };
 		F2C9F8491C0C576500FC454B /* HT_HomePage_LeftBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C9F8471C0C576500FC454B /* HT_HomePage_LeftBottomView.xib */; };
+		F2CE739F1C1AB81800E663D0 /* HT_About_BottomCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CE739D1C1AB81800E663D0 /* HT_About_BottomCView.m */; };
+		F2CE73A01C1AB81800E663D0 /* HT_About_BottomCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CE739E1C1AB81800E663D0 /* HT_About_BottomCView.xib */; };
 		F2D7AECC1C17121A00725B4E /* HT_Infor_BottomCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D7AECA1C17121A00725B4E /* HT_Infor_BottomCView.m */; };
 		F2D7AECD1C17121A00725B4E /* HT_Infor_BottomCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D7AECB1C17121A00725B4E /* HT_Infor_BottomCView.xib */; };
 		F2D7AED01C171D4B00725B4E /* HT_Infor_GroupWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D7AECF1C171D4B00725B4E /* HT_Infor_GroupWebViewController.m */; };
@@ -391,6 +393,9 @@
 		F2C9F8451C0C576500FC454B /* HT_HomePage_LeftBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_LeftBottomView.h; sourceTree = "<group>"; };
 		F2C9F8461C0C576500FC454B /* HT_HomePage_LeftBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_LeftBottomView.m; sourceTree = "<group>"; };
 		F2C9F8471C0C576500FC454B /* HT_HomePage_LeftBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_LeftBottomView.xib; sourceTree = "<group>"; };
+		F2CE739C1C1AB81800E663D0 /* HT_About_BottomCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_About_BottomCView.h; sourceTree = "<group>"; };
+		F2CE739D1C1AB81800E663D0 /* HT_About_BottomCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_About_BottomCView.m; sourceTree = "<group>"; };
+		F2CE739E1C1AB81800E663D0 /* HT_About_BottomCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_About_BottomCView.xib; sourceTree = "<group>"; };
 		F2D7AEC91C17121A00725B4E /* HT_Infor_BottomCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_BottomCView.h; sourceTree = "<group>"; };
 		F2D7AECA1C17121A00725B4E /* HT_Infor_BottomCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_BottomCView.m; sourceTree = "<group>"; };
 		F2D7AECB1C17121A00725B4E /* HT_Infor_BottomCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_BottomCView.xib; sourceTree = "<group>"; };
@@ -685,6 +690,9 @@
 				F2D7AED41C172BDA00725B4E /* HT_About_IntroTableViewCell.h */,
 				F2D7AED51C172BDA00725B4E /* HT_About_IntroTableViewCell.m */,
 				F2D7AED61C172BDA00725B4E /* HT_About_IntroTableViewCell.xib */,
+				F2CE739C1C1AB81800E663D0 /* HT_About_BottomCView.h */,
+				F2CE739D1C1AB81800E663D0 /* HT_About_BottomCView.m */,
+				F2CE739E1C1AB81800E663D0 /* HT_About_BottomCView.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1200,6 +1208,7 @@
 				F2F968501C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib in Resources */,
 				F2F9684B1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.xib in Resources */,
 				F27261A91C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.xib in Resources */,
+				F2CE73A01C1AB81800E663D0 /* HT_About_BottomCView.xib in Resources */,
 				F27261671C07E61B0081EC95 /* LaunchScreen.storyboard in Resources */,
 				F27261E51C07FE810081EC95 /* HT_About_MainTableViewCell.xib in Resources */,
 				F2A019331C0B2F6A0017234F /* HT_HomePageCollectionViewCell.xib in Resources */,
@@ -1275,6 +1284,7 @@
 				F27D673B1C0B49A900EE6C4F /* HT_HomePageViewController.m in Sources */,
 				F2FAAA001C1A7C4A00A90DA1 /* selectView.m in Sources */,
 				F2FAA9F91C1A7C4A00A90DA1 /* SystemMessageController.m in Sources */,
+				F2CE739F1C1AB81800E663D0 /* HT_About_BottomCView.m in Sources */,
 				F28E883A1C19A0C300E75298 /* HT_HomePage_ChangeViewController.m in Sources */,
 				F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */,
 				F27261A81C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.m in Sources */,
