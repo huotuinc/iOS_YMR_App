@@ -12,7 +12,7 @@
 #import "HT_HomePageCollectionViewCell.h"
 #import "HT_PartnerViewController.h"
 #import "HT_InformationViewController.h"
-#import "HT_AboutMeiTouViewController.h"
+#import "HT_AboutViewController.h"
 #import "HT_HomePage_ChangeViewController.h"
 #import "HT_HomePage_PersonViewTableViewController.h"
 #import "UIViewController+MMDrawerController.h"
@@ -71,7 +71,7 @@ static NSString *RFIdentifier = @"RFIdentifier";
     [self.navigationController pushViewController:person animated:YES];
 }
 -(void)pushToAbout{
-    HT_AboutMeiTouViewController *about = [[HT_AboutMeiTouViewController alloc] init];
+    HT_AboutViewController *about = [[HT_AboutViewController alloc] init];
     [self.navigationController pushViewController:about animated:YES];
 }
 - (void)pushToPartner {
@@ -173,7 +173,7 @@ static NSString *RFIdentifier = @"RFIdentifier";
         [self.navigationController pushViewController:information animated:YES];
     }
     if (indexPath.row==2) {
-        HT_AboutMeiTouViewController *about=[[HT_AboutMeiTouViewController alloc]init];
+        HT_AboutViewController *about=[[HT_AboutViewController alloc]init];
         [self.navigationController pushViewController:about animated:YES];
     }
     

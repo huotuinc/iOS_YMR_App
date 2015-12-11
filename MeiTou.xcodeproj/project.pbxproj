@@ -27,7 +27,6 @@
 		F21A4B791C0D7F6B00C1F098 /* HT_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B781C0D7F6B00C1F098 /* HT_BaseViewController.m */; };
 		F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B7B1C0D7FA100C1F098 /* HT_PartnerViewController.m */; };
 		F21A4B7F1C0D7FD300C1F098 /* HT_InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B7E1C0D7FD300C1F098 /* HT_InformationViewController.m */; };
-		F21A4B821C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B811C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.m */; };
 		F21A4B851C0D84C600C1F098 /* HT_HomePage_PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B841C0D84C600C1F098 /* HT_HomePage_PhoneViewController.m */; };
 		F21E44F41C102F0100657249 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F21E44E81C102F0100657249 /* LICENSE */; };
 		F21E44F51C102F0100657249 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F21E44EB1C102F0100657249 /* MMDrawerBarButtonItem.m */; };
@@ -161,6 +160,10 @@
 		F2FAA9FF1C1A7C4A00A90DA1 /* PraiseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FAA9F01C1A7C4A00A90DA1 /* PraiseCell.xib */; };
 		F2FAAA011C1A7C4A00A90DA1 /* SystemMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9F41C1A7C4A00A90DA1 /* SystemMessageCell.m */; };
 		F2FAAA021C1A7C4A00A90DA1 /* SystemMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FAA9F51C1A7C4A00A90DA1 /* SystemMessageCell.xib */; };
+		F2FAAA061C1AA04000A90DA1 /* HT_AboutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAAA041C1AA04000A90DA1 /* HT_AboutTableViewCell.m */; };
+		F2FAAA071C1AA04000A90DA1 /* HT_AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FAAA051C1AA04000A90DA1 /* HT_AboutTableViewCell.xib */; };
+		F2FAAA0A1C1AA0BC00A90DA1 /* HT_AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAAA091C1AA0BC00A90DA1 /* HT_AboutViewController.m */; };
+		F2FAAA0D1C1AA9D200A90DA1 /* HT_About_CompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAAA0C1C1AA9D200A90DA1 /* HT_About_CompanyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,8 +220,6 @@
 		F21A4B7B1C0D7FA100C1F098 /* HT_PartnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_PartnerViewController.m; sourceTree = "<group>"; };
 		F21A4B7D1C0D7FD300C1F098 /* HT_InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_InformationViewController.h; sourceTree = "<group>"; };
 		F21A4B7E1C0D7FD300C1F098 /* HT_InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_InformationViewController.m; sourceTree = "<group>"; };
-		F21A4B801C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_AboutMeiTouViewController.h; sourceTree = "<group>"; };
-		F21A4B811C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_AboutMeiTouViewController.m; sourceTree = "<group>"; };
 		F21A4B831C0D84C600C1F098 /* HT_HomePage_PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_PhoneViewController.h; sourceTree = "<group>"; };
 		F21A4B841C0D84C600C1F098 /* HT_HomePage_PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_PhoneViewController.m; sourceTree = "<group>"; };
 		F21E44E81C102F0100657249 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -444,6 +445,13 @@
 		F2FAA9F31C1A7C4A00A90DA1 /* SystemMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMessageCell.h; sourceTree = "<group>"; };
 		F2FAA9F41C1A7C4A00A90DA1 /* SystemMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMessageCell.m; sourceTree = "<group>"; };
 		F2FAA9F51C1A7C4A00A90DA1 /* SystemMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemMessageCell.xib; sourceTree = "<group>"; };
+		F2FAAA031C1AA04000A90DA1 /* HT_AboutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_AboutTableViewCell.h; sourceTree = "<group>"; };
+		F2FAAA041C1AA04000A90DA1 /* HT_AboutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_AboutTableViewCell.m; sourceTree = "<group>"; };
+		F2FAAA051C1AA04000A90DA1 /* HT_AboutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_AboutTableViewCell.xib; sourceTree = "<group>"; };
+		F2FAAA081C1AA0BC00A90DA1 /* HT_AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_AboutViewController.h; sourceTree = "<group>"; };
+		F2FAAA091C1AA0BC00A90DA1 /* HT_AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_AboutViewController.m; sourceTree = "<group>"; };
+		F2FAAA0B1C1AA9D200A90DA1 /* HT_About_CompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_About_CompanyViewController.h; sourceTree = "<group>"; };
+		F2FAAA0C1C1AA9D200A90DA1 /* HT_About_CompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_About_CompanyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -666,10 +674,12 @@
 		F272618B1C07E95F0081EC95 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				F21A4B801C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.h */,
-				F21A4B811C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.m */,
 				F2D7AED11C172BAB00725B4E /* HT_About_IntroViewController.h */,
 				F2D7AED21C172BAB00725B4E /* HT_About_IntroViewController.m */,
+				F2FAAA081C1AA0BC00A90DA1 /* HT_AboutViewController.h */,
+				F2FAAA091C1AA0BC00A90DA1 /* HT_AboutViewController.m */,
+				F2FAAA0B1C1AA9D200A90DA1 /* HT_About_CompanyViewController.h */,
+				F2FAAA0C1C1AA9D200A90DA1 /* HT_About_CompanyViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -687,6 +697,9 @@
 				F27261E11C07FE810081EC95 /* HT_About_MainTableViewCell.h */,
 				F27261E21C07FE810081EC95 /* HT_About_MainTableViewCell.m */,
 				F27261E31C07FE810081EC95 /* HT_About_MainTableViewCell.xib */,
+				F2FAAA031C1AA04000A90DA1 /* HT_AboutTableViewCell.h */,
+				F2FAAA041C1AA04000A90DA1 /* HT_AboutTableViewCell.m */,
+				F2FAAA051C1AA04000A90DA1 /* HT_AboutTableViewCell.xib */,
 				F2D7AED91C172D5A00725B4E /* HT_About_TopCView.h */,
 				F2D7AEDA1C172D5A00725B4E /* HT_About_TopCView.m */,
 				F2D7AEDB1C172D5A00725B4E /* HT_About_TopCView.xib */,
@@ -1244,6 +1257,7 @@
 				F22453681C0EEF8100A12AF8 /* HT_Par_BuyBottomView.xib in Resources */,
 				F2C00D801C1071180008833B /* HT_Par_IteBottomCView.xib in Resources */,
 				F21E44F41C102F0100657249 /* LICENSE in Resources */,
+				F2FAAA071C1AA04000A90DA1 /* HT_AboutTableViewCell.xib in Resources */,
 				F27261E01C07FE530081EC95 /* HT_Par_SubListTableViewCell.xib in Resources */,
 				F263CA171C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.xib in Resources */,
 				F2D7AEDD1C172D5A00725B4E /* HT_About_TopCView.xib in Resources */,
@@ -1331,6 +1345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FAAA0A1C1AA0BC00A90DA1 /* HT_AboutViewController.m in Sources */,
 				F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */,
 				F27D673B1C0B49A900EE6C4F /* HT_HomePageViewController.m in Sources */,
 				F2FAA9F91C1A7C4A00A90DA1 /* SystemMessageController.m in Sources */,
@@ -1349,9 +1364,11 @@
 				F272615F1C07E61B0081EC95 /* ViewController.m in Sources */,
 				F2B512A41C1138AC000599DC /* HT_Par_BuyPayViewController.m in Sources */,
 				F2FAAA011C1A7C4A00A90DA1 /* SystemMessageCell.m in Sources */,
+				F2FAAA061C1AA04000A90DA1 /* HT_AboutTableViewCell.m in Sources */,
 				F29085121C0EBD9200F779FA /* HT_Par_BuyHeaderView.m in Sources */,
 				F272615C1C07E61B0081EC95 /* AppDelegate.m in Sources */,
 				F27261C11C07FE240081EC95 /* HT_Par_IteResult_HeadView.m in Sources */,
+				F2FAAA0D1C1AA9D200A90DA1 /* HT_About_CompanyViewController.m in Sources */,
 				F263CA0A1C1527E100EE78CA /* HT_Par_ItePaymentOrderViewController.m in Sources */,
 				F2FAA9F81C1A7C4A00A90DA1 /* PraiseController.m in Sources */,
 				F28E88361C192B3B00E75298 /* HT_Par_SearchCView.m in Sources */,
@@ -1381,7 +1398,6 @@
 				F28E88321C19285E00E75298 /* HT_Infor_ShareViewController.m in Sources */,
 				F2D7AED01C171D4B00725B4E /* HT_Infor_GroupWebViewController.m in Sources */,
 				F2C00D841C1075370008833B /* HT_Par_IteViewController.m in Sources */,
-				F21A4B821C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.m in Sources */,
 				F27261B71C07FDFE0081EC95 /* HT_Par_IteListTableViewCell.m in Sources */,
 				F27261F31C07FE9E0081EC95 /* HT_Infor_HeadCView.m in Sources */,
 				F2FAA9F61C1A7C4A00A90DA1 /* CallMeController.m in Sources */,

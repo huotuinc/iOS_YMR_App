@@ -19,7 +19,7 @@
 //    @property (weak, nonatomic) IBOutlet UILabel *labelRule;
 //    @property (weak, nonatomic) IBOutlet UILabel *labelHelp;
     _imageVTop.image=[UIImage imageNamed:@"crowdfunding_content_center_success"];
-    _buttonTreasury.backgroundColor=REDCOLOR;
+    _buttonTreasury.backgroundColor=COLOR_BUTTON_RED;
     _buttonTreasury.titleLabel.textColor=[UIColor whiteColor];
     
 }

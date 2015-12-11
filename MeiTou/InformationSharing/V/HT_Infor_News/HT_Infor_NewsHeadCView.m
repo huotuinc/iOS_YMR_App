@@ -14,16 +14,16 @@
     // Initialization code
     _imageVLine.image=[UIImage imageNamed:@"line1"];
     
-    _labelTitle.textColor=TITLECOLOR;
+    _labelTitle.textColor=COLOR_TEXT_TITILE;
     
-    _labelEnd.textColor=CONTENTCOLOR;
-    _labelTime.textColor=CONTENTCOLOR;
-    _labelEndTime.textColor=CONTENTCOLOR;
-    _labelStart.textColor=CONTENTCOLOR;
-    _labelStartMoney.textColor=CONTENTCOLOR;
-    _labelEndMoney.textColor=CONTENTCOLOR;
+    _labelEnd.textColor=COLOR_TEXT_DATE;
+    _labelTime.textColor=COLOR_TEXT_DATE;
+    _labelEndTime.textColor=COLOR_TEXT_DATE;
+    _labelStart.textColor=COLOR_TEXT_DATE;
+    _labelStartMoney.textColor=COLOR_TEXT_DATE;
+    _labelEndMoney.textColor=COLOR_TEXT_DATE;
     
-    _labelScore.textColor=REDCOLOR;
+    _labelScore.textColor=COLOR_BUTTON_RED;
     
     _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(32)];
     NSLog(@"******** %f **********",FONT_SIZE(32));

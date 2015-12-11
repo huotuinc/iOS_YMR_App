@@ -24,7 +24,7 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    self.navigationController.navigationBar.barTintColor = NAVBARCOLOR1;
+    self.navigationController.navigationBar.barTintColor = COLOR_NAVBAR_A;
     [self createBarButtonItem];
     
     

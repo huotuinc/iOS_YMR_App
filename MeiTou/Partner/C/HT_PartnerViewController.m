@@ -33,7 +33,7 @@ static NSString *cellMain = @"cellMain";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    self.navigationController.navigationBar.barTintColor = NAVBARCOLOR1;
+    self.navigationController.navigationBar.barTintColor = COLOR_NAVBAR_A;
 
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
     
