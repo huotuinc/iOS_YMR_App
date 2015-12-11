@@ -147,6 +147,19 @@
 		F2F968501C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F9684E1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib */; };
 		F2F968591C158511000045B1 /* HT_Par_SubBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F968571C158511000045B1 /* HT_Par_SubBottomView.m */; };
 		F2F9685A1C158511000045B1 /* HT_Par_SubBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F968581C158511000045B1 /* HT_Par_SubBottomView.xib */; };
+		F2FAA9F61C1A7C4A00A90DA1 /* CallMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9DF1C1A7C4A00A90DA1 /* CallMeController.m */; };
+		F2FAA9F71C1A7C4A00A90DA1 /* CommentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9E11C1A7C4A00A90DA1 /* CommentsController.m */; };
+		F2FAA9F81C1A7C4A00A90DA1 /* PraiseController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9E31C1A7C4A00A90DA1 /* PraiseController.m */; };
+		F2FAA9F91C1A7C4A00A90DA1 /* SystemMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9E51C1A7C4A00A90DA1 /* SystemMessageController.m */; };
+		F2FAA9FA1C1A7C4A00A90DA1 /* CallMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9E91C1A7C4A00A90DA1 /* CallMeCell.m */; };
+		F2FAA9FB1C1A7C4A00A90DA1 /* CallMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FAA9EA1C1A7C4A00A90DA1 /* CallMeCell.xib */; };
+		F2FAA9FC1C1A7C4A00A90DA1 /* CommentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9EC1C1A7C4A00A90DA1 /* CommentsCell.m */; };
+		F2FAA9FD1C1A7C4A00A90DA1 /* CommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FAA9ED1C1A7C4A00A90DA1 /* CommentsCell.xib */; };
+		F2FAA9FE1C1A7C4A00A90DA1 /* PraiseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9EF1C1A7C4A00A90DA1 /* PraiseCell.m */; };
+		F2FAA9FF1C1A7C4A00A90DA1 /* PraiseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FAA9F01C1A7C4A00A90DA1 /* PraiseCell.xib */; };
+		F2FAAA001C1A7C4A00A90DA1 /* selectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9F21C1A7C4A00A90DA1 /* selectView.m */; };
+		F2FAAA011C1A7C4A00A90DA1 /* SystemMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FAA9F41C1A7C4A00A90DA1 /* SystemMessageCell.m */; };
+		F2FAAA021C1A7C4A00A90DA1 /* SystemMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FAA9F51C1A7C4A00A90DA1 /* SystemMessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -405,6 +418,28 @@
 		F2F968561C158511000045B1 /* HT_Par_SubBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_SubBottomView.h; sourceTree = "<group>"; };
 		F2F968571C158511000045B1 /* HT_Par_SubBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_SubBottomView.m; sourceTree = "<group>"; };
 		F2F968581C158511000045B1 /* HT_Par_SubBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_SubBottomView.xib; sourceTree = "<group>"; };
+		F2FAA9DE1C1A7C4A00A90DA1 /* CallMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallMeController.h; sourceTree = "<group>"; };
+		F2FAA9DF1C1A7C4A00A90DA1 /* CallMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallMeController.m; sourceTree = "<group>"; };
+		F2FAA9E01C1A7C4A00A90DA1 /* CommentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsController.h; sourceTree = "<group>"; };
+		F2FAA9E11C1A7C4A00A90DA1 /* CommentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsController.m; sourceTree = "<group>"; };
+		F2FAA9E21C1A7C4A00A90DA1 /* PraiseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PraiseController.h; sourceTree = "<group>"; };
+		F2FAA9E31C1A7C4A00A90DA1 /* PraiseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PraiseController.m; sourceTree = "<group>"; };
+		F2FAA9E41C1A7C4A00A90DA1 /* SystemMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMessageController.h; sourceTree = "<group>"; };
+		F2FAA9E51C1A7C4A00A90DA1 /* SystemMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMessageController.m; sourceTree = "<group>"; };
+		F2FAA9E81C1A7C4A00A90DA1 /* CallMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallMeCell.h; sourceTree = "<group>"; };
+		F2FAA9E91C1A7C4A00A90DA1 /* CallMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallMeCell.m; sourceTree = "<group>"; };
+		F2FAA9EA1C1A7C4A00A90DA1 /* CallMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallMeCell.xib; sourceTree = "<group>"; };
+		F2FAA9EB1C1A7C4A00A90DA1 /* CommentsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsCell.h; sourceTree = "<group>"; };
+		F2FAA9EC1C1A7C4A00A90DA1 /* CommentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsCell.m; sourceTree = "<group>"; };
+		F2FAA9ED1C1A7C4A00A90DA1 /* CommentsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsCell.xib; sourceTree = "<group>"; };
+		F2FAA9EE1C1A7C4A00A90DA1 /* PraiseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PraiseCell.h; sourceTree = "<group>"; };
+		F2FAA9EF1C1A7C4A00A90DA1 /* PraiseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PraiseCell.m; sourceTree = "<group>"; };
+		F2FAA9F01C1A7C4A00A90DA1 /* PraiseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PraiseCell.xib; sourceTree = "<group>"; };
+		F2FAA9F11C1A7C4A00A90DA1 /* selectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectView.h; sourceTree = "<group>"; };
+		F2FAA9F21C1A7C4A00A90DA1 /* selectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectView.m; sourceTree = "<group>"; };
+		F2FAA9F31C1A7C4A00A90DA1 /* SystemMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMessageCell.h; sourceTree = "<group>"; };
+		F2FAA9F41C1A7C4A00A90DA1 /* SystemMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMessageCell.m; sourceTree = "<group>"; };
+		F2FAA9F51C1A7C4A00A90DA1 /* SystemMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemMessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,6 +597,7 @@
 				F27261631C07E61B0081EC95 /* Assets.xcassets */,
 				F27261651C07E61B0081EC95 /* LaunchScreen.storyboard */,
 				F27261681C07E61B0081EC95 /* Info.plist */,
+				F2FAA9DC1C1A7C4A00A90DA1 /* personalCenter */,
 				F27261571C07E61B0081EC95 /* Supporting Files */,
 			);
 			path = MeiTou;
@@ -985,6 +1021,59 @@
 			path = HT_Par_InitiateController;
 			sourceTree = "<group>";
 		};
+		F2FAA9DC1C1A7C4A00A90DA1 /* personalCenter */ = {
+			isa = PBXGroup;
+			children = (
+				F2FAA9DD1C1A7C4A00A90DA1 /* controller */,
+				F2FAA9E61C1A7C4A00A90DA1 /* model */,
+				F2FAA9E71C1A7C4A00A90DA1 /* view */,
+			);
+			path = personalCenter;
+			sourceTree = "<group>";
+		};
+		F2FAA9DD1C1A7C4A00A90DA1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2FAA9DE1C1A7C4A00A90DA1 /* CallMeController.h */,
+				F2FAA9DF1C1A7C4A00A90DA1 /* CallMeController.m */,
+				F2FAA9E01C1A7C4A00A90DA1 /* CommentsController.h */,
+				F2FAA9E11C1A7C4A00A90DA1 /* CommentsController.m */,
+				F2FAA9E21C1A7C4A00A90DA1 /* PraiseController.h */,
+				F2FAA9E31C1A7C4A00A90DA1 /* PraiseController.m */,
+				F2FAA9E41C1A7C4A00A90DA1 /* SystemMessageController.h */,
+				F2FAA9E51C1A7C4A00A90DA1 /* SystemMessageController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F2FAA9E61C1A7C4A00A90DA1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F2FAA9E71C1A7C4A00A90DA1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F2FAA9E81C1A7C4A00A90DA1 /* CallMeCell.h */,
+				F2FAA9E91C1A7C4A00A90DA1 /* CallMeCell.m */,
+				F2FAA9EA1C1A7C4A00A90DA1 /* CallMeCell.xib */,
+				F2FAA9EB1C1A7C4A00A90DA1 /* CommentsCell.h */,
+				F2FAA9EC1C1A7C4A00A90DA1 /* CommentsCell.m */,
+				F2FAA9ED1C1A7C4A00A90DA1 /* CommentsCell.xib */,
+				F2FAA9EE1C1A7C4A00A90DA1 /* PraiseCell.h */,
+				F2FAA9EF1C1A7C4A00A90DA1 /* PraiseCell.m */,
+				F2FAA9F01C1A7C4A00A90DA1 /* PraiseCell.xib */,
+				F2FAA9F11C1A7C4A00A90DA1 /* selectView.h */,
+				F2FAA9F21C1A7C4A00A90DA1 /* selectView.m */,
+				F2FAA9F31C1A7C4A00A90DA1 /* SystemMessageCell.h */,
+				F2FAA9F41C1A7C4A00A90DA1 /* SystemMessageCell.m */,
+				F2FAA9F51C1A7C4A00A90DA1 /* SystemMessageCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1106,12 +1195,14 @@
 				F2A019391C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib in Resources */,
 				F2C9F8491C0C576500FC454B /* HT_HomePage_LeftBottomView.xib in Resources */,
 				F28E88371C192B3B00E75298 /* HT_Par_SearchCView.xib in Resources */,
+				F2FAA9FF1C1A7C4A00A90DA1 /* PraiseCell.xib in Resources */,
 				F27BFA951C18823E007D928A /* HT_Par_IteOrderCView.xib in Resources */,
 				F27261CC1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.xib in Resources */,
 				F27261A41C07FD510081EC95 /* HT_Par_MainTopView.xib in Resources */,
 				F2E443441C187D9F0077B904 /* HT_Par_IteCooperationCView.xib in Resources */,
 				F27261DE1C07FE530081EC95 /* HT_Par_SubClaimCView.xib in Resources */,
 				F2F9685A1C158511000045B1 /* HT_Par_SubBottomView.xib in Resources */,
+				F2FAA9FD1C1A7C4A00A90DA1 /* CommentsCell.xib in Resources */,
 				F29944A21C084D9600823E75 /* HT_Infor_ShareCView.xib in Resources */,
 				F27261B81C07FDFE0081EC95 /* HT_Par_IteListTableViewCell.xib in Resources */,
 				F29C69591C166B16000A8C29 /* HT_Infor_GroupTableViewCell.xib in Resources */,
@@ -1129,8 +1220,10 @@
 				F27261E01C07FE530081EC95 /* HT_Par_SubListTableViewCell.xib in Resources */,
 				F263CA171C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.xib in Resources */,
 				F2D7AEDD1C172D5A00725B4E /* HT_About_TopCView.xib in Resources */,
+				F2FAAA021C1A7C4A00A90DA1 /* SystemMessageCell.xib in Resources */,
 				F2D7AEE21C172DC500725B4E /* HT_About_HeaderCView.xib in Resources */,
 				F27261F01C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.xib in Resources */,
+				F2FAA9FB1C1A7C4A00A90DA1 /* CallMeCell.xib in Resources */,
 				F29C69541C166653000A8C29 /* HT_News_HeadTableViewCell.xib in Resources */,
 				F2B1681E1C1852AE00517879 /* HT_HomePage_PointsCView.xib in Resources */,
 				F27261D41C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.xib in Resources */,
@@ -1165,6 +1258,8 @@
 			files = (
 				F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */,
 				F27D673B1C0B49A900EE6C4F /* HT_HomePageViewController.m in Sources */,
+				F2FAAA001C1A7C4A00A90DA1 /* selectView.m in Sources */,
+				F2FAA9F91C1A7C4A00A90DA1 /* SystemMessageController.m in Sources */,
 				F28E883A1C19A0C300E75298 /* HT_HomePage_ChangeViewController.m in Sources */,
 				F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */,
 				F27261A81C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.m in Sources */,
@@ -1179,10 +1274,12 @@
 				F2B1681D1C1852AE00517879 /* HT_HomePage_PointsCView.m in Sources */,
 				F272615F1C07E61B0081EC95 /* ViewController.m in Sources */,
 				F2B512A41C1138AC000599DC /* HT_Par_BuyPayViewController.m in Sources */,
+				F2FAAA011C1A7C4A00A90DA1 /* SystemMessageCell.m in Sources */,
 				F29085121C0EBD9200F779FA /* HT_Par_BuyHeaderView.m in Sources */,
 				F272615C1C07E61B0081EC95 /* AppDelegate.m in Sources */,
 				F27261C11C07FE240081EC95 /* HT_Par_IteResult_HeadView.m in Sources */,
 				F263CA0A1C1527E100EE78CA /* HT_Par_ItePaymentOrderViewController.m in Sources */,
+				F2FAA9F81C1A7C4A00A90DA1 /* PraiseController.m in Sources */,
 				F28E88361C192B3B00E75298 /* HT_Par_SearchCView.m in Sources */,
 				F29944A11C084D9600823E75 /* HT_Infor_ShareCView.m in Sources */,
 				F21E44F81C102F0100657249 /* UIViewController+MMDrawerController.m in Sources */,
@@ -1190,10 +1287,12 @@
 				F27261BC1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.m in Sources */,
 				F280268E1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m in Sources */,
 				F2D7AED31C172BAB00725B4E /* HT_About_IntroViewController.m in Sources */,
+				F2FAA9FE1C1A7C4A00A90DA1 /* PraiseCell.m in Sources */,
 				F299447F1C082A0600823E75 /* HT_HomePage_LeftViewController.m in Sources */,
 				F214A6DA1C0D4BC40096D523 /* HT_Par_MainTableViewCell.m in Sources */,
 				F21E44F61C102F0100657249 /* MMDrawerController.m in Sources */,
 				F2D7AEE11C172DC500725B4E /* HT_About_HeaderCView.m in Sources */,
+				F2FAA9FC1C1A7C4A00A90DA1 /* CommentsCell.m in Sources */,
 				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,
 				F263CA231C157D5300EE78CA /* HT_Par_SubListViewController.m in Sources */,
 				F2F9684A1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */,
@@ -1201,6 +1300,7 @@
 				F2670CF41C0E950000CA70A2 /* HT_Par_BuyViewController.m in Sources */,
 				F22453671C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m in Sources */,
 				F27261F11C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.m in Sources */,
+				F2FAA9FA1C1A7C4A00A90DA1 /* CallMeCell.m in Sources */,
 				F2137BB81C17BBC10030E7D8 /* HT_Par_MainPickerCView.m in Sources */,
 				F22B23EE1C116EC40009CCF4 /* HT_Par_IteListViewController.m in Sources */,
 				F290850E1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m in Sources */,
@@ -1210,6 +1310,7 @@
 				F21A4B821C0D7FEB00C1F098 /* HT_AboutMeiTouViewController.m in Sources */,
 				F27261B71C07FDFE0081EC95 /* HT_Par_IteListTableViewCell.m in Sources */,
 				F27261F31C07FE9E0081EC95 /* HT_Infor_HeadCView.m in Sources */,
+				F2FAA9F61C1A7C4A00A90DA1 /* CallMeController.m in Sources */,
 				F2C9F8481C0C576500FC454B /* HT_HomePage_LeftBottomView.m in Sources */,
 				F21E44F51C102F0100657249 /* MMDrawerBarButtonItem.m in Sources */,
 				F263CA001C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.m in Sources */,
@@ -1229,6 +1330,7 @@
 				F29944821C082B0D00823E75 /* RootViewController.m in Sources */,
 				F2D7AECC1C17121A00725B4E /* HT_Infor_BottomCView.m in Sources */,
 				F263CA261C157E6500EE78CA /* HT_Par_SubViewController.m in Sources */,
+				F2FAA9F71C1A7C4A00A90DA1 /* CommentsController.m in Sources */,
 				F2A019321C0B2F6A0017234F /* HT_HomePageCollectionViewCell.m in Sources */,
 				F21E44F71C102F0100657249 /* MMDrawerVisualState.m in Sources */,
 				F21A4B791C0D7F6B00C1F098 /* HT_BaseViewController.m in Sources */,
