@@ -20,7 +20,6 @@
 
 -(void)selectClick:(NSInteger) tag;
 
--(void)selectBackgroundClick;
 
 @end
 

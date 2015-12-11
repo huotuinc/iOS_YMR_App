@@ -15,6 +15,7 @@
 #import "Measure.h"
 #import "NSNotification.h"
 #import "Color.h"
+#import <UIView+BlocksKit.h>
 
 #import "Font.h"
 #endif /* pchFile_pch */
