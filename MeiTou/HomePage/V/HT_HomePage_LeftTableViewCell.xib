@@ -23,6 +23,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-kY-kVc" userLabel="NameLabel">
                                 <rect key="frame" x="67" y="14" width="314" height="45"/>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -30,13 +31,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="ENS-i8-GeC" userLabel="TypeImage View">
                                 <rect key="frame" x="17" y="14" width="45" height="45"/>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ENS-i8-GeC" secondAttribute="height" multiplier="1:1" id="9Ic-Xl-det"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ENS-i8-GeC" firstAttribute="width" secondItem="S63-ah-kAW" secondAttribute="width" id="AvP-FB-SNK"/>
                             <constraint firstItem="ENS-i8-GeC" firstAttribute="centerY" secondItem="S63-ah-kAW" secondAttribute="centerY" id="Bcm-Gf-oda"/>
@@ -55,6 +57,7 @@
                     </view>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="S63-ah-kAW" secondAttribute="trailing" id="0vv-0Y-jWS"/>
                     <constraint firstItem="S63-ah-kAW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="1YF-LE-HWo"/>

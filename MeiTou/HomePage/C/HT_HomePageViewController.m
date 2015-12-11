@@ -13,6 +13,7 @@
 #import "HT_PartnerViewController.h"
 #import "HT_InformationViewController.h"
 #import "HT_AboutMeiTouViewController.h"
+#import "HT_HomePage_ChangeViewController.h"
 #import "HT_HomePage_PersonViewTableViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "MMDrawerBarButtonItem.h"//第三方封装的头文件
@@ -35,7 +36,9 @@ static NSString *RFIdentifier = @"RFIdentifier";
 
 @end
 
-@implementation HT_HomePageViewController
+@implementation HT_HomePageViewController{
+    NSMutableArray *_imageArray;
+}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -47,6 +50,7 @@ static NSString *RFIdentifier = @"RFIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _imageArray=[NSMutableArray arrayWithArray:@[@"home_center_imge_1",@"home_center_imge_2",@"home_center_imge_3"]];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftOption];
     [self.myCollectionView registerNib:[UINib nibWithNibName:@"HT_HomePageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:RFIdentifier];
     [self createCollectionView];
@@ -57,6 +61,7 @@ static NSString *RFIdentifier = @"RFIdentifier";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToInformation) name:@"information" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToAbout) name:@"about" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToPerson) name:@"person" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToChange) name:@"change" object:nil];
 
     
 }
@@ -76,6 +81,10 @@ static NSString *RFIdentifier = @"RFIdentifier";
 -(void)pushToInformation{
     HT_InformationViewController *information = [[HT_InformationViewController alloc] init];
     [self.navigationController pushViewController:information animated:YES];
+}
+-(void)pushToChange{
+    HT_HomePage_ChangeViewController *change=[[HT_HomePage_ChangeViewController alloc]init];
+    [self.navigationController pushViewController:change animated:YES];
 }
 
 /**
@@ -144,12 +153,13 @@ static NSString *RFIdentifier = @"RFIdentifier";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 3;
+    return [_imageArray count];
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HT_HomePageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:RFIdentifier forIndexPath:indexPath];
+    cell.imageVCover.image=[UIImage imageNamed:[NSString stringWithFormat:@"%@",_imageArray[indexPath.row]]];
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

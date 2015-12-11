@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _labelName.textColor=COLOR_LEFTVC_Main;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

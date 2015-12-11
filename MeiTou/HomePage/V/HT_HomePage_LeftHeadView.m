@@ -7,23 +7,41 @@
 //
 
 #import "HT_HomePage_LeftHeadView.h"
-#import "HT_Par_IteResult_HeadView.h"
 
 @implementation HT_HomePage_LeftHeadView
 
 - (void)awakeFromNib {
     // Initialization code
-    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
-    UIView *headV=[nib firstObject];
-   
+  
+    _labelHelp.text=@"联系客服";
+    _labelHelp.textColor=COLOR_LEFTVC_Main;
+    _imageVHelp.image=[UIImage imageNamed:@"SlidingMenu_content_bottom_kefu"];
     
     _LabelName.textAlignment=NSTextAlignmentCenter;
     _LabelName.text=@"小车";
+    _LabelName.textColor=COLOR_LEFTVC_Main;
     
-    [self.headView addSubview:headV];
-//    self.headView.backgroundColor=[UIColor redColor];
+//    _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
+//    _imageVHead.backgroundColor=[UIColor redColor];
+//    _imageVHead.layer.cornerRadius=_imageVHead.frame.size.height/2;
+//    _imageVHead.layer.borderColor=[[UIColor redColor] CGColor];
+//    _imageVHead.layer.borderWidth=5;
+//    _imageVHead.layer.masksToBounds=YES;
+    
+}
+-(void)drawRect:(CGRect)rect{
+    _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVHead.backgroundColor=[UIColor redColor];
+    _imageVHead.layer.cornerRadius=_imageVHead.frame.size.height/2;
+    _imageVHead.layer.borderColor=[[UIColor redColor] CGColor];
+    _imageVHead.layer.borderWidth=5;
+    _imageVHead.layer.masksToBounds=YES;
+////
 }
 
+-(void)drawRect:(CGRect)rect forViewPrintFormatter:(UIViewPrintFormatter *)formatter{
+
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

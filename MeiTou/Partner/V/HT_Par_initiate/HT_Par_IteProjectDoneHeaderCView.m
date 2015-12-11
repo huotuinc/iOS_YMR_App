@@ -15,6 +15,7 @@
     _imageVTop.image=[UIImage imageNamed:@"xdd"];
     _imageVline.image=[UIImage imageNamed:@"line1"];
     _imageVRight.image=[UIImage imageNamed:@"common_title_top_back"];
+    _imagevState.image=[UIImage imageNamed:@"crowdfunding_content_center_success"];
     
     _labelEnd.text=@"结束时间";
     _labelStart.text=@"起购";

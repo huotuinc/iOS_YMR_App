@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="470" height="214"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="470" height="213.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="470" height="214"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-6H-F9n" userLabel="BaseView">
@@ -31,7 +31,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="36c-rq-L6j" userLabel="LevelImage View">
-                                        <rect key="frame" x="67.5" y="16" width="22" height="22"/>
+                                        <rect key="frame" x="68" y="16" width="22" height="22"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="36c-rq-L6j" secondAttribute="height" multiplier="1:1" id="FCU-HV-6Jp"/>
@@ -98,7 +98,7 @@
                                         <rect key="frame" x="0.0" y="77" width="330" height="105"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJY-o4-L7d" userLabel="HeadGroupView">
-                                                <rect key="frame" x="0.0" y="7.5" width="330" height="90"/>
+                                                <rect key="frame" x="0.0" y="8" width="330" height="90"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>

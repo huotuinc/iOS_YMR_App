@@ -16,11 +16,7 @@
 
 - (void)awakeFromNib
 {
-    self.layer.cornerRadius = 4;
-    self.layer.borderWidth = 1;
-    self.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    self.headImage.layer.cornerRadius = self.headImage.frame.size.width / 2;
-    self.follow.layer.cornerRadius = 4;
+    
 }
 
 @end

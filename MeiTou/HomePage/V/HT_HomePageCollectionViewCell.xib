@@ -14,57 +14,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="250" height="350"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="NaC-37-BeP">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="NaC-37-BeP" userLabel="CoverimageV">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="350"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="250" id="4CX-VA-0wf"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4CX-VA-0wf"/>
+                            </mask>
+                        </variation>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Mr-Ze-K1J">
-                        <rect key="frame" x="75" y="184" width="100" height="100"/>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="100" id="KZb-eK-UMR"/>
-                            <constraint firstAttribute="height" constant="100" id="QEz-Ho-eXj"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="follow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7F-6q-FlN">
-                        <rect key="frame" x="93" y="304" width="64" height="30"/>
-                        <animations/>
-                        <color key="backgroundColor" red="1" green="0.8919088723776224" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="64" id="CuV-ZK-he2"/>
-                            <constraint firstAttribute="height" constant="30" id="KZC-Vu-Q8j"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <animations/>
             <constraints>
-                <constraint firstItem="Z7F-6q-FlN" firstAttribute="centerX" secondItem="lyD-Ym-rZC" secondAttribute="centerX" id="QcL-73-LC2"/>
-                <constraint firstItem="Z7F-6q-FlN" firstAttribute="top" secondItem="5Mr-Ze-K1J" secondAttribute="bottom" constant="20" id="UMf-FC-GXv"/>
                 <constraint firstItem="NaC-37-BeP" firstAttribute="top" secondItem="lyD-Ym-rZC" secondAttribute="top" id="Vhh-dw-gN9"/>
-                <constraint firstItem="5Mr-Ze-K1J" firstAttribute="centerX" secondItem="lyD-Ym-rZC" secondAttribute="centerX" id="eEg-3h-YJ0"/>
-                <constraint firstAttribute="bottom" secondItem="Z7F-6q-FlN" secondAttribute="bottom" constant="16" id="fm3-PK-BDg"/>
                 <constraint firstAttribute="trailing" secondItem="NaC-37-BeP" secondAttribute="trailing" id="grH-e5-yvC"/>
                 <constraint firstItem="NaC-37-BeP" firstAttribute="leading" secondItem="lyD-Ym-rZC" secondAttribute="leading" id="r9W-Sg-ipM"/>
+                <constraint firstAttribute="bottom" secondItem="NaC-37-BeP" secondAttribute="bottom" id="s1y-x4-7EG"/>
             </constraints>
             <connections>
-                <outlet property="follow" destination="Z7F-6q-FlN" id="YW4-rH-bUO"/>
-                <outlet property="headImage" destination="5Mr-Ze-K1J" id="ERy-ql-0Ti"/>
-                <outlet property="topImage" destination="NaC-37-BeP" id="1iJ-kB-eWn"/>
+                <outlet property="imageVCover" destination="NaC-37-BeP" id="kgO-zA-JRN"/>
             </connections>
             <point key="canvasLocation" x="663" y="239"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="1" width="494" height="324"/>
         <image name="2" width="491" height="473"/>
     </resources>
 </document>

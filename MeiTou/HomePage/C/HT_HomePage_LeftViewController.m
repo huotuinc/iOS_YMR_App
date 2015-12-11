@@ -12,11 +12,11 @@
 #import "HT_AboutMeiTouViewController.h"
 #import "HT_PartnerViewController.h"
 #import "HT_InformationViewController.h"
+#import "HT_HomePage_ChangeViewController.h"
 
 
 #import "HT_HomePage_LeftTableViewCell.h"
 #import "HT_HomePage_LeftHeadView.h"
-#import "HT_HomePage_LeftBottomView.h"
 
 #import "UIViewController+MMDrawerController.h"
 
@@ -27,8 +27,10 @@
 @end
 
 @implementation HT_HomePage_LeftViewController{
+    UIView *_headView;
     UITableView *_tableView;
     UIView *_baseView;
+    UIImageView *_imageV;
     
     NSMutableArray *_iconArray;
 //    HT_HomePage_LeftHeadView *_headView;
@@ -38,9 +40,11 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.view.backgroundColor=[UIColor whiteColor];
-
+     _imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sides_menu_nndd"]];
+    _imageV.frame = self.view.bounds;
+    _imageV.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [self.view insertSubview:_imageV atIndex:0];
+    
 
 }
 
@@ -52,43 +56,40 @@
     [self createLocalData];
     [self createHeadView];
     [self createTableView];
-    [self createButtonBottom];
     
 }
 /**
  *  创建数据
  */
 -(void)createLocalData{
-    _iconArray=[NSMutableArray arrayWithArray:@[@"SlidingMenu_content_left_home",@"SlidingMenu_content_left_account",@"SlidingMenu_content_left_meitou",@"SlidingMenu_content_left_partner",@"SlidingMenu_content_left_partner"]];
-    _titleArray=[NSMutableArray arrayWithArray:@[@"首页",@"账户",@"关于美投",@"合伙人",@"爱美容"]];
+    _iconArray=[NSMutableArray arrayWithArray:@[@"SlidingMenu_content_left_home",@"SlidingMenu_content_left_account",@"SlidingMenu_content_left_meitou",@"SlidingMenu_content_left_partner",@"SlidingMenu_content_left_partner",@"SlidingMenu_content_left_qiehuan"]];
+    _titleArray=[NSMutableArray arrayWithArray:@[@"首页",@"账户",@"关于美投",@"合伙人",@"爱美容",@"账户切换"]];
 }
+
 
 -(void)createHeadView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_LeftHeadView" owner:nil options:nil];
-    UIView *headView=[nib firstObject];
+    HT_HomePage_LeftHeadView *headView=[nib firstObject];
     headView.frame=CGRectMake(0, 0, SCREEN_WITH * SplitScreenRate, SCREEN_HEIGHT/1100*460);
-    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHeadView)];
-    [headView addGestureRecognizer:tap];
-    [self.view addSubview:headView];
+    UITapGestureRecognizer * tapHead= [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHeadView)];
+    [headView.headView addGestureRecognizer:tapHead];
+    UITapGestureRecognizer * tapHelp = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHelpView)];
+    [headView.viewHelp addGestureRecognizer:tapHelp];
+    _headView=headView;
+    _headView.backgroundColor=[UIColor clearColor];//    _headView.alpha=1;
+    [self.view addSubview:_headView];
 }
 
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/1100*450, SCREEN_WITH * SplitScreenRate, SCREEN_HEIGHT/1100*400) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/1100*450, SCREEN_WITH * SplitScreenRate, SCREEN_HEIGHT/1100*480) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+    _tableView.separatorColor = COLOR_LEFTVC_CELLS;
+    _tableView.backgroundColor=[UIColor clearColor];
     [self.view addSubview:_tableView];
 }
 
--(void)createButtonBottom{
-    
-    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_LeftBottomView" owner:nil options:nil];
-    UIView *bottomView=[nib firstObject];
-    bottomView.frame=CGRectMake(0, _tableView.frame.origin.y+_tableView.frame.size.height, SCREEN_WITH * SplitScreenRate,SCREEN_HEIGHT/1100*145);
-    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapThebottomView)];
-    [bottomView addGestureRecognizer:tap];
-    [self.view addSubview:bottomView];
 
-}
 
 -(void)tapTheHeadView{
     NSLog(@"tap");
@@ -97,7 +98,7 @@
     
 
 }
--(void)tapThebottomView{
+-(void)tapTheHelpView{
     UIAlertView *alter  = [[UIAlertView alloc]initWithTitle:[NSString stringWithFormat:@"88888888"] message:nil delegate: self cancelButtonTitle:@"取消" otherButtonTitles: @"呼叫",nil];
     
     [alter show];
@@ -113,9 +114,11 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_LeftTableViewCell" owner:nil options:nil] lastObject];
     }
+    cell.alpha=0;
+
+    cell.backgroundColor=[UIColor clearColor];
     cell.imageVType.image=[UIImage imageNamed:[NSString stringWithFormat:@"%@",_iconArray[indexPath.row]]];
     cell.labelName.text=_titleArray[indexPath.row];
-    cell.backgroundColor=[UIColor redColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
@@ -124,11 +127,11 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return [_titleArray count];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return _tableView.frame.size.height/5;
+    return _tableView.frame.size.height/[_titleArray count];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==0) {
@@ -157,6 +160,12 @@
     }
     if (indexPath.row==4) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"information" object:nil userInfo:nil];
+        [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
+            
+        }];
+    }
+    if (indexPath.row==5) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"change" object:nil userInfo:nil];
         [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
             
         }];

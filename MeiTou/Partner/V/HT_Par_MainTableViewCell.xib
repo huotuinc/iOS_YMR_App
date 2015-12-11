@@ -13,33 +13,33 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="287"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="286.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="286"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQf-gd-H2k" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="304" height="270.5"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQf-gd-H2k" userLabel="BaseView">
+                        <rect key="frame" x="8" y="8" width="304" height="271"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfE-LV-nhg" userLabel="MainView">
-                                <rect key="frame" x="10" y="10" width="285" height="249.5"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfE-LV-nhg" userLabel="MainView">
+                                <rect key="frame" x="10" y="10" width="285" height="250"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6Y-yA-EGe" userLabel="AView">
-                                        <rect key="frame" x="0.0" y="0.0" width="285" height="143.5"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6Y-yA-EGe" userLabel="AView">
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="144"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="tt1-17-Czn" userLabel="HeadImage View">
-                                                <rect key="frame" x="0.0" y="0.0" width="285" height="143.5"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="tt1-17-Czn" userLabel="HeadImage View">
+                                                <rect key="frame" x="0.0" y="0.0" width="285" height="144"/>
                                                 <animations/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ja-4q-9LW" userLabel="A_AView">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ja-4q-9LW" userLabel="A_AView">
                                                 <rect key="frame" x="0.0" y="113" width="285" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2A-3R-gwb" userLabel="TitleLabel">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2A-3R-gwb" userLabel="TitleLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="243" height="30"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSz-6Z-7Ed" userLabel="DateLabel">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSz-6Z-7Ed" userLabel="DateLabel">
                                                         <rect key="frame" x="243" y="0.0" width="42" height="30"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -109,17 +109,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="37"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypD-Lt-7ZL" userLabel="C_A_AView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="19"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaf-HX-RbI" userLabel="RightLabel">
-                                                                <rect key="frame" x="95" y="0.0" width="95" height="18.5"/>
+                                                                <rect key="frame" x="95" y="0.0" width="95" height="19"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7g-mQ-KGX" userLabel="LeftLabel">
-                                                                <rect key="frame" x="0.0" y="0.0" width="95" height="18.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="95" height="19"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,10 +139,10 @@
                                                             <constraint firstItem="Q7g-mQ-KGX" firstAttribute="top" secondItem="ypD-Lt-7ZL" secondAttribute="top" id="yPc-4N-7Zw"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txB-Bc-OF3" userLabel="C_A_BView">
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txB-Bc-OF3" userLabel="C_A_BView">
                                                         <rect key="frame" x="0.0" y="18" width="190" height="19"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qw" translatesAutoresizingMaskIntoConstraints="NO" id="Obu-ac-yWB">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="qw" translatesAutoresizingMaskIntoConstraints="NO" id="Obu-ac-yWB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="19"/>
                                                                 <animations/>
                                                             </imageView>

@@ -99,6 +99,7 @@
 		F28E88321C19285E00E75298 /* HT_Infor_ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28E88311C19285E00E75298 /* HT_Infor_ShareViewController.m */; };
 		F28E88361C192B3B00E75298 /* HT_Par_SearchCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28E88341C192B3B00E75298 /* HT_Par_SearchCView.m */; };
 		F28E88371C192B3B00E75298 /* HT_Par_SearchCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F28E88351C192B3B00E75298 /* HT_Par_SearchCView.xib */; };
+		F28E883A1C19A0C300E75298 /* HT_HomePage_ChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28E88391C19A0C300E75298 /* HT_HomePage_ChangeViewController.m */; };
 		F290850E1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290850D1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m */; };
 		F29085121C0EBD9200F779FA /* HT_Par_BuyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29085101C0EBD9200F779FA /* HT_Par_BuyHeaderView.m */; };
 		F29085131C0EBD9200F779FA /* HT_Par_BuyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29085111C0EBD9200F779FA /* HT_Par_BuyHeaderView.xib */; };
@@ -323,6 +324,8 @@
 		F28E88331C192B3A00E75298 /* HT_Par_SearchCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_SearchCView.h; sourceTree = "<group>"; };
 		F28E88341C192B3B00E75298 /* HT_Par_SearchCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_SearchCView.m; sourceTree = "<group>"; };
 		F28E88351C192B3B00E75298 /* HT_Par_SearchCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_SearchCView.xib; sourceTree = "<group>"; };
+		F28E88381C19A0C300E75298 /* HT_HomePage_ChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_ChangeViewController.h; sourceTree = "<group>"; };
+		F28E88391C19A0C300E75298 /* HT_HomePage_ChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_ChangeViewController.m; sourceTree = "<group>"; };
 		F290850C1C0E9E3F00F779FA /* HT_Par_BuyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyListViewController.h; sourceTree = "<group>"; };
 		F290850D1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyListViewController.m; sourceTree = "<group>"; };
 		F290850F1C0EBD9200F779FA /* HT_Par_BuyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyHeaderView.h; sourceTree = "<group>"; };
@@ -663,6 +666,8 @@
 				F21E44FB1C10346A00657249 /* HT_LeftViewController.m */,
 				F2B1681F1C185ABC00517879 /* HT_HomePage_PointsViewController.h */,
 				F2B168201C185ABC00517879 /* HT_HomePage_PointsViewController.m */,
+				F28E88381C19A0C300E75298 /* HT_HomePage_ChangeViewController.h */,
+				F28E88391C19A0C300E75298 /* HT_HomePage_ChangeViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1160,6 +1165,7 @@
 			files = (
 				F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */,
 				F27D673B1C0B49A900EE6C4F /* HT_HomePageViewController.m in Sources */,
+				F28E883A1C19A0C300E75298 /* HT_HomePage_ChangeViewController.m in Sources */,
 				F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */,
 				F27261A81C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.m in Sources */,
 				F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */,

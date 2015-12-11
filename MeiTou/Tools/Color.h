@@ -17,5 +17,8 @@
 #define TITLECOLOR [UIColor colorWithRed:62/255 green:62/255 blue:62/255    alpha:1]
 #define CONTENTCOLOR [UIColor colorWithRed:85/255 green:85/255 blue:85/255    alpha:1]
 #define REDCOLOR [UIColor colorWithRed:254/255 green:100/255 blue:90/255 alpha:1]
-
+//左抽屉 字体颜色
+#define COLOR_LEFTVC_Main [UIColor colorWithRed:138/255 green:116/255 blue:126/255 alpha:1]
+//左抽屉 cell分割线
+#define COLOR_LEFTVC_CELLS [UIColor colorWithRed:163/255 green:56/255 blue:103/255 alpha:1]
 #endif /* Color_h */

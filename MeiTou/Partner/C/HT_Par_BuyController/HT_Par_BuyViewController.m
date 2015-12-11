@@ -26,12 +26,15 @@ static NSString *cellBuy = @"cellBuy";
     UIView *_topView;//顶部视图
     UIView *_headerView;//_tableV 的headerV
     UIView *_bottomView;//底部视图
+    UIImageView *_imageV;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent = NO;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellBuy];
+    
+
     [self createBarButtonItem];
     
     
@@ -96,7 +99,6 @@ static NSString *cellBuy = @"cellBuy";
 }
 
 -(void)createBottomView{
-//    SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*100)
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_BuyBottomView" owner:nil options:nil];
     HT_Par_BuyBottomView *bottomView=[nib firstObject];
     bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*100)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*100);
@@ -107,10 +109,6 @@ static NSString *cellBuy = @"cellBuy";
     
     [self.view addSubview:_bottomView];
     
-    
-//    NSLog(@"%f",SCREEN_HEIGHT);
-//    NSLog(@"%f",SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*100));
-//    NSLog(@"%f",SCREEN_HEIGHT/1100*100);
     
 }
 -(void)createTableView{
