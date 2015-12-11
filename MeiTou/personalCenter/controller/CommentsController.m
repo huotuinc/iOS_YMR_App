@@ -9,6 +9,7 @@
 #import "CommentsController.h"
 #import "CommentsCell.h"
 #import "selectView.h"
+#import <UIBarButtonItem+BlocksKit.h>
 
 @interface CommentsController ()<UITableViewDataSource,UITableViewDelegate,SelectViewDelegate>
 
@@ -25,10 +26,11 @@ static NSString *commentIdentify = @"commentsIdentify";
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CommentsCell" bundle:nil] forCellReuseIdentifier:commentIdentify];
     
-    self.selectV = [[selectView alloc] initWithFrame:CGRectMake(0, 64 - 111, SCREEN_WITH, 111) AndSelectTag:0];
+    self.selectV = [[selectView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WITH, 111) AndSelectTag:0];
     self.selectV.delegate = self;
-//    self.selectV.hidden = YES;
-    [self.selectV addSubview:self.view];
+    self.selectV.hidden = YES;
+    [self.view addSubview:self.selectV];
+    
     
     
 }

@@ -22,10 +22,10 @@
 static NSString *selectIdentify = @"selectViewIdentify";
 
 - (instancetype)initWithFrame:(CGRect)frame AndSelectTag:(NSInteger) tag {
-    if (self = [super initWithFrame:frame]) {
+    if (self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)]) {
         
         self.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.781];
-        self.frame = CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
+        self.userInteractionEnabled = YES;
         
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height) style:UITableViewStylePlain];
         _tableView.dataSource = self;
@@ -35,7 +35,8 @@ static NSString *selectIdentify = @"selectViewIdentify";
         
         _selectIndexPath = [NSIndexPath indexPathForRow:tag inSection:0];
         
-        UIGestureRecognizer *ger = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(selectViewBackgroundClick)];
+        UITapGestureRecognizer *ger = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectViewBackgroundClick)];
+        
         [self addGestureRecognizer:ger];
     }
     return self;
@@ -101,9 +102,10 @@ static NSString *selectIdentify = @"selectViewIdentify";
 
 - (void)selectViewBackgroundClick
 {
-    if ([self.delegate respondsToSelector:@selector(selectViewBackgroundClick)]) {
-        [self.delegate selectBackgroundClick];
-    }
+    [UIView animateWithDuration:0.2 animations:^{
+        self.hidden = YES;
+
+    }];
 }
 
 @end
