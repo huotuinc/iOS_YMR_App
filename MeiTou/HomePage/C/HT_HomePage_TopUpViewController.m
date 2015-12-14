@@ -16,7 +16,8 @@
 @end
 
 @implementation HT_HomePage_TopUpViewController{
-    UIView *_mainView;
+//    UIView *_mainView;
+    HT_HomePage_TopUpCView *_mainView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -50,23 +51,24 @@
 -(void)createMainView{
     
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_TopUpCView" owner:nil options:nil];
-    HT_HomePage_TopUpCView *mainView=[nib firstObject];
-    [mainView.buttonBuy addTarget:self action:@selector(goToPayView) forControlEvents:UIControlEventTouchUpInside];
+    _mainView=[nib firstObject];
+    [_mainView.buttonBuy addTarget:self action:@selector(goToPayView) forControlEvents:UIControlEventTouchUpInside];
 
     
     UITapGestureRecognizer * tapViewPay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheViewPay)];
-    [mainView.viewPay addGestureRecognizer:tapViewPay];
+    [_mainView.viewPay addGestureRecognizer:tapViewPay];
     UITapGestureRecognizer * tapViewWei = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheViewWei)];
-    [mainView.viewWei addGestureRecognizer:tapViewWei];
+    [_mainView.viewWei addGestureRecognizer:tapViewWei];
     UITapGestureRecognizer *tapViewUp=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheViewUp)];
-    [mainView.viewUp addGestureRecognizer:tapViewUp];
+    [_mainView.viewUp addGestureRecognizer:tapViewUp];
     UITapGestureRecognizer *tapViewMore=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheViewMore)];
-    [mainView.viewMore addGestureRecognizer:tapViewMore];
+    [_mainView.viewMore addGestureRecognizer:tapViewMore];
 
-    mainView.viewLevelUp.hidden=YES;
-    mainView.buttonPay.selected=YES;
-    mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
-    _mainView=mainView;
+    _mainView.viewLevelUp.hidden=YES;
+    _mainView.buttonPay.selected=YES;
+    _mainView.labelUp.textColor=COLOR_BUTTON_RED;
+    _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
+//    _mainView=mainView;
     [self.view addSubview:_mainView];
     
     
@@ -104,6 +106,8 @@
 
 }
 -(void)tapTheViewUp{
+    _mainView.labelUp.textColor=COLOR_BUTTON_RED;
+    _mainView.labelMore.textColor=COLOR_TEXT_TITILE;
     for (int i=0; i<2; i++) {
         UIView *view=(UIView *)[self.view viewWithTag:200+i];
         view.hidden=YES;
@@ -114,6 +118,8 @@
 
 }
 -(void)tapTheViewMore{
+    _mainView.labelUp.textColor=COLOR_TEXT_TITILE;
+    _mainView.labelMore.textColor=COLOR_BUTTON_RED;
     for (int i=0; i<2; i++) {
         UIView *view=(UIView *)[self.view viewWithTag:200+i];
         view.hidden=YES;

@@ -21,8 +21,9 @@
 //    @property (weak, nonatomic) IBOutlet UILabel *labelProgress;
 //    @property (weak, nonatomic) IBOutlet UIButton *ButtonGo;
 //}
+    _imageVTop.image=[UIImage imageNamed:@"meitou_center_president"];
     _A_AView.alpha=0.5;
-    _A_AView.backgroundColor=[UIColor grayColor];
+    _A_AView.backgroundColor=COLOR_TEXT_CONTENT;
     _LabelTitle.textColor=[UIColor whiteColor];
     _LabelTitle.alpha=0.5;
     

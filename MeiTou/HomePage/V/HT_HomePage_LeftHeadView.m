@@ -37,7 +37,7 @@
     _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
     _imageVHead.backgroundColor=[UIColor redColor];
     _imageVHead.layer.cornerRadius=_imageVHead.frame.size.height/2;
-    _imageVHead.layer.borderColor=[[UIColor redColor] CGColor];
+    _imageVHead.layer.borderColor=[[UIColor colorWithRed:142/255.0f green:15/255.0f blue:71/255.0f alpha:1] CGColor];
     _imageVHead.layer.borderWidth=5;
     _imageVHead.layer.masksToBounds=YES;
 ////

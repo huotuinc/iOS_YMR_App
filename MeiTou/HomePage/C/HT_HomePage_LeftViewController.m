@@ -20,6 +20,8 @@
 
 #import "UIViewController+MMDrawerController.h"
 
+
+
 @interface HT_HomePage_LeftViewController ()<NSXMLParserDelegate,UITableViewDelegate,UITableViewDataSource>
 
 
@@ -40,6 +42,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    
+    
      _imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sides_menu_nndd"]];
     _imageV.frame = self.view.bounds;
     _imageV.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -47,6 +51,19 @@
     
 
 }
+//-(void)viewDidLayoutSubviews
+//{
+//    [super viewDidLayoutSubviews];
+//    
+//    // Force your tableview margins (this may be a bad idea)
+//    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+//        [_tableView setSeparatorInset:UIEdgeInsetsZero];
+//    }
+//    
+//    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+//        [_tableView setLayoutMargins:UIEdgeInsetsZero];
+//    }
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,7 +79,7 @@
  *  创建数据
  */
 -(void)createLocalData{
-    _iconArray=[NSMutableArray arrayWithArray:@[@"SlidingMenu_content_left_home",@"SlidingMenu_content_left_account",@"SlidingMenu_content_left_meitou",@"SlidingMenu_content_left_partner",@"SlidingMenu_content_left_partner",@"SlidingMenu_content_left_qiehuan"]];
+    _iconArray=[NSMutableArray arrayWithArray:@[@"SlidingMenu_content_left_home",@"SlidingMenu_content_left_account",@"SlidingMenu_content_left_meitou",@"SlidingMenu_content_left_partner",@"SlidingMenu_content_left_cosmetology",@"SlidingMenu_content_left_qiehuan"]];
     _titleArray=[NSMutableArray arrayWithArray:@[@"首页",@"账户",@"关于美投",@"合伙人",@"爱美容",@"账户切换"]];
 }
 
@@ -76,7 +93,7 @@
     UITapGestureRecognizer * tapHelp = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHelpView)];
     [headView.viewHelp addGestureRecognizer:tapHelp];
     _headView=headView;
-    _headView.backgroundColor=[UIColor clearColor];//    _headView.alpha=1;
+    _headView.backgroundColor=[UIColor clearColor];//
     [self.view addSubview:_headView];
 }
 
@@ -86,6 +103,7 @@
     _tableView.dataSource=self;
     _tableView.separatorColor = COLOR_LEFTVC_CELLS;
     _tableView.backgroundColor=[UIColor clearColor];
+    _tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
 }
 
@@ -115,12 +133,11 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_LeftTableViewCell" owner:nil options:nil] lastObject];
     }
     cell.alpha=0;
-
     cell.backgroundColor=[UIColor clearColor];
     cell.imageVType.image=[UIImage imageNamed:[NSString stringWithFormat:@"%@",_iconArray[indexPath.row]]];
     cell.labelName.text=_titleArray[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
 
 
     return cell;
@@ -171,6 +188,24 @@
         }];
     }
 }
+
+//-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // Remove seperator inset
+//    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+//        [cell setSeparatorInset:UIEdgeInsetsZero];
+//    }
+//    
+//    // Prevent the cell from inheriting the Table View's margin settings
+//    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+//        [cell setPreservesSuperviewLayoutMargins:NO];
+//    }
+//    
+//    // Explictly set your cell's layout margins
+//    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+//        [cell setLayoutMargins:UIEdgeInsetsZero];
+//    }
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
