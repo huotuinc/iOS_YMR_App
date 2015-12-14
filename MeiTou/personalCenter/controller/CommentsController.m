@@ -64,11 +64,11 @@ static NSString *commentIdentify = @"commentsIdentify";
         self.selectV.hidden = YES;
     }else if (tag == 2) {
         self.selectV.hidden = YES;
+    }else if (tag == 3) {
+        self.selectV.hidden = YES;
     }
 }
 
-- (void)selectBackgroundClick {
-    self.selectV.hidden = YES;
-}
+
 
 @end

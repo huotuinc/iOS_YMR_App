@@ -8,8 +8,11 @@
 
 #import "CallMeController.h"
 #import "CallMeCell.h"
+#import "selectView.h"
 
-@interface CallMeController ()<UITableViewDataSource,UITableViewDelegate>
+@interface CallMeController ()<UITableViewDataSource,UITableViewDelegate,SelectViewDelegate>
+
+@property (nonatomic, strong) selectView *selectV;
 
 @end
 
@@ -22,6 +25,12 @@ static NSString *callMeIdentify = @"callMeIdentify";
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CallMeCell" bundle:nil] forCellReuseIdentifier:callMeIdentify];
+    
+    
+    self.selectV = [[selectView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WITH, 111) AndSelectTag:2];
+    self.selectV.delegate = self;
+    self.selectV.hidden = YES;
+    [self.view addSubview:self.selectV];
     
 }
 
@@ -43,6 +52,19 @@ static NSString *callMeIdentify = @"callMeIdentify";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CallMeCell *cell = [tableView dequeueReusableCellWithIdentifier:callMeIdentify forIndexPath:indexPath];
     return cell;
+}
+
+#pragma mark selectView
+
+- (void)selectClick:(NSInteger)tag {
+    
+    if (tag == 1) {
+        self.selectV.hidden = YES;
+    }else if (tag == 2) {
+        self.selectV.hidden = YES;
+    }else if (tag == 3) {
+        self.selectV.hidden = YES;
+    }
 }
 
 

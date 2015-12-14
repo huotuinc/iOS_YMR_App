@@ -21,13 +21,13 @@
  *  导航栏颜色
  */
 //导航栏A 颜色
-#define COLOR_NAVBAR_A [UIColor colorWithRed:77/255 green:0/255 blue:33/255 alpha:1]
+#define COLOR_NAVBAR_A [UIColor colorWithRed:0.302 green:0.000 blue:0.129 alpha:1.000]
 
 /**
  *  进度条颜色
  */
 //进度条
-#define COLOR_PROGRESS_A [UIColor colorWithRed:255/255 green:150/255 blue:25/255 alpha:1]
+#define COLOR_PROGRESS_A [UIColor colorWithRed:255/255.0f green:150/255.0f blue:25/255.0f alpha:1]
 
 /**
  *  按钮颜色

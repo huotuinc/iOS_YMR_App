@@ -27,7 +27,7 @@ static NSString *selectIdentify = @"selectViewIdentify";
         self.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.781];
         self.userInteractionEnabled = YES;
         
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 37 * 4) style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:selectIdentify];
@@ -47,7 +47,7 @@ static NSString *selectIdentify = @"selectViewIdentify";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -73,6 +73,11 @@ static NSString *selectIdentify = @"selectViewIdentify";
             cell.textLabel.text = @"@我的";
             cell.textLabel.font = [UIFont systemFontOfSize:13];
             break;
+        }
+        case 3:
+        {
+            cell.textLabel.text = @"我的分享";
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
         }
         default:
             break;
