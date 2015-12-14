@@ -20,4 +20,13 @@
     // Configure the view for the selected state
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.reback.layer.cornerRadius = 5;
+    self.reback.layer.borderColor = [UIColor colorWithWhite:0.894 alpha:1.000].CGColor;
+    self.reback.layer.borderWidth = 1;
+}
+
+
 @end
