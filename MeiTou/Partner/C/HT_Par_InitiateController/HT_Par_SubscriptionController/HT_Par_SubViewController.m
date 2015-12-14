@@ -109,7 +109,6 @@ static NSString *cellSub = @"cellSub";
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
-    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
 }
 /**

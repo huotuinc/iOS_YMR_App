@@ -32,7 +32,6 @@ static NSString *cellBuy = @"cellBuy";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent = NO;
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellBuy];
     
 
     [self createBarButtonItem];
@@ -105,7 +104,7 @@ static NSString *cellBuy = @"cellBuy";
     [bottomView.buttonSubscription addTarget:self action:@selector(clickButtonSubscription) forControlEvents:UIControlEventTouchUpInside];
     
        _bottomView=bottomView;
-//    [self.view insertSubview:_bottomView aboveSubview:_tableView];
+    [self.view insertSubview:_bottomView aboveSubview:_tableView];
     
     [self.view addSubview:_bottomView];
     
@@ -116,7 +115,9 @@ static NSString *cellBuy = @"cellBuy";
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
-    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellBuy];
+
+//    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
 }
 /**
@@ -135,7 +136,7 @@ static NSString *cellBuy = @"cellBuy";
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    
-        HT_Par_BuyMainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellBuy forIndexPath:indexPath];
+    HT_Par_BuyMainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellBuy forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     

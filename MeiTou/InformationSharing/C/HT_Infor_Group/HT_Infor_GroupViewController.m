@@ -97,6 +97,8 @@ static NSString *cellGMain = @"cellGMain";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *_cell;
     HT_Infor_GroupTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellGMain forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     _cell=cell;
     
     return _cell;

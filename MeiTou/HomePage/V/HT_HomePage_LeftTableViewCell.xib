@@ -14,14 +14,14 @@
             <rect key="frame" x="0.0" y="0.0" width="397" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="397" height="89"/>
+                <rect key="frame" x="0.0" y="0.0" width="397" height="88.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S63-ah-kAW">
                         <rect key="frame" x="8" y="8" width="381" height="72"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-kY-kVc" userLabel="NameLabel">
-                                <rect key="frame" x="67" y="14" width="314" height="45"/>
+                                <rect key="frame" x="66" y="14" width="257" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -29,29 +29,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="ENS-i8-GeC" userLabel="TypeImage View">
-                                <rect key="frame" x="17" y="14" width="45" height="45"/>
+                                <rect key="frame" x="16" y="14" width="45" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ENS-i8-GeC" secondAttribute="height" multiplier="1:1" id="9Ic-Xl-det"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gD3-6c-mMW">
+                                <rect key="frame" x="323" y="14" width="45" height="45"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gD3-6c-mMW" firstAttribute="centerY" secondItem="ENS-i8-GeC" secondAttribute="centerY" id="0fE-hE-nwo"/>
+                            <constraint firstItem="gD3-6c-mMW" firstAttribute="width" secondItem="ENS-i8-GeC" secondAttribute="width" id="6yc-CX-ieE"/>
                             <constraint firstItem="ENS-i8-GeC" firstAttribute="width" secondItem="S63-ah-kAW" secondAttribute="width" id="AvP-FB-SNK"/>
                             <constraint firstItem="ENS-i8-GeC" firstAttribute="centerY" secondItem="S63-ah-kAW" secondAttribute="centerY" id="Bcm-Gf-oda"/>
                             <constraint firstItem="JnX-kY-kVc" firstAttribute="leading" secondItem="ENS-i8-GeC" secondAttribute="trailing" constant="5" id="LlP-kI-s1x"/>
+                            <constraint firstItem="gD3-6c-mMW" firstAttribute="centerX" secondItem="S63-ah-kAW" secondAttribute="centerX" multiplier="490:270" id="N77-Uu-tp0"/>
                             <constraint firstItem="JnX-kY-kVc" firstAttribute="centerY" secondItem="S63-ah-kAW" secondAttribute="centerY" id="SCD-v6-59A"/>
                             <constraint firstItem="ENS-i8-GeC" firstAttribute="centerX" secondItem="S63-ah-kAW" secondAttribute="centerX" multiplier="55:270" id="TkX-hg-PJW"/>
+                            <constraint firstItem="gD3-6c-mMW" firstAttribute="height" secondItem="ENS-i8-GeC" secondAttribute="height" id="UIg-fz-xtw"/>
                             <constraint firstAttribute="trailing" secondItem="JnX-kY-kVc" secondAttribute="trailing" id="cMs-VC-llo"/>
                             <constraint firstItem="ENS-i8-GeC" firstAttribute="height" secondItem="S63-ah-kAW" secondAttribute="height" multiplier="50:80" id="edN-C5-R86"/>
+                            <constraint firstItem="gD3-6c-mMW" firstAttribute="leading" secondItem="JnX-kY-kVc" secondAttribute="trailing" id="m2s-6y-3vh"/>
                             <constraint firstItem="JnX-kY-kVc" firstAttribute="height" secondItem="ENS-i8-GeC" secondAttribute="height" id="oZ7-jD-5W1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="AvP-FB-SNK"/>
+                                <exclude reference="cMs-VC-llo"/>
                             </mask>
                         </variation>
                     </view>
@@ -67,6 +77,7 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="imageVNext" destination="gD3-6c-mMW" id="Tgc-bx-xfe"/>
                 <outlet property="imageVType" destination="ENS-i8-GeC" id="LsL-Hy-eUR"/>
                 <outlet property="labelName" destination="JnX-kY-kVc" id="cUt-Cp-wdG"/>
             </connections>

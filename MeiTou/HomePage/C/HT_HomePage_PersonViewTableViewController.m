@@ -11,6 +11,7 @@
 #import "HT_HomePage_PointsViewController.h"
 #import "HT_HomePageViewController.h"
 #import "HT_HomePage_PhoneViewController.h"
+#import "HT_HomePage_TopUpViewController.h"
 
 #import "MMDrawerBarButtonItem.h"
 @interface HT_HomePage_PersonViewTableViewController ()
@@ -96,7 +97,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==1) {
         if (indexPath.row==0) {
-            HT_HomePage_PointsViewController *point=[[HT_HomePage_PointsViewController alloc]init];
+            HT_HomePage_TopUpViewController *point=[[HT_HomePage_TopUpViewController alloc]init];
             [self.navigationController pushViewController:point animated:YES];
         }
     }

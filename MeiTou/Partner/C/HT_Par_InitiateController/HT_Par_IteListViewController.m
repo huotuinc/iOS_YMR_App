@@ -66,7 +66,6 @@ static NSString *cellIList = @"cellIList";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *_cell;
     
-//    HT_Par_IteListTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIList forIndexPath:indexPath];
     HT_Par_IteListTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIList        forIndexPath:indexPath];
 
     

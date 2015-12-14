@@ -12,6 +12,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _imageVLine.image=[UIImage imageNamed:@"line1"];
+    _imageVLineB.image=[UIImage imageNamed:@"line1"];
+    _imageVProject.image=[UIImage imageNamed:@"common_content_top_item_red"];
+    _imageVPerson.image=[UIImage imageNamed:@"common_content_top_list"];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

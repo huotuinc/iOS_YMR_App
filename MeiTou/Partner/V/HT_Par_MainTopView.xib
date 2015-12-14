@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="640" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="640" height="79"/>
+                <rect key="frame" x="0.0" y="0.0" width="640" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1g-Jp-Pg4" userLabel="BaseView">
@@ -91,11 +91,21 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQ3-up-cpz" userLabel="LineView">
                                         <rect key="frame" x="312" y="0.0" width="1" height="62"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nlg-WD-ZSS">
+                                                <rect key="frame" x="0.0" y="0.0" width="1" height="62"/>
+                                                <animations/>
+                                            </imageView>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="Kka-EJ-cdM"/>
+                                            <constraint firstAttribute="bottom" secondItem="nlg-WD-ZSS" secondAttribute="bottom" id="b6k-Af-V8b"/>
+                                            <constraint firstItem="nlg-WD-ZSS" firstAttribute="leading" secondItem="sQ3-up-cpz" secondAttribute="leading" id="gtV-2n-kKI"/>
+                                            <constraint firstItem="nlg-WD-ZSS" firstAttribute="top" secondItem="sQ3-up-cpz" secondAttribute="top" id="ifr-bK-IgU"/>
+                                            <constraint firstAttribute="trailing" secondItem="nlg-WD-ZSS" secondAttribute="trailing" id="uRR-YS-c2D"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -137,10 +147,20 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-j3-oiv" userLabel="BView">
                                 <rect key="frame" x="0.0" y="62" width="624" height="1"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jbm-bA-wDc">
+                                        <rect key="frame" x="0.0" y="0.0" width="624" height="1"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="Jbm-bA-wDc" firstAttribute="top" secondItem="Dc5-j3-oiv" secondAttribute="top" id="0Ql-bf-MKZ"/>
+                                    <constraint firstItem="Jbm-bA-wDc" firstAttribute="leading" secondItem="Dc5-j3-oiv" secondAttribute="leading" id="LxW-5h-nWG"/>
                                     <constraint firstAttribute="height" constant="1" id="SZg-bT-b4v"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jbm-bA-wDc" secondAttribute="bottom" id="XNX-i0-xbP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jbm-bA-wDc" secondAttribute="trailing" id="ef4-xU-7lE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -179,12 +199,17 @@
             <connections>
                 <outlet property="ViewPerson" destination="GbX-28-r97" id="ubp-tK-dcY"/>
                 <outlet property="ViewProgect" destination="Zqj-3a-v1Y" id="n4g-9J-sxi"/>
+                <outlet property="imageVLine" destination="nlg-WD-ZSS" id="7NJ-rT-7mj"/>
+                <outlet property="imageVLineB" destination="Jbm-bA-wDc" id="MCq-wU-mdA"/>
+                <outlet property="imageVPerson" destination="KVQ-Pj-dCB" id="isb-1j-nR6"/>
+                <outlet property="imageVProject" destination="CED-08-XDB" id="HIR-sP-u5y"/>
                 <outlet property="labelPerson" destination="21T-Pc-Dap" id="4jK-d4-sSw"/>
+                <outlet property="labelProject" destination="4ZH-Tm-zIJ" id="Bnq-pL-epS"/>
             </connections>
             <point key="canvasLocation" x="146" y="244"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="head" width="180" height="180"/>
+        <image name="head" width="1" height="1"/>
     </resources>
 </document>

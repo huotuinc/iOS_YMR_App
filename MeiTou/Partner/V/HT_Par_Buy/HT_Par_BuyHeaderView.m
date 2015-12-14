@@ -23,8 +23,8 @@
 //    @property (weak, nonatomic) IBOutlet UILabel *labelPerson;
 //    @property (weak, nonatomic) IBOutlet UIView *viewProgress;
     
+
     _imageVTop.image=[UIImage imageNamed:@"xdd"];
-    _imageVLine.image=[UIImage imageNamed:@"line1"];
     _labelTitle.text=@"众筹会议类";
     _labeEnd.text=@"结束时间";
     _labelDone.text=@"已预约";

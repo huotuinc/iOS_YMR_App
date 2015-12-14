@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-cn-aX7" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="304" height="173.5"/>
+                        <rect key="frame" x="8" y="8" width="304" height="174"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-fh-QVa" userLabel="HeadImage View">
-                                <rect key="frame" x="9.5" y="0.0" width="285" height="173.5"/>
+                                <rect key="frame" x="10" y="0.0" width="285" height="174"/>
                                 <animations/>
                             </imageView>
                         </subviews>

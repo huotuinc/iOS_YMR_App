@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="267"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="267"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="266.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3HP-eU-olZ" userLabel="BaseView">
@@ -561,6 +561,6 @@
     </objects>
     <resources>
         <image name="1" width="494" height="324"/>
-        <image name="head" width="180" height="180"/>
+        <image name="head" width="1" height="1"/>
     </resources>
 </document>

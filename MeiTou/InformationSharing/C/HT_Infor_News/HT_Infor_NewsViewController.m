@@ -26,7 +26,8 @@ static NSString *cellIBuy=@"cellIBuy";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent = NO;
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIBuy];
+    
+
     [self createBarButtonItem];
     
     
@@ -36,7 +37,7 @@ static NSString *cellIBuy=@"cellIBuy";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
-    
+
     [self createHeadView];
     [self createTableView];
     [self createBottomView];
@@ -88,11 +89,11 @@ static NSString *cellIBuy=@"cellIBuy";
     
 }
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1150*(1150-90)-64) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1150*(1150-90)-64) style:UITableViewStyleGrouped];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
-    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil] forCellReuseIdentifier:cellIBuy];
     [self.view addSubview:_tableView];
 }
 -(void)clickButtonGo{
@@ -116,6 +117,7 @@ static NSString *cellIBuy=@"cellIBuy";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

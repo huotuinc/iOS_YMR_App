@@ -27,7 +27,7 @@ static NSString *RFIdentifier = @"RFIdentifier";
 @interface HT_HomePageViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
-@property (strong,nonatomic) UIPageControl *pageCtrl;
+//@property (strong,nonatomic) UIPageControl *pageCtrl;
 
 
 /**返回按钮*/
@@ -44,8 +44,9 @@ static NSString *RFIdentifier = @"RFIdentifier";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    self.navigationController.navigationBar.barTintColor=[UIColor yellowColor];
-}
+    UIImage *image = [UIImage imageNamed:@"bg_clear"];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:image];}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,7 +55,7 @@ static NSString *RFIdentifier = @"RFIdentifier";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftOption];
     [self.myCollectionView registerNib:[UINib nibWithNibName:@"HT_HomePageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:RFIdentifier];
     [self createCollectionView];
-    [self createPageControl];
+//    [self createPageControl];
     
    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToPartner) name:@"partner" object:nil];
@@ -90,26 +91,28 @@ static NSString *RFIdentifier = @"RFIdentifier";
 /**
  *  Description
  */
--(void)createPageControl
-{
-    self.myCollectionView.delegate = self;
-    //uiview的子类
-    _pageCtrl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-100, SCREEN_WITH, 10)];
-    _pageCtrl.backgroundColor = [UIColor blackColor];
-    _pageCtrl.numberOfPages = 3;//设置页数
-    _pageCtrl.alpha = 0.5;
-    _pageCtrl.currentPage = 0;//设置默认页数
-    _pageCtrl.backgroundColor=[UIColor redColor];
-    [self.view addSubview:_pageCtrl];
-    //UIControlEventValueChanged 点击方法
-    [_pageCtrl addTarget:self action:@selector(pagechanged:) forControlEvents:UIControlEventTouchUpInside];
-    
-}
+//-(void)createPageControl
+//{
+//    self.myCollectionView.delegate = self;
+//    //uiview的子类
+//    _pageCtrl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-100, SCREEN_WITH, 10)];
+//    _pageCtrl.backgroundColor = [UIColor blackColor];
+//    _pageCtrl.numberOfPages = 3;//设置页数
+//    _pageCtrl.alpha = 0.5;
+//    _pageCtrl.currentPage = 0;//设置默认页数
+//    _pageCtrl.backgroundColor=[UIColor redColor];
+//    [self.view addSubview:_pageCtrl];
+//    //UIControlEventValueChanged 点击方法
+//    [_pageCtrl addTarget:self action:@selector(pagechanged:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//}
 
 -(void)createCollectionView{
     _myCollectionView.collectionViewLayout = [[HT_HomePageLayout alloc] init];
     _myCollectionView.backgroundColor = [UIColor clearColor];
     _myCollectionView.showsHorizontalScrollIndicator = NO;
+//    [_myCollectionView setBackgroundColor:[UIColor redColor]];
+    _myCollectionView.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"meitou_center_knowledge"] ];
 
 }
 /**
@@ -117,17 +120,17 @@ static NSString *RFIdentifier = @"RFIdentifier";
  *
  *  @param page <#page description#>
  */
--(void)pagechanged:(UIPageControl *)page
-{
-    if(_myCollectionView.contentOffset.x == 2 * SCREEN_WITH)
-    {
-        [_myCollectionView setContentOffset:CGPointMake(3 *SCREEN_WITH, 0) animated:YES];
-        _pageCtrl.currentPage = 0;
-        return;
-    }
-    //需要获取改变后的ContentOffset.x 通过currentPage
-    [_myCollectionView setContentOffset:CGPointMake(_pageCtrl.currentPage *SCREEN_WITH, 0) animated:YES];
-}
+//-(void)pagechanged:(UIPageControl *)page
+//{
+//    if(_myCollectionView.contentOffset.x == 2 * SCREEN_WITH)
+//    {
+//        [_myCollectionView setContentOffset:CGPointMake(3 *SCREEN_WITH, 0) animated:YES];
+//        _pageCtrl.currentPage = 0;
+//        return;
+//    }
+//    //需要获取改变后的ContentOffset.x 通过currentPage
+//    [_myCollectionView setContentOffset:CGPointMake(_pageCtrl.currentPage *SCREEN_WITH, 0) animated:YES];
+//}
 
 - (UIButton *)leftOption{
     
@@ -185,17 +188,17 @@ static NSString *RFIdentifier = @"RFIdentifier";
  *  @param cell           <#cell description#>
  *  @param indexPath      <#indexPath description#>
  */
--(void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
-    //滑动的时候改变 页数
-    //通过ContentOffset.x 改变currentPage
-    if (_myCollectionView.contentOffset.x == 3*SCREEN_WITH) {
-        _myCollectionView.contentOffset = CGPointZero;
-    }
-    _pageCtrl.currentPage = _myCollectionView.contentOffset.x/SCREEN_WITH;
-
-    
-
-}
+//-(void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+//    //滑动的时候改变 页数
+//    //通过ContentOffset.x 改变currentPage
+//    if (_myCollectionView.contentOffset.x == 3*SCREEN_WITH) {
+//        _myCollectionView.contentOffset = CGPointZero;
+//    }
+//    _pageCtrl.currentPage = _myCollectionView.contentOffset.x/SCREEN_WITH;
+//
+//    
+//
+//}
 -(void)collectionView:(UICollectionView *)collectionView didEndDisplayingSupplementaryView:(UICollectionReusableView *)view forElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath{
 }
 

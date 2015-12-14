@@ -70,9 +70,7 @@ static NSString *cellMain = @"cellMain";
  *
  */
 -(void)clickLightButton{
-//    HT_HomePageViewController *home=[[HT_HomePageViewController alloc]init];
-//    UINavigationController *centernav = [[UINavigationController alloc] initWithRootViewController:home];
-//    [self.navigationController popToViewController:centernav animated:YES];
+
     for (UIViewController *temp in self.navigationController.viewControllers) {
         if ([temp isKindOfClass:[HT_HomePageViewController class]]) {
             [self.navigationController popToViewController:temp animated:YES];
@@ -101,7 +99,6 @@ static NSString *cellMain = @"cellMain";
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
-//    _tableView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:_tableView];
     
     

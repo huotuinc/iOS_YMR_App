@@ -11,5 +11,6 @@
 @interface HT_HomePage_LeftTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageVType;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVNext;
 
 @end

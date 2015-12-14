@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="227.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dua-px-M0G" userLabel="BaseView">
@@ -28,7 +28,7 @@
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K58-Vy-Gzx" userLabel="HelpImage View">
@@ -76,7 +76,7 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O2K-ze-h8A" userLabel="LevelImage View">
-                                        <rect key="frame" x="75" y="22" width="18" height="14"/>
+                                        <rect key="frame" x="81" y="22" width="18" height="14"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="O2K-ze-h8A" secondAttribute="height" multiplier="47:36" id="dTx-vm-atD"/>
@@ -94,7 +94,7 @@
                                     <constraint firstItem="A9u-88-iiP" firstAttribute="centerX" secondItem="Bkq-AX-4Bx" secondAttribute="centerX" id="Tt7-KH-fWJ"/>
                                     <constraint firstAttribute="width" secondItem="Bkq-AX-4Bx" secondAttribute="height" multiplier="1:1" id="UhI-NO-bg6"/>
                                     <constraint firstItem="O2K-ze-h8A" firstAttribute="centerY" secondItem="Bkq-AX-4Bx" secondAttribute="centerY" multiplier="12:21" id="VJH-d8-NDJ"/>
-                                    <constraint firstItem="O2K-ze-h8A" firstAttribute="centerX" secondItem="Bkq-AX-4Bx" secondAttribute="centerX" multiplier="35:21" id="dXC-HJ-0yS"/>
+                                    <constraint firstItem="O2K-ze-h8A" firstAttribute="centerX" secondItem="Bkq-AX-4Bx" secondAttribute="centerX" multiplier="38:21" id="dXC-HJ-0yS"/>
                                     <constraint firstItem="A9u-88-iiP" firstAttribute="height" secondItem="Bkq-AX-4Bx" secondAttribute="height" multiplier="230:250" id="tG5-ZJ-k7z"/>
                                 </constraints>
                                 <variation key="default">

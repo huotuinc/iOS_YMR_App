@@ -1,14 +1,14 @@
 //
-//  HT_About_BottomCView.m
-//  MeiTou
+//  HT_Cpn_BuyBoundTableViewCell.m
+//  HTTableViewCell
 //
-//  Created by che on 15/12/11.
+//  Created by che on 15/11/23.
 //  Copyright © 2015年 车. All rights reserved.
 //
 
-#import "HT_About_BottomCView.h"
+#import "HT_Par_ChangePhoneCView.h"
 
-@implementation HT_About_BottomCView
+@implementation HT_Par_ChangePhoneCView
 
 - (void)awakeFromNib {
     // Initialization code
