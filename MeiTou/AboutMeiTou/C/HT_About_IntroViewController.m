@@ -90,18 +90,15 @@ static NSString *cellIntro = @"cellIntro";
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
-    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
 }
 
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *_cell;
     HT_About_IntroTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIntro forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    _cell=cell;
     
-    return _cell;
+    return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

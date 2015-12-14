@@ -15,6 +15,8 @@
     _imageVLine.image=[UIImage imageNamed:@"line1"];
     _imageVNice.image=[UIImage imageNamed:@"common_zanred_a"];
     _imageVShare.image=[UIImage imageNamed:@"common_share"];
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

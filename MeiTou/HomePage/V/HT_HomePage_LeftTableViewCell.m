@@ -13,6 +13,8 @@
 - (void)awakeFromNib {
     // Initialization code
     _labelName.textColor=COLOR_LEFTVC_Main;
+    _labelName.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _imageVNext.image=[UIImage imageNamed:@"common_content_right_more"];
     
 }
 

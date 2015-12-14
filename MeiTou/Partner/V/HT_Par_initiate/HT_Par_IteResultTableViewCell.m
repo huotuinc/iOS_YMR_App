@@ -17,13 +17,18 @@
 //    headV.frame = CGRectMake(0, 0, self.ViewHead.frame.size.width, self.ViewHead.frame.size.height);
 //    [self.ViewHead addSubview:headV];
 //    self.ViewHead.backgroundColor=[UIColor redColor];
-    _imageVHead.image=[UIImage imageNamed:@"head"];
 //    _imageVHead.layer.cornerRadius=_imageVHead.frame.size.width/2;
     
     _imageVlevel.image=[UIImage imageNamed:@"common_LV2"];
     
 }
 
+-(void)drawRect:(CGRect)rect{
+    _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVHead.layer.cornerRadius=_imageVHead.frame.size.height/2;
+    _imageVHead.layer.masksToBounds=YES;
+    ////
+}
 - (void)layoutSubviews {
     [super layoutSubviews];
 //    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];

@@ -15,11 +15,15 @@
   
     _labelHelp.text=@"联系客服";
     _labelHelp.textColor=COLOR_LEFTVC_Main;
+    _labelHelp.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
     _imageVHelp.image=[UIImage imageNamed:@"SlidingMenu_content_bottom_kefu"];
+    
     
     _LabelName.textAlignment=NSTextAlignmentCenter;
     _LabelName.text=@"小车";
     _LabelName.textColor=COLOR_LEFTVC_Main;
+    
+    _imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV3"];
     
 //    _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
 //    _imageVHead.backgroundColor=[UIColor redColor];

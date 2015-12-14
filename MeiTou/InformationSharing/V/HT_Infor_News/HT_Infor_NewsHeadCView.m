@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _imageVLine.image=[UIImage imageNamed:@"line1"];
+//    _imageVLine.image=[UIImage imageNamed:@"line1"];
     
     _labelTitle.textColor=COLOR_TEXT_TITILE;
     

@@ -7,6 +7,7 @@
 //
 
 #import "HT_HomePage_PointsViewController.h"
+#import "HT_HomePage_LevelUpViewController.h"
 
 #import "HT_HomePage_PointsCView.h"
 
@@ -51,12 +52,18 @@
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_PointsCView" owner:nil options:nil];
     HT_HomePage_PointsCView *mainView=[nib firstObject];
     mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
+    [mainView.buttonTreasury addTarget:self action:@selector(clickButtonTreasury) forControlEvents:UIControlEventTouchUpInside];
     _mainView=mainView;
     [self.view addSubview:_mainView];
     
     
     
     
+}
+
+-(void)clickButtonTreasury{
+    HT_HomePage_LevelUpViewController *level=[[HT_HomePage_LevelUpViewController alloc]init];
+    [self.navigationController pushViewController:level animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

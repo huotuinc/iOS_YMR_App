@@ -13,6 +13,7 @@
 #import "HT_Infor_ShareViewController.h"
 
 #import "HT_Infor_MainTableViewCell.h"
+#import "HT_Infor_BottomTabBarCView.h"
 
 
 static NSString *cellIMain = @"cellIMain";
@@ -22,6 +23,7 @@ static NSString *cellIMain = @"cellIMain";
 
 @implementation HT_InformationViewController{
     UITableView *_tableView;
+    UIView *_bottomView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -43,6 +45,7 @@ static NSString *cellIMain = @"cellIMain";
     self.view.backgroundColor=[UIColor cyanColor];
 
     [self createTableView];
+    [self createBottomView];
 }
 
 -(void)createBarButtonItem{
@@ -65,9 +68,16 @@ static NSString *cellIMain = @"cellIMain";
     _tableView.dataSource=self;
     //    _tableView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:_tableView];
-    
-    
-    
+   
+}
+
+-(void)createBottomView{
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_BottomTabBarCView" owner:nil options:nil];
+    HT_Infor_BottomTabBarCView *bottomView=[nib firstObject];
+    bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*90)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*90);
+    _bottomView=bottomView;
+    [self.view addSubview:_bottomView];
+
 }
 /**
  *

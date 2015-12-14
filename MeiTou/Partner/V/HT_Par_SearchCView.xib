@@ -12,10 +12,10 @@
             <rect key="frame" x="0.0" y="0.0" width="464" height="114"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="464" height="113"/>
+                <rect key="frame" x="0.0" y="0.0" width="464" height="113.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <searchBar contentMode="redraw" misplaced="YES" placeholder="请输入关键字" translatesAutoresizingMaskIntoConstraints="NO" id="I8Z-aF-DMJ">
+                    <searchBar contentMode="redraw" placeholder="请输入关键字" translatesAutoresizingMaskIntoConstraints="NO" id="I8Z-aF-DMJ">
                         <rect key="frame" x="8" y="8" width="448" height="98"/>
                         <animations/>
                         <textInputTraits key="textInputTraits"/>

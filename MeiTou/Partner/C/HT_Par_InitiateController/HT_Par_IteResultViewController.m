@@ -52,6 +52,7 @@ static NSString *cellIResult = @"cellIResult";
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+_tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [self.view addSubview:_tableView];
     
 }
