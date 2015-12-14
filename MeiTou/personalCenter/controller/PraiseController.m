@@ -28,6 +28,8 @@ static NSString *praiseIdentify = @"praiseIdentify";
     self.selectV = [[selectView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WITH, 111) AndSelectTag:1];
     self.selectV.delegate = self;
     self.selectV.hidden = YES;
+    self.tableView.backgroundColor = COLOR_BACK_MAIN;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.selectV];
     
 }
@@ -52,6 +54,10 @@ static NSString *praiseIdentify = @"praiseIdentify";
     PraiseCell *cell = [tableView dequeueReusableCellWithIdentifier:praiseIdentify forIndexPath:indexPath];
     return cell;
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark selectView

@@ -20,6 +20,7 @@ static NSString *SysIndentify = @"SysIndentify";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor colorWithWhite:0.792 alpha:1.000];
     [self.tableView registerNib:[UINib nibWithNibName:@"SystemMessageCell" bundle:nil] forCellReuseIdentifier:SysIndentify];
     
 }

@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *articleTitle;
 @property (weak, nonatomic) IBOutlet UILabel *articleDetail;
 
+@property (weak, nonatomic) IBOutlet UIButton *reback;
+
 @property (weak, nonatomic) IBOutlet UIButton *forwarding;
 @property (weak, nonatomic) IBOutlet UIButton *comments;
 @property (weak, nonatomic) IBOutlet UIButton *praise;

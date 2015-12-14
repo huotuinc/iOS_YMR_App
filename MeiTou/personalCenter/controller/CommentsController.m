@@ -29,6 +29,8 @@ static NSString *commentIdentify = @"commentsIdentify";
     self.selectV = [[selectView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WITH, 111) AndSelectTag:0];
     self.selectV.delegate = self;
     self.selectV.hidden = YES;
+    self.tableView.backgroundColor = COLOR_BACK_MAIN;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.selectV];
     
     
@@ -43,7 +45,8 @@ static NSString *commentIdentify = @"commentsIdentify";
 #pragma mark tableView
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 159;
+    
+    return 159 + 26;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -54,6 +57,10 @@ static NSString *commentIdentify = @"commentsIdentify";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CommentsCell *cell = [tableView dequeueReusableCellWithIdentifier:commentIdentify forIndexPath:indexPath];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark selectView 
