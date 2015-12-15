@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface HT_Par_BuyPayCView : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIView *viewBase;
+@property (weak, nonatomic) IBOutlet UITextField *textFName;
+@property (weak, nonatomic) IBOutlet UILabel *textFTel;
+@property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UILabel *labelTel;
+@property (weak, nonatomic) IBOutlet UILabel *labelHelp;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVHelp;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSub;
+@property (weak, nonatomic) IBOutlet UILabel *labelMoney;
 
 @end

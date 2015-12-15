@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HT_Par_BuyPhoneViewController : UIViewController
+@interface HT_Par_BoundPhoneViewController : UIViewController
 
 @end

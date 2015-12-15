@@ -183,6 +183,6 @@
     </objects>
     <resources>
         <image name="3" width="64" height="52"/>
-        <image name="head" width="491" height="473"/>
+        <image name="head" width="1" height="1"/>
     </resources>
 </document>

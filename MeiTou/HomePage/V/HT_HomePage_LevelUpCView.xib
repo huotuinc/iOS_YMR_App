@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -17,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSr-2H-XUw">
-                        <rect key="frame" x="8" y="8" width="304" height="435"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="451"/>
                         <animations/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgK-jb-eKI">
@@ -29,12 +28,12 @@
                 <animations/>
                 <constraints>
                     <constraint firstItem="zgK-jb-eKI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="640:575" id="9vh-iH-Ane"/>
-                    <constraint firstItem="cSr-2H-XUw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Cb9-Zg-mi4"/>
+                    <constraint firstItem="cSr-2H-XUw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cb9-Zg-mi4"/>
                     <constraint firstItem="zgK-jb-eKI" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="428:640" id="EwQ-8O-PFy"/>
                     <constraint firstItem="zgK-jb-eKI" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="74:1150" id="TaR-yt-ZNv"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="cSr-2H-XUw" secondAttribute="trailing" id="jLf-PJ-Pia"/>
-                    <constraint firstItem="cSr-2H-XUw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="kPm-Rb-Ff9"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="cSr-2H-XUw" secondAttribute="bottom" id="m5W-xy-JZn"/>
+                    <constraint firstAttribute="trailing" secondItem="cSr-2H-XUw" secondAttribute="trailing" id="jLf-PJ-Pia"/>
+                    <constraint firstItem="cSr-2H-XUw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kPm-Rb-Ff9"/>
+                    <constraint firstAttribute="bottom" secondItem="cSr-2H-XUw" secondAttribute="bottom" id="m5W-xy-JZn"/>
                     <constraint firstItem="zgK-jb-eKI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zJq-kN-scP"/>
                 </constraints>
             </tableViewCellContentView>

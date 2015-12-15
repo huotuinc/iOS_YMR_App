@@ -22,8 +22,6 @@
 		F214A6DB1C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F214A6D91C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib */; };
 		F21A1D051C1124D5006FD426 /* HT_HomePage_PhoneCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A1D031C1124D5006FD426 /* HT_HomePage_PhoneCView.m */; };
 		F21A1D061C1124D5006FD426 /* HT_HomePage_PhoneCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21A1D041C1124D5006FD426 /* HT_HomePage_PhoneCView.xib */; };
-		F21A1D0A1C112578006FD426 /* HT_Par_BuyPhoneCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A1D081C112578006FD426 /* HT_Par_BuyPhoneCView.m */; };
-		F21A1D0B1C112578006FD426 /* HT_Par_BuyPhoneCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21A1D091C112578006FD426 /* HT_Par_BuyPhoneCView.xib */; };
 		F21A4B791C0D7F6B00C1F098 /* HT_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B781C0D7F6B00C1F098 /* HT_BaseViewController.m */; };
 		F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B7B1C0D7FA100C1F098 /* HT_PartnerViewController.m */; };
 		F21A4B7F1C0D7FD300C1F098 /* HT_InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B7E1C0D7FD300C1F098 /* HT_InformationViewController.m */; };
@@ -40,6 +38,8 @@
 		F21C19221C1E9C3100E717A8 /* HT_Par_LoginPhoneCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21C19201C1E9C3100E717A8 /* HT_Par_LoginPhoneCView.xib */; };
 		F21C19261C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21C19241C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.m */; };
 		F21C19271C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21C19251C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.xib */; };
+		F21C192D1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21C192C1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m */; };
+		F21C19301C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21C192F1C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.m */; };
 		F21E44F41C102F0100657249 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F21E44E81C102F0100657249 /* LICENSE */; };
 		F21E44F51C102F0100657249 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F21E44EB1C102F0100657249 /* MMDrawerBarButtonItem.m */; };
 		F21E44F61C102F0100657249 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21E44EE1C102F0100657249 /* MMDrawerController.m */; };
@@ -108,7 +108,7 @@
 		F27D673C1C0B49A900EE6C4F /* HT_HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27D673A1C0B49A900EE6C4F /* HT_HomePageViewController.xib */; };
 		F280268E1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F280268C1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m */; };
 		F280268F1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F280268D1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib */; };
-		F288685D1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F288685C1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.m */; };
+		F288685D1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F288685C1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.m */; };
 		F28E88321C19285E00E75298 /* HT_Infor_ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28E88311C19285E00E75298 /* HT_Infor_ShareViewController.m */; };
 		F28E88361C192B3B00E75298 /* HT_Par_SearchCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28E88341C192B3B00E75298 /* HT_Par_SearchCView.m */; };
 		F28E88371C192B3B00E75298 /* HT_Par_SearchCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F28E88351C192B3B00E75298 /* HT_Par_SearchCView.xib */; };
@@ -225,9 +225,6 @@
 		F21A1D021C1124D5006FD426 /* HT_HomePage_PhoneCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_PhoneCView.h; sourceTree = "<group>"; };
 		F21A1D031C1124D5006FD426 /* HT_HomePage_PhoneCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_PhoneCView.m; sourceTree = "<group>"; };
 		F21A1D041C1124D5006FD426 /* HT_HomePage_PhoneCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_PhoneCView.xib; sourceTree = "<group>"; };
-		F21A1D071C112578006FD426 /* HT_Par_BuyPhoneCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyPhoneCView.h; sourceTree = "<group>"; };
-		F21A1D081C112578006FD426 /* HT_Par_BuyPhoneCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyPhoneCView.m; sourceTree = "<group>"; };
-		F21A1D091C112578006FD426 /* HT_Par_BuyPhoneCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_BuyPhoneCView.xib; sourceTree = "<group>"; };
 		F21A4B771C0D7F6B00C1F098 /* HT_BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_BaseViewController.h; sourceTree = "<group>"; };
 		F21A4B781C0D7F6B00C1F098 /* HT_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_BaseViewController.m; sourceTree = "<group>"; };
 		F21A4B7A1C0D7FA100C1F098 /* HT_PartnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_PartnerViewController.h; sourceTree = "<group>"; };
@@ -255,6 +252,10 @@
 		F21C19231C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_ChangePhoneCView.h; sourceTree = "<group>"; };
 		F21C19241C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_ChangePhoneCView.m; sourceTree = "<group>"; };
 		F21C19251C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_ChangePhoneCView.xib; sourceTree = "<group>"; };
+		F21C192B1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_ChangePhoneViewController.h; sourceTree = "<group>"; };
+		F21C192C1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_ChangePhoneViewController.m; sourceTree = "<group>"; };
+		F21C192E1C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_LoginPhoneViewController.h; sourceTree = "<group>"; };
+		F21C192F1C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_LoginPhoneViewController.m; sourceTree = "<group>"; };
 		F21E44E81C102F0100657249 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F21E44EA1C102F0100657249 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
 		F21E44EB1C102F0100657249 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
@@ -370,8 +371,8 @@
 		F280268B1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_PersonTableViewCell.h; sourceTree = "<group>"; };
 		F280268C1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_PersonTableViewCell.m; sourceTree = "<group>"; };
 		F280268D1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_PersonTableViewCell.xib; sourceTree = "<group>"; };
-		F288685B1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyPhoneViewController.h; sourceTree = "<group>"; };
-		F288685C1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyPhoneViewController.m; sourceTree = "<group>"; };
+		F288685B1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BoundPhoneViewController.h; sourceTree = "<group>"; };
+		F288685C1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BoundPhoneViewController.m; sourceTree = "<group>"; };
 		F28E88301C19285E00E75298 /* HT_Infor_ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_ShareViewController.h; sourceTree = "<group>"; };
 		F28E88311C19285E00E75298 /* HT_Infor_ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_ShareViewController.m; sourceTree = "<group>"; };
 		F28E88331C192B3A00E75298 /* HT_Par_SearchCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_SearchCView.h; sourceTree = "<group>"; };
@@ -612,10 +613,14 @@
 				F2670CF31C0E950000CA70A2 /* HT_Par_BuyViewController.m */,
 				F290850C1C0E9E3F00F779FA /* HT_Par_BuyListViewController.h */,
 				F290850D1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m */,
-				F288685B1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.h */,
-				F288685C1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.m */,
+				F288685B1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.h */,
+				F288685C1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.m */,
 				F2B512A21C1138AC000599DC /* HT_Par_BuyPayViewController.h */,
 				F2B512A31C1138AC000599DC /* HT_Par_BuyPayViewController.m */,
+				F21C192B1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.h */,
+				F21C192C1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m */,
+				F21C192E1C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.h */,
+				F21C192F1C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.m */,
 			);
 			path = HT_Par_BuyController;
 			sourceTree = "<group>";
@@ -990,9 +995,6 @@
 				F27261A51C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.h */,
 				F27261A61C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.m */,
 				F27261A71C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.xib */,
-				F21A1D071C112578006FD426 /* HT_Par_BuyPhoneCView.h */,
-				F21A1D081C112578006FD426 /* HT_Par_BuyPhoneCView.m */,
-				F21A1D091C112578006FD426 /* HT_Par_BuyPhoneCView.xib */,
 				F2C00D771C1054880008833B /* HT_Par_BuyPayCView.h */,
 				F2C00D781C1054880008833B /* HT_Par_BuyPayCView.m */,
 				F2C00D791C1054880008833B /* HT_Par_BuyPayCView.xib */,
@@ -1275,7 +1277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21A1D0B1C112578006FD426 /* HT_Par_BuyPhoneCView.xib in Resources */,
 				F27261BD1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.xib in Resources */,
 				F29085131C0EBD9200F779FA /* HT_Par_BuyHeaderView.xib in Resources */,
 				F2C00D7B1C1054880008833B /* HT_Par_BuyPayCView.xib in Resources */,
@@ -1453,6 +1454,7 @@
 				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,
 				F263CA231C157D5300EE78CA /* HT_Par_SubListViewController.m in Sources */,
 				F2F9684A1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */,
+				F21C192D1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m in Sources */,
 				F263CA161C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.m in Sources */,
 				F2670CF41C0E950000CA70A2 /* HT_Par_BuyViewController.m in Sources */,
 				F22B3A9B1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m in Sources */,
@@ -1475,7 +1477,6 @@
 				F263CA001C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.m in Sources */,
 				F2B168171C18264800517879 /* HT_Infor_NewsHeadCView.m in Sources */,
 				F27261EF1C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.m in Sources */,
-				F21A1D0A1C112578006FD426 /* HT_Par_BuyPhoneCView.m in Sources */,
 				F263CA071C1527B100EE78CA /* HT_Par_IteOrderViewController.m in Sources */,
 				F27261A31C07FD510081EC95 /* HT_Par_MainTopView.m in Sources */,
 				F2D7AEDC1C172D5A00725B4E /* HT_About_TopCView.m in Sources */,
@@ -1499,7 +1500,8 @@
 				F263CA041C15278700EE78CA /* HT_Par_IteCooperationViewController.m in Sources */,
 				F2C00D7F1C1071180008833B /* HT_Par_IteBottomCView.m in Sources */,
 				F21A4B851C0D84C600C1F098 /* HT_HomePage_PhoneViewController.m in Sources */,
-				F288685D1C109AEF0024D6AD /* HT_Par_BuyPhoneViewController.m in Sources */,
+				F21C19301C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.m in Sources */,
+				F288685D1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.m in Sources */,
 				F206B36B1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m in Sources */,
 				F2E443431C187D9F0077B904 /* HT_Par_IteCooperationCView.m in Sources */,
 				F22B23F11C1178730009CCF4 /* HT_Par_IteResultViewController.m in Sources */,
@@ -1609,7 +1611,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "05ab86ec-b4f1-49b3-a539-7fe52b90cef3";
+				PROVISIONING_PROFILE = "f89f9d26-1929-47da-803d-ce0fd5e8c0a8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1648,7 +1650,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "05ab86ec-b4f1-49b3-a539-7fe52b90cef3";
+				PROVISIONING_PROFILE = "f89f9d26-1929-47da-803d-ce0fd5e8c0a8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1669,7 +1671,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4600a5b7-67ec-42c9-8743-1a3a6ed15326";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1688,7 +1690,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4600a5b7-67ec-42c9-8743-1a3a6ed15326";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

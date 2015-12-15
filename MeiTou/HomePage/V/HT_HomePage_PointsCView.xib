@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -18,43 +17,43 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ls6-rP-Fxm">
-                        <rect key="frame" x="8" y="8" width="359" height="521"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqy-O8-bHl" userLabel="TopImage View">
-                                <rect key="frame" x="150" y="18" width="59" height="59"/>
+                                <rect key="frame" x="158" y="19" width="60" height="60"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hqy-O8-bHl" secondAttribute="height" multiplier="1:1" id="e75-gL-T2C"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的美投积分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo9-vY-xKw" userLabel="myLabel">
-                                <rect key="frame" x="0.0" y="89" width="359" height="13"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="15"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ua-FG-sCc" userLabel="PointLabel">
-                                <rect key="frame" x="0.0" y="102" width="359" height="37"/>
+                                <rect key="frame" x="0.0" y="105" width="375" height="38"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jJ-Ai-JfL" userLabel="TreasuryButton">
-                                <rect key="frame" x="11" y="152" width="337" height="32"/>
+                                <rect key="frame" x="12" y="157" width="351" height="33"/>
                                 <animations/>
                                 <state key="normal" title="充入小金库"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美投积分充入商城小金库,可用在购买商品时抵现" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cls-aG-4Gl" userLabel="HelpLabel">
-                                <rect key="frame" x="11" y="211" width="337" height="13"/>
+                                <rect key="frame" x="12" y="217" width="351" height="15"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前100美投积分=1元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MZ-0P-a5s" userLabel="RuleLabel">
-                                <rect key="frame" x="11" y="193" width="337" height="13"/>
+                                <rect key="frame" x="12" y="198" width="351" height="15"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,11 +107,11 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="ls6-rP-Fxm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="3Ka-Qx-41y"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ls6-rP-Fxm" secondAttribute="bottom" id="BJe-I0-faD"/>
-                    <constraint firstItem="ls6-rP-Fxm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="BOx-hA-3BU"/>
-                    <constraint firstItem="ls6-rP-Fxm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="fu8-7o-fDy"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ls6-rP-Fxm" secondAttribute="trailing" id="iVU-Wn-xpx"/>
+                    <constraint firstItem="ls6-rP-Fxm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3Ka-Qx-41y"/>
+                    <constraint firstAttribute="bottom" secondItem="ls6-rP-Fxm" secondAttribute="bottom" id="BJe-I0-faD"/>
+                    <constraint firstItem="ls6-rP-Fxm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BOx-hA-3BU"/>
+                    <constraint firstItem="ls6-rP-Fxm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fu8-7o-fDy"/>
+                    <constraint firstAttribute="trailing" secondItem="ls6-rP-Fxm" secondAttribute="trailing" id="iVU-Wn-xpx"/>
                     <constraint firstItem="ls6-rP-Fxm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lRi-AY-Fu4"/>
                 </constraints>
                 <variation key="default">

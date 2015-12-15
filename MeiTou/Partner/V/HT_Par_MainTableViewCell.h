@@ -15,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelContent;
 @property (weak, nonatomic) IBOutlet UILabel *labelLeft;
 @property (weak, nonatomic) IBOutlet UILabel *labelRight;
-@property (weak, nonatomic) IBOutlet UILabel *labelBottomProgress;
-@property (weak, nonatomic) IBOutlet UILabel *labelSurfaceProgress;
 @property (weak, nonatomic) IBOutlet UIButton *ButtonGo;
 @property (weak, nonatomic) IBOutlet UIView *A_AView
 ;

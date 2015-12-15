@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -16,29 +16,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OT-oz-4Xq" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="359" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZ4-os-Qxs" userLabel="Aiew">
-                                <rect key="frame" x="6" y="37" width="347" height="39"/>
+                                <rect key="frame" x="6" y="37" width="363" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG9-7m-Qo0">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="41"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vg-Kr-eBd" userLabel="PhoneText Field">
-                                        <rect key="frame" x="116" y="0.0" width="115" height="39"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izR-x5-Tpt">
+                                        <rect key="frame" x="269" y="5" width="84" height="31"/>
+                                        <animations/>
+                                        <state key="normal" title="发送验证码"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vg-Kr-eBd" userLabel="PhoneText Field">
+                                        <rect key="frame" x="121" y="0.0" width="121" height="41"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izR-x5-Tpt">
-                                        <rect key="frame" x="257" y="5" width="80" height="29"/>
-                                        <animations/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,16 +70,16 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zJ-Z7-Qmc" userLabel="BView">
-                                <rect key="frame" x="6" y="161" width="347" height="39"/>
+                                <rect key="frame" x="6" y="165" width="363" height="41"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-IX-GFb" userLabel="ValidationText Field">
-                                        <rect key="frame" x="116" y="0.0" width="115" height="39"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-IX-GFb" userLabel="ValidationText Field">
+                                        <rect key="frame" x="121" y="0.0" width="121" height="41"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbP-Zg-lmS">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="41"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,12 +105,12 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuE-tp-04v">
-                                <rect key="frame" x="6" y="235" width="347" height="39"/>
+                                <rect key="frame" x="6" y="240" width="363" height="41"/>
                                 <animations/>
                                 <state key="normal" title="绑定"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="验证号码验证号码验证号码验证号码验证号码验证号码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWQ-7m-FQb" userLabel="StateLabel">
-                                <rect key="frame" x="9" y="84" width="347" height="17"/>
+                                <rect key="frame" x="9" y="86" width="363" height="17"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,17 +142,28 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="6YH-3W-sGB"/>
-                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="H2e-p8-Nne"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="0OT-oz-4Xq" secondAttribute="trailing" id="MqR-6z-aib"/>
-                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="duT-iG-2f2"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="0OT-oz-4Xq" secondAttribute="bottom" id="lkR-Df-lWz"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="0OT-oz-4Xq" secondAttribute="bottom" id="nE5-nR-F05"/>
-                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rFx-tD-GAt"/>
-                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="yYI-oF-vQv"/>
+                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6YH-3W-sGB"/>
+                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="H2e-p8-Nne"/>
+                    <constraint firstAttribute="trailing" secondItem="0OT-oz-4Xq" secondAttribute="trailing" id="MqR-6z-aib"/>
+                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="duT-iG-2f2"/>
+                    <constraint firstAttribute="bottom" secondItem="0OT-oz-4Xq" secondAttribute="bottom" id="lkR-Df-lWz"/>
+                    <constraint firstAttribute="bottom" secondItem="0OT-oz-4Xq" secondAttribute="bottom" id="nE5-nR-F05"/>
+                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rFx-tD-GAt"/>
+                    <constraint firstItem="0OT-oz-4Xq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yYI-oF-vQv"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="buttonBound" destination="uuE-tp-04v" id="fDq-Yc-iey"/>
+                <outlet property="buttonSend" destination="izR-x5-Tpt" id="dab-VQ-JLf"/>
+                <outlet property="labelNumber" destination="ZbP-Zg-lmS" id="r6O-py-yQw"/>
+                <outlet property="labelPhone" destination="jG9-7m-Qo0" id="leK-sg-Zq0"/>
+                <outlet property="labelState" destination="pWQ-7m-FQb" id="J3L-5G-T3Q"/>
+                <outlet property="textFNumber" destination="DTt-IX-GFb" id="xp0-AC-Cpu"/>
+                <outlet property="textFPhone" destination="3Vg-Kr-eBd" id="Dtq-pp-rJP"/>
+                <outlet property="viewA" destination="tZ4-os-Qxs" id="OSb-WJ-YaZ"/>
+                <outlet property="viewB" destination="5zJ-Z7-Qmc" id="jFN-4b-3fD"/>
+            </connections>
             <point key="canvasLocation" x="235.5" y="86.5"/>
         </tableViewCell>
     </objects>

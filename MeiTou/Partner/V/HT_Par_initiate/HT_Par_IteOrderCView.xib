@@ -13,13 +13,13 @@
             <rect key="frame" x="0.0" y="0.0" width="368" height="534"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="368" height="533.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="368" height="533"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xd0-3b-7hD" userLabel="BaseView">
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xd0-3b-7hD" userLabel="BaseView">
                         <rect key="frame" x="8" y="8" width="352" height="518"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ck-9u-h4W" userLabel="MainView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ck-9u-h4W" userLabel="MainView">
                                 <rect key="frame" x="11" y="0.0" width="330" height="302"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMq-rq-3J6" userLabel="NameView">
@@ -199,7 +199,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示:美投将从中扣掉一定的中介费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDp-Gs-39R" userLabel="NoticeLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="提示:美投将从中扣掉一定的中介费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDp-Gs-39R" userLabel="NoticeLabel">
                                         <rect key="frame" x="0.0" y="274" width="330" height="20"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>

@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -18,20 +17,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xn-VC-Rhr" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="304" height="122"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikY-cV-ELb" userLabel="MainView">
-                                <rect key="frame" x="11" y="29" width="282" height="64"/>
+                                <rect key="frame" x="12" y="33" width="296" height="72"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="DWD-VR-lFy" userLabel="HelpImage View">
-                                        <rect key="frame" x="102" y="11" width="42" height="42"/>
+                                        <rect key="frame" x="104" y="12" width="48" height="48"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DWD-VR-lFy" secondAttribute="height" multiplier="1:1" id="A8g-DT-0Rr"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mky-YI-yXj" userLabel="HelpLabel">
-                                        <rect key="frame" x="144" y="11" width="138" height="42"/>
+                                        <rect key="frame" x="152" y="12" width="144" height="48"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,10 +74,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="5xn-VC-Rhr" secondAttribute="trailing" id="Azy-mZ-FAV"/>
-                    <constraint firstItem="5xn-VC-Rhr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="BEq-87-2f7"/>
-                    <constraint firstItem="5xn-VC-Rhr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="XN4-NY-GLe"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="5xn-VC-Rhr" secondAttribute="bottom" id="rK2-YR-bki"/>
+                    <constraint firstAttribute="trailing" secondItem="5xn-VC-Rhr" secondAttribute="trailing" id="Azy-mZ-FAV"/>
+                    <constraint firstItem="5xn-VC-Rhr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BEq-87-2f7"/>
+                    <constraint firstItem="5xn-VC-Rhr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XN4-NY-GLe"/>
+                    <constraint firstAttribute="bottom" secondItem="5xn-VC-Rhr" secondAttribute="bottom" id="rK2-YR-bki"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

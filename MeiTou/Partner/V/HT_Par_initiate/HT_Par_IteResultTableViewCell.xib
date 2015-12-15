@@ -14,10 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="470" height="214"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="470" height="213.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="470" height="213"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-6H-F9n" userLabel="BaseView">
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-6H-F9n" userLabel="BaseView">
                         <rect key="frame" x="8" y="8" width="454" height="198"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-zV-JwQ" userLabel="HeadView">
@@ -49,7 +49,7 @@
                                     <constraint firstItem="ckd-C5-gZz" firstAttribute="centerX" secondItem="xyc-zV-JwQ" secondAttribute="centerX" id="zTG-Vf-Qod"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-e8-yMJ" userLabel="ContentView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-e8-yMJ" userLabel="ContentView">
                                 <rect key="frame" x="114" y="0.0" width="330" height="182"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRc-gG-tLP" userLabel="AView">
@@ -94,10 +94,10 @@
                                             <constraint firstAttribute="trailing" secondItem="jwh-Sr-DDi" secondAttribute="trailing" id="xtC-oG-owB"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uo-Da-YZS" userLabel="BView">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1uo-Da-YZS" userLabel="BView">
                                         <rect key="frame" x="0.0" y="77" width="330" height="105"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJY-o4-L7d" userLabel="HeadGroupView">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJY-o4-L7d" userLabel="HeadGroupView">
                                                 <rect key="frame" x="0.0" y="8" width="330" height="90"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,10 +127,10 @@
                                     <constraint firstAttribute="bottom" secondItem="1uo-Da-YZS" secondAttribute="bottom" id="z8H-Wd-b0e"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkY-6i-mM6" userLabel="LineView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XkY-6i-mM6" userLabel="LineView">
                                 <rect key="frame" x="56" y="99" width="1" height="99"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-6V-4N6">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-6V-4N6">
                                         <rect key="frame" x="0.0" y="0.0" width="1" height="99"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
