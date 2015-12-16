@@ -35,9 +35,13 @@ static NSString *selectIdentify = @"selectViewIdentify";
         
         _selectIndexPath = [NSIndexPath indexPathForRow:tag inSection:0];
         
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 37 * 4, frame.size.width, [UIScreen mainScreen].bounds.size.height - 37  * 4 - frame.origin.y)];
+        view.userInteractionEnabled = YES;
+        [self addSubview:view];
+        
         UITapGestureRecognizer *ger = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectViewBackgroundClick)];
         
-        [self addGestureRecognizer:ger];
+        [view addGestureRecognizer:ger];
     }
     return self;
 }
@@ -109,8 +113,10 @@ static NSString *selectIdentify = @"selectViewIdentify";
 {
     [UIView animateWithDuration:0.2 animations:^{
         self.hidden = YES;
-
     }];
+    if ([self.delegate respondsToSelector:@selector(cannelClick)]) {
+        [self.delegate cannelClick];
+    }
 }
 
 @end

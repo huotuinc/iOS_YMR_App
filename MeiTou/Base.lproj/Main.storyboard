@@ -791,6 +791,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="common_title_top_search" width="15" height="15"/>
+        <image name="common_title_top_search" width="56" height="56"/>
     </resources>
 </document>
