@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -13,21 +12,21 @@
             <rect key="frame" x="0.0" y="0.0" width="323" height="415"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="323" height="414.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="323" height="414"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwV-o1-vgP">
-                        <rect key="frame" x="8" y="8" width="307" height="398"/>
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="414"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目概况" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ye-s4-kJt" userLabel="TitleLabel">
-                                <rect key="frame" x="0.0" y="0.0" width="307" height="39"/>
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="41"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrI-JN-Whh" userLabel="ContentLabel">
-                                <rect key="frame" x="0.0" y="39" width="307" height="359"/>
+                                <rect key="frame" x="0.0" y="41" width="323" height="373"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,10 +55,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="QwV-o1-vgP" secondAttribute="trailing" id="0AV-l7-miw"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="QwV-o1-vgP" secondAttribute="bottom" id="0Ww-NK-cfO"/>
-                    <constraint firstItem="QwV-o1-vgP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9rR-jE-Hly"/>
-                    <constraint firstItem="QwV-o1-vgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="c6T-ot-tds"/>
+                    <constraint firstAttribute="trailing" secondItem="QwV-o1-vgP" secondAttribute="trailing" id="0AV-l7-miw"/>
+                    <constraint firstAttribute="bottom" secondItem="QwV-o1-vgP" secondAttribute="bottom" id="0Ww-NK-cfO"/>
+                    <constraint firstItem="QwV-o1-vgP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9rR-jE-Hly"/>
+                    <constraint firstItem="QwV-o1-vgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="c6T-ot-tds"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

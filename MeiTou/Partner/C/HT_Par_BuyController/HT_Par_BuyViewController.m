@@ -8,7 +8,7 @@
 
 #import "HT_Par_BuyViewController.h"
 #import "HT_Par_BuyListViewController.h"
-#import "HT_Par_BuyPhoneViewController.h"
+#import "HT_Par_BoundPhoneViewController.h"
 #import "HT_Par_MainTopView.h"
 #import "HT_Par_BuyHeaderView.h"
 #import "HT_Par_BuyBottomView.h"
@@ -116,7 +116,6 @@ static NSString *cellBuy = @"cellBuy";
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellBuy];
-
 //    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
 }
@@ -129,7 +128,7 @@ static NSString *cellBuy = @"cellBuy";
     [self.navigationController pushViewController:list animated:YES];
 }
 -(void)clickButtonSubscription{
-    HT_Par_BuyPhoneViewController *auth=[[HT_Par_BuyPhoneViewController alloc]init];
+    HT_Par_BoundPhoneViewController *auth=[[HT_Par_BoundPhoneViewController alloc]init];
     [self.navigationController pushViewController:auth animated:YES];
 
 }

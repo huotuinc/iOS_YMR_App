@@ -18,10 +18,24 @@
 //    @property (weak, nonatomic) IBOutlet UIButton *buttonTreasury;
 //    @property (weak, nonatomic) IBOutlet UILabel *labelRule;
 //    @property (weak, nonatomic) IBOutlet UILabel *labelHelp;
-    _imageVTop.image=[UIImage imageNamed:@"crowdfunding_content_center_success"];
+    _imageVTop.image=[UIImage imageNamed:@"common_jifen"];
     _buttonTreasury.backgroundColor=COLOR_BUTTON_RED;
     _buttonTreasury.titleLabel.textColor=[UIColor whiteColor];
     
+    _labelMy.textColor=COLOR_TEXT_DATE;
+    _labelHelp.textColor=COLOR_TEXT_DATE;
+    _labelRule.textColor=COLOR_TEXT_DATE;
+    _labelPoint.textColor=COLOR_TEXT_TITILE;
+    
+    _labelMy.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelPoint.font=[UIFont systemFontOfSize:FONT_SIZE(40)];
+    _labelRule.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelHelp.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    
+    _buttonTreasury.titleLabel.textColor=[UIColor whiteColor];
+    _buttonTreasury.layer.cornerRadius=3;
+    _buttonTreasury.layer.masksToBounds=YES;
+    _buttonTreasury.clipsToBounds=YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

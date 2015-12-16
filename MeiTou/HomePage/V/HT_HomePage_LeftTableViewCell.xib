@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -14,14 +13,14 @@
             <rect key="frame" x="0.0" y="0.0" width="397" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="397" height="88.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="397" height="88"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S63-ah-kAW">
-                        <rect key="frame" x="8" y="8" width="381" height="72"/>
+                        <rect key="frame" x="0.0" y="0.0" width="397" height="88"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-kY-kVc" userLabel="NameLabel">
-                                <rect key="frame" x="66" y="14" width="257" height="45"/>
+                                <rect key="frame" x="73" y="17" width="260" height="55"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -29,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="ENS-i8-GeC" userLabel="TypeImage View">
-                                <rect key="frame" x="16" y="14" width="45" height="45"/>
+                                <rect key="frame" x="13" y="17" width="55" height="55"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -37,7 +36,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gD3-6c-mMW">
-                                <rect key="frame" x="323" y="14" width="45" height="45"/>
+                                <rect key="frame" x="333" y="17" width="55" height="55"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -69,10 +68,10 @@
                 <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="S63-ah-kAW" secondAttribute="trailing" id="0vv-0Y-jWS"/>
-                    <constraint firstItem="S63-ah-kAW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="1YF-LE-HWo"/>
-                    <constraint firstItem="S63-ah-kAW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Gpi-ma-ngS"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="S63-ah-kAW" secondAttribute="bottom" id="gfn-ya-QM6"/>
+                    <constraint firstAttribute="trailing" secondItem="S63-ah-kAW" secondAttribute="trailing" id="0vv-0Y-jWS"/>
+                    <constraint firstItem="S63-ah-kAW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1YF-LE-HWo"/>
+                    <constraint firstItem="S63-ah-kAW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gpi-ma-ngS"/>
+                    <constraint firstAttribute="bottom" secondItem="S63-ah-kAW" secondAttribute="bottom" id="gfn-ya-QM6"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

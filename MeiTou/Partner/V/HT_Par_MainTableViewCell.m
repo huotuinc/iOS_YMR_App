@@ -21,28 +21,31 @@
 //    @property (weak, nonatomic) IBOutlet UILabel *labelProgress;
 //    @property (weak, nonatomic) IBOutlet UIButton *ButtonGo;
 //}
+    _imageVTop.image=[UIImage imageNamed:@"aaa"];
     _A_AView.alpha=0.5;
-    _A_AView.backgroundColor=[UIColor grayColor];
+    _A_AView.backgroundColor=COLOR_TEXT_CONTENT;
     _LabelTitle.textColor=[UIColor whiteColor];
     _LabelTitle.alpha=0.5;
+    _LabelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
     
     _labelDate.textColor=[UIColor whiteColor];
     _labelDate.textAlignment=NSTextAlignmentRight;
     _labelDate.alpha=0.5;
+    _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
     
     _labelLeft.textAlignment=NSTextAlignmentCenter;
+    _labelLeft.font=[UIFont systemFontOfSize:20];
+    _labelRight.font=[UIFont systemFontOfSize:20];
     _labelRight.textAlignment=NSTextAlignmentCenter;
     
-    _labelContent.textColor=[UIColor grayColor];
-//    _labelContent.lineBreakMode=NSLineBreakByCharWrapping;
-
+    _labelContent.textColor=COLOR_TEXT_CONTENT;
+    _labelLeft.textColor=COLOR_TEXT_TITILE;
+    _labelRight.textColor=COLOR_BUTTON_RED;
+    
+    
 
     
-    _labelBottomProgress.layer.cornerRadius=10;
-    _labelBottomProgress.backgroundColor=[UIColor grayColor];
-    
-    _labelSurfaceProgress.backgroundColor=[UIColor brownColor];
-    _labelSurfaceProgress.layer.cornerRadius=100;
+
     
     
     

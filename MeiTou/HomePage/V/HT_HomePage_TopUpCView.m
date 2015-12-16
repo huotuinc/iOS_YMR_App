@@ -12,32 +12,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
-//    @property (weak, nonatomic) IBOutlet UILabel *labelLevel;
-//    @property (weak, nonatomic) IBOutlet UIView *viewBase;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelScore;
-//    @property (weak, nonatomic) IBOutlet UIImageView *imageViewSplite;
-//    @property (weak, nonatomic) IBOutlet UIImageView *lineA;
-//    @property (weak, nonatomic) IBOutlet UIImageView *lineB;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelUp;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelMore;
-//    @property (weak, nonatomic) IBOutlet UIImageView *lineC;
-//    @property (weak, nonatomic) IBOutlet UIImageView *lineD;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelBuy;
-//    @property (weak, nonatomic) IBOutlet UITextField *textFBuy;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelGet;
-//    @property (weak, nonatomic) IBOutlet UITextField *textFGet;
-//    @property (weak, nonatomic) IBOutlet UIImageView *lineE;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-//    @property (weak, nonatomic) IBOutlet UIImageView *lineF;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelPay;
-//    @property (weak, nonatomic) IBOutlet UIButton *buttonPay;
-//    @property (weak, nonatomic) IBOutlet UIImageView *imageVPay;
-//    @property (weak, nonatomic) IBOutlet UIImageView *lineAA;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelWei;
-//    @property (weak, nonatomic) IBOutlet UIButton *buttonWei;
-//    @property (weak, nonatomic) IBOutlet UIImageView *imageWei;
-//    @property (weak, nonatomic) IBOutlet UIImageView *lineG;
-//    @property (weak, nonatomic) IBOutlet UIButton *buttonBuy;
+
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 
     _lineA.image=[UIImage imageNamed:@"line1"];
     _lineB.image=[UIImage imageNamed:@"line1"];
@@ -60,16 +37,31 @@
     _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
     _labelPay.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
     _labelWei.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
+    _labelMoney.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
+    _labelLevelUp.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
+    _labelBuy.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelGet.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelPoint.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
     
     _labelLevel.textColor=COLOR_TEXT_DATE;
     _labelScore.textColor=COLOR_TEXT_DATE;
     _labelGet.textColor=COLOR_TEXT_DATE;
     _labelBuy.textColor=COLOR_TEXT_DATE;
     _labelPay.textColor=COLOR_TEXT_DATE;
-    _labelLevel.textColor=COLOR_TEXT_TITILE;
+    _labelPoint.textColor=COLOR_TEXT_DATE;
+    _textFBuy.textColor=COLOR_TEXT_DATE;
+    
+    _labelUp.textColor=COLOR_TEXT_TITILE;
+    _labelMore.textColor=COLOR_TEXT_TITILE;
     _labelMoney.textColor=COLOR_TEXT_TITILE;
+    _labelLevelUp.textColor=COLOR_TEXT_TITILE;
     _labelWei.textColor=COLOR_TEXT_CONTENT;
     _labelPay.textColor=COLOR_TEXT_CONTENT;
+    
+    
+    _labelBuy.backgroundColor=COLOR_BACK_MAIN;
+    _textFBuy.backgroundColor=COLOR_BACK_MAIN;
+    
     
     
     _imageVPay.image=[UIImage imageNamed:@"zhifubao"];
@@ -84,10 +76,51 @@
     
     _viewBase.backgroundColor=COLOR_BACK_MAIN;
     
+    _viewA.layer.cornerRadius=3;
+    _viewA.layer.masksToBounds=YES;
+    _viewB.layer.cornerRadius=3;
+    _viewB.layer.masksToBounds=YES;
+    _buttonBuy.layer.cornerRadius=3;
+    _buttonBuy.layer.masksToBounds=YES;
+    
     
 
 }
+/**
+ *  键盘监听
+ *
+ *  @param sender <#sender description#>
+ */
+-(void)KeyboardWillShow:(NSNotification *)sender
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]
+     ];
+    [UIView commitAnimations];//开始执行动画
+}
+-(void)KeyboardWillHide:(NSNotification *)sender
+{
+    if (![_textFBuy.text isEqual:@""]) {
+        _labelPoint.text=[NSString stringWithFormat:@"%@分",_textFBuy.text ];
+    }
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]];
+    self.transform = CGAffineTransformIdentity; //重置状态
+    [UIView commitAnimations];
 
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITextField *text  = (id)[self viewWithTag:300];
+    [text resignFirstResponder];
+
+    
+}
+/**
+ *  画圆
+ *
+ *  @param rect <#rect description#>
+ */
 -(void)drawRect:(CGRect)rect{
     _buttonPay.layer.masksToBounds=YES;
     _buttonPay.layer.cornerRadius=_buttonPay.frame.size.height/2;

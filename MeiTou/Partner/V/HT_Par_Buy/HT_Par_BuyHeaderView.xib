@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -13,44 +12,44 @@
             <rect key="frame" x="0.0" y="0.0" width="380" height="250"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="380" height="249.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="380" height="249"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYo-FQ-PFo" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="364" height="233"/>
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="249"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hT2-K2-qcC">
-                                <rect key="frame" x="0.0" y="10" width="364" height="222"/>
+                                <rect key="frame" x="0.0" y="10" width="380" height="238"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gz-iD-MdU" userLabel="MainView">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="222"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="238"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-rQ-LTx" userLabel="AView">
-                                                <rect key="frame" x="0.0" y="-1" width="364" height="111"/>
+                                                <rect key="frame" x="0.0" y="-1" width="380" height="119"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束时间:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxI-EV-nfl">
-                                                        <rect key="frame" x="0.0" y="67" width="57" height="44"/>
+                                                        <rect key="frame" x="0.0" y="71" width="59" height="48"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-wq-8zV" userLabel="TimeLabel">
-                                                        <rect key="frame" x="118" y="67" width="246" height="44"/>
+                                                        <rect key="frame" x="122" y="71" width="258" height="48"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFZ-M3-ZOs" userLabel="DateLabel">
-                                                        <rect key="frame" x="59" y="67" width="57" height="44"/>
+                                                        <rect key="frame" x="61" y="71" width="59" height="48"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="众筹会议类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQE-Re-jdg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="364" height="67"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="380" height="71"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,17 +78,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZ6-Qa-A4w" userLabel="BView">
-                                                <rect key="frame" x="0.0" y="110" width="364" height="44"/>
+                                                <rect key="frame" x="0.0" y="118" width="380" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已预约" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hre-Ty-jZR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="44"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="48"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6m-hi-B5Y" userLabel="PersonLabel">
-                                                        <rect key="frame" x="57" y="0.0" width="307" height="44"/>
+                                                        <rect key="frame" x="59" y="0.0" width="321" height="48"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,10 +108,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIZ-5G-y1i" userLabel="CView">
-                                                <rect key="frame" x="0.0" y="154" width="364" height="68"/>
+                                                <rect key="frame" x="0.0" y="166" width="380" height="72"/>
                                                 <subviews>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tw8-ab-zS4">
-                                                        <rect key="frame" x="0.0" y="21" width="364" height="22"/>
+                                                        <rect key="frame" x="0.0" y="24" width="380" height="24"/>
                                                         <animations/>
                                                     </progressView>
                                                 </subviews>
@@ -162,14 +161,14 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XEV-Fe-ao4" userLabel="LineImage View">
-                                <rect key="frame" x="0.0" y="232" width="364" height="1"/>
+                                <rect key="frame" x="0.0" y="248" width="380" height="1"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="YaZ-yY-LZf"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xdd" translatesAutoresizingMaskIntoConstraints="NO" id="Emx-Q8-3Zf" userLabel="TopImage View">
-                                <rect key="frame" x="0.0" y="0.0" width="364" height="10"/>
+                                <rect key="frame" x="0.0" y="0.0" width="380" height="10"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -202,10 +201,10 @@
                 <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="OYo-FQ-PFo" secondAttribute="bottom" id="0KY-C9-ax4"/>
-                    <constraint firstItem="OYo-FQ-PFo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="6yz-yy-ysz"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="OYo-FQ-PFo" secondAttribute="trailing" id="S1L-D1-8nH"/>
-                    <constraint firstItem="OYo-FQ-PFo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hxm-hJ-jCN"/>
+                    <constraint firstAttribute="bottom" secondItem="OYo-FQ-PFo" secondAttribute="bottom" id="0KY-C9-ax4"/>
+                    <constraint firstItem="OYo-FQ-PFo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6yz-yy-ysz"/>
+                    <constraint firstAttribute="trailing" secondItem="OYo-FQ-PFo" secondAttribute="trailing" id="S1L-D1-8nH"/>
+                    <constraint firstItem="OYo-FQ-PFo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hxm-hJ-jCN"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

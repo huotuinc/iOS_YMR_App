@@ -1,23 +1,21 @@
 //
-//  MainViewController.m
-//  qwer
+//  HT_Par_ChangePhoneViewController.m
+//  MeiTou
 //
-//  Created by che on 15/12/3.
+//  Created by che on 15/12/14.
 //  Copyright © 2015年 车. All rights reserved.
 //
 
-#import "HT_Par_BuyPhoneViewController.h"
-#import "HT_Par_BuyPayViewController.h"
-#import "HT_Par_BuyPhoneCView.h"
+#import "HT_Par_ChangePhoneViewController.h"
+#import "HT_Par_LoginPhoneViewController.h"
 
-
-
-@interface HT_Par_BuyPhoneViewController ()
+#import "HT_Par_ChangePhoneCView.h"
+@interface HT_Par_ChangePhoneViewController ()
 
 @end
 
-@implementation HT_Par_BuyPhoneViewController{
-    UIView *_mainView;
+@implementation HT_Par_ChangePhoneViewController{
+    HT_Par_ChangePhoneCView *_mainView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -39,7 +37,7 @@
     UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
     self.navigationItem.leftBarButtonItem=bbiL;
     
-
+    
 }
 /**
  *
@@ -50,26 +48,20 @@
 
 -(void)createMainView{
     
-        NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_BuyPhoneCView" owner:nil options:nil];
-        HT_Par_BuyPhoneCView *mainView=[nib firstObject];
-    [mainView.buttonBound addTarget:self action:@selector(goToPayView) forControlEvents:UIControlEventTouchUpInside];
-        mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
-        _mainView=mainView;
-        [self.view addSubview:_mainView];
-
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_ChangePhoneCView" owner:nil options:nil];
+    _mainView=[nib firstObject];
+    [_mainView.buttonBound addTarget:self action:@selector(goToNextView) forControlEvents:UIControlEventTouchUpInside];
+    _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
+    [self.view addSubview:_mainView];
+    
     
     
     
 }
--(void)goToPayView{
-    HT_Par_BuyPayViewController *pay=[[HT_Par_BuyPayViewController alloc]init];
-    [self.navigationController pushViewController:pay animated:YES];
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)goToNextView{
+    HT_Par_LoginPhoneViewController *login=[[HT_Par_LoginPhoneViewController alloc]init];
+    [self.navigationController pushViewController:login animated:YES];
+    
 }
 
 /*

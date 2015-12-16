@@ -109,7 +109,6 @@ static NSString *cellMain = @"cellMain";
     UITableViewCell *_cell;
     if (indexPath.section==0) {
         HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
-        cell.imageVTop.image=[UIImage imageNamed:@"1"];
         cell.labelDate.text=@"10-10";
         cell.LabelTitle.text=@"11111111111111111111";
         cell.labelContent.text=@"12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）";
@@ -127,7 +126,6 @@ static NSString *cellMain = @"cellMain";
     }
     if (indexPath.section==1) {
         HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
-        cell.imageVTop.image=[UIImage imageNamed:@"1"];
         cell.labelDate.text=@"10-10";
         cell.LabelTitle.text=@"2222222222222222222";
         [cell.ButtonGo setTitle:@"我要发起" forState:UIControlStateNormal];
@@ -137,7 +135,6 @@ static NSString *cellMain = @"cellMain";
     }
     if (indexPath.section==2) {
         HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
-        cell.imageVTop.image=[UIImage imageNamed:@"1"];
         cell.labelDate.text=@"10-10";
         cell.LabelTitle.text=@"3333333333333";
         [cell.ButtonGo setTitle:@"我要认购" forState:UIControlStateNormal];

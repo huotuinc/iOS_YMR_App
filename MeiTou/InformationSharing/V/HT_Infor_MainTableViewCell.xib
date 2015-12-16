@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="376.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="376"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdS-bh-t3I" userLabel="BaseView">
@@ -283,7 +283,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aET-5f-4IJ" userLabel="HeadGroupView">
-                                        <rect key="frame" x="0.0" y="10.5" width="250" height="27"/>
+                                        <rect key="frame" x="0.0" y="11" width="250" height="27"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>

@@ -17,17 +17,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelLevel;
 @property (weak, nonatomic) IBOutlet UIView *viewBase;
 @property (weak, nonatomic) IBOutlet UILabel *labelScore;
-@property (weak, nonatomic) IBOutlet UIImageView *imageViewSplite;
+@property (weak, nonatomic) IBOutlet UIView *viewA;
+@property (weak, nonatomic) IBOutlet UIView *viewB;
 @property (weak, nonatomic) IBOutlet UIImageView *lineA;
 @property (weak, nonatomic) IBOutlet UIImageView *lineB;
 @property (weak, nonatomic) IBOutlet UILabel *labelUp;
 @property (weak, nonatomic) IBOutlet UILabel *labelMore;
+@property (weak, nonatomic) IBOutlet UILabel *labelPoint;
 @property (weak, nonatomic) IBOutlet UIImageView *lineC;
 @property (weak, nonatomic) IBOutlet UIImageView *lineD;
 @property (weak, nonatomic) IBOutlet UILabel *labelBuy;
 @property (weak, nonatomic) IBOutlet UITextField *textFBuy;
 @property (weak, nonatomic) IBOutlet UILabel *labelGet;
-@property (weak, nonatomic) IBOutlet UITextField *textFGet;
+
 @property (weak, nonatomic) IBOutlet UIImageView *lineE;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *lineF;
