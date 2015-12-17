@@ -10,19 +10,20 @@
 #import "HT_Par_ItePaymentOrderViewController.h"
 
 #import "HT_Par_IteCooperationCView.h"
-
+#import "HT_Par_IteChoicePickerView.h"
 @interface HT_Par_IteCooperationViewController ()
 
 @end
 
 @implementation HT_Par_IteCooperationViewController{
-    UIView *_mainView;
+    HT_Par_IteCooperationCView *_mainView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
+    [self createNavgationBarTitle];
     [self createBarButtonItem];
     
 }
@@ -30,6 +31,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createMainView];
+}
+
+-(void)createNavgationBarTitle{
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(36)];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"我要合作";
+    self.navigationItem.titleView = titleLabel;
 }
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
@@ -50,14 +61,27 @@
 -(void)createMainView{
     
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteCooperationCView" owner:nil options:nil];
-    HT_Par_IteCooperationCView *mainView=[nib firstObject];
-    [mainView.buttonSubmit addTarget:self action:@selector(goToPayView) forControlEvents:UIControlEventTouchUpInside];
-    mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
-    _mainView=mainView;
+    _mainView=[nib firstObject];
+    [_mainView.buttonSubmit addTarget:self action:@selector(goToPayView) forControlEvents:UIControlEventTouchUpInside];
+    _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
+    UITapGestureRecognizer * tapMoney = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheLabelSelect)];
+    [_mainView.viewSelect addGestureRecognizer:tapMoney];
     [self.view addSubview:_mainView];
     
     
     
+    
+}
+
+/**
+ *  tap事件
+ */
+-(void)tapTheLabelSelect{
+    HT_Par_IteChoicePickerView *picker = [[HT_Par_IteChoicePickerView alloc]init];
+    picker.block = ^(HT_Par_IteChoicePickerView *view,UIButton *btn,HT_Par_IteChociePickerNModel *locate){
+        _mainView.labelSelect.text = [NSString stringWithFormat:@"%@.00",locate];
+    };
+    [picker show];
     
 }
 -(void)goToPayView{

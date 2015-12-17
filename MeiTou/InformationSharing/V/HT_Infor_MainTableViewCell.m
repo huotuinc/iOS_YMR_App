@@ -14,12 +14,33 @@
     // Initialization code
     _labelTitle.text=@"内容标题内容标题内容标题";
     _labelDate.text=@"2050/10/10 10:10:10";
-    _labelNice.text=@"111";
-    _labelComment.text=@"222";
-    _labelShare.text=@"333";
+    _labelNice.text=@"800赞";
+    _labelComment.text=@"79评论";
+    _labelShare.text=@"518人";
     _labelCount.text=@"333个赞";
     _labelScore.text=@"转发得55分";
     
+    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
+    _labelScore.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelContent.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelCount.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelComment.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
+    _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
+    _labelNice.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
+    _labelShare.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
+    
+    _labelTitle.textColor=COLOR_TEXT_TITILE;
+    _labelScore.textColor=COLOR_TEXT_DATE;
+    _labelContent.textColor=COLOR_TEXT_CONTENT;
+    _labelCount.textColor=COLOR_TEXT_DATE;
+    _labelComment.textColor=COLOR_TEXT_DATE;
+    _labelDate.textColor=COLOR_TEXT_DATE;
+    _labelNice.textColor=COLOR_TEXT_DATE;
+    _labelShare.textColor=COLOR_TEXT_DATE;
+    
+    
+    _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVMain.image=[UIImage imageNamed:@"aaa"];
     _labelContent.text=@"但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是";
     _labelContent.numberOfLines=3;
     

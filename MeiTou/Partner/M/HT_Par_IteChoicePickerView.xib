@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddressChoicePickerView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HT_Par_IteChoicePickerView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -45,8 +45,8 @@
                                 <action selector="finishBtnPress:" destination="iN0-l3-epB" eventType="touchUpInside" id="haM-Td-3xJ"/>
                             </connections>
                         </button>
-                        <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgF-GQ-51O">
-                            <rect key="frame" x="0.0" y="55" width="320" height="180"/>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgF-GQ-51O">
+                            <rect key="frame" x="0.0" y="40" width="320" height="210"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="210" id="uCq-3h-YEp"/>

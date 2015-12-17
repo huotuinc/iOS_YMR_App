@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 com.injoinow. All rights reserved.
 //  make by 郑泽钦 分享
 
-#import "AreaObject.h"
+#import "HT_Par_IteChociePickerNModel.h"
 
-@implementation AreaObject
+@implementation HT_Par_IteChociePickerNModel
 
 - (NSString *)description{
     return [NSString stringWithFormat:@"%@ ",self.region];

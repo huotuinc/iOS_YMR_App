@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="397" height="88"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-kY-kVc" userLabel="NameLabel">
-                                <rect key="frame" x="73" y="17" width="260" height="55"/>
+                                <rect key="frame" x="65" y="17" width="276" height="55"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="ENS-i8-GeC" userLabel="TypeImage View">
-                                <rect key="frame" x="13" y="17" width="55" height="55"/>
+                                <rect key="frame" x="21" y="25" width="39" height="39"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -36,7 +36,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gD3-6c-mMW">
-                                <rect key="frame" x="333" y="17" width="55" height="55"/>
+                                <rect key="frame" x="341" y="25" width="39" height="39"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -53,14 +53,16 @@
                             <constraint firstItem="ENS-i8-GeC" firstAttribute="centerX" secondItem="S63-ah-kAW" secondAttribute="centerX" multiplier="55:270" id="TkX-hg-PJW"/>
                             <constraint firstItem="gD3-6c-mMW" firstAttribute="height" secondItem="ENS-i8-GeC" secondAttribute="height" id="UIg-fz-xtw"/>
                             <constraint firstAttribute="trailing" secondItem="JnX-kY-kVc" secondAttribute="trailing" id="cMs-VC-llo"/>
-                            <constraint firstItem="ENS-i8-GeC" firstAttribute="height" secondItem="S63-ah-kAW" secondAttribute="height" multiplier="50:80" id="edN-C5-R86"/>
+                            <constraint firstItem="ENS-i8-GeC" firstAttribute="height" secondItem="S63-ah-kAW" secondAttribute="height" multiplier="35:80" id="edN-C5-R86"/>
                             <constraint firstItem="gD3-6c-mMW" firstAttribute="leading" secondItem="JnX-kY-kVc" secondAttribute="trailing" id="m2s-6y-3vh"/>
                             <constraint firstItem="JnX-kY-kVc" firstAttribute="height" secondItem="ENS-i8-GeC" secondAttribute="height" id="oZ7-jD-5W1"/>
+                            <constraint firstItem="JnX-kY-kVc" firstAttribute="height" secondItem="S63-ah-kAW" secondAttribute="height" multiplier="50:80" id="z6f-NS-1pD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="AvP-FB-SNK"/>
                                 <exclude reference="cMs-VC-llo"/>
+                                <exclude reference="oZ7-jD-5W1"/>
                             </mask>
                         </variation>
                     </view>
@@ -84,6 +86,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="head" width="180" height="180"/>
+        <image name="head" width="494" height="324"/>
     </resources>
 </document>

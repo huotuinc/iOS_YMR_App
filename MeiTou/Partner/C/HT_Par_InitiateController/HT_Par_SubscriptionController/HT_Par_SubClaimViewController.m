@@ -7,7 +7,7 @@
 //
 
 #import "HT_Par_SubClaimViewController.h"
-#import "AddressChoicePickerView.h"
+#import "HT_Par_IteChoicePickerView.h"
 
 #import "HT_Par_SubClaimCView.h"
 
@@ -63,13 +63,11 @@
  *  tap事件
  */
 -(void)tapTheLabelSelect{
-    AddressChoicePickerView *addressPickerView = [[AddressChoicePickerView alloc]init];
-    addressPickerView.block = ^(AddressChoicePickerView *view,UIButton *btn,AreaObject *locate){
+    HT_Par_IteChoicePickerView *picker = [[HT_Par_IteChoicePickerView alloc]init];
+    picker.block = ^(HT_Par_IteChoicePickerView *view,UIButton *btn,HT_Par_IteChociePickerNModel *locate){
         mainView.labelSelect.text = [NSString stringWithFormat:@"%@",locate];
-
     };
-    [addressPickerView show];
-    
+    [picker show];
 
 }
 - (void)didReceiveMemoryWarning {

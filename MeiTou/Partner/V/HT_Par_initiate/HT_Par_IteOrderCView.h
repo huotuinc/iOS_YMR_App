@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HT_Par_IteOrderCView : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageVDown;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelTel;
 @property (weak, nonatomic) IBOutlet UILabel *labelMoney;
@@ -22,7 +23,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFMark;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSubmit;
 @property (weak, nonatomic) IBOutlet UIView *viewMoney;
-
 @property (weak, nonatomic) IBOutlet UIView *viewSelect;
+@property (weak, nonatomic) IBOutlet UIView *viewName;
+@property (weak, nonatomic) IBOutlet UIView *viewTel;
+@property (weak, nonatomic) IBOutlet UIView *viewMark;
+@property (weak, nonatomic) IBOutlet UIView *viewState;
 
 @end

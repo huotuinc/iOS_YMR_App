@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AreaObject.h"
-@class AddressChoicePickerView;
-typedef void (^AddressChoicePickerViewBlock)(AddressChoicePickerView *view,UIButton *btn,AreaObject *locate);
-@interface AddressChoicePickerView : UIView
+#import "HT_Par_IteChociePickerNModel.h"
+@class HT_Par_IteChoicePickerView;
+typedef void (^AddressChoicePickerViewBlock)(HT_Par_IteChoicePickerView *view,UIButton *btn,HT_Par_IteChociePickerNModel *locate);
+@interface HT_Par_IteChoicePickerView : UIView
 
 @property (copy, nonatomic)AddressChoicePickerViewBlock block;
 

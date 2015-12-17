@@ -11,8 +11,10 @@
 @interface HT_Par_IteProjectDoneHeaderCView : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageVTop;
 @property (weak, nonatomic) IBOutlet UIImageView *imagevState;
-
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVLine;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *labelEnd;
 @property (weak, nonatomic) IBOutlet UILabel *labelDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelTime;
@@ -26,10 +28,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelTip;
 @property (weak, nonatomic) IBOutlet UILabel *labelResult;
 @property (weak, nonatomic) IBOutlet UILabel *labelSuccess;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVline;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageVRight;
 @property (weak, nonatomic) IBOutlet UIProgressView *viewProgress;
-@property (weak, nonatomic) IBOutlet UIImageView *imageVline;
 @property (weak, nonatomic) IBOutlet UIView *viewHeadGroup;
 
 @end

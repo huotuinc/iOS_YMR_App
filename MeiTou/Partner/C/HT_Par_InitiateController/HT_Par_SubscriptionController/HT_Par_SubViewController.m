@@ -33,7 +33,6 @@ static NSString *cellSub = @"cellSub";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent = NO;
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellSub];
     [self createBarButtonItem];
 }
 - (void)viewDidLoad {
@@ -82,7 +81,7 @@ static NSString *cellSub = @"cellSub";
 -(void)createHeadView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_SubProjectDoneHeaderCView" owner:nil options:nil];
     HT_Par_SubProjectDoneHeaderCView *headerView=[nib firstObject];
-    headerView.frame=CGRectMake(0, 0, SCREEN_WITH,SCREEN_HEIGHT/1100*222/190*270);
+    headerView.frame=CGRectMake(0, 0, SCREEN_WITH,SCREEN_HEIGHT/1100*250/190*270);
     _headerView=headerView;
 }
 
@@ -104,11 +103,16 @@ static NSString *cellSub = @"cellSub";
     //    NSLog(@"%f",SCREEN_HEIGHT/1100*100);
     
 }
+//原来250是222
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT/1100*(615+222)) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT/1100*(615+250)) style:UITableViewStylePlain];
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellSub];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
+    _tableView.backgroundColor=COLOR_BACK_MAIN;
+    _tableView.showsVerticalScrollIndicator =NO;
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
 }
 /**
@@ -126,19 +130,16 @@ static NSString *cellSub = @"cellSub";
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *_cell;
     HT_Par_BuyMainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellSub forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    _cell=cell;
-    
-    return _cell;
+    return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return SCREEN_HEIGHT ;
+    return (NSInteger)SCREEN_HEIGHT ;
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

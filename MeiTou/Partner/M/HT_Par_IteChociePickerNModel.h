@@ -8,7 +8,7 @@
 //区域对象
 #import <Foundation/Foundation.h>
 
-@interface AreaObject : NSObject
+@interface HT_Par_IteChociePickerNModel : NSObject
 
 //区域
 @property (copy, nonatomic) NSString *region;

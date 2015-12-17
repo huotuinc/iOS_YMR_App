@@ -9,13 +9,13 @@
 #import "HT_Par_IteOrderViewController.h"
 
 #import "HT_Par_IteOrderCView.h"
-
+#import "HT_Par_IteChoicePickerView.h"
 @interface HT_Par_IteOrderViewController ()
 
 @end
 
 @implementation HT_Par_IteOrderViewController{
-    UIView *_mainView;
+    HT_Par_IteOrderCView *_mainView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -49,14 +49,24 @@
 -(void)createMainView{
     
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteOrderCView" owner:nil options:nil];
-    HT_Par_IteOrderCView *mainView=[nib firstObject];
-    [mainView.buttonSubmit addTarget:self action:@selector(clickButtonSubmit) forControlEvents:UIControlEventTouchUpInside];
-    mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
-    _mainView=mainView;
+    _mainView=[nib firstObject];
+    [_mainView.buttonSubmit addTarget:self action:@selector(clickButtonSubmit) forControlEvents:UIControlEventTouchUpInside];
+    _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
+    UITapGestureRecognizer * tapMoney = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheLabelSelect)];
+    [_mainView.viewSelect addGestureRecognizer:tapMoney];
     [self.view addSubview:_mainView];
-    
-    
-    
+ 
+}
+/**
+ *  tap事件
+ */
+-(void)tapTheLabelSelect{
+    HT_Par_IteChoicePickerView *picker = [[HT_Par_IteChoicePickerView alloc]init];
+    picker.block = ^(HT_Par_IteChoicePickerView *view,UIButton *btn,HT_Par_IteChociePickerNModel *locate){
+        _mainView.labelSelect.text = [NSString stringWithFormat:@"%@.00",locate];
+        _mainView.labelState.text=[NSString stringWithFormat:@"我有%@万,我要找人合作众筹",locate];
+    };
+    [picker show];
     
 }
 -(void)clickButtonSubmit{

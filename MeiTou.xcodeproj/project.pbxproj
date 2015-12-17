@@ -13,9 +13,9 @@
 		F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A41C15B71800ED2017 /* HT_Infor_GroupViewController.m */; };
 		F20697A81C15B72900ED2017 /* HT_Infor_NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A71C15B72900ED2017 /* HT_Infor_NewsViewController.m */; };
 		F206B36B1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F206B36A1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m */; };
-		F211BC091C1819A00033B59E /* AreaObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F211BC051C1819A00033B59E /* AreaObject.m */; };
-		F211BC0A1C1819A00033B59E /* AddressChoicePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F211BC071C1819A00033B59E /* AddressChoicePickerView.m */; };
-		F211BC0B1C1819A00033B59E /* AddressChoicePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F211BC081C1819A00033B59E /* AddressChoicePickerView.xib */; };
+		F211BC091C1819A00033B59E /* HT_Par_IteChociePickerNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F211BC051C1819A00033B59E /* HT_Par_IteChociePickerNModel.m */; };
+		F211BC0A1C1819A00033B59E /* HT_Par_IteChoicePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F211BC071C1819A00033B59E /* HT_Par_IteChoicePickerView.m */; };
+		F211BC0B1C1819A00033B59E /* HT_Par_IteChoicePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F211BC081C1819A00033B59E /* HT_Par_IteChoicePickerView.xib */; };
 		F2137BB81C17BBC10030E7D8 /* HT_Par_MainPickerCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2137BB61C17BBC10030E7D8 /* HT_Par_MainPickerCView.m */; };
 		F2137BB91C17BBC10030E7D8 /* HT_Par_MainPickerCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2137BB71C17BBC10030E7D8 /* HT_Par_MainPickerCView.xib */; };
 		F214A6DA1C0D4BC40096D523 /* HT_Par_MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F214A6D81C0D4BC40096D523 /* HT_Par_MainTableViewCell.m */; };
@@ -154,6 +154,7 @@
 		F2D7AEDD1C172D5A00725B4E /* HT_About_TopCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D7AEDB1C172D5A00725B4E /* HT_About_TopCView.xib */; };
 		F2D7AEE11C172DC500725B4E /* HT_About_HeaderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D7AEDF1C172DC500725B4E /* HT_About_HeaderCView.m */; };
 		F2D7AEE21C172DC500725B4E /* HT_About_HeaderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D7AEE01C172DC500725B4E /* HT_About_HeaderCView.xib */; };
+		F2D91CB91C2004BA007778B8 /* HT_Par_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D91CB81C2004BA007778B8 /* HT_Par_SearchViewController.m */; };
 		F2E443431C187D9F0077B904 /* HT_Par_IteCooperationCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E443411C187D9F0077B904 /* HT_Par_IteCooperationCView.m */; };
 		F2E443441C187D9F0077B904 /* HT_Par_IteCooperationCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E443421C187D9F0077B904 /* HT_Par_IteCooperationCView.xib */; };
 		F2F9684A1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F968481C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m */; };
@@ -211,11 +212,11 @@
 		F20697A71C15B72900ED2017 /* HT_Infor_NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_NewsViewController.m; sourceTree = "<group>"; };
 		F206B3691C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_PersonViewTableViewController.h; sourceTree = "<group>"; };
 		F206B36A1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_PersonViewTableViewController.m; sourceTree = "<group>"; };
-		F211BC041C1819A00033B59E /* AreaObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaObject.h; sourceTree = "<group>"; };
-		F211BC051C1819A00033B59E /* AreaObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaObject.m; sourceTree = "<group>"; };
-		F211BC061C1819A00033B59E /* AddressChoicePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressChoicePickerView.h; sourceTree = "<group>"; };
-		F211BC071C1819A00033B59E /* AddressChoicePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressChoicePickerView.m; sourceTree = "<group>"; };
-		F211BC081C1819A00033B59E /* AddressChoicePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressChoicePickerView.xib; sourceTree = "<group>"; };
+		F211BC041C1819A00033B59E /* HT_Par_IteChociePickerNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_IteChociePickerNModel.h; sourceTree = "<group>"; };
+		F211BC051C1819A00033B59E /* HT_Par_IteChociePickerNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_IteChociePickerNModel.m; sourceTree = "<group>"; };
+		F211BC061C1819A00033B59E /* HT_Par_IteChoicePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HT_Par_IteChoicePickerView.h; path = ../../M/HT_Par_IteChoicePickerView.h; sourceTree = "<group>"; };
+		F211BC071C1819A00033B59E /* HT_Par_IteChoicePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HT_Par_IteChoicePickerView.m; path = ../../M/HT_Par_IteChoicePickerView.m; sourceTree = "<group>"; };
+		F211BC081C1819A00033B59E /* HT_Par_IteChoicePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HT_Par_IteChoicePickerView.xib; path = ../../M/HT_Par_IteChoicePickerView.xib; sourceTree = "<group>"; };
 		F2137BB51C17BBC10030E7D8 /* HT_Par_MainPickerCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_MainPickerCView.h; sourceTree = "<group>"; };
 		F2137BB61C17BBC10030E7D8 /* HT_Par_MainPickerCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_MainPickerCView.m; sourceTree = "<group>"; };
 		F2137BB71C17BBC10030E7D8 /* HT_Par_MainPickerCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_MainPickerCView.xib; sourceTree = "<group>"; };
@@ -450,6 +451,8 @@
 		F2D7AEDE1C172DC500725B4E /* HT_About_HeaderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_About_HeaderCView.h; sourceTree = "<group>"; };
 		F2D7AEDF1C172DC500725B4E /* HT_About_HeaderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_About_HeaderCView.m; sourceTree = "<group>"; };
 		F2D7AEE01C172DC500725B4E /* HT_About_HeaderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_About_HeaderCView.xib; sourceTree = "<group>"; };
+		F2D91CB71C2004BA007778B8 /* HT_Par_SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_SearchViewController.h; sourceTree = "<group>"; };
+		F2D91CB81C2004BA007778B8 /* HT_Par_SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_SearchViewController.m; sourceTree = "<group>"; };
 		F2E443401C187D9F0077B904 /* HT_Par_IteCooperationCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_IteCooperationCView.h; sourceTree = "<group>"; };
 		F2E443411C187D9F0077B904 /* HT_Par_IteCooperationCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_IteCooperationCView.m; sourceTree = "<group>"; };
 		F2E443421C187D9F0077B904 /* HT_Par_IteCooperationCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_IteCooperationCView.xib; sourceTree = "<group>"; };
@@ -621,6 +624,8 @@
 				F21C192C1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m */,
 				F21C192E1C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.h */,
 				F21C192F1C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.m */,
+				F2D91CB71C2004BA007778B8 /* HT_Par_SearchViewController.h */,
+				F2D91CB81C2004BA007778B8 /* HT_Par_SearchViewController.m */,
 			);
 			path = HT_Par_BuyController;
 			sourceTree = "<group>";
@@ -921,11 +926,8 @@
 		F27261981C07E95F0081EC95 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				F211BC041C1819A00033B59E /* AreaObject.h */,
-				F211BC051C1819A00033B59E /* AreaObject.m */,
-				F211BC061C1819A00033B59E /* AddressChoicePickerView.h */,
-				F211BC071C1819A00033B59E /* AddressChoicePickerView.m */,
-				F211BC081C1819A00033B59E /* AddressChoicePickerView.xib */,
+				F211BC041C1819A00033B59E /* HT_Par_IteChociePickerNModel.h */,
+				F211BC051C1819A00033B59E /* HT_Par_IteChociePickerNModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1005,6 +1007,9 @@
 		F272619E1C07FCD30081EC95 /* HT_Par_initiate */ = {
 			isa = PBXGroup;
 			children = (
+				F211BC061C1819A00033B59E /* HT_Par_IteChoicePickerView.h */,
+				F211BC071C1819A00033B59E /* HT_Par_IteChoicePickerView.m */,
+				F211BC081C1819A00033B59E /* HT_Par_IteChoicePickerView.xib */,
 				F2C00D7C1C1071180008833B /* HT_Par_IteBottomCView.h */,
 				F2C00D7D1C1071180008833B /* HT_Par_IteBottomCView.m */,
 				F2C00D7E1C1071180008833B /* HT_Par_IteBottomCView.xib */,
@@ -1309,7 +1314,7 @@
 				F27261621C07E61B0081EC95 /* Main.storyboard in Resources */,
 				F2D7AED81C172BDA00725B4E /* HT_About_IntroTableViewCell.xib in Resources */,
 				F280268F1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib in Resources */,
-				F211BC0B1C1819A00033B59E /* AddressChoicePickerView.xib in Resources */,
+				F211BC0B1C1819A00033B59E /* HT_Par_IteChoicePickerView.xib in Resources */,
 				F2D7AECD1C17121A00725B4E /* HT_Infor_BottomCView.xib in Resources */,
 				F27261F41C07FE9E0081EC95 /* HT_Infor_HeadCView.xib in Resources */,
 				F2B168181C18264800517879 /* HT_Infor_NewsHeadCView.xib in Resources */,
@@ -1419,7 +1424,7 @@
 				F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */,
 				F27261A81C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.m in Sources */,
 				F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */,
-				F211BC091C1819A00033B59E /* AreaObject.m in Sources */,
+				F211BC091C1819A00033B59E /* HT_Par_IteChociePickerNModel.m in Sources */,
 				F20697A81C15B72900ED2017 /* HT_Infor_NewsViewController.m in Sources */,
 				F27261DF1C07FE530081EC95 /* HT_Par_SubListTableViewCell.m in Sources */,
 				F2F968591C158511000045B1 /* HT_Par_SubBottomView.m in Sources */,
@@ -1486,6 +1491,7 @@
 				F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */,
 				F27D67311C0B30A900EE6C4F /* HT_HomePageLayout.m in Sources */,
 				F21C19101C1E670700E717A8 /* HT_HomePage_TopUpViewController.m in Sources */,
+				F2D91CB91C2004BA007778B8 /* HT_Par_SearchViewController.m in Sources */,
 				F29C69531C166653000A8C29 /* HT_News_HeadTableViewCell.m in Sources */,
 				F263CA0D1C15284C00EE78CA /* HT_Par_ItePaymentResultsViewController.m in Sources */,
 				F29944821C082B0D00823E75 /* RootViewController.m in Sources */,
@@ -1508,7 +1514,7 @@
 				F27261591C07E61B0081EC95 /* main.m in Sources */,
 				6014343B1C1AAF4E00E102B7 /* selectView.m in Sources */,
 				F2B168211C185ABC00517879 /* HT_HomePage_PointsViewController.m in Sources */,
-				F211BC0A1C1819A00033B59E /* AddressChoicePickerView.m in Sources */,
+				F211BC0A1C1819A00033B59E /* HT_Par_IteChoicePickerView.m in Sources */,
 				F21E44FC1C10346A00657249 /* HT_LeftViewController.m in Sources */,
 				F263CA201C157D3100EE78CA /* HT_Par_SubClaimViewController.m in Sources */,
 				F27261E41C07FE810081EC95 /* HT_About_MainTableViewCell.m in Sources */,
@@ -1671,7 +1677,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4600a5b7-67ec-42c9-8743-1a3a6ed15326";
+				PROVISIONING_PROFILE = "f89f9d26-1929-47da-803d-ce0fd5e8c0a8";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1690,7 +1696,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4600a5b7-67ec-42c9-8743-1a3a6ed15326";
+				PROVISIONING_PROFILE = "f89f9d26-1929-47da-803d-ce0fd5e8c0a8";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

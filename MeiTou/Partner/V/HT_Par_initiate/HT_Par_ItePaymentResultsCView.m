@@ -12,6 +12,36 @@
 
 - (void)awakeFromNib {
     // Initialization code
+//    @property (weak, nonatomic) IBOutlet UIImageView *imageViewUp;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelState;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelPay;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelType;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelMoney;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelCreate;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelDate;
+//    @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+    _imageViewUp.image=[UIImage imageNamed:@"recharge_icon_success"];
+    
+    _labelState.font=[UIFont systemFontOfSize:FONT_SIZE(32)];
+    _labelPay.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelType.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelCreate.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelMoney.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    
+    _labelState.textColor=COLOR_TEXT_TITILE;
+    _labelPay.textColor=COLOR_TEXT_DATE;
+    _labelCreate.textColor=COLOR_TEXT_DATE;
+    _labelMoney.textColor=COLOR_TEXT_DATE;
+
+    _labelType.textColor=COLOR_TEXT_CONTENT;
+    _labelDate.textColor=COLOR_TEXT_CONTENT;
+    _labelTitle.textColor=COLOR_TEXT_TITILE;
+
+
+
+
 
 }
 

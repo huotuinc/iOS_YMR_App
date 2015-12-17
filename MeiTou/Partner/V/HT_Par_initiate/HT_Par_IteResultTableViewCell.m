@@ -21,6 +21,11 @@
     
     _imageVlevel.image=[UIImage imageNamed:@"common_LV2"];
     
+    _viewBase.layer.cornerRadius=3;
+    _viewBase.layer.borderWidth=1;
+    _viewBase.layer.borderColor=[COLOR_LINE_C CGColor];
+    _viewBase.layer.masksToBounds=YES;
+    
 }
 
 -(void)drawRect:(CGRect)rect{

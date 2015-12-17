@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  支付预约金
+ */
 @interface HT_Par_BuyPayViewController : UIViewController
 
 @end

@@ -14,27 +14,27 @@
             <rect key="frame" x="0.0" y="0.0" width="464" height="336"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="464" height="335.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="464" height="335"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKK-GN-NWP" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="448" height="319.5"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hKK-GN-NWP" userLabel="BaseView">
+                        <rect key="frame" x="8" y="8" width="448" height="320"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUr-UC-1jQ" userLabel="MainView">
-                                <rect key="frame" x="14" y="13" width="420" height="293.5"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUr-UC-1jQ" userLabel="MainView">
+                                <rect key="frame" x="14" y="13" width="420" height="294"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-Dq-jSd" userLabel="AView">
-                                        <rect key="frame" x="14" y="56.5" width="392" height="32"/>
+                                        <rect key="frame" x="14" y="57" width="392" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSK-Dx-Io6" userLabel="TitleLabel">
-                                                <rect key="frame" x="0.0" y="5.5" width="49" height="20"/>
+                                                <rect key="frame" x="0.0" y="6" width="49" height="20"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdO-RE-doc" userLabel="TitleText Field">
-                                                <rect key="frame" x="49" y="5.5" width="343" height="20"/>
+                                                <rect key="frame" x="49" y="6" width="343" height="20"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.82321316519999999" green="0.85519255049999998" blue="0.84816209009999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -72,11 +72,11 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-ge-KOr" userLabel="BView">
-                                        <rect key="frame" x="14" y="88.5" width="392" height="183.5"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-ge-KOr" userLabel="BView">
+                                        <rect key="frame" x="14" y="89" width="392" height="183"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-RU-tbV" userLabel="ContentText Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="392" height="183.5"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-RU-tbV" userLabel="ContentText Field">
+                                                <rect key="frame" x="0.0" y="0.0" width="392" height="184"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.82321316519999999" green="0.85519255049999998" blue="0.84816209009999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -92,18 +92,18 @@
                                             <constraint firstAttribute="bottom" secondItem="Q9C-RU-tbV" secondAttribute="bottom" id="mRf-vM-uXN"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qz9-lD-8Nw" userLabel="CView">
-                                        <rect key="frame" x="14" y="272" width="392" height="21.5"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qz9-lD-8Nw" userLabel="CView">
+                                        <rect key="frame" x="14" y="272" width="392" height="22"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-tJ-tTr" userLabel="C_AView">
-                                                <rect key="frame" x="0.0" y="0.0" width="122.5" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123" height="22"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Slj-ka-C8I" userLabel="PhotoImage View">
                                                         <rect key="frame" x="0.0" y="2" width="22" height="17"/>
                                                         <animations/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="插入图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQP-IV-VK1" userLabel="PhotoLabel">
-                                                        <rect key="frame" x="24" y="3" width="98" height="16.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="插入图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQP-IV-VK1" userLabel="PhotoLabel">
+                                                        <rect key="frame" x="24" y="3" width="98" height="17"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -123,22 +123,22 @@
                                                     <constraint firstItem="iQP-IV-VK1" firstAttribute="leading" secondItem="Slj-ka-C8I" secondAttribute="trailing" constant="2" id="giM-sv-hSE"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMU-4o-vNd" userLabel="PointLabel">
-                                                <rect key="frame" x="244.5" y="0.0" width="137" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMU-4o-vNd" userLabel="PointLabel">
+                                                <rect key="frame" x="245" y="0.0" width="137" height="22"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfA-cd-qWQ" userLabel="C_BView">
-                                                <rect key="frame" x="122" y="0.0" width="122.5" height="21.5"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HfA-cd-qWQ" userLabel="C_BView">
+                                                <rect key="frame" x="122" y="0.0" width="123" height="22"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-PA-1Hw" userLabel="EmotionImage View">
-                                                        <rect key="frame" x="0.5" y="2" width="21.5" height="17"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-PA-1Hw" userLabel="EmotionImage View">
+                                                        <rect key="frame" x="1" y="2" width="21" height="17"/>
                                                         <animations/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT5-rS-T6i" userLabel="EmotionLabel">
-                                                        <rect key="frame" x="24" y="3" width="99" height="16.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="表情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT5-rS-T6i" userLabel="EmotionLabel">
+                                                        <rect key="frame" x="24" y="3" width="99" height="17"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

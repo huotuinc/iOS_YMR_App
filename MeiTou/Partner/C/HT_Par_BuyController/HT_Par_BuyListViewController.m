@@ -25,6 +25,7 @@ static NSString *cellMain = @"cellMain";
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyListTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
+    [self createNavgationBarTitle];
     [self createBarButtonItem];
     
 }
@@ -34,6 +35,15 @@ static NSString *cellMain = @"cellMain";
     // Do any additional setup after loading the view.
     [self createTableView];
 }
+-(void)createNavgationBarTitle{
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(36)];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"预约人列表";
+    self.navigationItem.titleView = titleLabel;
+}
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
     [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
@@ -41,11 +51,7 @@ static NSString *cellMain = @"cellMain";
     UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
     self.navigationItem.leftBarButtonItem=bbiL;
     
-    UIButton *buttonR=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
-    [buttonR setBackgroundImage:[UIImage imageNamed:@"cosmetology_main_menu_bottom_search"] forState:UIControlStateNormal];
-    [buttonR addTarget:self action:@selector(clickRightButton) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *bbiR=[[UIBarButtonItem alloc]initWithCustomView:buttonR];
-    self.navigationItem.rightBarButtonItem=bbiR;
+
 }
 /**
  *
@@ -53,25 +59,29 @@ static NSString *cellMain = @"cellMain";
 -(void)clickLightButton{
     [self.navigationController popViewControllerAnimated:YES];
 }
--(void)clickRightButton{
-    
-}
 
 -(void)createTableView{
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+//    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
     
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *_cell;
 
-        HT_Par_BuyListTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
-
-    _cell=cell;
-        return _cell;
+    HT_Par_BuyListTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
+    if (indexPath.row==1) {
+        cell.buttonState.titleLabel.text=@"预约审核中";
+        cell.buttonState.backgroundColor=COLOR_BUTTON_WAIT;
+    }
+    if (indexPath.row==2) {
+        cell.buttonState.titleLabel.text=@"预约失败";
+        cell.buttonState.backgroundColor=COLOR_BUTTON_OUTDATE;
+    }
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    return cell;
     
     
     
@@ -80,12 +90,50 @@ static NSString *cellMain = @"cellMain";
     return 10;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return SCREEN_HEIGHT/8;
+    return (NSInteger)SCREEN_HEIGHT/8;
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 }
+
+//- (void)drawRect:(CGRect)rect
+//{
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    
+//    CGContextSetFillColorWithColor(context, [UIColor clearColor].CGColor);
+//    CGContextFillRect(context, rect);
+//    
+//    //上分割线，
+//    CGContextSetStrokeColorWithColor(context, [COLOR_LINE_A CGColor]);
+//    CGContextStrokeRect(context, CGRectMake(5, -1, rect.size.width - 10, 1));
+//    
+//    //下分割线
+//    CGContextSetStrokeColorWithColor(context, [COLOR_LINE_A CGColor]);
+//    CGContextStrokeRect(context, CGRectMake(5, rect.size.height, rect.size.width - 10, 1));
+//}
+/**
+ *  cell分割线完全填充
+ */
+-(void)viewDidLayoutSubviews {
+    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [_tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [_tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }  
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

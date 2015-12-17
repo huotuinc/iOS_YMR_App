@@ -304,7 +304,7 @@
                                 <rect key="frame" x="0.0" y="162" width="375" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR6-SR-uSe" userLabel="TitleLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="26"/>
+                                        <rect key="frame" x="10" y="0.0" width="365" height="26"/>
                                         <animations/>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -317,7 +317,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="yR6-SR-uSe" secondAttribute="trailing" id="SQd-6C-EIV"/>
                                     <constraint firstAttribute="bottom" secondItem="yR6-SR-uSe" secondAttribute="bottom" id="Z2d-TB-cUe"/>
-                                    <constraint firstItem="yR6-SR-uSe" firstAttribute="leading" secondItem="LNL-z2-V7I" secondAttribute="leading" id="ZIx-OJ-dBN"/>
+                                    <constraint firstItem="yR6-SR-uSe" firstAttribute="leading" secondItem="LNL-z2-V7I" secondAttribute="leading" constant="10" id="ZIx-OJ-dBN"/>
                                     <constraint firstItem="yR6-SR-uSe" firstAttribute="top" secondItem="LNL-z2-V7I" secondAttribute="top" id="pEe-RC-JcU"/>
                                 </constraints>
                             </view>
@@ -463,10 +463,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGX-sy-Piw" userLabel="FView">
-                                <rect key="frame" x="0.0" y="290" width="375" height="32"/>
+                                <rect key="frame" x="0.0" y="288" width="375" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruj-LZ-rPp" userLabel="PayingButton">
-                                        <rect key="frame" x="12" y="0.0" width="351" height="32"/>
+                                        <rect key="frame" x="12" y="0.0" width="351" height="36"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.34138342770000002" blue="0.28841900399999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="确认支付">
@@ -493,7 +493,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fGX-sy-Piw" firstAttribute="height" secondItem="J58-3S-T5B" secondAttribute="height" multiplier="70:1150" id="04Z-0r-PAf"/>
+                            <constraint firstItem="fGX-sy-Piw" firstAttribute="height" secondItem="J58-3S-T5B" secondAttribute="height" multiplier="80:1150" id="04Z-0r-PAf"/>
                             <constraint firstItem="LNL-z2-V7I" firstAttribute="top" secondItem="JLR-zH-hFN" secondAttribute="bottom" id="1jj-B7-Pbd"/>
                             <constraint firstAttribute="trailing" secondItem="LNL-z2-V7I" secondAttribute="trailing" id="6Gr-FS-JQe"/>
                             <constraint firstItem="jlw-Ho-1jK" firstAttribute="height" secondItem="J58-3S-T5B" secondAttribute="height" multiplier="200:1150" id="ATd-U2-Xkt"/>
@@ -582,6 +582,7 @@
                 <outlet property="viewA" destination="AcR-1b-3Ml" id="vrn-zz-cLR"/>
                 <outlet property="viewB" destination="mdg-l4-bvx" id="PjC-JN-Azr"/>
                 <outlet property="viewBase" destination="J58-3S-T5B" id="UqG-uC-30A"/>
+                <outlet property="viewC_A" destination="AcR-1b-3Ml" id="r6F-eJ-0nf"/>
                 <outlet property="viewLevelUp" destination="xKp-7E-EoS" id="YBv-at-LNx"/>
                 <outlet property="viewMore" destination="GqY-JF-kJ6" id="kNQ-SQ-J43"/>
                 <outlet property="viewPay" destination="gfR-bt-O9H" id="NWh-cR-ylh"/>
@@ -592,7 +593,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="head" width="180" height="180"/>
+        <image name="head" width="1" height="1"/>
         <image name="line2" width="1" height="1"/>
     </resources>
 </document>

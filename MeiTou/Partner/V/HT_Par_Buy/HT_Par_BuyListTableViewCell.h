@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelNumber;
 @property (weak, nonatomic) IBOutlet UIImageView *imageVlevel;
 @property (weak, nonatomic) IBOutlet UILabel *labelDate;
+@property (weak, nonatomic) IBOutlet UIButton *buttonState;
 
 @end

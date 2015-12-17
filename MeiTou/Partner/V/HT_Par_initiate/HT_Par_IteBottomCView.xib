@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -16,33 +15,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="360" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-At-WoK" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="344" height="105"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-At-WoK" userLabel="BaseView">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="120"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x3s-QD-pa7">
-                                <rect key="frame" x="0.0" y="0.0" width="344" height="1"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="f4D-MM-J2f"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-rf-KzY" userLabel="MainView">
-                                <rect key="frame" x="0.0" y="0.0" width="344" height="105"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-rf-KzY" userLabel="MainView">
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-LY-XV5" userLabel="CooperationButton">
-                                        <rect key="frame" x="11" y="21" width="156" height="64"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BQz-kV-HQt">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="1"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="0.84347264841886072" blue="0.36958841238803797" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="我要合作">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fK-zj-UuT" userLabel="InitiateButton">
-                                        <rect key="frame" x="178" y="21" width="155" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="7fJ-be-qou"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fK-zj-UuT" userLabel="InitiateButton">
+                                        <rect key="frame" x="186" y="18" width="163" height="84"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.5565014935" blue="0.51036055700000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="我要发起">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-LY-XV5" userLabel="CooperationButton">
+                                        <rect key="frame" x="11" y="18" width="163" height="84"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.84347264841886072" blue="0.36958841238803797" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="我要合作">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -54,12 +53,15 @@
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="centerX" secondItem="bpk-rf-KzY" secondAttribute="centerX" multiplier="475:320" id="4Hc-fS-XwL"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="leading" secondItem="OuD-LY-XV5" secondAttribute="trailing" constant="20" id="5Rq-ik-qlN"/>
                                     <constraint firstItem="OuD-LY-XV5" firstAttribute="centerY" secondItem="bpk-rf-KzY" secondAttribute="centerY" id="AyC-3j-B2W"/>
+                                    <constraint firstItem="BQz-kV-HQt" firstAttribute="leading" secondItem="bpk-rf-KzY" secondAttribute="leading" id="CBn-uY-ZIh"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="centerY" secondItem="OuD-LY-XV5" secondAttribute="centerY" id="HvH-UQ-1Ed"/>
-                                    <constraint firstItem="OuD-LY-XV5" firstAttribute="height" secondItem="bpk-rf-KzY" secondAttribute="height" multiplier="55:90" id="NC8-8X-32w"/>
+                                    <constraint firstItem="OuD-LY-XV5" firstAttribute="height" secondItem="bpk-rf-KzY" secondAttribute="height" multiplier="70:100" id="NC8-8X-32w"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="centerX" secondItem="bpk-rf-KzY" secondAttribute="centerX" multiplier="475:320" id="TTO-y2-wxA"/>
                                     <constraint firstItem="OuD-LY-XV5" firstAttribute="centerX" secondItem="bpk-rf-KzY" secondAttribute="centerX" multiplier="165:320" id="aSN-Td-RmU"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="centerY" secondItem="bpk-rf-KzY" secondAttribute="centerY" id="fXA-Tj-DfH"/>
+                                    <constraint firstAttribute="trailing" secondItem="BQz-kV-HQt" secondAttribute="trailing" id="jk2-Nd-kdo"/>
                                     <constraint firstItem="OuD-LY-XV5" firstAttribute="width" secondItem="bpk-rf-KzY" secondAttribute="width" multiplier="290:640" id="mzq-zR-KAW"/>
+                                    <constraint firstItem="BQz-kV-HQt" firstAttribute="top" secondItem="bpk-rf-KzY" secondAttribute="top" id="rW8-Bw-8gn"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="height" secondItem="OuD-LY-XV5" secondAttribute="height" id="vrY-da-W7c"/>
                                     <constraint firstItem="3fK-zj-UuT" firstAttribute="width" secondItem="OuD-LY-XV5" secondAttribute="width" id="xpI-qy-fOp"/>
                                 </constraints>
@@ -79,25 +81,23 @@
                             <constraint firstItem="bpk-rf-KzY" firstAttribute="top" secondItem="8Tk-At-WoK" secondAttribute="top" id="1pQ-z7-obA"/>
                             <constraint firstItem="bpk-rf-KzY" firstAttribute="leading" secondItem="8Tk-At-WoK" secondAttribute="leading" id="6Oa-RW-23j"/>
                             <constraint firstAttribute="trailing" secondItem="bpk-rf-KzY" secondAttribute="trailing" id="B5N-zq-BA9"/>
-                            <constraint firstItem="x3s-QD-pa7" firstAttribute="top" secondItem="8Tk-At-WoK" secondAttribute="top" id="EzE-Qr-0CM"/>
                             <constraint firstAttribute="bottom" secondItem="bpk-rf-KzY" secondAttribute="bottom" id="Foi-wk-Wh7"/>
-                            <constraint firstItem="x3s-QD-pa7" firstAttribute="leading" secondItem="8Tk-At-WoK" secondAttribute="leading" id="sIe-lr-UO7"/>
-                            <constraint firstAttribute="trailing" secondItem="x3s-QD-pa7" secondAttribute="trailing" id="yqI-Ac-B18"/>
                         </constraints>
                     </view>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="8Tk-At-WoK" secondAttribute="trailing" id="3W4-3Y-81c"/>
-                    <constraint firstItem="8Tk-At-WoK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5X5-yw-zwZ"/>
-                    <constraint firstItem="8Tk-At-WoK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cG3-0Y-PDu"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="8Tk-At-WoK" secondAttribute="bottom" id="cQH-Z6-MXw"/>
+                    <constraint firstAttribute="trailing" secondItem="8Tk-At-WoK" secondAttribute="trailing" id="3W4-3Y-81c"/>
+                    <constraint firstItem="8Tk-At-WoK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5X5-yw-zwZ"/>
+                    <constraint firstItem="8Tk-At-WoK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cG3-0Y-PDu"/>
+                    <constraint firstAttribute="bottom" secondItem="8Tk-At-WoK" secondAttribute="bottom" id="cQH-Z6-MXw"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
                 <outlet property="buttonCooperation" destination="OuD-LY-XV5" id="kTc-r5-RUc"/>
                 <outlet property="buttonOrder" destination="3fK-zj-UuT" id="kYD-9A-JHc"/>
+                <outlet property="imageVLine" destination="BQz-kV-HQt" id="9e4-R0-Jes"/>
             </connections>
             <point key="canvasLocation" x="258" y="181.5"/>
         </tableViewCell>

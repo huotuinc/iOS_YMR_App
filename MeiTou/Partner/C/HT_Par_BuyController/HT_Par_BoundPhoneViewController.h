@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  绑定手机
+ */
 @interface HT_Par_BoundPhoneViewController : UIViewController
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  换绑手机
+ */
 @interface HT_Par_ChangePhoneViewController : UIViewController
 
 @end

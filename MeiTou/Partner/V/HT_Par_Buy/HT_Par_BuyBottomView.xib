@@ -18,8 +18,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-GB-Dnz" userLabel="BaseView">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="93"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-hr-f3s">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="1"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="4kl-rR-9Rc"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-vs-QME">
-                                <rect key="frame" x="68" y="19" width="207" height="55"/>
+                                <rect key="frame" x="68" y="14" width="207" height="65"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.55650149345233202" blue="0.51036055701377259" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -29,11 +36,13 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5dG-vs-QME" firstAttribute="height" secondItem="5DM-GB-Dnz" secondAttribute="height" multiplier="60:100" id="JOp-YH-Uiv"/>
+                            <constraint firstItem="fDM-hr-f3s" firstAttribute="leading" secondItem="5DM-GB-Dnz" secondAttribute="leading" id="HtQ-fe-Kpi"/>
+                            <constraint firstItem="5dG-vs-QME" firstAttribute="height" secondItem="5DM-GB-Dnz" secondAttribute="height" multiplier="70:100" id="JOp-YH-Uiv"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="centerY" secondItem="5DM-GB-Dnz" secondAttribute="centerY" id="Mob-ek-Xhh"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="width" secondItem="5DM-GB-Dnz" secondAttribute="width" multiplier="385:640" id="aKe-lO-rMw"/>
+                            <constraint firstItem="fDM-hr-f3s" firstAttribute="top" secondItem="5DM-GB-Dnz" secondAttribute="top" id="g2O-bz-JLd"/>
+                            <constraint firstAttribute="trailing" secondItem="fDM-hr-f3s" secondAttribute="trailing" id="kMg-Id-3Ls"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="centerX" secondItem="5DM-GB-Dnz" secondAttribute="centerX" id="xJA-gc-eIh"/>
                         </constraints>
                     </view>
@@ -49,6 +58,7 @@
             <animations/>
             <connections>
                 <outlet property="buttonSubscription" destination="5dG-vs-QME" id="J0A-ge-5cu"/>
+                <outlet property="imageVLine" destination="fDM-hr-f3s" id="jQ9-CO-8oe"/>
             </connections>
             <point key="canvasLocation" x="263.5" y="428"/>
         </tableViewCell>

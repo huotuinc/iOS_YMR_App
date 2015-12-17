@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  手机授权登陆
+ */
 @interface HT_Par_LoginPhoneViewController : UIViewController
 
 @end

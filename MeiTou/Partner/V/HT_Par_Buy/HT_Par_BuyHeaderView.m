@@ -25,22 +25,39 @@
     
 
     _imageVTop.image=[UIImage imageNamed:@"xdd"];
+    _imageVLine.image=[UIImage imageNamed:@"line1"];
     _labelTitle.text=@"众筹会议类";
     _labeEnd.text=@"结束时间";
     _labelDone.text=@"已预约";
+    _labelTime.text=@"18:00 - 20:00";
+    _labelDate.text=@"10-10";
+    _labelPerson.text=@"20/100人";
+    
+    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(34)];
+    _labeEnd.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelDone.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelTime.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelPerson.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    
+    _labelTitle.textColor=COLOR_TEXT_TITILE;
+    _labeEnd.textColor=COLOR_TEXT_DATE;
+    _labelDate.textColor=COLOR_TEXT_CONTENT;
+    _labelDone.textColor=COLOR_TEXT_DATE;
+    _labelPerson.textColor=COLOR_BUTTON_RED;
+
+
     _viewProgress.transform=CGAffineTransformMakeScale(1.0f, 1.0f);
     _viewProgress.layer.cornerRadius=5;
     _viewProgress.clipsToBounds=YES;
     //设置进度条颜色
-    _viewProgress.trackTintColor=[UIColor blackColor];
+    _viewProgress.trackTintColor=COLOR_BACK_MAIN;
     //设置进度默认值，这个相当于百分比，范围在0~1之间，不可以设置最大最小值
     _viewProgress.progress=0.7;
     //设置进度条上进度的颜色
-    _viewProgress.progressTintColor=[UIColor redColor];
+    _viewProgress.progressTintColor=COLOR_BUTTON_ORANGE;
     
-    _labelTime.text=@"10:10:10";
-    _labelDate.text=@"10-10";
-    _labelPerson.text=@"20/100人";
+
     
 }
 

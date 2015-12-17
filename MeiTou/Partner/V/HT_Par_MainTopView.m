@@ -21,8 +21,8 @@
     _labelPerson.textColor=COLOR_TEXT_TITILE;
     _labelProject.textColor=COLOR_BUTTON_RED;
     
-    _labelPerson.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
-    _labelProject.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
+    _labelPerson.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelProject.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
 
     
 }

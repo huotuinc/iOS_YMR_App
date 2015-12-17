@@ -41,9 +41,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jJ-Ai-JfL" userLabel="TreasuryButton">
-                                <rect key="frame" x="12" y="157" width="351" height="33"/>
+                                <rect key="frame" x="12" y="155" width="351" height="37"/>
                                 <animations/>
-                                <state key="normal" title="充入小金库"/>
+                                <state key="normal" title="充入小金库">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美投积分充入商城小金库,可用在购买商品时抵现" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cls-aG-4Gl" userLabel="HelpLabel">
                                 <rect key="frame" x="12" y="217" width="351" height="15"/>
@@ -88,7 +90,7 @@
                             <constraint firstItem="7Ua-FG-sCc" firstAttribute="width" secondItem="ls6-rP-Fxm" secondAttribute="width" id="pCE-Tq-KC0"/>
                             <constraint firstItem="hqy-O8-bHl" firstAttribute="height" secondItem="ls6-rP-Fxm" secondAttribute="height" multiplier="130:1150" id="qjk-PM-lPy"/>
                             <constraint firstItem="7Ua-FG-sCc" firstAttribute="centerX" secondItem="ls6-rP-Fxm" secondAttribute="centerX" id="rsq-Tx-iIY"/>
-                            <constraint firstItem="1jJ-Ai-JfL" firstAttribute="height" secondItem="ls6-rP-Fxm" secondAttribute="height" multiplier="70:1150" id="t6K-fX-gp5"/>
+                            <constraint firstItem="1jJ-Ai-JfL" firstAttribute="height" secondItem="ls6-rP-Fxm" secondAttribute="height" multiplier="80:1150" id="t6K-fX-gp5"/>
                             <constraint firstItem="7Ua-FG-sCc" firstAttribute="centerY" secondItem="ls6-rP-Fxm" secondAttribute="centerY" id="v5N-CE-E61"/>
                             <constraint firstItem="3MZ-0P-a5s" firstAttribute="width" secondItem="1jJ-Ai-JfL" secondAttribute="width" id="xC6-ZI-xC5"/>
                             <constraint firstItem="3MZ-0P-a5s" firstAttribute="height" secondItem="Fo9-vY-xKw" secondAttribute="height" id="xJK-Hg-QgO"/>

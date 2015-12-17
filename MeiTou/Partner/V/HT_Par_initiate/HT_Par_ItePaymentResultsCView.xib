@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -18,27 +17,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J58-3S-T5B" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="359" height="498"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="514"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="feN-10-gy8" userLabel="LineImage View">
-                                <rect key="frame" x="0.0" y="4" width="359" height="1"/>
+                                <rect key="frame" x="0.0" y="4" width="375" height="1"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="RMa-9w-B3J"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqN-DU-5bW" userLabel="AView">
-                                <rect key="frame" x="0.0" y="5" width="359" height="91"/>
+                                <rect key="frame" x="0.0" y="5" width="375" height="94"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="oQr-GU-7VZ">
-                                        <rect key="frame" x="162" y="15" width="35" height="35"/>
+                                        <rect key="frame" x="170" y="16" width="36" height="36"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="oQr-GU-7VZ" secondAttribute="height" multiplier="1:1" id="OzR-zJ-Qyr"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值成功,您当前为LV2等级" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-5D-Kpr">
-                                        <rect key="frame" x="0.0" y="59" width="359" height="20"/>
+                                        <rect key="frame" x="0.0" y="61" width="375" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,17 +57,17 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="SUY-J8-Iyi" userLabel="LineImage View">
-                                <rect key="frame" x="0.0" y="96" width="359" height="1"/>
+                                <rect key="frame" x="0.0" y="99" width="375" height="1"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="zZb-qh-Lic"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNL-z2-V7I" userLabel="BView">
-                                <rect key="frame" x="0.0" y="97" width="359" height="26"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付详情" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR6-SR-uSe" userLabel="TitleLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="26"/>
+                                        <rect key="frame" x="10" y="0.0" width="365" height="27"/>
                                         <animations/>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -77,43 +76,43 @@
                                     </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="yR6-SR-uSe" secondAttribute="trailing" id="SQd-6C-EIV"/>
                                     <constraint firstAttribute="bottom" secondItem="yR6-SR-uSe" secondAttribute="bottom" id="Z2d-TB-cUe"/>
-                                    <constraint firstItem="yR6-SR-uSe" firstAttribute="leading" secondItem="LNL-z2-V7I" secondAttribute="leading" id="ZIx-OJ-dBN"/>
+                                    <constraint firstItem="yR6-SR-uSe" firstAttribute="leading" secondItem="LNL-z2-V7I" secondAttribute="leading" constant="10" id="ZIx-OJ-dBN"/>
                                     <constraint firstItem="yR6-SR-uSe" firstAttribute="top" secondItem="LNL-z2-V7I" secondAttribute="top" id="pEe-RC-JcU"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="JUC-98-Yxp" userLabel="LineImage View">
-                                <rect key="frame" x="0.0" y="123" width="359" height="1"/>
+                                <rect key="frame" x="0.0" y="127" width="375" height="1"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="GfM-Cr-rkP"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwq-Y2-NyV" userLabel="CView">
-                                <rect key="frame" x="0.0" y="124" width="359" height="78"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-bt-O9H" userLabel="PayView">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付款明细" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-se-zfz">
-                                                <rect key="frame" x="0.0" y="4" width="101" height="30"/>
+                                                <rect key="frame" x="0.0" y="4" width="106" height="31"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1500.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlM-sM-GhP">
-                                                <rect key="frame" x="258" y="4" width="101" height="30"/>
+                                                <rect key="frame" x="270" y="4" width="105" height="31"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信支付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOv-XN-iN2">
-                                                <rect key="frame" x="101" y="5" width="157" height="30"/>
+                                                <rect key="frame" x="106" y="5" width="164" height="31"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,24 +143,24 @@
                                         </variation>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line2" translatesAutoresizingMaskIntoConstraints="NO" id="0di-ab-vP7" userLabel="LineImage View">
-                                        <rect key="frame" x="0.0" y="39" width="359" height="1"/>
+                                        <rect key="frame" x="0.0" y="40" width="375" height="1"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="lKv-lr-hfD"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYC-X9-HRQ" userLabel="WeiView">
-                                        <rect key="frame" x="0.0" y="40" width="359" height="37"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYC-X9-HRQ" userLabel="WeiView">
+                                        <rect key="frame" x="0.0" y="41" width="375" height="39"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="创建时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnb-q0-J4P">
-                                                <rect key="frame" x="0.0" y="4" width="101" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnb-q0-J4P">
+                                                <rect key="frame" x="0.0" y="4" width="106" height="31"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2015-11-12 16:50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atG-Lu-Tgo">
-                                                <rect key="frame" x="101" y="4" width="157" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-11-12 16:50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atG-Lu-Tgo">
+                                                <rect key="frame" x="106" y="4" width="164" height="31"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -206,8 +205,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-rD-y1r" userLabel="LineImage View">
-                                <rect key="frame" x="0.0" y="201" width="359" height="1"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-rD-y1r" userLabel="LineImage View">
+                                <rect key="frame" x="0.0" y="208" width="375" height="1"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="lmx-VU-LaN"/>
@@ -215,7 +214,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="LNL-z2-V7I" secondAttribute="trailing" id="6Gr-FS-JQe"/>
                             <constraint firstItem="LNL-z2-V7I" firstAttribute="top" secondItem="qqN-DU-5bW" secondAttribute="bottom" id="6rL-85-HSc"/>
@@ -257,24 +256,23 @@
                     </view>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="J58-3S-T5B" secondAttribute="trailing" id="TKV-es-Crx"/>
-                    <constraint firstItem="J58-3S-T5B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="VyW-js-obg"/>
-                    <constraint firstItem="J58-3S-T5B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ay4-e3-d5C"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="J58-3S-T5B" secondAttribute="bottom" id="u9G-73-iVJ"/>
+                    <constraint firstAttribute="trailing" secondItem="J58-3S-T5B" secondAttribute="trailing" id="TKV-es-Crx"/>
+                    <constraint firstItem="J58-3S-T5B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VyW-js-obg"/>
+                    <constraint firstItem="J58-3S-T5B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ay4-e3-d5C"/>
+                    <constraint firstAttribute="bottom" secondItem="J58-3S-T5B" secondAttribute="bottom" id="u9G-73-iVJ"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="ViewA" destination="qqN-DU-5bW" id="LZ6-eG-Qgg"/>
-                <outlet property="ViewB" destination="LNL-z2-V7I" id="yxt-ea-Az8"/>
-                <outlet property="ViewBase" destination="J58-3S-T5B" id="GR2-rL-eKy"/>
-                <outlet property="ViewC" destination="Nwq-Y2-NyV" id="Pm9-L3-jJV"/>
+                <outlet property="imageViewUp" destination="oQr-GU-7VZ" id="QX2-TD-ZPk"/>
                 <outlet property="labelCreate" destination="pnb-q0-J4P" id="yHG-ic-U2z"/>
                 <outlet property="labelDate" destination="atG-Lu-Tgo" id="TMc-Jf-naZ"/>
                 <outlet property="labelMoney" destination="DlM-sM-GhP" id="a00-SM-5Th"/>
                 <outlet property="labelPay" destination="fDe-se-zfz" id="Jit-ZA-c33"/>
                 <outlet property="labelState" destination="oyy-5D-Kpr" id="FRc-dY-2zg"/>
+                <outlet property="labelTitle" destination="yR6-SR-uSe" id="BhW-0D-uxz"/>
                 <outlet property="labelType" destination="zOv-XN-iN2" id="kjH-Is-EyV"/>
             </connections>
             <point key="canvasLocation" x="301.5" y="298"/>

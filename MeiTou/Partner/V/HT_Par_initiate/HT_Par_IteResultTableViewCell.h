@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UIView *ViewHeadGroup;
+@property (weak, nonatomic) IBOutlet UIView *viewBase;
 
 @end

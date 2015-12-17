@@ -16,19 +16,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwV-o1-vgP">
-                        <rect key="frame" x="0.0" y="0.0" width="323" height="414"/>
+                        <rect key="frame" x="10" y="0.0" width="303" height="414"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目概况" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ye-s4-kJt" userLabel="TitleLabel">
-                                <rect key="frame" x="0.0" y="0.0" width="323" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrI-JN-Whh" userLabel="ContentLabel">
+                                <rect key="frame" x="0.0" y="40" width="303" height="15"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrI-JN-Whh" userLabel="ContentLabel">
-                                <rect key="frame" x="0.0" y="41" width="323" height="373"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目概况" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ye-s4-kJt" userLabel="TitleLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SDp-NR-UGW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -37,6 +40,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2ye-s4-kJt" firstAttribute="top" secondItem="QwV-o1-vgP" secondAttribute="top" id="NsJ-9j-Nij"/>
+                            <constraint firstItem="2ye-s4-kJt" firstAttribute="top" secondItem="QwV-o1-vgP" secondAttribute="top" id="PaD-YH-49k"/>
                             <constraint firstItem="2ye-s4-kJt" firstAttribute="height" secondItem="QwV-o1-vgP" secondAttribute="height" multiplier="60:620" id="W2O-FZ-hSG"/>
                             <constraint firstItem="GrI-JN-Whh" firstAttribute="top" secondItem="2ye-s4-kJt" secondAttribute="bottom" id="YfN-hM-V4g"/>
                             <constraint firstAttribute="bottom" secondItem="GrI-JN-Whh" secondAttribute="bottom" id="f0g-4y-kEA"/>
@@ -48,7 +52,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="NsJ-9j-Nij"/>
+                                <exclude reference="W2O-FZ-hSG"/>
                                 <exclude reference="f0g-4y-kEA"/>
+                                <exclude reference="lKN-m4-dhx"/>
                             </mask>
                         </variation>
                     </view>
@@ -58,8 +65,16 @@
                     <constraint firstAttribute="trailing" secondItem="QwV-o1-vgP" secondAttribute="trailing" id="0AV-l7-miw"/>
                     <constraint firstAttribute="bottom" secondItem="QwV-o1-vgP" secondAttribute="bottom" id="0Ww-NK-cfO"/>
                     <constraint firstItem="QwV-o1-vgP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9rR-jE-Hly"/>
+                    <constraint firstItem="QwV-o1-vgP" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Mk8-Zh-psM"/>
                     <constraint firstItem="QwV-o1-vgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="c6T-ot-tds"/>
+                    <constraint firstItem="QwV-o1-vgP" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="600:640" id="mCK-oF-ns5"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="0AV-l7-miw"/>
+                        <exclude reference="9rR-jE-Hly"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <animations/>
             <connections>

@@ -44,5 +44,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonBuy;
 @property (weak, nonatomic) IBOutlet UILabel *labelMoney;
 @property (weak, nonatomic) IBOutlet UILabel *labelLevelUp;
+@property (weak, nonatomic) IBOutlet UIView *viewC_A;
 
 @end

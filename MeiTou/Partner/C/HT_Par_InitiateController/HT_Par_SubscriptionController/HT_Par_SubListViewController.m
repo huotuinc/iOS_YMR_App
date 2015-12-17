@@ -24,7 +24,6 @@ static NSString *cellSList=@"cellSList";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_SubListTableViewCell" bundle:nil]forCellReuseIdentifier:cellSList];
     [self createBarButtonItem];
     
 }
@@ -57,35 +56,66 @@ static NSString *cellSList=@"cellSList";
 }
 -(void)createTableView{
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_SubListTableViewCell" bundle:nil]forCellReuseIdentifier:cellSList];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+    _tableView.tableFooterView=[[UIView alloc]init];
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
     
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *_cell;
-    
     HT_Par_SubListTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellSList forIndexPath:indexPath];
-    
-    _cell=cell;
-    return _cell;
+    if (indexPath.row==0) {
+        cell.imageVState.image=[UIImage imageNamed:@"rengou_content_right_fail"];
+    }
+    if (indexPath.row==1) {
+        cell.imageVState.image=[UIImage imageNamed:@"rengou_content_right_success"];
+
+    }
+    if (indexPath.row==2) {
+        cell.imageVState.image=[UIImage imageNamed:@"rengou_content_right_unconfirmed"];
+
+    }
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    return cell;
     
     
     
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return 4;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return SCREEN_HEIGHT/8;
+    return (NSInteger)SCREEN_HEIGHT/8;
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
 
+/**
+ *  cell分割线完全填充
+ */
+-(void)viewDidLayoutSubviews {
+    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [_tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [_tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *ButtonGo;
 @property (weak, nonatomic) IBOutlet UIView *A_AView
 ;
+@property (weak, nonatomic) IBOutlet UIProgressView *viewProgress;
 
 @end

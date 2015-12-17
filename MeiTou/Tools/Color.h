@@ -64,6 +64,8 @@
 #define COLOR_LINE_A [UIColor colorWithRed:202/255.0f green:202/255.0f blue:202/255.0f alpha:1]
 //分割线 列表1px分割线
 #define COLOR_LINE_B [UIColor colorWithRed:228/255.0f green:228/255.0f blue:228/255.0f alpha:1]
+//分割线 textField
+#define COLOR_LINE_C [UIColor colorWithRed:217/255.0f green:217/255.0f blue:218/255.0f alpha:1]
 //底色 浅灰底色_正文背景 输入框底色
 #define COLOR_BACK_MAIN [UIColor colorWithRed:242/255.0f green:242/255.0f blue:242/255.0f alpha:1]
 //底色 紫红底色_侧滑页背景

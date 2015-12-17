@@ -30,18 +30,18 @@
     _labelMoney.text=@"$1500.00";
     _labelLevelUp.text=@"立即支付,升级为LV2等级";
     
-    _labelLevel.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
-    _labelScore.font=[UIFont systemFontOfSize:FONT_SIZE(20)];
-    _labelUp.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelMore.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelLevel.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelScore.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelUp.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelMore.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
     _labelPay.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
     _labelWei.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
-    _labelMoney.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
+    _labelMoney.font=[UIFont systemFontOfSize:FONT_SIZE(40)];
     _labelLevelUp.font=[UIFont systemFontOfSize:FONT_SIZE(30)];
-    _labelBuy.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
-    _labelGet.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
-    _labelPoint.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _labelBuy.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelGet.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelPoint.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
     
     _labelLevel.textColor=COLOR_TEXT_DATE;
     _labelScore.textColor=COLOR_TEXT_DATE;
@@ -77,9 +77,15 @@
     _viewBase.backgroundColor=COLOR_BACK_MAIN;
     
     _viewA.layer.cornerRadius=3;
+    _viewA.layer.borderColor=[COLOR_LINE_C CGColor];
+    _viewA.layer.borderWidth=1;
     _viewA.layer.masksToBounds=YES;
     _viewB.layer.cornerRadius=3;
     _viewB.layer.masksToBounds=YES;
+    
+    
+    
+    _buttonBuy.titleLabel.font=[UIFont systemFontOfSize:FONT_SIZE(30 )];
     _buttonBuy.layer.cornerRadius=3;
     _buttonBuy.layer.masksToBounds=YES;
     

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  支付订单
+ */
 @interface HT_Par_ItePaymentOrderViewController : UIViewController
 
 @end

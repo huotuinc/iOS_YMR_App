@@ -15,7 +15,7 @@
 @end
 
 @implementation HT_Par_ItePaymentResultsViewController{
-    UIView *_mainView;
+    HT_Par_ItePaymentResultsCView *_mainView;
     
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -50,9 +50,9 @@
 
 -(void)createMainView{
     NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_ItePaymentResultsCView" owner:nil options:nil];
-    HT_Par_ItePaymentResultsCView *mainView=[nib firstObject];
-    mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
-    _mainView=mainView;
+    _mainView=[nib firstObject];
+    _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
+    _mainView.backgroundColor=COLOR_BACK_MAIN;
     [self.view addSubview:_mainView];
     
     

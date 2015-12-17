@@ -6,27 +6,27 @@
 //  Copyright (c) 2015年 com.injoinow. All rights reserved.
 //  make by 郑泽钦 分享
 
-#import "AddressChoicePickerView.h"
+#import "HT_Par_IteChoicePickerView.h"
 
-@interface AddressChoicePickerView()<UIPickerViewDataSource,UIPickerViewDelegate>
+@interface HT_Par_IteChoicePickerView()<UIPickerViewDataSource,UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewHegithCons;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickView;
-@property (strong, nonatomic) AreaObject *locate;
+@property (strong, nonatomic) HT_Par_IteChociePickerNModel *locate;
 //区域 数组
 @property (strong, nonatomic) NSMutableArray *regionArr;
 
 
 @end
-@implementation AddressChoicePickerView
+@implementation HT_Par_IteChoicePickerView
 
 - (instancetype)init{
     
     if (self = [super init]) {
-        self = [[[NSBundle mainBundle]loadNibNamed:@"AddressChoicePickerView" owner:nil options:nil]firstObject];
+        self = [[[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteChoicePickerView" owner:nil options:nil]firstObject];
         self.frame = [UIScreen mainScreen].bounds;
         self.pickView.delegate = self;
         self.pickView.dataSource = self;
-        self.regionArr = [NSMutableArray arrayWithArray:@[@"1111",@"2222",@"3333"]];
+        self.regionArr = [NSMutableArray arrayWithArray:@[@"1000",@"2000",@"3000",@"4000",@"5000",@"6000",@"7000",@"8000",@"9000"]];
         self.locate=_regionArr[0];
         [self customView];
     }
@@ -40,9 +40,9 @@
 
 #pragma mark - setter && getter
 
-- (AreaObject *)locate{
+- (HT_Par_IteChociePickerNModel *)locate{
     if (!_locate) {
-        _locate = [[AreaObject alloc]init];
+        _locate = [[HT_Par_IteChociePickerNModel alloc]init];
     }
     return _locate;
 }

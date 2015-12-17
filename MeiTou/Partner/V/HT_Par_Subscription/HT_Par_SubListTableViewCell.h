@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelPrice;
 @property (weak, nonatomic) IBOutlet UILabel *labelDate;
+@property (weak, nonatomic) IBOutlet UIView *viewBase;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageVHead;
 @property (weak, nonatomic) IBOutlet UIImageView *imageVLevel;

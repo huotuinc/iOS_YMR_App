@@ -27,25 +27,35 @@
     _viewBase.backgroundColor=COLOR_BACK_MAIN;
     _imageVHelp.image=[UIImage imageNamed:@"common_content_notice"];
     
+
+    _viewA.layer.cornerRadius=3;
+    _viewA.layer.masksToBounds=YES;
+    _viewA.layer.borderWidth=1;
+    _viewA.layer.borderColor=[COLOR_LINE_C CGColor];
+    _viewA.clipsToBounds=YES;
+    _viewB.layer.cornerRadius=3;
+    _viewB.layer.borderColor=[COLOR_LINE_C CGColor];
+    _viewB.layer.borderWidth=1;
+    _viewB.layer.masksToBounds=YES;
+    _viewB.clipsToBounds=YES;
+                                                                                         
     _labelName.textColor=COLOR_TEXT_DATE;
     _labelTel.textColor=COLOR_TEXT_DATE;
     _labelMoney.textColor=COLOR_TEXT_TITILE;
     _labelHelp.textColor=COLOR_TEXT_DATE;
-    _textFName.textColor=COLOR_TEXT_CONTENT;
-    _textFTel.textColor=COLOR_TEXT_CONTENT;
     
-    _labelName.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelTel.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelName.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelTel.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
     _labelHelp.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelMoney.font=[UIFont systemFontOfSize:FONT_SIZE(40)];
-    _textFTel.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
-    _textFName.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _textFTel.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _textFName.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
     
     _labelMoney.text=@"$1500.00";
     
     [_buttonSub setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_buttonSub setBackgroundColor:COLOR_BUTTON_RED];
-    _buttonSub.titleLabel.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _buttonSub.titleLabel.font=[UIFont systemFontOfSize:FONT_SIZE(28)];
     _buttonSub.layer.cornerRadius=3;
     _buttonSub.layer.masksToBounds=YES;
     _buttonSub.clipsToBounds=YES;

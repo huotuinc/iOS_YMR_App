@@ -10,5 +10,6 @@
 
 @interface HT_Par_SubBottomView : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIButton *buttonSubscription;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVLine;
 
 @end
