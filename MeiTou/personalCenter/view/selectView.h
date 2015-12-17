@@ -20,6 +20,7 @@
 
 -(void)selectClick:(NSInteger) tag;
 
+-(void)cannelClick;
 
 @end
 

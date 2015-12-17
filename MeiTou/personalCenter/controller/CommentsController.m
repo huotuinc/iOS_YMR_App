@@ -6,7 +6,9 @@
 //  Copyright © 2015年 车. All rights reserved.
 //
 
+#import "CallMeController.h"
 #import "CommentsController.h"
+#import "PraiseController.h"
 #import "CommentsCell.h"
 #import "selectView.h"
 #import <UIBarButtonItem+BlocksKit.h>
@@ -14,6 +16,8 @@
 @interface CommentsController ()<UITableViewDataSource,UITableViewDelegate,SelectViewDelegate>
 
 @property (nonatomic, strong) selectView *selectV;
+
+@property (nonatomic, strong) UIButton *titleButton;
 
 @end
 
@@ -33,7 +37,25 @@ static NSString *commentIdentify = @"commentsIdentify";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.selectV];
     
-    
+    _titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _titleButton.frame = CGRectMake(0, 0, 100, 30);
+    [_titleButton setImage:[UIImage imageNamed:@"heda"] forState:UIControlStateNormal];
+    [_titleButton setTitle:@"我的评论" forState:UIControlStateNormal];
+    [_titleButton layoutIfNeeded];
+    [_titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_titleButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -16, 0, 16)];
+    [_titleButton setImageEdgeInsets:UIEdgeInsetsMake(0, _titleButton.titleLabel.bounds.size.width, 0, -_titleButton.titleLabel.bounds.size.width)];
+    self.navigationItem.titleView = _titleButton;
+    [_titleButton bk_whenTapped:^{
+        if (self.selectV.hidden) {
+            [_titleButton setImage:[UIImage imageNamed:@"hehe"] forState:UIControlStateNormal];
+            self.selectV.hidden = NO;
+        }else {
+            [_titleButton setImage:[UIImage imageNamed:@"heda"] forState:UIControlStateNormal];
+            self.selectV.hidden = YES;
+        }
+        
+    }];
     
 }
 
@@ -67,15 +89,26 @@ static NSString *commentIdentify = @"commentsIdentify";
 
 - (void)selectClick:(NSInteger)tag {
     
-    if (tag == 1) {
-        self.selectV.hidden = YES;
-    }else if (tag == 2) {
-        self.selectV.hidden = YES;
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    self.selectV.hidden = YES;
+    [self.titleButton setImage:[UIImage imageNamed:@"heda"] forState:UIControlStateNormal];
+    //点击后转跳到相应页面
+    if (tag == 2) {
+        CallMeController *comment = [story instantiateViewControllerWithIdentifier:@"CallMeController"];
+        [self.navigationController pushViewController:comment animated:YES];
+        
+    }else if (tag == 1) {
+        PraiseController *praise = [story instantiateViewControllerWithIdentifier:@"PraiseController"];
+        [self.navigationController pushViewController:praise animated:YES];
     }else if (tag == 3) {
-        self.selectV.hidden = YES;
+        
+        
     }
 }
 
+- (void)cannelClick {
+    [self.titleButton setImage:[UIImage imageNamed:@"hehe"] forState:UIControlStateNormal];
+}
 
 
 @end
