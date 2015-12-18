@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6014343B1C1AAF4E00E102B7 /* selectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014343A1C1AAF4E00E102B7 /* selectView.m */; };
 		609292901C22A04A0076D589 /* LevelUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6092928F1C22A04A0076D589 /* LevelUpView.m */; };
+		609292941C23A2080076D589 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609292921C23A2080076D589 /* ShareCell.m */; };
+		609292951C23A2080076D589 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609292931C23A2080076D589 /* ShareCell.xib */; };
+		609292981C23E02E0076D589 /* ShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609292971C23E02E0076D589 /* ShareController.m */; };
 		AD43035F75929EF3A81B1C16 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8698D34D22B86C408994D26D /* libPods.a */; };
 		F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A11C15B70000ED2017 /* HT_Infor_CommentViewController.m */; };
 		F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A41C15B71800ED2017 /* HT_Infor_GroupViewController.m */; };
@@ -208,6 +211,11 @@
 		6014343A1C1AAF4E00E102B7 /* selectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectView.m; sourceTree = "<group>"; };
 		6092928E1C22A04A0076D589 /* LevelUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpView.h; sourceTree = "<group>"; };
 		6092928F1C22A04A0076D589 /* LevelUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUpView.m; sourceTree = "<group>"; };
+		609292911C23A2080076D589 /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
+		609292921C23A2080076D589 /* ShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCell.m; sourceTree = "<group>"; };
+		609292931C23A2080076D589 /* ShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCell.xib; sourceTree = "<group>"; };
+		609292961C23E02E0076D589 /* ShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareController.h; sourceTree = "<group>"; };
+		609292971C23E02E0076D589 /* ShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareController.m; sourceTree = "<group>"; };
 		7FFFE40FAB63B9F5F5340FCC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8698D34D22B86C408994D26D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7257668B6600CED282BB2C9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -1163,6 +1171,8 @@
 				F2FAA9E31C1A7C4A00A90DA1 /* PraiseController.m */,
 				F2FAA9E41C1A7C4A00A90DA1 /* SystemMessageController.h */,
 				F2FAA9E51C1A7C4A00A90DA1 /* SystemMessageController.m */,
+				609292961C23E02E0076D589 /* ShareController.h */,
+				609292971C23E02E0076D589 /* ShareController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1191,6 +1201,9 @@
 				F2FAA9F31C1A7C4A00A90DA1 /* SystemMessageCell.h */,
 				F2FAA9F41C1A7C4A00A90DA1 /* SystemMessageCell.m */,
 				F2FAA9F51C1A7C4A00A90DA1 /* SystemMessageCell.xib */,
+				609292911C23A2080076D589 /* ShareCell.h */,
+				609292921C23A2080076D589 /* ShareCell.m */,
+				609292931C23A2080076D589 /* ShareCell.xib */,
 				6092928E1C22A04A0076D589 /* LevelUpView.h */,
 				6092928F1C22A04A0076D589 /* LevelUpView.m */,
 			);
@@ -1267,6 +1280,7 @@
 				TargetAttributes = {
 					F27261531C07E61B0081EC95 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = Q3B3AD6JJH;
 					};
 					F272616C1C07E61B0081EC95 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -1312,6 +1326,7 @@
 				F2F968501C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib in Resources */,
 				F2F9684B1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.xib in Resources */,
 				F27261A91C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.xib in Resources */,
+				609292951C23A2080076D589 /* ShareCell.xib in Resources */,
 				F2CE73A01C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.xib in Resources */,
 				F27261671C07E61B0081EC95 /* LaunchScreen.storyboard in Resources */,
 				F27261E51C07FE810081EC95 /* HT_About_MainTableViewCell.xib in Resources */,
@@ -1441,6 +1456,7 @@
 				F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */,
 				F27D673B1C0B49A900EE6C4F /* HT_HomePageViewController.m in Sources */,
 				F2FAA9F91C1A7C4A00A90DA1 /* SystemMessageController.m in Sources */,
+				609292981C23E02E0076D589 /* ShareController.m in Sources */,
 				F21C19261C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.m in Sources */,
 				F2CE739F1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.m in Sources */,
 				F28E883A1C19A0C300E75298 /* HT_HomePage_ChangeViewController.m in Sources */,
@@ -1514,6 +1530,7 @@
 				F27261D31C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.m in Sources */,
 				F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */,
 				F27D67311C0B30A900EE6C4F /* HT_HomePageLayout.m in Sources */,
+				609292941C23A2080076D589 /* ShareCell.m in Sources */,
 				F21C19101C1E670700E717A8 /* HT_HomePage_TopUpViewController.m in Sources */,
 				F2D91CB91C2004BA007778B8 /* HT_Par_SearchViewController.m in Sources */,
 				F29C69531C166653000A8C29 /* HT_News_HeadTableViewCell.m in Sources */,
