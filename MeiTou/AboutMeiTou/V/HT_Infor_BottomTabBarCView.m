@@ -20,6 +20,14 @@
     _labelSearch.text=@"搜索";
     _labelShare.text=@"我要分享";
     
+    _labelShop.textColor=COLOR_TEXT_DATE;
+    _labelShare.textColor=COLOR_TEXT_DATE;
+    _labelSearch.textColor=COLOR_TEXT_DATE;
+    
+    _labelShop.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelSearch.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelShare.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    
 
 }
 -(void)drawRect:(CGRect)rect{

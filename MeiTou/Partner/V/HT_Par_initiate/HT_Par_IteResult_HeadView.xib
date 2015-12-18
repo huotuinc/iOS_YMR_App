@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -14,14 +13,14 @@
             <rect key="frame" x="0.0" y="0.0" width="155" height="174"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="155" height="173.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="155" height="173"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biC-Oj-xnO" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="139" height="157"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="biC-Oj-xnO" userLabel="BaseView">
+                        <rect key="frame" x="0.0" y="0.0" width="155" height="174"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="EWP-5g-DXO" userLabel="HeadImage View">
-                                <rect key="frame" x="9" y="19" width="120" height="120"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWP-5g-DXO" userLabel="HeadImage View">
+                                <rect key="frame" x="11" y="21" width="132" height="133"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EWP-5g-DXO" secondAttribute="height" multiplier="1:1" id="LeF-Oj-v7w"/>
@@ -33,8 +32,8 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="gzu-sL-odI" userLabel="LevelImage View">
-                                <rect key="frame" x="97" y="26" width="38" height="38"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzu-sL-odI" userLabel="LevelImage View">
+                                <rect key="frame" x="105" y="29" width="42" height="42"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gzu-sL-odI" secondAttribute="height" multiplier="1:1" id="bSp-Ea-0bh"/>
@@ -54,7 +53,7 @@
                             <constraint firstItem="EWP-5g-DXO" firstAttribute="centerX" secondItem="biC-Oj-xnO" secondAttribute="centerX" id="4ml-VZ-bYd"/>
                             <constraint firstItem="gzu-sL-odI" firstAttribute="width" secondItem="EWP-5g-DXO" secondAttribute="width" id="5N2-SZ-icA"/>
                             <constraint firstItem="EWP-5g-DXO" firstAttribute="height" secondItem="biC-Oj-xnO" secondAttribute="height" multiplier="32:42" id="7jb-fE-tCU"/>
-                            <constraint firstItem="gzu-sL-odI" firstAttribute="centerX" secondItem="biC-Oj-xnO" secondAttribute="centerX" multiplier="35:21" id="C2i-8g-xnK"/>
+                            <constraint firstItem="gzu-sL-odI" firstAttribute="centerX" secondItem="biC-Oj-xnO" secondAttribute="centerX" multiplier="32:21" id="C2i-8g-xnK"/>
                             <constraint firstItem="EWP-5g-DXO" firstAttribute="height" secondItem="biC-Oj-xnO" secondAttribute="height" multiplier="32:42" id="T3e-AR-fqv"/>
                             <constraint firstItem="gzu-sL-odI" firstAttribute="centerY" secondItem="EWP-5g-DXO" secondAttribute="centerY" constant="12" id="X7O-0D-GIL"/>
                             <constraint firstItem="gzu-sL-odI" firstAttribute="height" secondItem="EWP-5g-DXO" secondAttribute="height" multiplier="13:42" id="d57-99-2rC"/>
@@ -73,10 +72,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="biC-Oj-xnO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="54Y-bl-FUT"/>
-                    <constraint firstItem="biC-Oj-xnO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="KeB-Ri-epr"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="biC-Oj-xnO" secondAttribute="trailing" id="Mej-Rt-YL5"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="biC-Oj-xnO" secondAttribute="bottom" id="V7d-pZ-MQy"/>
+                    <constraint firstItem="biC-Oj-xnO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="54Y-bl-FUT"/>
+                    <constraint firstItem="biC-Oj-xnO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KeB-Ri-epr"/>
+                    <constraint firstAttribute="trailing" secondItem="biC-Oj-xnO" secondAttribute="trailing" id="Mej-Rt-YL5"/>
+                    <constraint firstAttribute="bottom" secondItem="biC-Oj-xnO" secondAttribute="bottom" id="V7d-pZ-MQy"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
@@ -87,8 +86,4 @@
             <point key="canvasLocation" x="218.5" y="440"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Main" width="650" height="352"/>
-        <image name="head" width="1" height="1"/>
-    </resources>
 </document>

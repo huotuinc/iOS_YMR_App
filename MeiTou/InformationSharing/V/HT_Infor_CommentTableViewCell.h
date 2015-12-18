@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HT_Infor_CommentTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIView *viewBase;
+@property (weak, nonatomic) IBOutlet UIImageView *imagePoint;
 
 @end

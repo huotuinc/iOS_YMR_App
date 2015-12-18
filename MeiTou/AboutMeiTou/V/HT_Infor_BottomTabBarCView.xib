@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qef-3r-BU3">
-                        <rect key="frame" x="8" y="8" width="624" height="1"/>
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="1"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="1" id="2m4-U4-j0J"/>
@@ -31,7 +31,7 @@
                         </variation>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ifn-Zo-CtH" userLabel="shareImage View">
-                        <rect key="frame" x="282" y="-29" width="75" height="75"/>
+                        <rect key="frame" x="275" y="-45" width="90" height="91"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Ifn-Zo-CtH" secondAttribute="height" multiplier="1:1" id="5xY-z2-c0e"/>
@@ -43,18 +43,18 @@
                             </mask>
                         </variation>
                     </imageView>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vC7-T9-SVY" userLabel="shopView">
-                        <rect key="frame" x="68" y="10" width="50" height="71"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vC7-T9-SVY" userLabel="shopView">
+                        <rect key="frame" x="69" y="10" width="49" height="70"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCJ-5d-mx9">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FCJ-5d-mx9">
+                                <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FCJ-5d-mx9" secondAttribute="height" multiplier="1:1" id="8W0-Tx-466"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="店铺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAW-pC-XRm" userLabel="店铺">
-                                <rect key="frame" x="0.0" y="50" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAW-pC-XRm" userLabel="店铺">
+                                <rect key="frame" x="0.0" y="49" width="49" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,18 +79,18 @@
                             </mask>
                         </variation>
                     </view>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93v-0i-XEe" userLabel="searchView">
-                        <rect key="frame" x="522" y="10" width="50" height="71"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93v-0i-XEe" userLabel="searchView">
+                        <rect key="frame" x="523" y="10" width="49" height="70"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Swm-lL-INZ">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Swm-lL-INZ">
+                                <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Swm-lL-INZ" secondAttribute="height" multiplier="1:1" id="BAO-xl-hd5"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="搜索" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEI-dY-b0f">
-                                <rect key="frame" x="0.0" y="50" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEI-dY-b0f">
+                                <rect key="frame" x="0.0" y="49" width="49" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,7 +116,7 @@
                         </variation>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我要分享" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF0-Bz-BdW">
-                        <rect key="frame" x="283" y="60" width="75" height="21"/>
+                        <rect key="frame" x="230" y="59" width="180" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,17 +127,17 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="93v-0i-XEe" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="547:320" id="0Bz-qq-Dk2"/>
-                    <constraint firstItem="gF0-Bz-BdW" firstAttribute="width" secondItem="Ifn-Zo-CtH" secondAttribute="width" id="1ns-gS-xmx"/>
+                    <constraint firstItem="gF0-Bz-BdW" firstAttribute="width" secondItem="Ifn-Zo-CtH" secondAttribute="width" multiplier="2:1" id="1ns-gS-xmx"/>
                     <constraint firstItem="Ifn-Zo-CtH" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4Pi-pc-5eB"/>
                     <constraint firstItem="93v-0i-XEe" firstAttribute="centerY" secondItem="vC7-T9-SVY" secondAttribute="centerY" id="5dg-td-IlZ"/>
-                    <constraint firstItem="qef-3r-BU3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="As7-ef-KMA"/>
+                    <constraint firstItem="qef-3r-BU3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="As7-ef-KMA"/>
                     <constraint firstItem="gF0-Bz-BdW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="EsH-WT-Bgi"/>
                     <constraint firstItem="Ifn-Zo-CtH" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="92:640" id="HDR-C3-gs5"/>
                     <constraint firstItem="93v-0i-XEe" firstAttribute="leading" secondItem="Ifn-Zo-CtH" secondAttribute="trailing" id="Ml1-bc-UrR"/>
                     <constraint firstItem="93v-0i-XEe" firstAttribute="top" secondItem="qef-3r-BU3" secondAttribute="bottom" id="P3M-ar-Qn9"/>
                     <constraint firstItem="93v-0i-XEe" firstAttribute="width" secondItem="vC7-T9-SVY" secondAttribute="width" id="Qar-7i-cjk"/>
                     <constraint firstItem="93v-0i-XEe" firstAttribute="height" secondItem="vC7-T9-SVY" secondAttribute="height" id="SXm-TY-FR3"/>
-                    <constraint firstItem="Ifn-Zo-CtH" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="75:640" id="T2q-dr-0Ep"/>
+                    <constraint firstItem="Ifn-Zo-CtH" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="90:640" id="T2q-dr-0Ep"/>
                     <constraint firstItem="gF0-Bz-BdW" firstAttribute="centerY" secondItem="vAW-pC-XRm" secondAttribute="centerY" id="Taf-DE-2dd"/>
                     <constraint firstItem="93v-0i-XEe" firstAttribute="width" secondItem="vC7-T9-SVY" secondAttribute="width" id="Tpq-P4-Def"/>
                     <constraint firstItem="vC7-T9-SVY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WV9-vA-qP2"/>
@@ -149,9 +149,9 @@
                     <constraint firstItem="vC7-T9-SVY" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="70:90" id="oTM-SP-J9V"/>
                     <constraint firstItem="gF0-Bz-BdW" firstAttribute="height" secondItem="vAW-pC-XRm" secondAttribute="height" id="oe4-dH-LLT"/>
                     <constraint firstAttribute="trailingMargin" secondItem="93v-0i-XEe" secondAttribute="trailing" id="rNL-xK-xSt"/>
-                    <constraint firstItem="qef-3r-BU3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="w7X-3F-ISl"/>
+                    <constraint firstItem="qef-3r-BU3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="w7X-3F-ISl"/>
                     <constraint firstItem="vC7-T9-SVY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="93:320" id="xsz-Ei-XOR"/>
-                    <constraint firstItem="qef-3r-BU3" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="zSi-c4-TFX"/>
+                    <constraint firstItem="qef-3r-BU3" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="zSi-c4-TFX"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">

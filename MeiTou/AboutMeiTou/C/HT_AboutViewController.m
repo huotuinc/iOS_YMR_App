@@ -64,6 +64,7 @@ static NSString *cellAbout=@"cellAbout";
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
     
 }
@@ -80,7 +81,7 @@ static NSString *cellAbout=@"cellAbout";
     return [_imageArray count];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return _tableView.frame.size.height/[_imageArray count];
+    return (NSInteger)_tableView.frame.size.height/[_imageArray count];
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UIView *ViewHeadGroup;
 @property (weak, nonatomic) IBOutlet UIView *viewBase;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVpoint;
 
 @end

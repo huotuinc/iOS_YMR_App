@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -13,14 +12,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-cn-aX7" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="304" height="174"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-fh-QVa" userLabel="HeadImage View">
-                                <rect key="frame" x="10" y="0.0" width="285" height="174"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-fh-QVa" userLabel="HeadImage View">
+                                <rect key="frame" x="11" y="0.0" width="300" height="189"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -46,10 +45,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="jbM-cn-aX7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Ckv-Z6-QMV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="jbM-cn-aX7" secondAttribute="bottom" id="FUp-mo-Gd3"/>
-                    <constraint firstItem="jbM-cn-aX7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="U4p-t5-8er"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="jbM-cn-aX7" secondAttribute="trailing" id="zCG-50-gci"/>
+                    <constraint firstItem="jbM-cn-aX7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ckv-Z6-QMV"/>
+                    <constraint firstAttribute="bottom" secondItem="jbM-cn-aX7" secondAttribute="bottom" id="FUp-mo-Gd3"/>
+                    <constraint firstItem="jbM-cn-aX7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="U4p-t5-8er"/>
+                    <constraint firstAttribute="trailing" secondItem="jbM-cn-aX7" secondAttribute="trailing" id="zCG-50-gci"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,14 +11,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="186.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3G-U0-rL6" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="304" height="170"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-ba-UgM" userLabel="MainImage View">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="170"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -35,10 +34,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="p3G-U0-rL6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="7I9-2u-dxp"/>
-                    <constraint firstItem="p3G-U0-rL6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="H6Z-eu-gim"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="p3G-U0-rL6" secondAttribute="bottom" id="d4j-b3-uni"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="p3G-U0-rL6" secondAttribute="trailing" id="gK4-jt-a2g"/>
+                    <constraint firstItem="p3G-U0-rL6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7I9-2u-dxp"/>
+                    <constraint firstItem="p3G-U0-rL6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="H6Z-eu-gim"/>
+                    <constraint firstAttribute="bottom" secondItem="p3G-U0-rL6" secondAttribute="bottom" id="d4j-b3-uni"/>
+                    <constraint firstAttribute="trailing" secondItem="p3G-U0-rL6" secondAttribute="trailing" id="gK4-jt-a2g"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

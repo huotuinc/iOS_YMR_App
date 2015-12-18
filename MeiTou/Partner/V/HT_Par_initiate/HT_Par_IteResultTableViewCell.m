@@ -19,11 +19,12 @@
 //    self.ViewHead.backgroundColor=[UIColor redColor];
 //    _imageVHead.layer.cornerRadius=_imageVHead.frame.size.width/2;
     
+    _imageVpoint.image=[UIImage imageNamed:@"oiu"];
     _imageVlevel.image=[UIImage imageNamed:@"common_LV2"];
     
     _viewBase.layer.cornerRadius=3;
     _viewBase.layer.borderWidth=1;
-    _viewBase.layer.borderColor=[COLOR_LINE_C CGColor];
+    _viewBase.layer.borderColor=[COLOR_BACK_MAIN CGColor];
     _viewBase.layer.masksToBounds=YES;
     
 }
@@ -36,11 +37,17 @@
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
-//    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
-//    HT_Par_IteResult_HeadView *headV=[nib firstObject];
-//    
-//    [self.ViewHead layoutIfNeeded];
-//     [self.ViewHead addSubview:headV];
+//    NSInteger height=_ViewHeadGroup.frame.size.height;
+
+    for (int i=0; i<5; i++) {
+        NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
+        HT_Par_IteResult_HeadView *headV=[nib firstObject];
+        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*i, 0, _ViewHeadGroup.frame.size.width/5, _ViewHeadGroup.frame.size.height);
+//        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*(i%5), height*(i/5), _ViewHeadGroup.frame.size.width/5, height);
+        [self.ViewHeadGroup layoutIfNeeded];
+        [self.ViewHeadGroup addSubview:headV];
+    }
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageVShare;
 @property (weak, nonatomic) IBOutlet UIView *viewScore;
 @property (weak, nonatomic) IBOutlet UIButton *buttonGo;
+@property (weak, nonatomic) IBOutlet UIButton *buttonScore;
 @end

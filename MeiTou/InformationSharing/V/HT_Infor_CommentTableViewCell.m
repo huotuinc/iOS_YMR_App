@@ -12,7 +12,17 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    _viewBase.layer.cornerRadius=3;
+    _viewBase.layer.borderWidth=1;
+    _viewBase.layer.borderColor=[COLOR_BACK_MAIN CGColor];
+    _viewBase.layer.masksToBounds=YES;
+    
+    _imagePoint.image=[UIImage imageNamed:@"kkr"];
+    
 }
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

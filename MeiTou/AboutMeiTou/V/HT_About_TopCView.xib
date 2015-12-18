@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,14 +11,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="150.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3G8-Bf-A5o" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="304" height="134.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司介绍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgW-vT-ZJy" userLabel="TitleLabel">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="134.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,10 +37,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="3G8-Bf-A5o" secondAttribute="trailing" id="etb-yc-Xd8"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="3G8-Bf-A5o" secondAttribute="bottom" id="mxO-Ov-MhO"/>
-                    <constraint firstItem="3G8-Bf-A5o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rVY-fX-f2V"/>
-                    <constraint firstItem="3G8-Bf-A5o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="uQW-aQ-b1n"/>
+                    <constraint firstAttribute="trailing" secondItem="3G8-Bf-A5o" secondAttribute="trailing" id="etb-yc-Xd8"/>
+                    <constraint firstAttribute="bottom" secondItem="3G8-Bf-A5o" secondAttribute="bottom" id="mxO-Ov-MhO"/>
+                    <constraint firstItem="3G8-Bf-A5o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rVY-fX-f2V"/>
+                    <constraint firstItem="3G8-Bf-A5o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uQW-aQ-b1n"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

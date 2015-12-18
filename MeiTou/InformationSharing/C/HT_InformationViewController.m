@@ -11,9 +11,11 @@
 #import "HT_Infor_CommentViewController.h"
 #import "HT_Infor_GroupViewController.h"
 #import "HT_Infor_ShareViewController.h"
+#import "HT_Par_SearchViewController.h"
 
 #import "HT_Infor_MainTableViewCell.h"
 #import "HT_Infor_BottomTabBarCView.h"
+#import "HT_Par_SearchCView.h"
 
 
 static NSString *cellIMain = @"cellIMain";
@@ -24,6 +26,8 @@ static NSString *cellIMain = @"cellIMain";
 @implementation HT_InformationViewController{
     UITableView *_tableView;
     UIView *_bottomView;
+    HT_Par_SearchCView *_topView;//搜索框
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -43,7 +47,7 @@ static NSString *cellIMain = @"cellIMain";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor cyanColor];
-
+    [self createTopView];
     [self createTableView];
     [self createBottomView];
 }
@@ -63,7 +67,7 @@ static NSString *cellIMain = @"cellIMain";
 }
 
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/1100*70, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     //    _tableView.backgroundColor = [UIColor lightGrayColor];
@@ -79,6 +83,17 @@ static NSString *cellIMain = @"cellIMain";
     [self.view addSubview:_bottomView];
 
 }
+
+-(void)createTopView{
+    NSArray *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_SearchCView" owner:nil options:nil];
+    _topView=[nib firstObject];
+    _topView.frame=CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1100*70);
+    UIView *viewSearch=[[UIView alloc]initWithFrame:_topView.frame];
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheSearchView)];
+    [viewSearch addGestureRecognizer:tap];
+    [self.view addSubview:_topView];
+    [self.view addSubview:viewSearch];
+}
 /**
  *
  */
@@ -89,6 +104,11 @@ static NSString *cellIMain = @"cellIMain";
     HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
     [self.navigationController pushViewController:share animated:YES];
 
+}
+-(void)tapTheSearchView{
+    HT_Par_SearchViewController *search=[[HT_Par_SearchViewController alloc]init];
+    [self.navigationController pushViewController:search animated:YES];
+    
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

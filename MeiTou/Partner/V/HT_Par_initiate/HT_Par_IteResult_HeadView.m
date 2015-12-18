@@ -12,11 +12,17 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _imageVHead.layer.cornerRadius=_imageVHead.frame.size.width/2;
-    _imageVLevel.layer.cornerRadius=_imageVLevel.frame.size.width/2;
+
+    _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVLevel.image=[UIImage imageNamed:@"common_LV3"];
     
 }
-
+-(void)drawRect:(CGRect)rect{
+    _imageVHead.layer.cornerRadius=_imageVHead.frame.size.width/2;
+    _imageVHead.layer.masksToBounds=YES;
+    _imageVLevel.layer.cornerRadius=_imageVLevel.frame.size.width/2;
+    _imageVLevel.layer.masksToBounds=YES;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
