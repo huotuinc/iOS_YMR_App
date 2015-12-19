@@ -15,8 +15,16 @@
     _labelTitle.text=@"这是一个文章的标题";
     _labelDate.text=@"2015/10/10 10:10:10";
     _labelScore.text=@"100/1000分";
-    _imageVMain.image=[UIImage imageNamed:@"Main"];
+    _imageVMain.image=[UIImage imageNamed:@"aaa"];
     
+    _labelTitle.textColor=COLOR_TEXT_TITILE;
+    _labelDate.textColor=COLOR_TEXT_DATE;
+    _labelScore.textColor=COLOR_BUTTON_RED;
+    
+    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(32)];
+    _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelScore.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

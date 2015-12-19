@@ -22,13 +22,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y91-Xw-s6M" userLabel="AView">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLM-3Z-Qdy" userLabel="TitleLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="39"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMW-oa-Z75" userLabel="DateLabel">
                                         <rect key="frame" x="0.0" y="39" width="180" height="26"/>
                                         <animations/>
@@ -43,18 +36,25 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLM-3Z-Qdy" userLabel="TitleLabel">
+                                        <rect key="frame" x="0.0" y="8" width="360" height="39"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="1sQ-AU-Fbu" firstAttribute="leading" secondItem="PMW-oa-Z75" secondAttribute="trailing" id="5cK-Lg-ehO"/>
-                                    <constraint firstItem="PMW-oa-Z75" firstAttribute="top" secondItem="JLM-3Z-Qdy" secondAttribute="bottom" id="7L7-Yb-l4R"/>
+                                    <constraint firstItem="PMW-oa-Z75" firstAttribute="top" secondItem="JLM-3Z-Qdy" secondAttribute="bottom" constant="-5" id="7L7-Yb-l4R"/>
                                     <constraint firstItem="PMW-oa-Z75" firstAttribute="leading" secondItem="Y91-Xw-s6M" secondAttribute="leading" id="BmP-ms-uLJ"/>
                                     <constraint firstAttribute="trailing" secondItem="JLM-3Z-Qdy" secondAttribute="trailing" id="LOu-Xu-T5P"/>
                                     <constraint firstAttribute="trailing" secondItem="1sQ-AU-Fbu" secondAttribute="trailing" id="NDd-Vd-Nxx"/>
-                                    <constraint firstItem="JLM-3Z-Qdy" firstAttribute="top" secondItem="Y91-Xw-s6M" secondAttribute="top" id="PpC-Jd-2wg"/>
+                                    <constraint firstItem="JLM-3Z-Qdy" firstAttribute="top" secondItem="Y91-Xw-s6M" secondAttribute="top" constant="5" id="PpC-Jd-2wg"/>
                                     <constraint firstAttribute="bottom" secondItem="1sQ-AU-Fbu" secondAttribute="bottom" id="S4X-SB-ykk"/>
-                                    <constraint firstItem="1sQ-AU-Fbu" firstAttribute="top" secondItem="JLM-3Z-Qdy" secondAttribute="bottom" id="SUJ-52-s5g"/>
+                                    <constraint firstItem="1sQ-AU-Fbu" firstAttribute="top" secondItem="JLM-3Z-Qdy" secondAttribute="bottom" constant="-5" id="SUJ-52-s5g"/>
                                     <constraint firstAttribute="bottom" secondItem="PMW-oa-Z75" secondAttribute="bottom" id="TIV-HS-tKd"/>
                                     <constraint firstItem="JLM-3Z-Qdy" firstAttribute="leading" secondItem="Y91-Xw-s6M" secondAttribute="leading" id="hwA-WO-geO"/>
                                     <constraint firstAttribute="trailing" secondItem="PMW-oa-Z75" secondAttribute="trailing" id="l5J-Pa-04T"/>

@@ -15,5 +15,12 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageVPhoto;
 @property (weak, nonatomic) IBOutlet UIImageView *imageVEmotion;
 @property (weak, nonatomic) IBOutlet UILabel *labelPoint;
+@property (weak, nonatomic) IBOutlet UIButton *buttonAdd;
+@property (weak, nonatomic) IBOutlet UILabel *labelAdd;
+@property (weak, nonatomic) IBOutlet UIView *viewBase;
+@property (weak, nonatomic) IBOutlet UIView *viewTop;
+@property (weak, nonatomic) IBOutlet UILabel *labelPhoto;
+@property (weak, nonatomic) IBOutlet UILabel *labelEmotion;
+@property (weak, nonatomic) IBOutlet UIView *viewMain;
 
 @end

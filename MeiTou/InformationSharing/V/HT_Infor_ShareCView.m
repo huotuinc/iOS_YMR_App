@@ -12,14 +12,63 @@
 
 - (void)awakeFromNib {
     // Initialization code
-//    @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-//    @property (weak, nonatomic) IBOutlet UITextField *textFTitle;
-//    @property (weak, nonatomic) IBOutlet UITextField *textFContent;
-//    @property (weak, nonatomic) IBOutlet UIImageView *imageVPhoto;
-//    @property (weak, nonatomic) IBOutlet UIImageView *imageVEmotion;
-//    @property (weak, nonatomic) IBOutlet UILabel *labelPoint;
+
     _imageVPhoto.image=[UIImage imageNamed:@"share_content_bottom_pic"];
     _imageVEmotion.image=[UIImage imageNamed:@"share_content_bottom_expression"];
+    
+    _labelAdd.text=@"上传封面图片";
+    _labelPhoto.text=@"插入照片";
+    _labelEmotion.text=@"表情";
+    _labelTitle.text=@"标题";
+    _labelPoint.text=@"奖励5积分";
+    _textFTitle.placeholder=@"输入标题在13个字符以内";
+    
+    _labelAdd.textColor=COLOR_TEXT_DATE;
+    _labelPhoto.textColor=COLOR_TEXT_TITILE;
+    _labelEmotion.textColor=COLOR_TEXT_TITILE;
+    _labelTitle.textColor=COLOR_TEXT_TITILE;
+    _labelPoint.textColor=COLOR_TEXT_TITILE;
+    _textFTitle.textColor=COLOR_TEXT_DATE;
+    
+    _labelAdd.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelPhoto.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelEmotion.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(28)];
+    _labelPoint.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    _textFTitle.font=[UIFont systemFontOfSize:FONT_SIZE(24)];
+    
+//    _viewBase.layer.cornerRadius=3;
+//    _viewBase.layer.borderWidth=1;
+//    _viewBase.layer.borderColor=[COLOR_LINE_A CGColor];
+//    _viewBase.layer.masksToBounds=YES;
+    _viewBase.backgroundColor=COLOR_BACK_MAIN;
+    
+    _textFTitle.layer.cornerRadius=3;
+    _textFTitle.layer.borderWidth=1;
+    _textFTitle.layer.borderColor=[COLOR_LINE_C CGColor];
+    _textFTitle.layer.masksToBounds=YES;
+    
+    _viewTop.layer.cornerRadius=3;
+    _viewTop.layer.borderWidth=1;
+    _viewTop.layer.borderColor=[COLOR_LINE_C CGColor];
+    _viewTop.layer.masksToBounds=YES;
+    
+    _viewMain.layer.cornerRadius=3;
+    _viewMain.layer.borderWidth=1;
+    _viewMain.layer.borderColor=[COLOR_LINE_A CGColor];
+    _viewMain.layer.masksToBounds=YES;
+    
+    _textFContent.layer.cornerRadius=3;
+    _textFContent.layer.borderWidth=1;
+    _textFContent.layer.borderColor=[COLOR_LINE_C CGColor];
+    _textFContent.layer.masksToBounds=YES;
+    
+    [_buttonAdd setBackgroundImage:[UIImage imageNamed:@"share_content_upload"] forState:UIControlStateNormal];
+    _buttonAdd.clipsToBounds=YES;
+    
+    _viewTop.backgroundColor=COLOR_BACK_MAIN;
+    _textFTitle.backgroundColor=COLOR_BACK_MAIN;
+    _textFContent.backgroundColor=COLOR_BACK_MAIN;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

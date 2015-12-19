@@ -14,7 +14,7 @@
 #import "HT_Infor_CommentCellHeaderView.h"
 
 static NSString *cellIComment=@"cellIComment";
-@interface HT_Infor_CommentViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface HT_Infor_CommentViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
 @end
 
@@ -104,6 +104,19 @@ static NSString *cellIComment=@"cellIComment";
 
     
 }
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex== 0) {
+        
+    }else if(buttonIndex == 1){
+        
+    }else if(buttonIndex == 2){
+        
+    }else{
+        
+    }
+}
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HT_Infor_CommentTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIComment forIndexPath:indexPath];
@@ -115,15 +128,17 @@ static NSString *cellIComment=@"cellIComment";
             UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(0, cell.viewBase.frame.size.height/2*i, SCREEN_WITH, cell.viewBase.frame.size.height/2)];
             if (i==0) {
                 label.text=@"  小丽: 奋斗第大佛个话题有人疼";
-            }else{
+            }
+            if(i==1){
                 label.text=@"  东东回复小丽 :但是减肥各地舒服";
             }
-            label.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+            label.backgroundColor=[UIColor clearColor];
+            label.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
             label.textColor=COLOR_TEXT_DATE;
             [cell.viewBase addSubview:label];
         }
     }
-
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     
     
     return cell;
@@ -148,14 +163,15 @@ static NSString *cellIComment=@"cellIComment";
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
     
+    UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"回复",@"举报", nil];
+    [sheet showInView:self.view];
     
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return SCREEN_HEIGHT/1150*250;
+    return SCREEN_HEIGHT/1150*190;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentCellHeaderView" owner:nil options:nil];

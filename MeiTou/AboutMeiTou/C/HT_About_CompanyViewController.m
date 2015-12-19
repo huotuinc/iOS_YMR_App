@@ -62,17 +62,17 @@ static NSString *cellACom=@"cellACom";
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+    
     [self.view addSubview:_tableView];
     
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *_cell;
     
     HT_About_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellACom forIndexPath:indexPath];
     
-    _cell=cell;
-    return _cell;
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    return cell;
     
     
     
@@ -89,6 +89,27 @@ static NSString *cellACom=@"cellACom";
     [self.navigationController pushViewController:intro animated:YES];
 }
 
+/**
+ *  cell分割线完全填充
+ */
+-(void)viewDidLayoutSubviews {
+    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [_tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [_tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

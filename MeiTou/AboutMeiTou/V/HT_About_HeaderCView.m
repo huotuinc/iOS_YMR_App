@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _imageVHead.image=[UIImage imageNamed:@"aaa"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

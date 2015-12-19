@@ -26,8 +26,15 @@
     _labelScore.textColor=COLOR_BUTTON_RED;
     
     _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(32)];
-    NSLog(@"******** %f **********",FONT_SIZE(32));
-//
+    _labelEnd.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelTime.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelEndTime.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelStart.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelStartMoney.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelEndMoney.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelScore.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+
+    //
 //    _labelEnd.textColor=CONTENTFONT;
 //    _labelTime.textColor=CONTENTFONT;
 //    _labelEndTime.textColor=CONTENTFONT;

@@ -18,8 +18,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-cn-aX7" userLabel="BaseView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-fh-QVa" userLabel="HeadImage View">
-                                <rect key="frame" x="11" y="0.0" width="300" height="189"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-fh-QVa" userLabel="HeadImage View">
+                                <rect key="frame" x="10" y="0.0" width="300" height="189"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -58,7 +58,4 @@
             <point key="canvasLocation" x="238" y="313"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Main" width="650" height="352"/>
-    </resources>
 </document>

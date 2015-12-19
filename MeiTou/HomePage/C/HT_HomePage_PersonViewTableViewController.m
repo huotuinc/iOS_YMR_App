@@ -88,8 +88,23 @@
     _labelRealName.text=@"发生";
     _labelSex.text=@"nan";
     _labelTel.text=@"1999999999";
-    [_ImageVHead setImage:[UIImage imageNamed:@"1"]];
-    [_imageVLevel setImage:[UIImage imageNamed:@"3"]];
+    _ImageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV2"];
+    _ImageVHead.layer.cornerRadius=_ImageVHead.frame.size.width/2;
+    
+    
+    for (int i=0; i<13; i++) {
+        UILabel *label=(UILabel *)[self.view viewWithTag:100+i];
+        label.text=@"ewrewrewrew";
+        label.font=[UIFont systemFontOfSize:FONT_SIZE(28)];
+        label.textColor=COLOR_TEXT_TITILE;
+    }
+    
+    for (int i=0; i<4; i++) {
+        UILabel *label=(UILabel *)[self.view viewWithTag:200+i];
+        label.font=[UIFont systemFontOfSize:FONT_SIZE(100)];
+        label.textColor=COLOR_TEXT_DATE;
+    }
     
 
 }

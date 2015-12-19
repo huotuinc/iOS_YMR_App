@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  关于美投
+ */
 @interface HT_AboutViewController : UIViewController
 
 @end

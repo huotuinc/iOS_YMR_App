@@ -28,6 +28,7 @@ static NSString *cellAbout=@"cellAbout";
     self.navigationController.navigationBar.translucent=YES;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_AboutTableViewCell" bundle:nil]forCellReuseIdentifier:cellAbout];
     [self createBarButtonItem];
+    [self createNavgationBarTitle];
     
 }
 
@@ -37,6 +38,15 @@ static NSString *cellAbout=@"cellAbout";
     _imageArray=[NSMutableArray arrayWithArray:@[@"meitou_center_company",@"meitou_center_president",@"meitou_center_college",@"meitou_center_knowledge"]];
     [self createTableView];
 }
+-(void)createNavgationBarTitle{
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(36)];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"关于美投";
+    self.navigationItem.titleView = titleLabel;
+}
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
     [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
@@ -44,11 +54,7 @@ static NSString *cellAbout=@"cellAbout";
     UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
     self.navigationItem.leftBarButtonItem=bbiL;
     
-    UIButton *buttonR=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
-    [buttonR setBackgroundImage:[UIImage imageNamed:@"cosmetology_main_menu_bottom_search"] forState:UIControlStateNormal];
-    [buttonR addTarget:self action:@selector(clickRightButton) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *bbiR=[[UIBarButtonItem alloc]initWithCustomView:buttonR];
-    self.navigationItem.rightBarButtonItem=bbiR;
+
 }
 /**
  *
@@ -56,9 +62,8 @@ static NSString *cellAbout=@"cellAbout";
 -(void)clickLightButton{
     [self.navigationController popViewControllerAnimated:YES];
 }
--(void)clickRightButton{
-    
-}
+
+
 
 -(void)createTableView{
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];

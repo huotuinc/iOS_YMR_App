@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(32)];
+    _labelTitle.textColor=COLOR_TEXT_TITILE;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

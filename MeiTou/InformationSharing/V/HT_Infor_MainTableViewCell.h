@@ -25,5 +25,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelScore;
 @property (weak, nonatomic) IBOutlet UILabel *labelCount;
 @property (weak, nonatomic) IBOutlet UIView *viewHeadGroup;
+@property (weak, nonatomic) IBOutlet UIImageView *imageLine;
+@property (weak, nonatomic) IBOutlet UIView *viewNice;
+@property (weak, nonatomic) IBOutlet UIView *viewComment;
+@property (weak, nonatomic) IBOutlet UIView *viewShare;
 
 @end

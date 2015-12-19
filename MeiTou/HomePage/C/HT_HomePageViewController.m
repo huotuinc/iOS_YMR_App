@@ -138,7 +138,7 @@ static NSString *RFIdentifier = @"RFIdentifier";
         _leftOption = [[UIButton alloc] init];
         _leftOption.frame = CGRectMake(0, 0, 25, 25);
 //        _leftOption.backgroundColor=[UIColor redColor];
-        [_leftOption setBackgroundImage:[UIImage imageNamed:@"SlidingMenu_content_left_home"] forState:UIControlStateNormal];        [_leftOption addTarget:self action:@selector(GoToLeft) forControlEvents:UIControlEventTouchUpInside];
+        [_leftOption setBackgroundImage:[UIImage imageNamed:@"common_icon_catalog"] forState:UIControlStateNormal];        [_leftOption addTarget:self action:@selector(GoToLeft) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_leftOption];
     }
     return _leftOption;
@@ -166,7 +166,6 @@ static NSString *RFIdentifier = @"RFIdentifier";
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"点击了第%ld个图",indexPath.row);
     if (indexPath.row==0) {
         HT_PartnerViewController *partner=[[HT_PartnerViewController alloc]init];
         [self.navigationController pushViewController:partner animated:YES];

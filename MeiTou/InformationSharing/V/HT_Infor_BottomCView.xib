@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -18,34 +17,34 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j88-1w-iww" userLabel="BaseView">
-                        <rect key="frame" x="8" y="8" width="490" height="77"/>
+                        <rect key="frame" x="0.0" y="0.0" width="506" height="93"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ErA-GK-cW9">
-                                <rect key="frame" x="0.0" y="0.0" width="490" height="1"/>
+                                <rect key="frame" x="0.0" y="0.0" width="506" height="1"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="qmP-n7-LTh"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYT-Aj-7KF" userLabel="MainView">
-                                <rect key="frame" x="0.0" y="1" width="490" height="76"/>
+                                <rect key="frame" x="0.0" y="1" width="506" height="92"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z8f-0o-eeE" userLabel="NiceImage View">
-                                        <rect key="frame" x="21" y="13" width="50" height="50"/>
+                                        <rect key="frame" x="17" y="23" width="46" height="46"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Z8f-0o-eeE" secondAttribute="height" multiplier="1:1" id="OuK-36-onq"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4m-6A-fig" userLabel="ShareImage View">
-                                        <rect key="frame" x="88" y="19" width="38" height="38"/>
+                                        <rect key="frame" x="80" y="23" width="46" height="46"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="R4m-6A-fig" secondAttribute="height" multiplier="1:1" id="Qaf-Xp-ffG"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh0-Tn-SRm">
-                                        <rect key="frame" x="306" y="8" width="168" height="60"/>
+                                        <rect key="frame" x="316" y="10" width="174" height="72"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.34138342770000002" blue="0.28841900399999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="去拼团">
@@ -53,7 +52,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXs-8r-Gq7">
-                                        <rect key="frame" x="135" y="13" width="154" height="50"/>
+                                        <rect key="frame" x="148" y="23" width="142" height="46"/>
                                         <animations/>
                                         <state key="normal" title="Button"/>
                                     </button>
@@ -64,22 +63,26 @@
                                     <constraint firstItem="Wh0-Tn-SRm" firstAttribute="centerX" secondItem="dYT-Aj-7KF" secondAttribute="centerX" multiplier="510:320" id="0XZ-bm-pUU"/>
                                     <constraint firstItem="Wh0-Tn-SRm" firstAttribute="width" secondItem="dYT-Aj-7KF" secondAttribute="width" multiplier="220:640" id="5BK-bb-eNd"/>
                                     <constraint firstItem="R4m-6A-fig" firstAttribute="width" secondItem="dYT-Aj-7KF" secondAttribute="width" id="6aY-CV-640"/>
-                                    <constraint firstItem="fXs-8r-Gq7" firstAttribute="height" secondItem="dYT-Aj-7KF" secondAttribute="height" multiplier="60:90" id="82Y-Ti-1q9"/>
-                                    <constraint firstItem="R4m-6A-fig" firstAttribute="centerX" secondItem="dYT-Aj-7KF" secondAttribute="centerX" multiplier="140:320" id="AKe-1g-Ku0"/>
+                                    <constraint firstItem="fXs-8r-Gq7" firstAttribute="height" secondItem="dYT-Aj-7KF" secondAttribute="height" multiplier="45:90" id="82Y-Ti-1q9"/>
+                                    <constraint firstItem="R4m-6A-fig" firstAttribute="centerX" secondItem="dYT-Aj-7KF" secondAttribute="centerX" multiplier="130:320" id="AKe-1g-Ku0"/>
                                     <constraint firstItem="Wh0-Tn-SRm" firstAttribute="height" secondItem="dYT-Aj-7KF" secondAttribute="height" multiplier="70:90" id="NER-Mr-Yce"/>
                                     <constraint firstItem="R4m-6A-fig" firstAttribute="centerY" secondItem="dYT-Aj-7KF" secondAttribute="centerY" id="PgE-HV-bXr"/>
                                     <constraint firstItem="R4m-6A-fig" firstAttribute="height" secondItem="dYT-Aj-7KF" secondAttribute="height" multiplier="45:90" id="Qdm-os-Rom"/>
                                     <constraint firstItem="fXs-8r-Gq7" firstAttribute="centerX" secondItem="dYT-Aj-7KF" secondAttribute="centerX" multiplier="260:300" id="UsQ-Kk-Q8X"/>
                                     <constraint firstItem="fXs-8r-Gq7" firstAttribute="centerY" secondItem="dYT-Aj-7KF" secondAttribute="centerY" id="W5T-Je-DHT"/>
-                                    <constraint firstItem="Z8f-0o-eeE" firstAttribute="centerX" secondItem="dYT-Aj-7KF" secondAttribute="centerX" multiplier="60:320" id="fCf-kL-shj"/>
+                                    <constraint firstItem="fXs-8r-Gq7" firstAttribute="height" secondItem="R4m-6A-fig" secondAttribute="height" id="ZDJ-6E-7hJ"/>
+                                    <constraint firstItem="Z8f-0o-eeE" firstAttribute="centerX" secondItem="dYT-Aj-7KF" secondAttribute="centerX" multiplier="50:320" id="fCf-kL-shj"/>
                                     <constraint firstItem="Wh0-Tn-SRm" firstAttribute="centerY" secondItem="dYT-Aj-7KF" secondAttribute="centerY" id="kyg-27-aMW"/>
                                     <constraint firstItem="Z8f-0o-eeE" firstAttribute="height" secondItem="dYT-Aj-7KF" secondAttribute="height" multiplier="60:90" id="mDx-Ds-g2I"/>
                                     <constraint firstItem="Z8f-0o-eeE" firstAttribute="centerY" secondItem="dYT-Aj-7KF" secondAttribute="centerY" id="njI-uv-d0x"/>
-                                    <constraint firstItem="fXs-8r-Gq7" firstAttribute="width" secondItem="dYT-Aj-7KF" secondAttribute="width" multiplier="200:640" id="pLa-St-fUf"/>
+                                    <constraint firstItem="fXs-8r-Gq7" firstAttribute="width" secondItem="dYT-Aj-7KF" secondAttribute="width" multiplier="180:640" id="pLa-St-fUf"/>
+                                    <constraint firstItem="Z8f-0o-eeE" firstAttribute="height" secondItem="R4m-6A-fig" secondAttribute="height" id="zI9-ju-WrD"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="mDx-Ds-g2I"/>
                                         <exclude reference="6aY-CV-640"/>
+                                        <exclude reference="82Y-Ti-1q9"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -105,10 +108,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="j88-1w-iww" secondAttribute="bottom" id="V4O-4M-e9o"/>
-                    <constraint firstItem="j88-1w-iww" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hwt-Ae-lF8"/>
-                    <constraint firstItem="j88-1w-iww" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="uHv-vR-h1w"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="j88-1w-iww" secondAttribute="trailing" id="vd0-as-uTl"/>
+                    <constraint firstAttribute="bottom" secondItem="j88-1w-iww" secondAttribute="bottom" id="V4O-4M-e9o"/>
+                    <constraint firstItem="j88-1w-iww" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hwt-Ae-lF8"/>
+                    <constraint firstItem="j88-1w-iww" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uHv-vR-h1w"/>
+                    <constraint firstAttribute="trailing" secondItem="j88-1w-iww" secondAttribute="trailing" id="vd0-as-uTl"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

@@ -25,8 +25,8 @@ static NSString *cellIMain = @"cellIMain";
 
 @implementation HT_InformationViewController{
     UITableView *_tableView;
-    UIView *_bottomView;
     HT_Par_SearchCView *_topView;//搜索框
+    HT_Infor_BottomTabBarCView *_bottomView;
     
 }
 
@@ -67,19 +67,21 @@ static NSString *cellIMain = @"cellIMain";
 }
 
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/1100*70, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/1100*70, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     _tableView.delegate=self;
     _tableView.dataSource=self;
-    //    _tableView.backgroundColor = [UIColor lightGrayColor];
+    _tableView.backgroundColor = COLOR_BACK_MAIN;
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
    
 }
 
 -(void)createBottomView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_BottomTabBarCView" owner:nil options:nil];
-    HT_Infor_BottomTabBarCView *bottomView=[nib firstObject];
-    bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*90)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*90);
-    _bottomView=bottomView;
+    _bottomView=[nib firstObject];
+    _bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*90)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*90);
+    UITapGestureRecognizer * tapA = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheShareView)];
+    [_bottomView.imageVShare addGestureRecognizer:tapA];
     [self.view addSubview:_bottomView];
 
 }
@@ -110,23 +112,25 @@ static NSString *cellIMain = @"cellIMain";
     [self.navigationController pushViewController:search animated:YES];
     
 }
+-(void)tapTheShareView{
+    HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
+    [self.navigationController pushViewController:share animated:YES];
+    NSLog(@"1111111");
+}
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *_cell;
         HT_Infor_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIMain forIndexPath:indexPath];
     if (indexPath.section==0) {
-        cell.labelTitle.text=@"第一种第一种第一种第一种第一种";
+        cell.imageVState.image=[UIImage imageNamed:@"SlidingMenu_content_LV2"];
     }
     if (indexPath.section==1) {
-        cell.labelTitle.text=@"第二种第二种第二种第二种";
     }
     if (indexPath.section==2) {
-        cell.labelTitle.text=@"第三种第三种";
     }
-    _cell=cell;
 
-    
-    return _cell;
+    cell.backgroundColor=COLOR_BACK_MAIN;
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    return cell;
     
     
     
@@ -139,7 +143,7 @@ static NSString *cellIMain = @"cellIMain";
     return 3;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return SCREEN_HEIGHT/1150*635;
+    return SCREEN_HEIGHT/1150*635 ;
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -162,6 +166,13 @@ static NSString *cellIMain = @"cellIMain";
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 10;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 1;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, 1)];
+    return view;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,7 +18,7 @@
 
     _labelName.text=@"小车哈哈";
     _labelDate.text=@"2010-10-10 18:00:00";
-    _labelContent.text=@"鼻子很漂亮奋斗奋斗奋斗说分手奋斗奋斗分斗说的奋斗奋斗奋斗说分手奋斗奋斗分斗说的奋斗奋斗";
+    _labelContent.text=@"鼻子很漂亮奋斗奋斗奋斗说分手奋斗奋斗分斗说的奋斗奋斗奋斗说分手奋斗奋";
     _labelContent.numberOfLines=0;
     _labelNice.text=@"1";
     _labelComment.text=@"2";
@@ -33,7 +33,6 @@
     _labelDate.textColor=COLOR_TEXT_DATE;
     _labelNice.textColor=COLOR_TEXT_DATE;
     _labelComment.textColor=COLOR_TEXT_DATE;
-    
     
 }
 

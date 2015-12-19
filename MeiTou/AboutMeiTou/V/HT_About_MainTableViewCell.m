@@ -14,11 +14,22 @@
     // Initialization code
     _imageVNext.image=[UIImage imageNamed:@"common_content_right_more"];
     _imageVWatch.image=[UIImage imageNamed:@"article_content_right_browse"];
+    _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
+    
     
     _labelName.text=@"公司介绍";
-    _labelContent.text=@"奋斗送你离开复苏带来烦恼死了烦奋斗送你离开复苏带来烦恼死了烦奋斗送你离开复苏带来烦恼死了烦奋斗送你离开复苏带来烦恼死了烦";
+    _labelContent.text=@"奋斗送你离开复苏带来烦恼死了烦奋斗送你离开复苏带来烦恼死了烦奋";
     _labelContent.numberOfLines=2;
     _labelNumber.text=@"313人";
+    
+    _labelName.textColor=COLOR_TEXT_TITILE;
+    _labelNumber.textColor=COLOR_TEXT_CONTENT;
+    _labelContent.textColor=COLOR_TEXT_CONTENT;
+    
+    _labelName.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelNumber.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    _labelContent.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

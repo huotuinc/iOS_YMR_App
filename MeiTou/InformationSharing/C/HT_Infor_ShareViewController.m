@@ -22,6 +22,7 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
+    self.view.backgroundColor=[UIColor whiteColor];
     [self createBarButtonItem];
     
 }
@@ -51,7 +52,7 @@
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_ShareCView" owner:nil options:nil];
     HT_Infor_ShareCView *mainView=[nib firstObject];
 
-    mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
+    mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*875);
     _mainView=mainView;
     [self.view addSubview:_mainView];
     

@@ -21,7 +21,7 @@ static NSString *cellGMain = @"cellGMain";
 
 @implementation HT_Infor_GroupViewController{
     UITableView *_tableView;
-    UIView *_headerView;//tbV的headerView
+    HT_Infor_HeadCView *_headerView;//tbV的headerView
     UIView *_bottomView;
 }
 
@@ -65,9 +65,11 @@ static NSString *cellGMain = @"cellGMain";
     
 }
 -(void)createHeaderView{
+
+    
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_HeadCView" owner:nil options:nil];
-    HT_Infor_HeadCView *headerView=[nib firstObject];
-    _headerView=headerView;
+    _headerView=[nib firstObject];
+    _headerView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*380);
 }
 
 -(void)createTableView{

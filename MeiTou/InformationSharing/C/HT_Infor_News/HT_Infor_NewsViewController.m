@@ -7,6 +7,7 @@
 //
 
 #import "HT_Infor_NewsViewController.h"
+#import "HT_Infor_ShareViewController.h"
 
 #import "HT_Infor_NewsHeadCView.h"
 #import "HT_Infor_BottomCView.h"
@@ -75,7 +76,7 @@ static NSString *cellIBuy=@"cellIBuy";
 -(void)createHeadView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_NewsHeadCView" owner:nil options:nil];
     HT_Infor_NewsHeadCView *headerView=[nib firstObject];
-    headerView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1100*170);
+    headerView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*170);
     _headerView=headerView;
 }
 
@@ -97,7 +98,8 @@ static NSString *cellIBuy=@"cellIBuy";
     [self.view addSubview:_tableView];
 }
 -(void)clickButtonGo{
-
+    HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
+    [self.navigationController pushViewController:share animated:YES];
 }
 
 #pragma mark UITableViewDelegate
