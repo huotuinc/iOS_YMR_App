@@ -112,7 +112,8 @@ static NSString *RFIdentifier = @"RFIdentifier";
     _myCollectionView.backgroundColor = [UIColor clearColor];
     _myCollectionView.showsHorizontalScrollIndicator = NO;
 //    [_myCollectionView setBackgroundColor:[UIColor redColor]];
-    _myCollectionView.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"meitou_center_knowledge"] ];
+//    _myCollectionView.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"meitou_center_knowledge"] ];
+    
 
 }
 /**

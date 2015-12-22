@@ -17,6 +17,7 @@
 #import "HT_Par_IteProjectDoneHeaderCView.h"
 #import "HT_Par_BuyMainTableViewCell.h"
 #import "HT_Par_IteBottomCView.h"
+#import "LevelUpView.h"
 static NSString *cellIte = @"cellIte";
 
 @interface HT_Par_IteViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -28,6 +29,7 @@ static NSString *cellIte = @"cellIte";
     UIView *_topView;
     UIView *_headerView;
     UIView *_bottomView;
+    LevelUpView *_levelUpView;
 }
 
 
@@ -71,7 +73,10 @@ static NSString *cellIte = @"cellIte";
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)clickRightButton{
-    
+    NSLog(@"点击了");
+    _levelUpView=[[LevelUpView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT)];
+    [[UIApplication sharedApplication].keyWindow addSubview:_levelUpView];
+
 }
 -(void)createTopView{
     

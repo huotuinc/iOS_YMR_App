@@ -121,7 +121,7 @@ static NSString *cellIMain = @"cellIMain";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
         HT_Infor_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIMain forIndexPath:indexPath];
     if (indexPath.section==0) {
-        cell.imageVState.image=[UIImage imageNamed:@"SlidingMenu_content_LV2"];
+        cell.imageVState.image=[UIImage imageNamed:@"zhiding"];
     }
     if (indexPath.section==1) {
     }

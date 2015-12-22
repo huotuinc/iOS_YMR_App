@@ -15,11 +15,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="343" height="93"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-GB-Dnz" userLabel="BaseView">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="94"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-GB-Dnz" userLabel="BaseView">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="93"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-vs-QME">
-                                <rect key="frame" x="68" y="14" width="207" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-vs-QME">
+                                <rect key="frame" x="0.0" y="28" width="343" height="65"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.55650149345233202" blue="0.51036055701377259" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -27,28 +27,29 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zba-rK-GM2">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="1"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="PSk-Mo-naR"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zba-rK-GM2" secondAttribute="trailing" id="0wM-Wn-2LU"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="height" secondItem="5DM-GB-Dnz" secondAttribute="height" multiplier="70:100" id="JOp-YH-Uiv"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="centerY" secondItem="5DM-GB-Dnz" secondAttribute="centerY" id="Mob-ek-Xhh"/>
-                            <constraint firstItem="zba-rK-GM2" firstAttribute="leading" secondItem="5DM-GB-Dnz" secondAttribute="leading" id="PYo-45-AXU"/>
+                            <constraint firstAttribute="trailing" secondItem="5dG-vs-QME" secondAttribute="trailing" id="PqU-X7-2hY"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="width" secondItem="5DM-GB-Dnz" secondAttribute="width" multiplier="385:640" id="aKe-lO-rMw"/>
-                            <constraint firstItem="zba-rK-GM2" firstAttribute="top" secondItem="5DM-GB-Dnz" secondAttribute="top" id="vN1-Z5-gqk"/>
+                            <constraint firstAttribute="bottom" secondItem="5dG-vs-QME" secondAttribute="bottom" id="fOL-8v-r45"/>
+                            <constraint firstItem="5dG-vs-QME" firstAttribute="leading" secondItem="5DM-GB-Dnz" secondAttribute="leading" id="iTB-No-vx5"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="centerX" secondItem="5DM-GB-Dnz" secondAttribute="centerX" id="xJA-gc-eIh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mob-ek-Xhh"/>
+                                <exclude reference="aKe-lO-rMw"/>
+                                <exclude reference="xJA-gc-eIh"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="5DM-GB-Dnz" secondAttribute="trailing" id="OdC-33-Bs8"/>
                     <constraint firstItem="5DM-GB-Dnz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PCc-hq-tB9"/>
@@ -59,7 +60,6 @@
             <animations/>
             <connections>
                 <outlet property="buttonSubscription" destination="5dG-vs-QME" id="J0A-ge-5cu"/>
-                <outlet property="imageVLine" destination="zba-rK-GM2" id="iEj-Ml-nlj"/>
             </connections>
             <point key="canvasLocation" x="263.5" y="428"/>
         </tableViewCell>

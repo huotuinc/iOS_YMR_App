@@ -40,7 +40,7 @@ static NSString *cellSList=@"cellSList";
     self.navigationItem.leftBarButtonItem=bbiL;
     
     UIButton *buttonR=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
-    [buttonR setBackgroundImage:[UIImage imageNamed:@"common_title_top_more"]forState:UIControlStateNormal];
+    [buttonR setBackgroundImage:[UIImage imageNamed:@"common_title_top_search_w"] forState:UIControlStateNormal];
     [buttonR addTarget:self action:@selector(clickRightButton) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *bbiR=[[UIBarButtonItem alloc]initWithCustomView:buttonR];
     self.navigationItem.rightBarButtonItem=bbiR;

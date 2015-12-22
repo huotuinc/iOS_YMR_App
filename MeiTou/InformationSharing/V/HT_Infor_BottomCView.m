@@ -14,7 +14,7 @@
     // Initialization code
     _imageVLine.image=[UIImage imageNamed:@"line1"];
     _imageVNice.image=[UIImage imageNamed:@"common_zanred_a"];
-    _imageVShare.image=[UIImage imageNamed:@"common_share"];
+    _imageVShare.image=[UIImage imageNamed:@"common_share_red"] ;
     
     [_buttonScore setBackgroundImage:[UIImage imageNamed:@"rtyx_a"] forState:UIControlStateNormal];
     [_buttonScore setTitle:@"转发奖励5积分" forState:UIControlStateNormal];

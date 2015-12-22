@@ -15,6 +15,8 @@
 
 #import "MMDrawerBarButtonItem.h"
 @interface HT_HomePage_PersonViewTableViewController ()
+@property (strong, nonatomic) NSArray *tasks;
+
 
 @end
 
@@ -84,29 +86,51 @@
     /**
      *  假数据
      */
-    _labelScore.text=@"188";
+    _labelName.text=@"小美008biu";
+    _labelScore.text=@"666";
     _labelRealName.text=@"发生";
     _labelSex.text=@"nan";
     _labelTel.text=@"1999999999";
+    _labelLocation.text=@"浙江-杭州";
     _ImageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
     _imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV2"];
     _ImageVHead.layer.cornerRadius=_ImageVHead.frame.size.width/2;
     
-    
-    for (int i=0; i<13; i++) {
-        UILabel *label=(UILabel *)[self.view viewWithTag:100+i];
-        label.text=@"ewrewrewrew";
-        label.font=[UIFont systemFontOfSize:FONT_SIZE(28)];
-        label.textColor=COLOR_TEXT_TITILE;
-    }
-    
-    for (int i=0; i<4; i++) {
-        UILabel *label=(UILabel *)[self.view viewWithTag:200+i];
-        label.font=[UIFont systemFontOfSize:FONT_SIZE(100)];
-        label.textColor=COLOR_TEXT_DATE;
-    }
+    /**
+     *  设置label样式
+     */
+    [self changeLabel:_labelName AndFont:26 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelA AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelB AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelC AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelD AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelE AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelF AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelG AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelH AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelI AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelJ AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelK AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelL AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_label1 AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_label2 AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_label3 AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_label4 AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_label5 AndFont:28 AndColor:COLOR_TEXT_TITILE];
+
     
 
+}
+/**
+ *  设置label的字体大小和颜色
+ *
+ *  @param label 更改的label
+ *  @param font  整形(相对效果图的像素大小)
+ *  @param color 颜色
+ */
+-(void)changeLabel:(UILabel *) label AndFont:(NSInteger) font AndColor:(UIColor *) color{
+    label.font=[UIFont systemFontOfSize:FONT_SIZE(font)];
+    label.textColor=color;
 }
 #pragma mark - Table view data source
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -125,7 +149,21 @@
     
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 12.50;
+}
 
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 1.00;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WITH, 5)];
+    return view;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WITH, 1)];
+    return view;
+}
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Incomplete implementation, return the number of sections
 //    return 0;

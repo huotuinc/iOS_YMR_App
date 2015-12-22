@@ -188,7 +188,27 @@
         }];
     }
 }
+/**
+ *  cell分割线完全填充
+ */
+-(void)viewDidLayoutSubviews {
+    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [_tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [_tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+}
 //-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    // Remove seperator inset

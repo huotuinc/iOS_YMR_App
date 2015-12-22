@@ -26,7 +26,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-vs-QME">
-                                <rect key="frame" x="68" y="14" width="207" height="65"/>
+                                <rect key="frame" x="0.0" y="28" width="343" height="65"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.55650149345233202" blue="0.51036055701377259" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -36,18 +36,29 @@
                             </button>
                         </subviews>
                         <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fDM-hr-f3s" firstAttribute="leading" secondItem="5DM-GB-Dnz" secondAttribute="leading" id="HtQ-fe-Kpi"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="height" secondItem="5DM-GB-Dnz" secondAttribute="height" multiplier="70:100" id="JOp-YH-Uiv"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="centerY" secondItem="5DM-GB-Dnz" secondAttribute="centerY" id="Mob-ek-Xhh"/>
+                            <constraint firstAttribute="bottom" secondItem="5dG-vs-QME" secondAttribute="bottom" id="Rq6-MQ-PSB"/>
+                            <constraint firstAttribute="trailing" secondItem="5dG-vs-QME" secondAttribute="trailing" id="Spy-3v-fkx"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="width" secondItem="5DM-GB-Dnz" secondAttribute="width" multiplier="385:640" id="aKe-lO-rMw"/>
+                            <constraint firstItem="5dG-vs-QME" firstAttribute="leading" secondItem="5DM-GB-Dnz" secondAttribute="leading" id="ckJ-Ie-nfQ"/>
                             <constraint firstItem="fDM-hr-f3s" firstAttribute="top" secondItem="5DM-GB-Dnz" secondAttribute="top" id="g2O-bz-JLd"/>
                             <constraint firstAttribute="trailing" secondItem="fDM-hr-f3s" secondAttribute="trailing" id="kMg-Id-3Ls"/>
                             <constraint firstItem="5dG-vs-QME" firstAttribute="centerX" secondItem="5DM-GB-Dnz" secondAttribute="centerX" id="xJA-gc-eIh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mob-ek-Xhh"/>
+                                <exclude reference="aKe-lO-rMw"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="5DM-GB-Dnz" secondAttribute="trailing" id="OdC-33-Bs8"/>
                     <constraint firstItem="5DM-GB-Dnz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PCc-hq-tB9"/>
@@ -56,6 +67,7 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="buttonSubscription" destination="5dG-vs-QME" id="J0A-ge-5cu"/>
                 <outlet property="imageVLine" destination="fDM-hr-f3s" id="jQ9-CO-8oe"/>

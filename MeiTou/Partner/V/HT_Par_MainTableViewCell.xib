@@ -39,7 +39,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2A-3R-gwb" userLabel="TitleLabel">
-                                                        <rect key="frame" x="0.0" y="0.0" width="245" height="31"/>
+                                                        <rect key="frame" x="5" y="0.0" width="240" height="31"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,7 +53,7 @@
                                                     <constraint firstItem="MSz-6Z-7Ed" firstAttribute="top" secondItem="8Ja-4q-9LW" secondAttribute="top" id="Mxm-dN-cMR"/>
                                                     <constraint firstItem="MSz-6Z-7Ed" firstAttribute="width" secondItem="8Ja-4q-9LW" secondAttribute="width" multiplier="90:600" id="ZES-i8-azq"/>
                                                     <constraint firstAttribute="trailing" secondItem="MSz-6Z-7Ed" secondAttribute="trailing" constant="5" id="Zoh-WE-7go"/>
-                                                    <constraint firstItem="h2A-3R-gwb" firstAttribute="leading" secondItem="8Ja-4q-9LW" secondAttribute="leading" id="aYS-wl-rlW"/>
+                                                    <constraint firstItem="h2A-3R-gwb" firstAttribute="leading" secondItem="8Ja-4q-9LW" secondAttribute="leading" constant="5" id="aYS-wl-rlW"/>
                                                     <constraint firstItem="MSz-6Z-7Ed" firstAttribute="leading" secondItem="h2A-3R-gwb" secondAttribute="trailing" constant="5" id="kZp-Pa-4ar"/>
                                                     <constraint firstAttribute="bottom" secondItem="h2A-3R-gwb" secondAttribute="bottom" id="klw-IL-wgg"/>
                                                     <constraint firstItem="h2A-3R-gwb" firstAttribute="top" secondItem="8Ja-4q-9LW" secondAttribute="top" id="qeu-Gs-cZz"/>

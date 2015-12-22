@@ -86,7 +86,7 @@ static NSString *cellAbout=@"cellAbout";
     return [_imageArray count];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return (NSInteger)_tableView.frame.size.height/[_imageArray count];
+    return (NSInteger)(_tableView.frame.size.height-64)/[_imageArray count];
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

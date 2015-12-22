@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HT_Par_SearchCView : UITableViewCell
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

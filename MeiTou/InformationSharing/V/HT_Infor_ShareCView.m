@@ -53,10 +53,13 @@
     _viewTop.layer.borderColor=[COLOR_LINE_C CGColor];
     _viewTop.layer.masksToBounds=YES;
     
-    _viewMain.layer.cornerRadius=3;
-    _viewMain.layer.borderWidth=1;
-    _viewMain.layer.borderColor=[COLOR_LINE_A CGColor];
-    _viewMain.layer.masksToBounds=YES;
+    _viewMainA.layer.cornerRadius=3;
+    _viewMainA.layer.borderWidth=1;
+    _viewMainA.layer.borderColor=[COLOR_LINE_A CGColor];
+    _viewMainA.layer.masksToBounds=YES;
+    
+    _viewBase.backgroundColor=COLOR_BACK_MAIN;
+    
     
     _textFContent.layer.cornerRadius=3;
     _textFContent.layer.borderWidth=1;
