@@ -77,12 +77,9 @@
     paramsOption[@"imei"] = DeviceNo;
 
     
-    
-    
     if (params != nil) {
         [paramsOption addEntriesFromDictionary:params];
     }
-    //
 
     NSData *data = [[paramsOption objectForKey:key] dataUsingEncoding:NSUTF8StringEncoding];
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];

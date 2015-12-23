@@ -12,6 +12,8 @@
 #import "HT_Infor_GroupViewController.h"
 #import "HT_Infor_ShareViewController.h"
 #import "HT_Par_SearchViewController.h"
+#import "HT_Infor_SearchViewController.h"
+
 #import "HT_Infor_MainTableViewCell.h"
 #import "HT_Infor_BottomTabBarCView.h"
 #import "HT_Par_SearchCView.h"
