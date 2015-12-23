@@ -9,7 +9,7 @@
 #import "UserLoginTool.h"
 #import "AFNetworking.h"
 #import "NSDictionary+HuoBanMallSign.h"
-#import <MKNetworkKit.h>
+#import "MKNetworkKit.h"
 
 
 @interface UserLoginTool()
@@ -65,7 +65,6 @@
 
 + (void)loginRequestPostWithFile:(NSString *)urlStr parame:(NSMutableDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure withFileKey:(NSString *)key{
     
-    NSString *url = [MainUrl stringByAppendingPathComponent:urlStr];
     
     //   AFHTTPRequestOperationManager * manager  = [AFHTTPRequestOperationManager manager];
     NSMutableDictionary * paramsOption = [NSMutableDictionary dictionary];
@@ -84,13 +83,11 @@
         [paramsOption addEntriesFromDictionary:params];
     }
     //
-    
+
     NSData *data = [[paramsOption objectForKey:key] dataUsingEncoding:NSUTF8StringEncoding];
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     [paramsOption removeObjectForKey:key];
-    //
     paramsOption[@"profileData"] = str;
-    
     paramsOption[@"sign"] = [NSDictionary asignWithMutableDictionary:paramsOption];
     [paramsOption removeObjectForKey:@"appSecret"];
     

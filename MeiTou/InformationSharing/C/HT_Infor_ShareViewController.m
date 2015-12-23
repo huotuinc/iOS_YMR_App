@@ -100,7 +100,7 @@
             photoImage = [info objectForKey:UIImagePickerControllerOriginalImage];
         }
     }
-    self.iconView.image = photoImage;
+//    self.iconView.image = photoImage;
     NSData *data = nil;
     if (UIImagePNGRepresentation(photoImage) == nil) {
         
@@ -118,7 +118,7 @@
         params[@"profileData"] = imagefile;
     
         
-        [UserLoginTool loginRequestPostWithFile:@"updateMerchantProfile" parame:params success:^(id json) {
+        [UserLoginTool loginRequestPostWithFile:@"" parame:params success:^(id json) {
 
             if ([json[@"systemResultCode"] intValue] ==1&&[json[@"resultCode"] intValue] == 1) {
                 

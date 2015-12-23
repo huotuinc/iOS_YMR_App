@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6014343B1C1AAF4E00E102B7 /* selectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014343A1C1AAF4E00E102B7 /* selectView.m */; };
+		607BA3D61C2A99F800DEA4D8 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 607BA3C71C2A99F800DEA4D8 /* NSData+MKBase64.m */; };
+		607BA3D71C2A99F800DEA4D8 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = 607BA3C91C2A99F800DEA4D8 /* NSDate+RFC1123.m */; };
+		607BA3D81C2A99F800DEA4D8 /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 607BA3CB1C2A99F800DEA4D8 /* NSDictionary+RequestEncoding.m */; };
+		607BA3D91C2A99F800DEA4D8 /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 607BA3CD1C2A99F800DEA4D8 /* NSString+MKNetworkKitAdditions.m */; };
+		607BA3DA1C2A99F800DEA4D8 /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 607BA3CF1C2A99F800DEA4D8 /* UIAlertView+MKNetworkKitAdditions.m */; };
+		607BA3DB1C2A99F800DEA4D8 /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 607BA3D11C2A99F800DEA4D8 /* MKNetworkEngine.m */; };
+		607BA3DC1C2A99F800DEA4D8 /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 607BA3D41C2A99F800DEA4D8 /* MKNetworkOperation.m */; };
+		607BA3DD1C2A99F800DEA4D8 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 607BA3D51C2A99F800DEA4D8 /* README.mdown */; };
 		609292901C22A04A0076D589 /* LevelUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6092928F1C22A04A0076D589 /* LevelUpView.m */; };
 		609292941C23A2080076D589 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609292921C23A2080076D589 /* ShareCell.m */; };
 		609292951C23A2080076D589 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609292931C23A2080076D589 /* ShareCell.xib */; };
@@ -232,6 +240,22 @@
 /* Begin PBXFileReference section */
 		601434391C1AAF4E00E102B7 /* selectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectView.h; sourceTree = "<group>"; };
 		6014343A1C1AAF4E00E102B7 /* selectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectView.m; sourceTree = "<group>"; };
+		607BA3C61C2A99F800DEA4D8 /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
+		607BA3C71C2A99F800DEA4D8 /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
+		607BA3C81C2A99F800DEA4D8 /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
+		607BA3C91C2A99F800DEA4D8 /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
+		607BA3CA1C2A99F800DEA4D8 /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
+		607BA3CB1C2A99F800DEA4D8 /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
+		607BA3CC1C2A99F800DEA4D8 /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		607BA3CD1C2A99F800DEA4D8 /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		607BA3CE1C2A99F800DEA4D8 /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		607BA3CF1C2A99F800DEA4D8 /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		607BA3D01C2A99F800DEA4D8 /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
+		607BA3D11C2A99F800DEA4D8 /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
+		607BA3D21C2A99F800DEA4D8 /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
+		607BA3D31C2A99F800DEA4D8 /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
+		607BA3D41C2A99F800DEA4D8 /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
+		607BA3D51C2A99F800DEA4D8 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 		6092928E1C22A04A0076D589 /* LevelUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpView.h; sourceTree = "<group>"; };
 		6092928F1C22A04A0076D589 /* LevelUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUpView.m; sourceTree = "<group>"; };
 		609292911C23A2080076D589 /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
@@ -617,6 +641,45 @@
 				8698D34D22B86C408994D26D /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		607BA3C31C2A99F800DEA4D8 /* MKNetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				607BA3C41C2A99F800DEA4D8 /* MKNetworkKit */,
+				607BA3D51C2A99F800DEA4D8 /* README.mdown */,
+			);
+			path = MKNetworkKit;
+			sourceTree = "<group>";
+		};
+		607BA3C41C2A99F800DEA4D8 /* MKNetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				607BA3C51C2A99F800DEA4D8 /* Categories */,
+				607BA3D01C2A99F800DEA4D8 /* MKNetworkEngine.h */,
+				607BA3D11C2A99F800DEA4D8 /* MKNetworkEngine.m */,
+				607BA3D21C2A99F800DEA4D8 /* MKNetworkKit.h */,
+				607BA3D31C2A99F800DEA4D8 /* MKNetworkOperation.h */,
+				607BA3D41C2A99F800DEA4D8 /* MKNetworkOperation.m */,
+			);
+			path = MKNetworkKit;
+			sourceTree = "<group>";
+		};
+		607BA3C51C2A99F800DEA4D8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				607BA3C61C2A99F800DEA4D8 /* NSData+MKBase64.h */,
+				607BA3C71C2A99F800DEA4D8 /* NSData+MKBase64.m */,
+				607BA3C81C2A99F800DEA4D8 /* NSDate+RFC1123.h */,
+				607BA3C91C2A99F800DEA4D8 /* NSDate+RFC1123.m */,
+				607BA3CA1C2A99F800DEA4D8 /* NSDictionary+RequestEncoding.h */,
+				607BA3CB1C2A99F800DEA4D8 /* NSDictionary+RequestEncoding.m */,
+				607BA3CC1C2A99F800DEA4D8 /* NSString+MKNetworkKitAdditions.h */,
+				607BA3CD1C2A99F800DEA4D8 /* NSString+MKNetworkKitAdditions.m */,
+				607BA3CE1C2A99F800DEA4D8 /* UIAlertView+MKNetworkKitAdditions.h */,
+				607BA3CF1C2A99F800DEA4D8 /* UIAlertView+MKNetworkKitAdditions.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		6095C2971C2A7D0000DBC029 /* M */ = {
@@ -1246,6 +1309,7 @@
 				F259CF8C1C29305F0082A912 /* 扩展 */,
 				F259CF881C2930120082A912 /* AFNNetTool */,
 				F259CF651C292DC20082A912 /* MJExtension */,
+				607BA3C31C2A99F800DEA4D8 /* MKNetworkKit */,
 				F21E44E71C102F0100657249 /* MMDrawerController */,
 			);
 			path = Lib;
@@ -1619,7 +1683,9 @@
 				F211BC091C1819A00033B59E /* HT_Par_IteChociePickerNModel.m in Sources */,
 				F259CF861C292DC20082A912 /* NSObject+MJKeyValue.m in Sources */,
 				F20697A81C15B72900ED2017 /* HT_Infor_NewsViewController.m in Sources */,
+				607BA3DC1C2A99F800DEA4D8 /* MKNetworkOperation.m in Sources */,
 				F27261DF1C07FE530081EC95 /* HT_Par_SubListTableViewCell.m in Sources */,
+				607BA3D81C2A99F800DEA4D8 /* NSDictionary+RequestEncoding.m in Sources */,
 				F2F968591C158511000045B1 /* HT_Par_SubBottomView.m in Sources */,
 				F259CF841C292DC20082A912 /* MJTypeEncoding.m in Sources */,
 				F2A019381C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m in Sources */,
@@ -1646,10 +1712,12 @@
 				F259CFA31C293EAB0082A912 /* UserModel.m in Sources */,
 				F259CFA01C2930D30082A912 /* MD5Encryption.m in Sources */,
 				F21E44F81C102F0100657249 /* UIViewController+MMDrawerController.m in Sources */,
+				607BA3DD1C2A99F800DEA4D8 /* README.mdown in Sources */,
 				F21E45001C1039D900657249 /* HT_HomePage_LeftHeadView.m in Sources */,
 				F27261BC1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.m in Sources */,
 				6095C29A1C2A7D1B00DBC029 /* InformationModel.m in Sources */,
 				F280268E1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m in Sources */,
+				607BA3D71C2A99F800DEA4D8 /* NSDate+RFC1123.m in Sources */,
 				F2D7AED31C172BAB00725B4E /* HT_About_IntroViewController.m in Sources */,
 				F2FAA9FE1C1A7C4A00A90DA1 /* PraiseCell.m in Sources */,
 				F299447F1C082A0600823E75 /* HT_HomePage_LeftViewController.m in Sources */,
@@ -1657,8 +1725,10 @@
 				F21E44F61C102F0100657249 /* MMDrawerController.m in Sources */,
 				F2D7AEE11C172DC500725B4E /* HT_About_HeaderCView.m in Sources */,
 				F259CF801C292DC20082A912 /* MJIvar.m in Sources */,
+				607BA3DA1C2A99F800DEA4D8 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				F2FAA9FC1C1A7C4A00A90DA1 /* CommentsCell.m in Sources */,
 				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,
+				607BA3D91C2A99F800DEA4D8 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				F263CA231C157D5300EE78CA /* HT_Par_SubListViewController.m in Sources */,
 				F2F9684A1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */,
 				F21C192D1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m in Sources */,
@@ -1698,6 +1768,7 @@
 				F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */,
 				F259CF851C292DC20082A912 /* NSObject+MJCoding.m in Sources */,
 				F27D67311C0B30A900EE6C4F /* HT_HomePageLayout.m in Sources */,
+				607BA3D61C2A99F800DEA4D8 /* NSData+MKBase64.m in Sources */,
 				609292941C23A2080076D589 /* ShareCell.m in Sources */,
 				F21C19101C1E670700E717A8 /* HT_HomePage_TopUpViewController.m in Sources */,
 				F2D91CB91C2004BA007778B8 /* HT_Par_SearchViewController.m in Sources */,
@@ -1712,6 +1783,7 @@
 				F2A019321C0B2F6A0017234F /* HT_HomePageCollectionViewCell.m in Sources */,
 				F21E44F71C102F0100657249 /* MMDrawerVisualState.m in Sources */,
 				F259CF7F1C292DC20082A912 /* MJFoundation.m in Sources */,
+				607BA3DB1C2A99F800DEA4D8 /* MKNetworkEngine.m in Sources */,
 				F21A4B791C0D7F6B00C1F098 /* HT_BaseViewController.m in Sources */,
 				F21A1D051C1124D5006FD426 /* HT_HomePage_PhoneCView.m in Sources */,
 				F259CF941C29305F0082A912 /* UITableView+CJ.m in Sources */,
