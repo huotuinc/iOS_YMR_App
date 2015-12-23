@@ -35,6 +35,11 @@
     _labelName.textColor=COLOR_TEXT_TITILE;
     _labelDate.textColor=COLOR_TEXT_DATE;
     _labelPrice.textColor=COLOR_BUTTON_RED;
+    
+    
+
+    
+    
 
 }
 -(void)drawRect:(CGRect)rect{
@@ -42,6 +47,10 @@
     _imageVHead.layer.masksToBounds=YES;
 
 }
+
+
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

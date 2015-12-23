@@ -75,6 +75,10 @@ static NSString *cellMain = @"cellMain";
     if (indexPath.row==1) {
         cell.buttonState.titleLabel.text=@"预约审核中";
         cell.buttonState.backgroundColor=COLOR_BUTTON_WAIT;
+//    cell.labelDate.text=
+//        cell.labelName.text=
+//        cell.labelNumber.text=
+        
     }
     if (indexPath.row==2) {
         cell.buttonState.titleLabel.text=@"预约失败";
@@ -97,21 +101,7 @@ static NSString *cellMain = @"cellMain";
 
 }
 
-//- (void)drawRect:(CGRect)rect
-//{
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//    
-//    CGContextSetFillColorWithColor(context, [UIColor clearColor].CGColor);
-//    CGContextFillRect(context, rect);
-//    
-//    //上分割线，
-//    CGContextSetStrokeColorWithColor(context, [COLOR_LINE_A CGColor]);
-//    CGContextStrokeRect(context, CGRectMake(5, -1, rect.size.width - 10, 1));
-//    
-//    //下分割线
-//    CGContextSetStrokeColorWithColor(context, [COLOR_LINE_A CGColor]);
-//    CGContextStrokeRect(context, CGRectMake(5, rect.size.height, rect.size.width - 10, 1));
-//}
+
 /**
  *  cell分割线完全填充
  */

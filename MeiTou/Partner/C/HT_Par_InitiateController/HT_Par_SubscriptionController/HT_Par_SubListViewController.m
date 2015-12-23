@@ -45,15 +45,6 @@ static NSString *cellSList=@"cellSList";
     UIBarButtonItem *bbiR=[[UIBarButtonItem alloc]initWithCustomView:buttonR];
     self.navigationItem.rightBarButtonItem=bbiR;
 }
-/**
- *
- */
--(void)clickLightButton{
-    [self.navigationController popViewControllerAnimated:YES];
-}
--(void)clickRightButton{
-    
-}
 -(void)createTableView{
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_SubListTableViewCell" bundle:nil]forCellReuseIdentifier:cellSList];
@@ -64,6 +55,32 @@ static NSString *cellSList=@"cellSList";
     [self.view addSubview:_tableView];
     
 }
+/**
+ *
+ */
+-(void)clickLightButton{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)clickRightButton{
+    
+}
+/**
+ *  改变某一段字符串字体大小
+ *
+ *  @param str   整个字符串
+ *  @param range 所在的位置
+ *  @param font  改变后的大小
+ *
+ *  @return
+ */
+-(NSMutableAttributedString *)changeTheString:(NSString *)str WithRange:(NSRange)range AndWithFont: (NSInteger)font{
+    NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:str];
+    [AttributedStr addAttribute:NSFontAttributeName
+                          value:[UIFont systemFontOfSize:FONT_SIZE(font)]
+                          range:range];
+    return AttributedStr;
+}
+
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HT_Par_SubListTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellSList forIndexPath:indexPath];
@@ -78,6 +95,8 @@ static NSString *cellSList=@"cellSList";
         cell.imageVState.image=[UIImage imageNamed:@"rengou_content_right_unconfirmed"];
 
     }
+    NSString *str=@"700000.00";
+    cell.labelPrice.attributedText = [self changeTheString:str WithRange:NSMakeRange(str.length-2, 2) AndWithFont:22];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
     

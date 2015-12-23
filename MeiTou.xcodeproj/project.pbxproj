@@ -22,6 +22,7 @@
 		F211BC0B1C1819A00033B59E /* HT_Par_IteChoicePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F211BC081C1819A00033B59E /* HT_Par_IteChoicePickerView.xib */; };
 		F2137BB81C17BBC10030E7D8 /* HT_Par_MainPickerCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2137BB61C17BBC10030E7D8 /* HT_Par_MainPickerCView.m */; };
 		F2137BB91C17BBC10030E7D8 /* HT_Par_MainPickerCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2137BB71C17BBC10030E7D8 /* HT_Par_MainPickerCView.xib */; };
+		F213A61F1C2A93C900966A97 /* HT_Infor_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F213A61E1C2A93C900966A97 /* HT_Infor_SearchViewController.m */; };
 		F214A6DA1C0D4BC40096D523 /* HT_Par_MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F214A6D81C0D4BC40096D523 /* HT_Par_MainTableViewCell.m */; };
 		F214A6DB1C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F214A6D91C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib */; };
 		F21A1D051C1124D5006FD426 /* HT_HomePage_PhoneCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A1D031C1124D5006FD426 /* HT_HomePage_PhoneCView.m */; };
@@ -256,6 +257,8 @@
 		F2137BB51C17BBC10030E7D8 /* HT_Par_MainPickerCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_MainPickerCView.h; sourceTree = "<group>"; };
 		F2137BB61C17BBC10030E7D8 /* HT_Par_MainPickerCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_MainPickerCView.m; sourceTree = "<group>"; };
 		F2137BB71C17BBC10030E7D8 /* HT_Par_MainPickerCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_MainPickerCView.xib; sourceTree = "<group>"; };
+		F213A61D1C2A93C900966A97 /* HT_Infor_SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_SearchViewController.h; sourceTree = "<group>"; };
+		F213A61E1C2A93C900966A97 /* HT_Infor_SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_SearchViewController.m; sourceTree = "<group>"; };
 		F214A6D71C0D4BC40096D523 /* HT_Par_MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_MainTableViewCell.h; sourceTree = "<group>"; };
 		F214A6D81C0D4BC40096D523 /* HT_Par_MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_MainTableViewCell.m; sourceTree = "<group>"; };
 		F214A6D91C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_MainTableViewCell.xib; sourceTree = "<group>"; };
@@ -1011,6 +1014,8 @@
 				F21A4B7E1C0D7FD300C1F098 /* HT_InformationViewController.m */,
 				F28E88301C19285E00E75298 /* HT_Infor_ShareViewController.h */,
 				F28E88311C19285E00E75298 /* HT_Infor_ShareViewController.m */,
+				F213A61D1C2A93C900966A97 /* HT_Infor_SearchViewController.h */,
+				F213A61E1C2A93C900966A97 /* HT_Infor_SearchViewController.m */,
 				F206979F1C15B6E100ED2017 /* HT_Infor_NewsController */,
 				F206979D1C15B6E100ED2017 /* HT_Infor_CommentController */,
 				F206979E1C15B6E100ED2017 /* HT_Infor_GroupController */,
@@ -1648,6 +1653,7 @@
 				F2FAA9FC1C1A7C4A00A90DA1 /* CommentsCell.m in Sources */,
 				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,
 				F263CA231C157D5300EE78CA /* HT_Par_SubListViewController.m in Sources */,
+				F213A61F1C2A93C900966A97 /* HT_Infor_SearchViewController.m in Sources */,
 				F2F9684A1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */,
 				F21C192D1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m in Sources */,
 				F263CA161C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.m in Sources */,
@@ -1877,7 +1883,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiTou/Tools/pchFile.pch";
 				INFOPLIST_FILE = MeiTou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1896,7 +1902,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiTou/Tools/pchFile.pch";
 				INFOPLIST_FILE = MeiTou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
