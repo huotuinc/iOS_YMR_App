@@ -209,6 +209,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="head" width="1" height="1"/>
+        <image name="head" width="494" height="324"/>
     </resources>
 </document>

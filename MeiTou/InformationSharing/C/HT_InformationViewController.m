@@ -32,6 +32,7 @@ static NSString *cellIMain = @"cellIMain";
     UITableView *_tableView;
     HT_Par_SearchCView *_topView;//搜索框
     HT_Infor_BottomTabBarCView *_bottomView;
+    UIView *_clearView;//用于添加imageVShare的tap事件
     
 }
 
@@ -143,14 +144,25 @@ static NSString *cellIMain = @"cellIMain";
     [self.view addSubview:_tableView];
    
 }
+-(void)createClearView{
+    _clearView=[[UIView alloc]initWithFrame:CGRectMake(SCREEN_WITH/2-SCREEN_WITH/640*90/2, _bottomView.frame.origin.y-SCREEN_WITH/640*90/2, SCREEN_WITH/640*90, SCREEN_WITH/640*90/2)];
+    _clearView.backgroundColor=[UIColor clearColor];
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheClearView)];
+    [_clearView addGestureRecognizer:tap];
+    [self.view insertSubview:_clearView aboveSubview:_bottomView];
+
+}
 
 -(void)createBottomView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_BottomTabBarCView" owner:nil options:nil];
     _bottomView=[nib firstObject];
     _bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*90)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*90);
+    _bottomView.imageVShare.userInteractionEnabled=YES;
     UITapGestureRecognizer * tapA = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheShareView)];
     [_bottomView.imageVShare addGestureRecognizer:tapA];
     [self.view addSubview:_bottomView];
+    [self createClearView];
+
 
 }
 
@@ -176,14 +188,18 @@ static NSString *cellIMain = @"cellIMain";
 
 }
 -(void)tapTheSearchView{
-    HT_Par_SearchViewController *search=[[HT_Par_SearchViewController alloc]init];
+    HT_Infor_SearchViewController *search=[[HT_Infor_SearchViewController alloc]init];
     [self.navigationController pushViewController:search animated:YES];
     
 }
--(void)tapTheShareView{
+-(void)tapTheClearView{
     HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
     [self.navigationController pushViewController:share animated:YES];
-    NSLog(@"1111111");
+}
+-(void)tapTheShareView{
+    NSLog(@"dsfgdshfds***************");
+    HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
+    [self.navigationController pushViewController:share animated:YES];
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -66,6 +66,17 @@
     _labelPrice.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelTime.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+    
+    for (int i=0; i<7; i++) {
+        UIImageView *imageV=[[UIImageView alloc]initWithFrame:CGRectMake((_viewHeadGroup.frame.size.width-30)/7*i,_viewHeadGroup.frame.size.height/2-_viewHeadGroup.frame.size.width/7/2 , _viewHeadGroup.frame.size.width/7, _viewHeadGroup.frame.size.width/7)];
+        imageV.image
+        =[UIImage imageNamed:@"sides_menu_tou"];
+        if (i==6) {
+//            imageV.image=[UIImage imageNamed:@"common_content_center_more"];
+            
+        }
+        [_viewHeadGroup addSubview:imageV];
+    }
 
 }
 

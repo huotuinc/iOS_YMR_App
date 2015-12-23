@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  众筹会议类
+ */
 @interface HT_Par_BuyViewController : UIViewController
 
 @end

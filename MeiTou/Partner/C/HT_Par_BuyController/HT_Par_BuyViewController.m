@@ -148,7 +148,8 @@ static NSString *cellBuy = @"cellBuy";
    
     HT_Par_BuyMainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellBuy forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
+//    cell.labelTitle.text=
+//    cell.labelContent.text=
     return cell;
 }
 
