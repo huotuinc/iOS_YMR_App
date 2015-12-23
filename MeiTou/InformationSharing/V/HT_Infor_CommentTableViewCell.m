@@ -17,7 +17,7 @@
     _viewBase.layer.borderWidth=1;
     _viewBase.layer.borderColor=[COLOR_BACK_MAIN CGColor];
     _viewBase.layer.masksToBounds=YES;
-    
+    _viewBase.backgroundColor=COLOR_BACK_MAIN;
     _imagePoint.image=[UIImage imageNamed:@"kkr"];
     
 }

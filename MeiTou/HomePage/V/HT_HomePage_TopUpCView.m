@@ -28,7 +28,15 @@
     _labelLevel.text=@"当前等级为:LV1";
     _labelScore.text=@"当前积分:800分";
     _labelMoney.text=@"$1500.00";
-    _labelLevelUp.text=@"立即支付,升级为LV2等级";
+//    _labelLevelUp.text=@"立即支付,升级为LV2等级";
+    
+    
+    NSString *str=@"LV2";
+    _labelLevelUp.textColor=COLOR_TEXT_TITILE;
+
+    NSMutableAttributedString *AttributedStr=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"立即支付,升级为%@等级",str]];
+    [AttributedStr addAttribute:NSForegroundColorAttributeName value:COLOR_BUTTON_RED range:NSMakeRange(8, str.length)];
+    _labelLevelUp.attributedText=AttributedStr;
     
     _labelLevel.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelScore.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
@@ -54,7 +62,6 @@
     _labelUp.textColor=COLOR_TEXT_TITILE;
     _labelMore.textColor=COLOR_TEXT_TITILE;
     _labelMoney.textColor=COLOR_TEXT_TITILE;
-    _labelLevelUp.textColor=COLOR_TEXT_TITILE;
     _labelWei.textColor=COLOR_TEXT_CONTENT;
     _labelPay.textColor=COLOR_TEXT_CONTENT;
     

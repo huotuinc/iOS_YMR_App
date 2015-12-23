@@ -27,6 +27,7 @@
         self.pickView.delegate = self;
         self.pickView.dataSource = self;
         self.regionArr = [NSMutableArray arrayWithArray:@[@"1000",@"2000",@"3000",@"4000",@"5000",@"6000",@"7000",@"8000",@"9000"]];
+        
         self.locate=_regionArr[0];
         [self customView];
     }

@@ -13,11 +13,23 @@
 #import "HT_Par_MainTableViewCell.h"
 #import "HT_HomePageViewController.h"
 #import "HT_Par_SearchViewController.h"
-
+#import "UserLoginTool.h"
 #import "HT_Par_SearchCView.h"
+
+#import "MJExtension.h"
+
 
 
 static NSString *cellMain = @"cellMain";
+
+
+@interface peoson : NSObject
+
+@property(nonatomic,copy)NSString * name;
+@end
+
+
+
 
 
 @interface HT_PartnerViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -50,6 +62,10 @@ static NSString *cellMain = @"cellMain";
     // Do any additional setup after loading the view.
     
 //    [_tableView registerNib:[UINib nibWithNibName:@"HT_Cpn_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
+
+    
+    
+    
     [self createTopView];
     [self createTableView];
 }
@@ -92,6 +108,8 @@ static NSString *cellMain = @"cellMain";
     [self.view addSubview:_topView];
     [self.view addSubview:viewSearch];
     
+    
+   
 
 }
 

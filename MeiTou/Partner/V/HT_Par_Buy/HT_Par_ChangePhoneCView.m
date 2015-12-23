@@ -65,6 +65,13 @@
     _buttonBound.layer.cornerRadius=3;
     _buttonBound.layer.masksToBounds=YES;
     _buttonBound.clipsToBounds=YES;
+    
+    
+    NSString *str=@"0571-000000";
+    NSMutableAttributedString *AttributedStr=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"请联系客服:%@",str]];
+    [AttributedStr addAttribute:NSForegroundColorAttributeName value:COLOR_BUTTON_RED range:NSMakeRange(6, str.length)];
+    _labelHelpB.attributedText=AttributedStr;
+    
 }
 
 /**

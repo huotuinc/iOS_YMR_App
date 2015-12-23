@@ -25,7 +25,12 @@
     
 
     _labelMoney.text=@"$1500.00";
-    _labelLevelUp.text=@"立即支付,升级为LV2等级";
+    
+    _labelLevelUp.textColor=COLOR_TEXT_DATE;
+    NSString *str=@"LV2";
+    NSMutableAttributedString *AttributedStr=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"立即支付,升级为%@等级",str]];
+    [AttributedStr addAttribute:NSForegroundColorAttributeName value:COLOR_BUTTON_RED range:NSMakeRange(8, str.length)];
+    _labelLevelUp.attributedText=AttributedStr;
     
 
     _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
@@ -34,9 +39,8 @@
     _labelMoney.font=[UIFont systemFontOfSize:FONT_SIZE(36)];
     _labelLevelUp.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
     
-    _labelPay.textColor=COLOR_TEXT_DATE;
     _labelMoney.textColor=COLOR_TEXT_TITILE;
-    _labelLevelUp.textColor=COLOR_TEXT_TITILE;
+    _labelPay.textColor=COLOR_TEXT_DATE;
     _labelWei.textColor=COLOR_TEXT_CONTENT;
     _labelPay.textColor=COLOR_TEXT_CONTENT;
     

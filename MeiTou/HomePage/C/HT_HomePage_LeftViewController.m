@@ -17,7 +17,6 @@
 
 #import "HT_HomePage_LeftTableViewCell.h"
 #import "HT_HomePage_LeftHeadView.h"
-
 #import "UIViewController+MMDrawerController.h"
 
 
@@ -124,6 +123,8 @@
 
 }
 
+
+
 #pragma mark UITableViewDelegate
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -186,6 +187,9 @@
         [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
             
         }];
+//        HT_HomePageViewController *home = [[HT_HomePageViewController alloc] init];
+//        UINavigationController *centernav = [[UINavigationController alloc] initWithRootViewController:home];
+//        [self.mm_drawerController setCenterViewController:centernav withCloseAnimation:YES completion:nil];
     }
 }
 /**

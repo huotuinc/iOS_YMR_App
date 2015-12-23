@@ -34,7 +34,6 @@ static NSString *cellIMain = @"cellIMain";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-//    self.navigationController.navigationBar.barTintColor = [];
     [self createBarButtonItem];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIMain];
     

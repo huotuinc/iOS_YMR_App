@@ -59,6 +59,27 @@
 		F22B23F11C1178730009CCF4 /* HT_Par_IteResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B23F01C1178730009CCF4 /* HT_Par_IteResultViewController.m */; };
 		F22B3A9B1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B3A991C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m */; };
 		F22B3A9C1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22B3A9A1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.xib */; };
+		F259CF631C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF611C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.m */; };
+		F259CF641C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F259CF621C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.xib */; };
+		F259CF7D1C292DC20082A912 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF671C292DC20082A912 /* MJArgument.m */; };
+		F259CF7E1C292DC20082A912 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF691C292DC20082A912 /* MJConst.m */; };
+		F259CF7F1C292DC20082A912 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF6C1C292DC20082A912 /* MJFoundation.m */; };
+		F259CF801C292DC20082A912 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF6E1C292DC20082A912 /* MJIvar.m */; };
+		F259CF811C292DC20082A912 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF701C292DC20082A912 /* MJMember.m */; };
+		F259CF821C292DC20082A912 /* MJMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF721C292DC20082A912 /* MJMethod.m */; };
+		F259CF831C292DC20082A912 /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF741C292DC20082A912 /* MJType.m */; };
+		F259CF841C292DC20082A912 /* MJTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF761C292DC20082A912 /* MJTypeEncoding.m */; };
+		F259CF851C292DC20082A912 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF781C292DC20082A912 /* NSObject+MJCoding.m */; };
+		F259CF861C292DC20082A912 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF7A1C292DC20082A912 /* NSObject+MJKeyValue.m */; };
+		F259CF871C292DC20082A912 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF7C1C292DC20082A912 /* NSObject+MJMember.m */; };
+		F259CF8B1C2930120082A912 /* UserLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF8A1C2930120082A912 /* UserLoginTool.m */; };
+		F259CF931C29305F0082A912 /* NSDictionary+HuoBanMallSign.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF8E1C29305F0082A912 /* NSDictionary+HuoBanMallSign.m */; };
+		F259CF941C29305F0082A912 /* UITableView+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF901C29305F0082A912 /* UITableView+CJ.m */; };
+		F259CF951C29305F0082A912 /* UIViewController+NAV.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF921C29305F0082A912 /* UIViewController+NAV.m */; };
+		F259CF9E1C2930D30082A912 /* Base64Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF981C2930D30082A912 /* Base64Util.m */; };
+		F259CF9F1C2930D30082A912 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF9A1C2930D30082A912 /* GTMBase64.m */; };
+		F259CFA01C2930D30082A912 /* MD5Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CF9D1C2930D30082A912 /* MD5Encryption.m */; };
+		F259CFA31C293EAB0082A912 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F259CFA21C293EAB0082A912 /* UserModel.m */; };
 		F263CA001C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F263C9FE1C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.m */; };
 		F263CA011C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F263C9FF1C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.xib */; };
 		F263CA041C15278700EE78CA /* HT_Par_IteCooperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F263CA031C15278700EE78CA /* HT_Par_IteCooperationViewController.m */; };
@@ -298,6 +319,49 @@
 		F22B3A981C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyMainTableViewCell.h; sourceTree = "<group>"; };
 		F22B3A991C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyMainTableViewCell.m; sourceTree = "<group>"; };
 		F22B3A9A1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_BuyMainTableViewCell.xib; sourceTree = "<group>"; };
+		F259CF601C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_ChangeIDCView.h; sourceTree = "<group>"; };
+		F259CF611C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_ChangeIDCView.m; sourceTree = "<group>"; };
+		F259CF621C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_ChangeIDCView.xib; sourceTree = "<group>"; };
+		F259CF661C292DC20082A912 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
+		F259CF671C292DC20082A912 /* MJArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJArgument.m; sourceTree = "<group>"; };
+		F259CF681C292DC20082A912 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
+		F259CF691C292DC20082A912 /* MJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst.m; sourceTree = "<group>"; };
+		F259CF6A1C292DC20082A912 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		F259CF6B1C292DC20082A912 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		F259CF6C1C292DC20082A912 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		F259CF6D1C292DC20082A912 /* MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJIvar.h; sourceTree = "<group>"; };
+		F259CF6E1C292DC20082A912 /* MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJIvar.m; sourceTree = "<group>"; };
+		F259CF6F1C292DC20082A912 /* MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMember.h; sourceTree = "<group>"; };
+		F259CF701C292DC20082A912 /* MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMember.m; sourceTree = "<group>"; };
+		F259CF711C292DC20082A912 /* MJMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMethod.h; sourceTree = "<group>"; };
+		F259CF721C292DC20082A912 /* MJMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMethod.m; sourceTree = "<group>"; };
+		F259CF731C292DC20082A912 /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
+		F259CF741C292DC20082A912 /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
+		F259CF751C292DC20082A912 /* MJTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTypeEncoding.h; sourceTree = "<group>"; };
+		F259CF761C292DC20082A912 /* MJTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTypeEncoding.m; sourceTree = "<group>"; };
+		F259CF771C292DC20082A912 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		F259CF781C292DC20082A912 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		F259CF791C292DC20082A912 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		F259CF7A1C292DC20082A912 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		F259CF7B1C292DC20082A912 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
+		F259CF7C1C292DC20082A912 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		F259CF891C2930120082A912 /* UserLoginTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginTool.h; sourceTree = "<group>"; };
+		F259CF8A1C2930120082A912 /* UserLoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginTool.m; sourceTree = "<group>"; };
+		F259CF8D1C29305F0082A912 /* NSDictionary+HuoBanMallSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HuoBanMallSign.h"; sourceTree = "<group>"; };
+		F259CF8E1C29305F0082A912 /* NSDictionary+HuoBanMallSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HuoBanMallSign.m"; sourceTree = "<group>"; };
+		F259CF8F1C29305F0082A912 /* UITableView+CJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CJ.h"; sourceTree = "<group>"; };
+		F259CF901C29305F0082A912 /* UITableView+CJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CJ.m"; sourceTree = "<group>"; };
+		F259CF911C29305F0082A912 /* UIViewController+NAV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NAV.h"; sourceTree = "<group>"; };
+		F259CF921C29305F0082A912 /* UIViewController+NAV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NAV.m"; sourceTree = "<group>"; };
+		F259CF971C2930D30082A912 /* Base64Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Util.h; sourceTree = "<group>"; };
+		F259CF981C2930D30082A912 /* Base64Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Util.m; sourceTree = "<group>"; };
+		F259CF991C2930D30082A912 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		F259CF9A1C2930D30082A912 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		F259CF9B1C2930D30082A912 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		F259CF9C1C2930D30082A912 /* MD5Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Encryption.h; sourceTree = "<group>"; };
+		F259CF9D1C2930D30082A912 /* MD5Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Encryption.m; sourceTree = "<group>"; };
+		F259CFA11C293EAB0082A912 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		F259CFA21C293EAB0082A912 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		F263C9FD1C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_ItePaymentOrderCView.h; sourceTree = "<group>"; };
 		F263C9FE1C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_ItePaymentOrderCView.m; sourceTree = "<group>"; };
 		F263C9FF1C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_ItePaymentOrderCView.xib; sourceTree = "<group>"; };
@@ -630,6 +694,72 @@
 			path = HT_Par_InitiateController/HT_Par_SubscriptionController;
 			sourceTree = "<group>";
 		};
+		F259CF651C292DC20082A912 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F259CF661C292DC20082A912 /* MJArgument.h */,
+				F259CF671C292DC20082A912 /* MJArgument.m */,
+				F259CF681C292DC20082A912 /* MJConst.h */,
+				F259CF691C292DC20082A912 /* MJConst.m */,
+				F259CF6A1C292DC20082A912 /* MJExtension.h */,
+				F259CF6B1C292DC20082A912 /* MJFoundation.h */,
+				F259CF6C1C292DC20082A912 /* MJFoundation.m */,
+				F259CF6D1C292DC20082A912 /* MJIvar.h */,
+				F259CF6E1C292DC20082A912 /* MJIvar.m */,
+				F259CF6F1C292DC20082A912 /* MJMember.h */,
+				F259CF701C292DC20082A912 /* MJMember.m */,
+				F259CF711C292DC20082A912 /* MJMethod.h */,
+				F259CF721C292DC20082A912 /* MJMethod.m */,
+				F259CF731C292DC20082A912 /* MJType.h */,
+				F259CF741C292DC20082A912 /* MJType.m */,
+				F259CF751C292DC20082A912 /* MJTypeEncoding.h */,
+				F259CF761C292DC20082A912 /* MJTypeEncoding.m */,
+				F259CF771C292DC20082A912 /* NSObject+MJCoding.h */,
+				F259CF781C292DC20082A912 /* NSObject+MJCoding.m */,
+				F259CF791C292DC20082A912 /* NSObject+MJKeyValue.h */,
+				F259CF7A1C292DC20082A912 /* NSObject+MJKeyValue.m */,
+				F259CF7B1C292DC20082A912 /* NSObject+MJMember.h */,
+				F259CF7C1C292DC20082A912 /* NSObject+MJMember.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		F259CF881C2930120082A912 /* AFNNetTool */ = {
+			isa = PBXGroup;
+			children = (
+				F259CF891C2930120082A912 /* UserLoginTool.h */,
+				F259CF8A1C2930120082A912 /* UserLoginTool.m */,
+			);
+			path = AFNNetTool;
+			sourceTree = "<group>";
+		};
+		F259CF8C1C29305F0082A912 /* 扩展 */ = {
+			isa = PBXGroup;
+			children = (
+				F259CF8D1C29305F0082A912 /* NSDictionary+HuoBanMallSign.h */,
+				F259CF8E1C29305F0082A912 /* NSDictionary+HuoBanMallSign.m */,
+				F259CF8F1C29305F0082A912 /* UITableView+CJ.h */,
+				F259CF901C29305F0082A912 /* UITableView+CJ.m */,
+				F259CF911C29305F0082A912 /* UIViewController+NAV.h */,
+				F259CF921C29305F0082A912 /* UIViewController+NAV.m */,
+			);
+			path = "扩展";
+			sourceTree = "<group>";
+		};
+		F259CF961C2930D30082A912 /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				F259CF971C2930D30082A912 /* Base64Util.h */,
+				F259CF981C2930D30082A912 /* Base64Util.m */,
+				F259CF991C2930D30082A912 /* GTMBase64.h */,
+				F259CF9A1C2930D30082A912 /* GTMBase64.m */,
+				F259CF9B1C2930D30082A912 /* GTMDefines.h */,
+				F259CF9C1C2930D30082A912 /* MD5Encryption.h */,
+				F259CF9D1C2930D30082A912 /* MD5Encryption.m */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
 		F2670CF11C0E945700CA70A2 /* HT_Par_BuyController */ = {
 			isa = PBXGroup;
 			children = (
@@ -698,6 +828,8 @@
 				F27261651C07E61B0081EC95 /* LaunchScreen.storyboard */,
 				F27261681C07E61B0081EC95 /* Info.plist */,
 				F27261571C07E61B0081EC95 /* Supporting Files */,
+				F259CFA11C293EAB0082A912 /* UserModel.h */,
+				F259CFA21C293EAB0082A912 /* UserModel.m */,
 			);
 			path = MeiTou;
 			sourceTree = "<group>";
@@ -855,6 +987,9 @@
 				F21C19141C1E908E00E717A8 /* HT_HomePage_LevelUpCView.h */,
 				F21C19151C1E908E00E717A8 /* HT_HomePage_LevelUpCView.m */,
 				F21C19161C1E908E00E717A8 /* HT_HomePage_LevelUpCView.xib */,
+				F259CF601C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.h */,
+				F259CF611C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.m */,
+				F259CF621C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1096,6 +1231,10 @@
 		F29944551C0822C700823E75 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				F259CF961C2930D30082A912 /* Encryption */,
+				F259CF8C1C29305F0082A912 /* 扩展 */,
+				F259CF881C2930120082A912 /* AFNNetTool */,
+				F259CF651C292DC20082A912 /* MJExtension */,
 				F21E44E71C102F0100657249 /* MMDrawerController */,
 			);
 			path = Lib;
@@ -1364,6 +1503,7 @@
 				F2FAAA071C1AA04000A90DA1 /* HT_AboutTableViewCell.xib in Resources */,
 				F27261E01C07FE530081EC95 /* HT_Par_SubListTableViewCell.xib in Resources */,
 				F263CA171C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.xib in Resources */,
+				F259CF641C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.xib in Resources */,
 				F2D7AEDD1C172D5A00725B4E /* HT_About_TopCView.xib in Resources */,
 				F2FAAA021C1A7C4A00A90DA1 /* SystemMessageCell.xib in Resources */,
 				F21C19271C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.xib in Resources */,
@@ -1452,6 +1592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F259CF9E1C2930D30082A912 /* Base64Util.m in Sources */,
 				F2FAAA0A1C1AA0BC00A90DA1 /* HT_AboutViewController.m in Sources */,
 				F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */,
 				F27D673B1C0B49A900EE6C4F /* HT_HomePageViewController.m in Sources */,
@@ -1459,16 +1600,20 @@
 				609292981C23E02E0076D589 /* ShareController.m in Sources */,
 				F21C19261C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.m in Sources */,
 				F2CE739F1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.m in Sources */,
+				F259CF821C292DC20082A912 /* MJMethod.m in Sources */,
 				F28E883A1C19A0C300E75298 /* HT_HomePage_ChangeViewController.m in Sources */,
 				F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */,
 				F27261A81C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.m in Sources */,
 				F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */,
 				F211BC091C1819A00033B59E /* HT_Par_IteChociePickerNModel.m in Sources */,
+				F259CF861C292DC20082A912 /* NSObject+MJKeyValue.m in Sources */,
 				F20697A81C15B72900ED2017 /* HT_Infor_NewsViewController.m in Sources */,
 				F27261DF1C07FE530081EC95 /* HT_Par_SubListTableViewCell.m in Sources */,
 				F2F968591C158511000045B1 /* HT_Par_SubBottomView.m in Sources */,
+				F259CF841C292DC20082A912 /* MJTypeEncoding.m in Sources */,
 				F2A019381C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m in Sources */,
 				F21E44F91C102F0100657249 /* README.md in Sources */,
+				F259CF7D1C292DC20082A912 /* MJArgument.m in Sources */,
 				F2C00D7A1C1054880008833B /* HT_Par_BuyPayCView.m in Sources */,
 				F2B1681D1C1852AE00517879 /* HT_HomePage_PointsCView.m in Sources */,
 				F272615F1C07E61B0081EC95 /* ViewController.m in Sources */,
@@ -1476,14 +1621,19 @@
 				F2FAAA011C1A7C4A00A90DA1 /* SystemMessageCell.m in Sources */,
 				F2FAAA061C1AA04000A90DA1 /* HT_AboutTableViewCell.m in Sources */,
 				F29085121C0EBD9200F779FA /* HT_Par_BuyHeaderView.m in Sources */,
+				F259CF7E1C292DC20082A912 /* MJConst.m in Sources */,
 				F272615C1C07E61B0081EC95 /* AppDelegate.m in Sources */,
 				F27261C11C07FE240081EC95 /* HT_Par_IteResult_HeadView.m in Sources */,
+				F259CF811C292DC20082A912 /* MJMember.m in Sources */,
 				F2FAAA0D1C1AA9D200A90DA1 /* HT_About_CompanyViewController.m in Sources */,
 				F263CA0A1C1527E100EE78CA /* HT_Par_ItePaymentOrderViewController.m in Sources */,
+				F259CF871C292DC20082A912 /* NSObject+MJMember.m in Sources */,
 				F2FAA9F81C1A7C4A00A90DA1 /* PraiseController.m in Sources */,
 				F28E88361C192B3B00E75298 /* HT_Par_SearchCView.m in Sources */,
 				F21C190C1C1E66D600E717A8 /* HT_HomePage_TopUpCView.m in Sources */,
 				F29944A11C084D9600823E75 /* HT_Infor_ShareCView.m in Sources */,
+				F259CFA31C293EAB0082A912 /* UserModel.m in Sources */,
+				F259CFA01C2930D30082A912 /* MD5Encryption.m in Sources */,
 				F21E44F81C102F0100657249 /* UIViewController+MMDrawerController.m in Sources */,
 				F21E45001C1039D900657249 /* HT_HomePage_LeftHeadView.m in Sources */,
 				F27261BC1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.m in Sources */,
@@ -1494,6 +1644,7 @@
 				F214A6DA1C0D4BC40096D523 /* HT_Par_MainTableViewCell.m in Sources */,
 				F21E44F61C102F0100657249 /* MMDrawerController.m in Sources */,
 				F2D7AEE11C172DC500725B4E /* HT_About_HeaderCView.m in Sources */,
+				F259CF801C292DC20082A912 /* MJIvar.m in Sources */,
 				F2FAA9FC1C1A7C4A00A90DA1 /* CommentsCell.m in Sources */,
 				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,
 				F263CA231C157D5300EE78CA /* HT_Par_SubListViewController.m in Sources */,
@@ -1501,6 +1652,7 @@
 				F21C192D1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m in Sources */,
 				F263CA161C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.m in Sources */,
 				F2670CF41C0E950000CA70A2 /* HT_Par_BuyViewController.m in Sources */,
+				F259CF831C292DC20082A912 /* MJType.m in Sources */,
 				F22B3A9B1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m in Sources */,
 				F21C19131C1E906600E717A8 /* HT_HomePage_LevelUpViewController.m in Sources */,
 				F22453671C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m in Sources */,
@@ -1517,18 +1669,22 @@
 				F27261F31C07FE9E0081EC95 /* HT_Infor_HeadCView.m in Sources */,
 				F2FAA9F61C1A7C4A00A90DA1 /* CallMeController.m in Sources */,
 				F2C9F8481C0C576500FC454B /* HT_HomePage_LeftBottomView.m in Sources */,
+				F259CF951C29305F0082A912 /* UIViewController+NAV.m in Sources */,
 				F21E44F51C102F0100657249 /* MMDrawerBarButtonItem.m in Sources */,
 				F263CA001C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.m in Sources */,
 				F2B168171C18264800517879 /* HT_Infor_NewsHeadCView.m in Sources */,
+				F259CF9F1C2930D30082A912 /* GTMBase64.m in Sources */,
 				609292901C22A04A0076D589 /* LevelUpView.m in Sources */,
 				F27261EF1C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.m in Sources */,
 				F263CA071C1527B100EE78CA /* HT_Par_IteOrderViewController.m in Sources */,
+				F259CF8B1C2930120082A912 /* UserLoginTool.m in Sources */,
 				F27261A31C07FD510081EC95 /* HT_Par_MainTopView.m in Sources */,
 				F2D7AEDC1C172D5A00725B4E /* HT_About_TopCView.m in Sources */,
 				F2F9684F1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.m in Sources */,
 				F27261CB1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.m in Sources */,
 				F27261D31C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.m in Sources */,
 				F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */,
+				F259CF851C292DC20082A912 /* NSObject+MJCoding.m in Sources */,
 				F27D67311C0B30A900EE6C4F /* HT_HomePageLayout.m in Sources */,
 				609292941C23A2080076D589 /* ShareCell.m in Sources */,
 				F21C19101C1E670700E717A8 /* HT_HomePage_TopUpViewController.m in Sources */,
@@ -1543,13 +1699,16 @@
 				F2FAA9F71C1A7C4A00A90DA1 /* CommentsController.m in Sources */,
 				F2A019321C0B2F6A0017234F /* HT_HomePageCollectionViewCell.m in Sources */,
 				F21E44F71C102F0100657249 /* MMDrawerVisualState.m in Sources */,
+				F259CF7F1C292DC20082A912 /* MJFoundation.m in Sources */,
 				F21A4B791C0D7F6B00C1F098 /* HT_BaseViewController.m in Sources */,
 				F21A1D051C1124D5006FD426 /* HT_HomePage_PhoneCView.m in Sources */,
+				F259CF941C29305F0082A912 /* UITableView+CJ.m in Sources */,
 				F263CA041C15278700EE78CA /* HT_Par_IteCooperationViewController.m in Sources */,
 				F2C00D7F1C1071180008833B /* HT_Par_IteBottomCView.m in Sources */,
 				F21A4B851C0D84C600C1F098 /* HT_HomePage_PhoneViewController.m in Sources */,
 				F21C19301C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.m in Sources */,
 				F288685D1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.m in Sources */,
+				F259CF931C29305F0082A912 /* NSDictionary+HuoBanMallSign.m in Sources */,
 				F206B36B1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m in Sources */,
 				F2E443431C187D9F0077B904 /* HT_Par_IteCooperationCView.m in Sources */,
 				F22B23F11C1178730009CCF4 /* HT_Par_IteResultViewController.m in Sources */,
@@ -1565,6 +1724,7 @@
 				F21A4B7F1C0D7FD300C1F098 /* HT_InformationViewController.m in Sources */,
 				F21C191C1C1E9A1F00E717A8 /* HT_HomePage_BoundPhoneCView.m in Sources */,
 				F27261DD1C07FE530081EC95 /* HT_Par_SubClaimCView.m in Sources */,
+				F259CF631C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.m in Sources */,
 				F29944701C08254600823E75 /* MMExampleDrawerVisualStateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1720,7 +1880,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "170bf81a-9e1b-4310-9bfe-2d05e599acb8";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1739,7 +1899,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "170bf81a-9e1b-4310-9bfe-2d05e599acb8";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

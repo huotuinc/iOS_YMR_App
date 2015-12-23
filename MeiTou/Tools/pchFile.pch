@@ -11,11 +11,38 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
 #import "Measure.h"
 #import "NSNotification.h"
 #import "Color.h"
 #import <UIView+BlocksKit.h>
+#import "UserLoginTool.h"
 
 #import "Font.h"
+
+
+
+#define MainUrl @"http://192.168.1.57:8080/ymr/app"
+
+//网络请求的固定参数
+#define HTYMRSCREAT @"1165a8d240b29af3f418b8d10599d0da"  //火图安全网络请求安全协议
+
+
+/**应用版本号*/
+#define AppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
+/**平台*/
+#define OPERATION_parame @"YMR2015APP"
+
+
+/**设备唯一号*/
+#define  DeviceNo ([[UIDevice currentDevice].identifierForVendor UUIDString])
+
+
+/**时间*/
+#define apptimesSince1970 [NSString stringWithFormat:@"%.0f",([[[NSDate alloc] init] timeIntervalSince1970]*1000)]
+
+/**APP token */
+#define AppToken @"AppToken"
+
+
 #endif /* pchFile_pch */

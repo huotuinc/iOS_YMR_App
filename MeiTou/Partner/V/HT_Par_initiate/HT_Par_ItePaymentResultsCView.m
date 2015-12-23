@@ -39,7 +39,10 @@
     _labelDate.textColor=COLOR_TEXT_CONTENT;
     _labelTitle.textColor=COLOR_TEXT_TITILE;
 
-
+    NSString *str=@"LV2";
+    NSMutableAttributedString *AttributedStr=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"充值成功,您当前为%@等级",str]];
+    [AttributedStr addAttribute:NSForegroundColorAttributeName value:COLOR_BUTTON_RED range:NSMakeRange(9, str.length)];
+    _labelState.attributedText=AttributedStr;
 
 
 

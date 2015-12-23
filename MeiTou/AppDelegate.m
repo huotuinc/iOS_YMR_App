@@ -9,20 +9,53 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "Measure.h"
+//
+//#import "MJExtension.h"
+//#import "UserModel.h"
+
+
 
 @interface AppDelegate ()
+
+
+//@property(nonatomic,strong) NSArray * users;
+
 
 @end
 
 @implementation AppDelegate
 
 
+
+
+//- (void)xxx:(NSIndexPath *)index{
+//    
+//    UserModel *us = self.users[index.row]
+//
+//    
+//    
+//}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     
+//    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+//    dict[@"name"] = @"123";
+//    dict[@"passwd"] = @"122";
+//    
+//    [UserLoginTool loginRequestGet:@"init" parame:dict success:^(NSDictionary* json) {//
+//        NSLog(@"init----%@",json);
+//        
+//        NSArray * users = [UserModel objectArrayWithKeyValuesArray:json[@"Userlist"]];
+//        self.users = users;
+//        
+//    } failure:^(NSError *error) {//
+//        NSLog(@"%@",error);
+//    }];
+//    
     
-   
+    
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

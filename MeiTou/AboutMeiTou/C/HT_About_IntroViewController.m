@@ -29,7 +29,6 @@ static NSString *cellIntro = @"cellIntro";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent = NO;
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_About_IntroTableViewCell" bundle:nil]forCellReuseIdentifier:cellIntro];
     [self createBarButtonItem];
 
     
@@ -86,6 +85,7 @@ static NSString *cellIntro = @"cellIntro";
 
 
 -(void)createTableView{
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_About_IntroTableViewCell" bundle:nil]forCellReuseIdentifier:cellIntro];
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;

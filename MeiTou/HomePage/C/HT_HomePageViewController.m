@@ -18,6 +18,8 @@
 #import "UIViewController+MMDrawerController.h"
 #import "MMDrawerBarButtonItem.h"//第三方封装的头文件
 
+#import "HT_HomePage_ChangeIDCView.h"
+
 
 
 #import "HT_HomePageLayout.h"
@@ -38,15 +40,16 @@ static NSString *RFIdentifier = @"RFIdentifier";
 
 @implementation HT_HomePageViewController{
     NSMutableArray *_imageArray;
+    HT_HomePage_ChangeIDCView *_changeView;
+    UIView *_backView; //提示框父视图
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    UIImage *image = [UIImage imageNamed:@"bg_clear"];
-    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:image];}
+    self.navigationController.navigationBar.backgroundColor=COLOR_NAVBAR_A;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -84,8 +87,26 @@ static NSString *RFIdentifier = @"RFIdentifier";
     [self.navigationController pushViewController:information animated:YES];
 }
 -(void)pushToChange{
-    HT_HomePage_ChangeViewController *change=[[HT_HomePage_ChangeViewController alloc]init];
-    [self.navigationController pushViewController:change animated:YES];
+    [self createChangeView];
+}
+
+-(void)createChangeView{
+    
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_ChangeIDCView" owner:nil options:nil];
+    _changeView=[nib firstObject];
+    
+    _backView= [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    _backView.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.800];
+    _backView.userInteractionEnabled = YES;
+    _changeView.frame = CGRectMake(_backView.frame.size.width/640*(640/2-455/2), _backView.frame.size.height/1330*(1330/2-550/2), _backView.frame.size.width/640*455, _backView.frame.size.height/1330*550);
+    _changeView.labelAccountA.userInteractionEnabled=YES;
+    UITapGestureRecognizer *tapA=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheLabeAccountA)];
+    [_changeView.labelAccountA addGestureRecognizer:tapA];
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:_backView];
+    [_backView addSubview:_changeView];
+    
+    
 }
 
 /**
@@ -152,6 +173,10 @@ static NSString *RFIdentifier = @"RFIdentifier";
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
         
     }];
+}
+
+-(void)tapTheLabeAccountA{
+    _backView.hidden=YES;
 }
 #pragma mark UITableViewDelegate
 

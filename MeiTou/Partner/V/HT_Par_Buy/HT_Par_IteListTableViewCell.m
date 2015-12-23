@@ -27,10 +27,17 @@
     _labelMoney.textColor=COLOR_TEXT_DATE;
 
     
-    _labelState.text=@"已有30人申请合作";
+//    _labelState.text=@"已有30人申请合作";
+    NSString *str=@"30";
     _labelState.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelState.textColor=COLOR_TEXT_CONTENT;
     
+    NSMutableAttributedString *AttributedStr=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"已有%@人申请合作",str]];
+    [AttributedStr addAttribute:NSForegroundColorAttributeName value:COLOR_BUTTON_RED range:NSMakeRange(2, str.length)];
+    _labelState.attributedText=AttributedStr;
+    
+
+
     
     
     [_buttonState setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
