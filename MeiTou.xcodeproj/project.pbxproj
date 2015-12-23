@@ -12,6 +12,8 @@
 		609292941C23A2080076D589 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609292921C23A2080076D589 /* ShareCell.m */; };
 		609292951C23A2080076D589 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609292931C23A2080076D589 /* ShareCell.xib */; };
 		609292981C23E02E0076D589 /* ShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609292971C23E02E0076D589 /* ShareController.m */; };
+		6095C29A1C2A7D1B00DBC029 /* InformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6095C2991C2A7D1B00DBC029 /* InformationModel.m */; };
+		6095C2A01C2A842700DBC029 /* ShareType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6095C29F1C2A842700DBC029 /* ShareType.m */; };
 		AD43035F75929EF3A81B1C16 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8698D34D22B86C408994D26D /* libPods.a */; };
 		F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A11C15B70000ED2017 /* HT_Infor_CommentViewController.m */; };
 		F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20697A41C15B71800ED2017 /* HT_Infor_GroupViewController.m */; };
@@ -237,6 +239,10 @@
 		609292931C23A2080076D589 /* ShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCell.xib; sourceTree = "<group>"; };
 		609292961C23E02E0076D589 /* ShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareController.h; sourceTree = "<group>"; };
 		609292971C23E02E0076D589 /* ShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareController.m; sourceTree = "<group>"; };
+		6095C2981C2A7D1B00DBC029 /* InformationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationModel.h; sourceTree = "<group>"; };
+		6095C2991C2A7D1B00DBC029 /* InformationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationModel.m; sourceTree = "<group>"; };
+		6095C29E1C2A842700DBC029 /* ShareType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareType.h; sourceTree = "<group>"; };
+		6095C29F1C2A842700DBC029 /* ShareType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareType.m; sourceTree = "<group>"; };
 		7FFFE40FAB63B9F5F5340FCC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8698D34D22B86C408994D26D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7257668B6600CED282BB2C9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -611,6 +617,18 @@
 				8698D34D22B86C408994D26D /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6095C2971C2A7D0000DBC029 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				6095C2981C2A7D1B00DBC029 /* InformationModel.h */,
+				6095C2991C2A7D1B00DBC029 /* InformationModel.m */,
+				6095C29E1C2A842700DBC029 /* ShareType.h */,
+				6095C29F1C2A842700DBC029 /* ShareType.m */,
+			);
+			name = M;
+			path = C/M;
 			sourceTree = "<group>";
 		};
 		9152CD0FA9681BF70C5A3B48 /* Pods */ = {
@@ -998,7 +1016,7 @@
 			isa = PBXGroup;
 			children = (
 				F27261931C07E95F0081EC95 /* C */,
-				F27261941C07E95F0081EC95 /* M */,
+				6095C2971C2A7D0000DBC029 /* M */,
 				F27261951C07E95F0081EC95 /* V */,
 			);
 			path = InformationSharing;
@@ -1016,13 +1034,6 @@
 				F206979E1C15B6E100ED2017 /* HT_Infor_GroupController */,
 			);
 			path = C;
-			sourceTree = "<group>";
-		};
-		F27261941C07E95F0081EC95 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
 			sourceTree = "<group>";
 		};
 		F27261951C07E95F0081EC95 /* V */ = {
@@ -1637,6 +1648,7 @@
 				F21E44F81C102F0100657249 /* UIViewController+MMDrawerController.m in Sources */,
 				F21E45001C1039D900657249 /* HT_HomePage_LeftHeadView.m in Sources */,
 				F27261BC1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.m in Sources */,
+				6095C29A1C2A7D1B00DBC029 /* InformationModel.m in Sources */,
 				F280268E1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m in Sources */,
 				F2D7AED31C172BAB00725B4E /* HT_About_IntroViewController.m in Sources */,
 				F2FAA9FE1C1A7C4A00A90DA1 /* PraiseCell.m in Sources */,
@@ -1722,6 +1734,7 @@
 				F29A25631C239E96001061EA /* HT_Infor_CommentHeadCView.m in Sources */,
 				F2D7AED71C172BDA00725B4E /* HT_About_IntroTableViewCell.m in Sources */,
 				F21A4B7F1C0D7FD300C1F098 /* HT_InformationViewController.m in Sources */,
+				6095C2A01C2A842700DBC029 /* ShareType.m in Sources */,
 				F21C191C1C1E9A1F00E717A8 /* HT_HomePage_BoundPhoneCView.m in Sources */,
 				F27261DD1C07FE530081EC95 /* HT_Par_SubClaimCView.m in Sources */,
 				F259CF631C28EE5E0082A912 /* HT_HomePage_ChangeIDCView.m in Sources */,

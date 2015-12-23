@@ -12,14 +12,19 @@
 #import "HT_Infor_GroupViewController.h"
 #import "HT_Infor_ShareViewController.h"
 #import "HT_Par_SearchViewController.h"
-
 #import "HT_Infor_MainTableViewCell.h"
 #import "HT_Infor_BottomTabBarCView.h"
 #import "HT_Par_SearchCView.h"
+#import "InformationModel.h"
+
 
 
 static NSString *cellIMain = @"cellIMain";
 @interface HT_InformationViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) NSString *searchKey;
+
+@property (nonatomic, strong) NSMutableArray *shareList;
 
 @end
 
@@ -37,8 +42,7 @@ static NSString *cellIMain = @"cellIMain";
     [self createBarButtonItem];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIMain];
     
-    
-    
+    [self getNewShareList];
     
 }
 
@@ -46,10 +50,75 @@ static NSString *cellIMain = @"cellIMain";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor cyanColor];
+    self.shareList = [NSMutableArray array];
+    
     [self createTopView];
     [self createTableView];
     [self createBottomView];
 }
+
+/**
+ *  下拉刷新
+ */
+- (void)getNewShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"lastId"] = @0;
+    dic[@"key"] = self.searchKey;
+    
+    
+    [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
+       
+        NSLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [InformationModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.shareList removeAllObjects];
+            
+            [self.shareList addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+/**
+ *  上拉加载更多
+ */
+- (void)getMoreShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"key"] = self.searchKey;
+    InformationModel *info = [self.shareList lastObject];
+    dic[@"lastId"] = info.pid;
+    
+    
+    [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
+        
+        NSLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [InformationModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.shareList addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+
 
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];

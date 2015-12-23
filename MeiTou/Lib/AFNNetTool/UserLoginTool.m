@@ -9,7 +9,7 @@
 #import "UserLoginTool.h"
 #import "AFNetworking.h"
 #import "NSDictionary+HuoBanMallSign.h"
-//#import <MKNetworkKit.h>
+#import <MKNetworkKit.h>
 
 
 @interface UserLoginTool()
@@ -61,6 +61,50 @@
         NSLog(@"%@",reponse);
         failure(error);
     }];
+}
+
++ (void)loginRequestPostWithFile:(NSString *)urlStr parame:(NSMutableDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure withFileKey:(NSString *)key{
+    
+    NSString *url = [MainUrl stringByAppendingPathComponent:urlStr];
+    
+    //   AFHTTPRequestOperationManager * manager  = [AFHTTPRequestOperationManager manager];
+    NSMutableDictionary * paramsOption = [NSMutableDictionary dictionary];
+    paramsOption[@"appSecret"] = HTYMRSCREAT;
+    paramsOption[@"timestamp"] = apptimesSince1970;
+    paramsOption[@"operation"] = OPERATION_parame;
+    paramsOption[@"version"] =AppVersion;
+    NSString * token = [[NSUserDefaults standardUserDefaults] stringForKey:AppToken];
+    paramsOption[@"token"] = token?token:@"";
+    paramsOption[@"imei"] = DeviceNo;
+
+    
+    
+    
+    if (params != nil) {
+        [paramsOption addEntriesFromDictionary:params];
+    }
+    //
+    
+    NSData *data = [[paramsOption objectForKey:key] dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    [paramsOption removeObjectForKey:key];
+    //
+    paramsOption[@"profileData"] = str;
+    
+    paramsOption[@"sign"] = [NSDictionary asignWithMutableDictionary:paramsOption];
+    [paramsOption removeObjectForKey:@"appSecret"];
+    
+    MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:MainUrlMK customHeaderFields:nil];
+    
+    MKNetworkOperation *op = [engine operationWithPath:urlStr params:paramsOption httpMethod:@"POST"];
+    
+    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        success(completedOperation.responseJSON);
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        failure(error);
+    }];
+    
+    [engine enqueueOperation:op];
 }
 
 

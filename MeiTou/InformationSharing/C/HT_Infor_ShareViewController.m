@@ -58,6 +58,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)clickRightButton{
+    
 }
 
 -(void)createMainView{
@@ -65,11 +66,104 @@
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_ShareCView" owner:nil options:nil];
     _mainView=[nib firstObject];
     _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT-64);
+    [_mainView.buttonAdd addTarget:self action:@selector(addImageClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_mainView];
     
+}
+
+- (void)addImageClick {
     
     
     
+}
+
+
+#pragma 拍照
+/**
+ *  拍照
+ *
+ *  @param picker
+ *  @param info
+ */
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    
+    UIImage *photoImage = nil;
+    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]){
+        // 判断，图片是否允许修改
+        if ([picker allowsEditing]){
+            //获取用户编辑之后的图像
+            photoImage = [info objectForKey:UIImagePickerControllerEditedImage];
+        } else {
+            // 照片的元数据参数
+            photoImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+        }
+    }
+    self.iconView.image = photoImage;
+    NSData *data = nil;
+    if (UIImagePNGRepresentation(photoImage) == nil) {
+        
+        data = UIImageJPEGRepresentation(photoImage, 1);
+        
+    } else {
+        
+        data = UIImagePNGRepresentation(photoImage);
+    }
+    
+    NSString * imagefile = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        NSMutableDictionary * params = [NSMutableDictionary dictionary];
+        params[@"profileType"] = @(2);
+        params[@"profileData"] = imagefile;
+    
+        
+        [UserLoginTool loginRequestPostWithFile:@"updateMerchantProfile" parame:params success:^(id json) {
+
+            if ([json[@"systemResultCode"] intValue] ==1&&[json[@"resultCode"] intValue] == 1) {
+                
+            }
+            
+        } failure:^(NSError *error) {
+
+
+        } withFileKey:@"profileData"];
+        
+    }];
+    
+}
+/**
+ *  取消拍照
+ *
+ *  @param picker
+ */
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+/**
+ *    相机掉出
+ *
+ *  @param actionSheet <#actionSheet description#>
+ *  @param buttonIndex <#buttonIndex description#>
+ */
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        UIImagePickerController * pc = [[UIImagePickerController alloc] init];
+        pc.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+        pc.delegate = self;
+        pc.allowsEditing = YES;
+        [self presentViewController:pc animated:YES completion:nil];
+        
+    }else if(buttonIndex == 1) {
+        
+        UIImagePickerController * pc = [[UIImagePickerController alloc] init];
+        pc.allowsEditing = YES;
+        pc.sourceType=UIImagePickerControllerSourceTypeCamera;
+        pc.delegate = self;
+        [self presentViewController:pc animated:YES completion:nil];
+    }
 }
 
 
