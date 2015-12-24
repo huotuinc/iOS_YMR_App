@@ -133,7 +133,7 @@
                 self.showHeadUrl = json[@"resultData"][@"data"];
                 self.returnHeadUrl = json[@"resultData"][@"relativeUrl"];
                 
-#pragma mark -增加网络加载图片
+#warning -增加网络加载图片
                 
             }else {
                 
@@ -182,6 +182,9 @@
 }
 
 
+/**
+ *  发布分享内容
+ */
 - (void)addShareinfoMation {
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
@@ -196,7 +199,7 @@
         if ([json[@"systemResultCode"] intValue] ==1&&[json[@"resultCode"] intValue] == 1) {
             LWLog(@"%@",json[@"resultDescription"]);
             
-#pragma mark 操作成功提示
+#warning 操作成功提示
             [self.navigationController popViewControllerAnimated:YES];
             
         }else {
