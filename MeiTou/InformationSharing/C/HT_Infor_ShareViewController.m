@@ -10,7 +10,11 @@
 
 #import "HT_Infor_ShareCView.h"
 
-@interface HT_Infor_ShareViewController ()
+@interface HT_Infor_ShareViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate>
+
+@property (nonatomic, strong) NSString *showHeadUrl;
+
+@property (nonatomic, strong) NSString *returnHeadUrl;
 
 @end
 
@@ -30,6 +34,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createMainView];
+    
+    self.showHeadUrl = [NSString string];
+    self.returnHeadUrl = [NSString string];
+    
 }
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH/640*110 , 30)];
@@ -58,7 +66,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)clickRightButton{
-    
+    [self addShareinfoMation];
 }
 
 -(void)createMainView{
@@ -73,7 +81,8 @@
 
 - (void)addImageClick {
     
-    
+    UIActionSheet * aa = [[UIActionSheet alloc] initWithTitle:@"选择图片来源" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"相册",@"相机", nil];
+    [aa showInView:self.view];
     
 }
 
@@ -114,13 +123,19 @@
     NSString * imagefile = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     [picker dismissViewControllerAnimated:YES completion:^{
         NSMutableDictionary * params = [NSMutableDictionary dictionary];
-        params[@"profileType"] = @(2);
+
         params[@"profileData"] = imagefile;
-    
         
-        [UserLoginTool loginRequestPostWithFile:@"" parame:params success:^(id json) {
+        [UserLoginTool loginRequestPostWithFile:@"uploadShareImg" parame:params success:^(id json) {
 
             if ([json[@"systemResultCode"] intValue] ==1&&[json[@"resultCode"] intValue] == 1) {
+                
+                self.showHeadUrl = json[@"resultData"][@"data"];
+                self.returnHeadUrl = json[@"resultData"][@"relativeUrl"];
+                
+#pragma mark -增加网络加载图片
+                
+            }else {
                 
             }
             
@@ -166,6 +181,33 @@
     }
 }
 
+
+- (void)addShareinfoMation {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"title"] = @"12312312";
+    dic[@"content"] = @"hello world！";
+    dic[@"imgUrl"] = self.returnHeadUrl;
+    dic[@"userId"] = @5678;
+#warning 用户id修改
+    
+    [UserLoginTool  loginRequestPostWithFile:@"addShare" parame:dic success:^(id json) {
+        LWLog(@"%@",json);
+        if ([json[@"systemResultCode"] intValue] ==1&&[json[@"resultCode"] intValue] == 1) {
+            LWLog(@"%@",json[@"resultDescription"]);
+            
+#pragma mark 操作成功提示
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }else {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error );
+    } withFileKey:nil];
+    
+    
+}
 
 
 /*

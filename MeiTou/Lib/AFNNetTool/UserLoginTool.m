@@ -9,7 +9,7 @@
 #import "UserLoginTool.h"
 #import "AFNetworking.h"
 #import "NSDictionary+HuoBanMallSign.h"
-#import "MKNetworkKit.h"
+#import <MKNetworkKit.h>
 
 
 @interface UserLoginTool()
@@ -50,10 +50,23 @@
 + (void)loginRequestPost:(NSString *)urlStr parame:(NSMutableDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure{
     
     
-    
+    NSMutableString * url = [NSMutableString stringWithFormat:@"%@/%@",MainUrl,urlStr];
+    NSMutableDictionary * paramsOption = [NSMutableDictionary dictionary];
+    paramsOption[@"appSecret"] = HTYMRSCREAT;
+    paramsOption[@"timestamp"] = apptimesSince1970;
+    paramsOption[@"operation"] = OPERATION_parame;
+    paramsOption[@"version"] =AppVersion;
+    NSString * token = [[NSUserDefaults standardUserDefaults] stringForKey:AppToken];
+    paramsOption[@"token"] = token?token:@"";
+    paramsOption[@"imei"] = DeviceNo;
+    if (params != nil) { //传入参数不为空
+        [paramsOption addEntriesFromDictionary:params];
+    }
+    paramsOption[@"sign"] = [NSDictionary asignWithMutableDictionary:paramsOption];  //计算asign
+    [paramsOption removeObjectForKey:@"appSecret"];
     
     AFHTTPRequestOperationManager * manager  = [AFHTTPRequestOperationManager manager];
-    [manager POST:urlStr parameters:params success:^void(AFHTTPRequestOperation * requset, id json) {
+    [manager POST:url parameters:params success:^void(AFHTTPRequestOperation * requset, id json) {
         NSLog(@"%@",requset);
         success(json);
     } failure:^void(AFHTTPRequestOperation * reponse, NSError * error) {
@@ -75,16 +88,16 @@
     NSString * token = [[NSUserDefaults standardUserDefaults] stringForKey:AppToken];
     paramsOption[@"token"] = token?token:@"";
     paramsOption[@"imei"] = DeviceNo;
-
-    
-    if (params != nil) {
+    if (params != nil) { //传入参数不为空
         [paramsOption addEntriesFromDictionary:params];
     }
-
-    NSData *data = [[paramsOption objectForKey:key] dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    [paramsOption removeObjectForKey:key];
-    paramsOption[@"profileData"] = str;
+    if (key != nil) {
+        NSData *data = [[paramsOption objectForKey:key] dataUsingEncoding:NSUTF8StringEncoding];
+        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        [paramsOption removeObjectForKey:key];
+        paramsOption[@"profileData"] = str;
+    }
+    
     paramsOption[@"sign"] = [NSDictionary asignWithMutableDictionary:paramsOption];
     [paramsOption removeObjectForKey:@"appSecret"];
     
@@ -92,11 +105,18 @@
     
     MKNetworkOperation *op = [engine operationWithPath:urlStr params:paramsOption httpMethod:@"POST"];
     
-    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+    [op onCompletion:^(MKNetworkOperation *completedOperation) {
         success(completedOperation.responseJSON);
-    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+    } onError:^(NSError *error) {
         failure(error);
     }];
+    
+    
+//    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+//        success(completedOperation.responseJSON);
+//    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+//        failure(error);
+//    }];
     
     [engine enqueueOperation:op];
 }

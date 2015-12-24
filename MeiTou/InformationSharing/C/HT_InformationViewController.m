@@ -72,7 +72,7 @@ static NSString *cellIMain = @"cellIMain";
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
        
-        NSLog(@"%@",json);
+        LWLog(@"%@",json);
         
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
             
@@ -86,7 +86,7 @@ static NSString *cellIMain = @"cellIMain";
         }
         
     } failure:^(NSError *error) {
-        NSLog(@"%@",error);
+        LWLog(@"%@",error);
     }];
     
 }
