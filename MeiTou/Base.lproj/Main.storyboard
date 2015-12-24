@@ -839,8 +839,61 @@
             </objects>
             <point key="canvasLocation" x="-260" y="-148"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="gp6-yL-Fud">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="O9Y-z6-4jZ" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OeW-SC-34k"/>
+                        <viewControllerLayoutGuide type="bottom" id="EPU-4n-bI0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tr7-Qd-CrS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="LoginViewController" translatesAutoresizingMaskIntoConstraints="NO" id="1cS-eH-wfY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlL-H3-Bxz">
+                                <rect key="frame" x="64" y="396" width="192" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="j42-BJ-Oeu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="微信登陆" image="weixin">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnClick:" destination="O9Y-z6-4jZ" eventType="touchUpInside" id="HOi-bu-crm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nlL-H3-Bxz" secondAttribute="centerX" id="1Uf-fp-EmC"/>
+                            <constraint firstItem="EPU-4n-bI0" firstAttribute="top" secondItem="1cS-eH-wfY" secondAttribute="bottom" id="Bv4-RT-ZjL"/>
+                            <constraint firstItem="nlL-H3-Bxz" firstAttribute="width" secondItem="tr7-Qd-CrS" secondAttribute="width" multiplier="0.6" id="Gfd-7C-ngN"/>
+                            <constraint firstItem="1cS-eH-wfY" firstAttribute="leading" secondItem="tr7-Qd-CrS" secondAttribute="leading" id="Iau-Xs-w7F"/>
+                            <constraint firstItem="1cS-eH-wfY" firstAttribute="top" secondItem="tr7-Qd-CrS" secondAttribute="top" id="ZUs-9j-N9i"/>
+                            <constraint firstAttribute="trailing" secondItem="1cS-eH-wfY" secondAttribute="trailing" id="j20-vE-SFN"/>
+                            <constraint firstItem="EPU-4n-bI0" firstAttribute="top" secondItem="nlL-H3-Bxz" secondAttribute="bottom" constant="40" id="zup-Nk-fWz"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="image" destination="1cS-eH-wfY" id="UU6-j0-Nf6"/>
+                        <outlet property="loginButton" destination="nlL-H3-Bxz" id="Ckr-qv-7Vz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cY8-Om-Bpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-432" y="1149"/>
+        </scene>
     </scenes>
     <resources>
         <image name="common_title_top_search" width="15" height="15"/>
+        <image name="weixin" width="24" height="24"/>
     </resources>
 </document>
