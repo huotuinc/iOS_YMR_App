@@ -47,6 +47,31 @@
 #define AppToken @"AppToken"
 
 
+//友盟数据统计
+#define HuoBanMallUMengAppKey @"123"
+#define HuoBanMallUMengSecret @"123"
+
+//ShareSDk数据统计
+#define HuoBanMallShareSdkAppId @"be89777c387c"
+//sina
+#define HuoBanMallShareSdkSinaKey @"1862469055"
+#define HuoBanMallShareSdkSinaSecret @"07ebe0f450679806a23c1bcc7627f4dc"
+#define HuoBanMallShareSdkSinaRedirectUri @"https://api.weibo.com/oauth2/default.html"
+//WeiXin
+#define HuoBanMallBuyWeiXinAppId @"wxf0b37b263cfe4d44"
+#define HuoBanMallShareSdkWeiXinSecret @"d4624c36b6795d1d99dcf0547af5443d"
+//qq
+#define HuoBanMallShareSdkQQKey @"1104945838"
+#define HuoBanMallShareSdkQQSecret @"5hqWhRjQiQfiz0dX"
+
+/****************** app信息本地化 *********************/
+#define WeiXinUserInfo @"WeiXinUserInfo"  //微信返回用户信息
+
+
+/***************************************/
+
+
+
 #ifdef DEBUG
 #define LWLog(...) NSLog(__VA_ARGS__)
 #else

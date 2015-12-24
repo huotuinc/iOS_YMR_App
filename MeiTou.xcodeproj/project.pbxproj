@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6014343B1C1AAF4E00E102B7 /* selectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014343A1C1AAF4E00E102B7 /* selectView.m */; };
-		603A48A71C2BCC2A00D229E4 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A48A61C2BCC2A00D229E4 /* UserModel.m */; };
 		603A48AA1C2BCC4300D229E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A48A91C2BCC4300D229E4 /* LoginViewController.m */; };
 		603A48CC1C2BCFBC00D229E4 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48AE1C2BCFBC00D229E4 /* TencentOpenAPI.framework */; };
 		603A48CD1C2BCFBC00D229E4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 603A48AF1C2BCFBC00D229E4 /* TencentOpenApi_IOS_Bundle.bundle */; };
@@ -24,6 +23,16 @@
 		603A48D71C2BCFBC00D229E4 /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48C91C2BCFBC00D229E4 /* ShareSDKInterfaceAdapter.framework */; };
 		603A48D81C2BCFBC00D229E4 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 603A48CA1C2BCFBC00D229E4 /* ShareSDKUI.bundle */; };
 		603A48D91C2BCFBC00D229E4 /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48CB1C2BCFBC00D229E4 /* ShareSDKUI.framework */; };
+		603A48DC1C2BD18900D229E4 /* AQuthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A48DB1C2BD18900D229E4 /* AQuthModel.m */; };
+		603A48E01C2BD3F700D229E4 /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A48DF1C2BD3F700D229E4 /* AccountTool.m */; };
+		603A48E21C2BEA0900D229E4 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48E11C2BEA0900D229E4 /* libicucore.tbd */; };
+		603A48E41C2BEA2500D229E4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48E31C2BEA2500D229E4 /* libz.tbd */; };
+		603A48E61C2BEA3100D229E4 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48E51C2BEA3100D229E4 /* libstdc++.tbd */; };
+		603A48E81C2BEA4700D229E4 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48E71C2BEA4700D229E4 /* JavaScriptCore.framework */; };
+		603A48EA1C2BEA5100D229E4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48E91C2BEA5100D229E4 /* ImageIO.framework */; };
+		603A48EC1C2BEA5800D229E4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48EB1C2BEA5800D229E4 /* AdSupport.framework */; };
+		603A48EE1C2BEA6400D229E4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48ED1C2BEA6400D229E4 /* libsqlite3.tbd */; };
+		603A48F41C2BEB4E00D229E4 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A48F31C2BEB4E00D229E4 /* UserInfo.m */; };
 		609292901C22A04A0076D589 /* LevelUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6092928F1C22A04A0076D589 /* LevelUpView.m */; };
 		609292941C23A2080076D589 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609292921C23A2080076D589 /* ShareCell.m */; };
 		609292951C23A2080076D589 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609292931C23A2080076D589 /* ShareCell.xib */; };
@@ -249,8 +258,6 @@
 /* Begin PBXFileReference section */
 		601434391C1AAF4E00E102B7 /* selectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectView.h; sourceTree = "<group>"; };
 		6014343A1C1AAF4E00E102B7 /* selectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectView.m; sourceTree = "<group>"; };
-		603A48A51C2BCC2A00D229E4 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		603A48A61C2BCC2A00D229E4 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		603A48A81C2BCC4300D229E4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		603A48A91C2BCC4300D229E4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		603A48AE1C2BCFBC00D229E4 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -281,6 +288,19 @@
 		603A48C91C2BCFBC00D229E4 /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
 		603A48CA1C2BCFBC00D229E4 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
 		603A48CB1C2BCFBC00D229E4 /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
+		603A48DA1C2BD18900D229E4 /* AQuthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQuthModel.h; sourceTree = "<group>"; };
+		603A48DB1C2BD18900D229E4 /* AQuthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQuthModel.m; sourceTree = "<group>"; };
+		603A48DE1C2BD3F700D229E4 /* AccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTool.h; sourceTree = "<group>"; };
+		603A48DF1C2BD3F700D229E4 /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
+		603A48E11C2BEA0900D229E4 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		603A48E31C2BEA2500D229E4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		603A48E51C2BEA3100D229E4 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		603A48E71C2BEA4700D229E4 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/PrivateFrameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		603A48E91C2BEA5100D229E4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		603A48EB1C2BEA5800D229E4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		603A48ED1C2BEA6400D229E4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		603A48F21C2BEB4E00D229E4 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		603A48F31C2BEB4E00D229E4 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		6092928E1C22A04A0076D589 /* LevelUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpView.h; sourceTree = "<group>"; };
 		6092928F1C22A04A0076D589 /* LevelUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUpView.m; sourceTree = "<group>"; };
 		609292911C23A2080076D589 /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
@@ -641,6 +661,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603A48EE1C2BEA6400D229E4 /* libsqlite3.tbd in Frameworks */,
+				603A48EC1C2BEA5800D229E4 /* AdSupport.framework in Frameworks */,
+				603A48EA1C2BEA5100D229E4 /* ImageIO.framework in Frameworks */,
+				603A48E81C2BEA4700D229E4 /* JavaScriptCore.framework in Frameworks */,
+				603A48E61C2BEA3100D229E4 /* libstdc++.tbd in Frameworks */,
+				603A48E41C2BEA2500D229E4 /* libz.tbd in Frameworks */,
+				603A48E21C2BEA0900D229E4 /* libicucore.tbd in Frameworks */,
 				AD43035F75929EF3A81B1C16 /* libPods.a in Frameworks */,
 				603A48D61C2BCFBC00D229E4 /* ShareSDKExtension.framework in Frameworks */,
 				603A48CE1C2BCFBC00D229E4 /* libWeiboSDK.a in Frameworks */,
@@ -674,6 +701,13 @@
 		26A77CB96190A44D86583431 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				603A48ED1C2BEA6400D229E4 /* libsqlite3.tbd */,
+				603A48EB1C2BEA5800D229E4 /* AdSupport.framework */,
+				603A48E91C2BEA5100D229E4 /* ImageIO.framework */,
+				603A48E71C2BEA4700D229E4 /* JavaScriptCore.framework */,
+				603A48E51C2BEA3100D229E4 /* libstdc++.tbd */,
+				603A48E31C2BEA2500D229E4 /* libz.tbd */,
+				603A48E11C2BEA0900D229E4 /* libicucore.tbd */,
 				8698D34D22B86C408994D26D /* libPods.a */,
 			);
 			name = Frameworks;
@@ -682,6 +716,7 @@
 		603A489E1C2BCBA200D229E4 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				603A48DD1C2BD3F700D229E4 /* Tool */,
 				603A489F1C2BCBE200D229E4 /* controller */,
 				603A48A01C2BCBE200D229E4 /* model */,
 				603A48A11C2BCBE200D229E4 /* view */,
@@ -702,8 +737,10 @@
 		603A48A01C2BCBE200D229E4 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				603A48A51C2BCC2A00D229E4 /* UserModel.h */,
-				603A48A61C2BCC2A00D229E4 /* UserModel.m */,
+				603A48F21C2BEB4E00D229E4 /* UserInfo.h */,
+				603A48F31C2BEB4E00D229E4 /* UserInfo.m */,
+				603A48DA1C2BD18900D229E4 /* AQuthModel.h */,
+				603A48DB1C2BD18900D229E4 /* AQuthModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -780,6 +817,16 @@
 				603A48C31C2BCFBC00D229E4 /* WXApiObject.h */,
 			);
 			path = WeChatSDK;
+			sourceTree = "<group>";
+		};
+		603A48DD1C2BD3F700D229E4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				603A48DE1C2BD3F700D229E4 /* AccountTool.h */,
+				603A48DF1C2BD3F700D229E4 /* AccountTool.m */,
+			);
+			name = Tool;
+			path = ../../Tool;
 			sourceTree = "<group>";
 		};
 		6095C2971C2A7D0000DBC029 /* M */ = {
@@ -1823,6 +1870,7 @@
 				F27261BC1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.m in Sources */,
 				6095C29A1C2A7D1B00DBC029 /* InformationModel.m in Sources */,
 				F280268E1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m in Sources */,
+				603A48DC1C2BD18900D229E4 /* AQuthModel.m in Sources */,
 				F2D7AED31C172BAB00725B4E /* HT_About_IntroViewController.m in Sources */,
 				F2FAA9FE1C1A7C4A00A90DA1 /* PraiseCell.m in Sources */,
 				F299447F1C082A0600823E75 /* HT_HomePage_LeftViewController.m in Sources */,
@@ -1830,7 +1878,6 @@
 				F21E44F61C102F0100657249 /* MMDrawerController.m in Sources */,
 				F2D7AEE11C172DC500725B4E /* HT_About_HeaderCView.m in Sources */,
 				F259CF801C292DC20082A912 /* MJIvar.m in Sources */,
-				603A48A71C2BCC2A00D229E4 /* UserModel.m in Sources */,
 				F2FAA9FC1C1A7C4A00A90DA1 /* CommentsCell.m in Sources */,
 				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,
 				F263CA231C157D5300EE78CA /* HT_Par_SubListViewController.m in Sources */,
@@ -1849,6 +1896,7 @@
 				F2FAA9FA1C1A7C4A00A90DA1 /* CallMeCell.m in Sources */,
 				F2137BB81C17BBC10030E7D8 /* HT_Par_MainPickerCView.m in Sources */,
 				F22B23EE1C116EC40009CCF4 /* HT_Par_IteListViewController.m in Sources */,
+				603A48F41C2BEB4E00D229E4 /* UserInfo.m in Sources */,
 				F290850E1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m in Sources */,
 				F28E88321C19285E00E75298 /* HT_Infor_ShareViewController.m in Sources */,
 				F2D7AED01C171D4B00725B4E /* HT_Infor_GroupWebViewController.m in Sources */,
@@ -1879,6 +1927,7 @@
 				F2D91CB91C2004BA007778B8 /* HT_Par_SearchViewController.m in Sources */,
 				F29C69531C166653000A8C29 /* HT_News_HeadTableViewCell.m in Sources */,
 				F263CA0D1C15284C00EE78CA /* HT_Par_ItePaymentResultsViewController.m in Sources */,
+				603A48E01C2BD3F700D229E4 /* AccountTool.m in Sources */,
 				F29944821C082B0D00823E75 /* RootViewController.m in Sources */,
 				F2D7AECC1C17121A00725B4E /* HT_Infor_BottomCView.m in Sources */,
 				F263CA261C157E6500EE78CA /* HT_Par_SubViewController.m in Sources */,
@@ -1990,6 +2039,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2036,6 +2086,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2072,6 +2123,7 @@
 					"$(PROJECT_DIR)/MeiTou/Lib/ShareSDK/UI",
 					"$(PROJECT_DIR)/MeiTou/Lib/libraries/extends/QQSDK",
 					"$(PROJECT_DIR)/MeiTou/Lib/libraries",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiTou/Tools/pchFile.pch";
@@ -2108,6 +2160,7 @@
 					"$(PROJECT_DIR)/MeiTou/Lib/ShareSDK/UI",
 					"$(PROJECT_DIR)/MeiTou/Lib/libraries/extends/QQSDK",
 					"$(PROJECT_DIR)/MeiTou/Lib/libraries",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiTou/Tools/pchFile.pch";

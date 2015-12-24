@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "Measure.h"
+#import "LoginViewController.h"
 //
 //#import "MJExtension.h"
 //#import "UserModel.h"
@@ -54,7 +55,11 @@
 //        NSLog(@"%@",error);
 //    }];
 //    
-    
+//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Mian" bundle:nil];
+//    LoginViewController *login = [story instantiateViewControllerWithIdentifier:@"LoginViewController"];
+//    self.window.rootViewController = login;
     
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
