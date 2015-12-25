@@ -19,12 +19,12 @@
 //unionid = "o76SuuMeJjOp0Tnsr2AQnPD_0RKs";
 
 
-@property(nonatomic,strong) NSString * access_token;
-@property(nonatomic,assign) long  expires_in;
+@property (nonatomic,strong) NSString * access_token;
+@property (nonatomic,assign) long     expires_in;
 //账号有效的时间
-@property(nonatomic,strong)NSDate * expiresTime;
-@property(nonatomic,strong) NSString * openid;
-@property(nonatomic,strong) NSString * scope;
-@property(nonatomic,strong) NSString * unionid;
-@property(nonatomic,strong) NSString * refresh_token;
+@property (nonatomic,strong) NSDate   * expiresTime;
+@property (nonatomic,strong) NSString * openid;
+@property (nonatomic,strong) NSString * scope;
+@property (nonatomic,strong) NSString * unionid;
+@property (nonatomic,strong) NSString * refresh_token;
 @end

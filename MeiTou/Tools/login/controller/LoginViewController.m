@@ -27,9 +27,9 @@
     
     self.image.contentMode = UIViewContentModeScaleAspectFit;
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OquthByWeiXinSuccess2:) name:@"ToGetUserInfo" object:nil];
-//    
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WeiXinFailureToUserOrigin1) name:@"ToGetUserInfoError" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OquthByWeiXinSuccess:) name:@"ToGetUserInfo" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WeiXinFailureToUserOrigin1) name:@"ToGetUserInfoError" object:nil];
     
 //    [UIViewController MonitorNetWork];
     
@@ -38,6 +38,21 @@
     
     
 }
+
+
+- (void)OquthByWeiXinSuccess:(NSNotification *) note{
+
+    LWLog(@"-=------------%@",note);
+    AQuthModel * account = [AccountTool account];
+    if (account.refresh_token.length) {
+        [self toRefreshaccess_token];
+    }else{
+        [self accessTokenWithCode:note.userInfo[@"code"]];
+    }
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"ToGetUserInfo" object:nil];
+}
+
 
 - (IBAction)loginBtnClick:(id)sender {
     if ([AccountTool verifyAccess_Token_Effect]) {
@@ -62,7 +77,7 @@
     __weak LoginViewController * wself = self;
     AQuthModel * mode = [AccountTool account];
     NSString * ss = [NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/refresh_token?appid=%@&grant_type=refresh_token&refresh_token=%@",HuoBanMallBuyWeiXinAppId,mode.refresh_token];
-    [UserLoginTool loginRequestGet:ss parame:nil success:^(id json) {
+    [UserLoginTool loginWeiXinRequestGet:ss parame:nil success:^(id json) {
         AQuthModel * aquth = [AQuthModel objectWithKeyValues:json];
         [AccountTool saveAccount:aquth];
         //获取用户信息
@@ -93,7 +108,7 @@
     __weak LoginViewController * wself = self;
     //进行授权
     NSString *url =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code",HuoBanMallBuyWeiXinAppId,HuoBanMallShareSdkWeiXinSecret,code];
-    [UserLoginTool loginRequestGet:url parame:nil success:^(id json) {
+    [UserLoginTool loginWeiXinRequestGet:url parame:nil success:^(id json) {
         
         //        NSLog(@"accessTokenWithCode%@",json);
         AQuthModel * aquth = [AQuthModel objectWithKeyValues:json];
@@ -101,7 +116,7 @@
         //获取用户信息
         [wself getUserInfo:aquth];
     } failure:^(NSError *error) {
-        //        NSLog(@"%@",error.description);
+                NSLog(@"%@",error.description);
     }];
 }
 
@@ -114,11 +129,8 @@
     NSMutableDictionary * parame = [NSMutableDictionary dictionary];
     parame[@"access_token"] = aquth.access_token;
     parame[@"openid"] = aquth.openid;
-    [UserLoginTool loginRequestGet:@"https://api.weixin.qq.com/sns/userinfo" parame:parame success:^(id json) {
+    [UserLoginTool loginWeiXinRequestGet:@"https://api.weixin.qq.com/sns/userinfo" parame:parame success:^(id json) {
         UserInfo * userInfo = [UserInfo objectWithKeyValues:json];
-        NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
-        [NSKeyedArchiver archiveRootObject:userInfo toFile:fileName];
         //向服务端提供微信数据
         [wself toPostWeiXinUserMessage:userInfo];
         //获取主地址
@@ -148,16 +160,26 @@
     parame[@"headimgurl"] = user.headimgurl;
     parame[@"unionid"] = user.unionid;
  
-    [UserLoginTool loginRequestPost:@"login" parame:parame success:^(id json) {
+    [UserLoginTool loginRequestPostWithFile:@"login" parame:parame success:^(id json) {
         LWLog(@"%@",json);
         if ([json[@"code"] integerValue] == 200) {
+            UserInfo *tempUser = [UserInfo objectWithKeyValues:json[@"data"]];
+            tempUser.city = user.city;
+            tempUser.country = user.country;
+            tempUser.headimgurl = user.headimgurl;
+            tempUser.language = user.language;
+            tempUser.openid = user.openid;
+            tempUser.privilege = user.privilege;
+            tempUser.province = user.province;
+            tempUser.unionid = user.unionid;
 
-            
-            
+            NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+            NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+            [NSKeyedArchiver archiveRootObject:tempUser toFile:fileName];
         }
     } failure:^(NSError *error) {
 
-    }];
+    }withFileKey:nil];
     
 }
 

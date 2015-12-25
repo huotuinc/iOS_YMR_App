@@ -27,15 +27,31 @@
 
  */
 
-@property(nonatomic,strong) NSString * city;
-@property(nonatomic,strong) NSString * country;
-@property(nonatomic,strong) NSString * headimgurl;
-@property(nonatomic,strong) NSString * language;
-@property(nonatomic,strong) NSString * nickname;
-@property(nonatomic,strong) NSString * openid;
-@property(nonatomic,strong) NSArray * privilege;
-@property(nonatomic,strong) NSString * province;
-@property(nonatomic,strong) NSNumber * sex;
-@property(nonatomic,strong) NSString * unionid;
-@property(nonatomic,strong) NSString *relatedType;
+@property (nonatomic,strong) NSString * city;
+@property (nonatomic,strong) NSString * country;
+@property (nonatomic,strong) NSString * headimgurl;
+@property (nonatomic,strong) NSString * language;
+@property (nonatomic,strong) NSString * nickname;
+@property (nonatomic,strong) NSString * openid;
+@property (nonatomic,strong) NSArray  * privilege;
+@property (nonatomic,strong) NSString * province;
+@property (nonatomic,strong) NSNumber * sex;
+@property (nonatomic,strong) NSString * unionid;
+
+
+
+@property (nonatomic,strong) NSString *isBindMobile;
+@property (nonatomic,strong) NSString *headUrl;
+@property (nonatomic,strong) NSNumber *merchantId;
+@property (nonatomic,strong) NSString *mobile;
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSNumber *score;
+@property (nonatomic,strong) NSString *userId;
+@property (nonatomic,strong) NSString *token;
+@property (nonatomic,strong) NSDictionary *userLevel;
+@property (nonatomic,strong) NSString *userName;
+
+
+
+
 @end

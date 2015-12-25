@@ -66,7 +66,9 @@
 
 /****************** app信息本地化 *********************/
 #define WeiXinUserInfo @"WeiXinUserInfo"  //微信返回用户信息
-
+#define LoginStatus @"LoginStatus" //登录标志
+#define Success @"Success" //成功
+#define Failure @"Failure" //失败
 
 /***************************************/
 

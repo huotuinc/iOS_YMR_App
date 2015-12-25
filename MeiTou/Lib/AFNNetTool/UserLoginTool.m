@@ -38,43 +38,27 @@
     [paramsOption removeObjectForKey:@"appSecret"];
     AFHTTPRequestOperationManager * manager  = [AFHTTPRequestOperationManager manager];
     [manager GET:url parameters:paramsOption success:^void(AFHTTPRequestOperation * request, id json) {
-        NSLog(@"%@",request);
+//        NSLog(@"%@",request);
        success(json);
     } failure:^void(AFHTTPRequestOperation * reponse, NSError * error) {
         failure(error);
-        NSLog(@"%@",reponse);
+//        NSLog(@"%@",reponse);
     }];
 }
 
-
-+ (void)loginRequestPost:(NSString *)urlStr parame:(NSMutableDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure{
-    
-    
-    NSMutableString * url = [NSMutableString stringWithFormat:@"%@/%@",MainUrl,urlStr];
-    NSMutableDictionary * paramsOption = [NSMutableDictionary dictionary];
-    paramsOption[@"appSecret"] = HTYMRSCREAT;
-    paramsOption[@"timestamp"] = apptimesSince1970;
-    paramsOption[@"operation"] = OPERATION_parame;
-    paramsOption[@"version"] =AppVersion;
-    NSString * token = [[NSUserDefaults standardUserDefaults] stringForKey:AppToken];
-    paramsOption[@"token"] = token?token:@"";
-    paramsOption[@"imei"] = DeviceNo;
-    if (params != nil) { //传入参数不为空
-        [paramsOption addEntriesFromDictionary:params];
-    }
-    paramsOption[@"sign"] = [NSDictionary asignWithMutableDictionary:paramsOption];  //计算asign
-    [paramsOption removeObjectForKey:@"appSecret"];
-    
++ (void)loginWeiXinRequestGet:(NSString *)urlStr parame:(NSMutableDictionary *) params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure {
     AFHTTPRequestOperationManager * manager  = [AFHTTPRequestOperationManager manager];
-    [manager POST:url parameters:params success:^void(AFHTTPRequestOperation * requset, id json) {
-        NSLog(@"%@",requset);
+    [manager GET:urlStr parameters:params success:^void(AFHTTPRequestOperation * request, id json) {
+//        NSLog(@"%@",request);
         success(json);
     } failure:^void(AFHTTPRequestOperation * reponse, NSError * error) {
-        
-        NSLog(@"%@",reponse);
         failure(error);
+//        NSLog(@"%@",reponse);
     }];
 }
+
+
+
 
 + (void)loginRequestPostWithFile:(NSString *)urlStr parame:(NSMutableDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure withFileKey:(NSString *)key{
     
