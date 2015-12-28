@@ -7,14 +7,20 @@
 //
 
 #import "HT_Infor_CommentViewController.h"
-
 #import "HT_Infor_CommentHeadCView.h"
 #import "HT_Infor_CommentTableViewCell.h"
 #import "HT_Infor_BottomCView.h"
 #import "HT_Infor_CommentCellHeaderView.h"
+#import "CommentModel.h"
+#import "UserInfo.h"
+
 
 static NSString *cellIComment=@"cellIComment";
 @interface HT_Infor_CommentViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
+
+@property (nonatomic, strong) NSMutableArray *commentList;
+
+@property (nonatomic, strong) UserInfo *user;
 
 @end
 
@@ -32,14 +38,8 @@ static NSString *cellIComment=@"cellIComment";
     self.navigationController.navigationBar.translucent=NO;
     //    self.navigationController.navigationBar.barTintColor = [];
     [self createBarButtonItem];
-
     
-    
-    
-    
-    
-    
-    
+    [self getNewShareList];
 }
 
 - (void)viewDidLoad {
@@ -50,7 +50,129 @@ static NSString *cellIComment=@"cellIComment";
     [self createFooterView];
     [self createTableView];
     [self createBottomView];
+    
+    
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
 }
+
+
+#pragma mark 网络请求列表数据
+/**
+ *  下拉刷新
+ */
+- (void)getNewShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"lastId"] = @0;
+    dic[@"shareId"] = @2;
+#warning 修改shareId
+    [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            [self.commentList removeAllObjects];
+            
+            NSArray *temp = [CommentModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            
+            [self.commentList addObjectsFromArray:temp];
+            
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    }];
+    
+}
+
+/**
+ *  上拉加载更多
+ */
+- (void)getMoreShareList {
+    
+    CommentModel *model = [self.commentList lastObject];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"lastId"] = model.pid;
+    dic[@"shareId"] = @2;
+#warning 修改shareId
+    [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [CommentModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            
+            [self.commentList addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+#pragma mark  网络请求回复评论
+
+-(void)addCommentWithInformation {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"userId"] = self.user.userId;
+    dic[@"shareId"] = @2;
+    dic[@"content"] =  @"哈哈哈哈哈哈哈哈哈哈哈哈";
+#warning 修改shareId 以及content
+    [UserLoginTool loginRequestPostWithFile:@"addComment" parame:dic success:^(id json) {
+        LWLog(@"%@",json);
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            LWLog(@"%@",json[@"systemResultDescription"]);
+        }else {
+            LWLog(@"%@",json[@"systemResultDescription"]);
+        }
+        
+    } failure:^(NSError *error) {
+        
+    } withFileKey:nil];
+    
+    
+}
+
+#pragma mark 网络请求增加评论
+
+- (void)addReplyWithComment {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"userId"] = self.user.userId;
+    dic[@"parentId"] = @1;
+    dic[@"content"] = @"啊啊啊啊啊啊啊";
+#warning 修改parentId 以及content
+    [UserLoginTool loginRequestPostWithFile:@"addReply" parame:dic success:^(id json) {
+        LWLog(@"%@",json);
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }else {
+            LWLog(@"%@",json[@"systemResultDescription"]);
+        }
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    } withFileKey:nil];
+}
+
+#pragma mark 为文章点赞
+
+- (void)clickPraiseWithShare {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"userId"] = self.user.userId;
+    dic[@"parentId"] = @1;
+    dic[@"content"] = @"啊啊啊啊啊啊啊";
+}
+
+
 
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
@@ -111,8 +233,12 @@ static NSString *cellIComment=@"cellIComment";
         
     }else if(buttonIndex == 1){
         
-    }else if(buttonIndex == 2){
+#warning 回复评论
+        [self addCommentWithInformation];
         
+    }else if(buttonIndex == 2){
+#warning 对评论进行回复
+        [self addReplyWithComment];
     }else{
         
     }

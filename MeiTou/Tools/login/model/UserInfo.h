@@ -7,7 +7,7 @@
 //  用户信息
 
 #import <Foundation/Foundation.h>
-
+#import "LevelModel.h"
 @interface UserInfo : NSObject
 
 /**
@@ -46,9 +46,9 @@
 @property (nonatomic,strong) NSString *mobile;
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSNumber *score;
-@property (nonatomic,strong) NSString *userId;
+@property (nonatomic,strong) NSNumber *userId;
 @property (nonatomic,strong) NSString *token;
-@property (nonatomic,strong) NSDictionary *userLevel;
+@property (nonatomic,strong) LevelModel *userLevel;
 @property (nonatomic,strong) NSString *userName;
 
 

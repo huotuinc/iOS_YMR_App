@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6014343B1C1AAF4E00E102B7 /* selectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014343A1C1AAF4E00E102B7 /* selectView.m */; };
+		60304A241C2D153C00AE1AA1 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60304A231C2D153C00AE1AA1 /* CommentModel.m */; };
+		60304A271C2D159D00AE1AA1 /* ReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60304A261C2D159D00AE1AA1 /* ReplyModel.m */; };
+		60304A2A1C2D175500AE1AA1 /* LevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60304A291C2D175500AE1AA1 /* LevelModel.m */; };
 		603A48AA1C2BCC4300D229E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A48A91C2BCC4300D229E4 /* LoginViewController.m */; };
 		603A48CC1C2BCFBC00D229E4 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48AE1C2BCFBC00D229E4 /* TencentOpenAPI.framework */; };
 		603A48CD1C2BCFBC00D229E4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 603A48AF1C2BCFBC00D229E4 /* TencentOpenApi_IOS_Bundle.bundle */; };
@@ -277,6 +280,12 @@
 /* Begin PBXFileReference section */
 		601434391C1AAF4E00E102B7 /* selectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectView.h; sourceTree = "<group>"; };
 		6014343A1C1AAF4E00E102B7 /* selectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectView.m; sourceTree = "<group>"; };
+		60304A221C2D153C00AE1AA1 /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		60304A231C2D153C00AE1AA1 /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		60304A251C2D159D00AE1AA1 /* ReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyModel.h; sourceTree = "<group>"; };
+		60304A261C2D159D00AE1AA1 /* ReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyModel.m; sourceTree = "<group>"; };
+		60304A281C2D175500AE1AA1 /* LevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelModel.h; sourceTree = "<group>"; };
+		60304A291C2D175500AE1AA1 /* LevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelModel.m; sourceTree = "<group>"; };
 		603A48A81C2BCC4300D229E4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		603A48A91C2BCC4300D229E4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		603A48AE1C2BCFBC00D229E4 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -799,6 +808,8 @@
 				603A48F31C2BEB4E00D229E4 /* UserInfo.m */,
 				603A48DA1C2BD18900D229E4 /* AQuthModel.h */,
 				603A48DB1C2BD18900D229E4 /* AQuthModel.m */,
+				60304A281C2D175500AE1AA1 /* LevelModel.h */,
+				60304A291C2D175500AE1AA1 /* LevelModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -894,6 +905,10 @@
 				6095C2991C2A7D1B00DBC029 /* InformationModel.m */,
 				6095C29E1C2A842700DBC029 /* ShareType.h */,
 				6095C29F1C2A842700DBC029 /* ShareType.m */,
+				60304A221C2D153C00AE1AA1 /* CommentModel.h */,
+				60304A231C2D153C00AE1AA1 /* CommentModel.m */,
+				60304A251C2D159D00AE1AA1 /* ReplyModel.h */,
+				60304A261C2D159D00AE1AA1 /* ReplyModel.m */,
 			);
 			name = M;
 			path = C/M;
@@ -1964,6 +1979,7 @@
 				60DC991E1C2CE0F500F50A5D /* UIProgressView+AFNetworking.m in Sources */,
 				F259CF861C292DC20082A912 /* NSObject+MJKeyValue.m in Sources */,
 				F20697A81C15B72900ED2017 /* HT_Infor_NewsViewController.m in Sources */,
+				60304A271C2D159D00AE1AA1 /* ReplyModel.m in Sources */,
 				F27261DF1C07FE530081EC95 /* HT_Par_SubListTableViewCell.m in Sources */,
 				F2F968591C158511000045B1 /* HT_Par_SubBottomView.m in Sources */,
 				F259CF841C292DC20082A912 /* MJTypeEncoding.m in Sources */,
@@ -2060,6 +2076,7 @@
 				609292941C23A2080076D589 /* ShareCell.m in Sources */,
 				F21C19101C1E670700E717A8 /* HT_HomePage_TopUpViewController.m in Sources */,
 				F2D91CB91C2004BA007778B8 /* HT_Par_SearchViewController.m in Sources */,
+				60304A2A1C2D175500AE1AA1 /* LevelModel.m in Sources */,
 				F29C69531C166653000A8C29 /* HT_News_HeadTableViewCell.m in Sources */,
 				F263CA0D1C15284C00EE78CA /* HT_Par_ItePaymentResultsViewController.m in Sources */,
 				60DC991F1C2CE0F500F50A5D /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -2086,6 +2103,7 @@
 				F288685D1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.m in Sources */,
 				F259CF931C29305F0082A912 /* NSDictionary+HuoBanMallSign.m in Sources */,
 				F206B36B1C0D3E0A00C800BE /* HT_HomePage_PersonViewTableViewController.m in Sources */,
+				60304A241C2D153C00AE1AA1 /* CommentModel.m in Sources */,
 				F2E443431C187D9F0077B904 /* HT_Par_IteCooperationCView.m in Sources */,
 				F22B23F11C1178730009CCF4 /* HT_Par_IteResultViewController.m in Sources */,
 				F27261591C07E61B0081EC95 /* main.m in Sources */,
@@ -2268,7 +2286,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiTou/Tools/pchFile.pch";
 				INFOPLIST_FILE = MeiTou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2305,7 +2323,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiTou/Tools/pchFile.pch";
 				INFOPLIST_FILE = MeiTou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

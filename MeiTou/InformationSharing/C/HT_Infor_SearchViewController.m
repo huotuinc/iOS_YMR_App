@@ -7,8 +7,13 @@
 //
 
 #import "HT_Infor_SearchViewController.h"
+#import "InformationModel.h"
 
 @interface HT_Infor_SearchViewController ()<UISearchBarDelegate>
+
+@property (nonatomic, strong) NSString *searchKey;
+
+@property (nonatomic, strong) NSMutableArray *shareList;
 
 @end
 
@@ -29,6 +34,68 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
     [self createSearchBar];
+    self.shareList = [NSMutableArray array];
+}
+
+/**
+ *  下拉刷新
+ */
+- (void)getNewShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"lastId"] = @0;
+    dic[@"key"] = self.searchKey;
+    
+    
+    [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [InformationModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.shareList removeAllObjects];
+            
+            [self.shareList addObjectsFromArray:temp];
+            
+//            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    }];
+    
+}
+
+/**
+ *  上拉加载更多
+ */
+- (void)getMoreShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"key"] = self.searchKey;
+    InformationModel *info = [self.shareList lastObject];
+    dic[@"lastId"] = info.pid;
+    
+    
+    [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
+        
+        NSLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [InformationModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.shareList addObjectsFromArray:temp];
+            
+//            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
 }
 
 

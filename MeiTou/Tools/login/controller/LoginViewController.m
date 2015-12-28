@@ -12,6 +12,8 @@
 #import "WXApi.h"
 #import "WXApiObject.h"
 #import "AccountTool.h"
+#import "AppDelegate.h"
+#import "RootViewController.h"
 
 @interface LoginViewController ()<WXApiDelegate>
 
@@ -162,8 +164,8 @@
  
     [UserLoginTool loginRequestPostWithFile:@"login" parame:parame success:^(id json) {
         LWLog(@"%@",json);
-        if ([json[@"code"] integerValue] == 200) {
-            UserInfo *tempUser = [UserInfo objectWithKeyValues:json[@"data"]];
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            UserInfo *tempUser = [UserInfo objectWithKeyValues:json[@"resultData"][@"data"]];
             tempUser.city = user.city;
             tempUser.country = user.country;
             tempUser.headimgurl = user.headimgurl;
@@ -176,12 +178,39 @@
             NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
             NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
             [NSKeyedArchiver archiveRootObject:tempUser toFile:fileName];
+            
+            
+            
+            [self UserLoginSuccess];
         }
     } failure:^(NSError *error) {
 
     }withFileKey:nil];
     
 }
+
+
+/**
+ *  用户登录成功
+ *
+ *  @param note <#note description#>
+ */
+- (void)UserLoginSuccess{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSUserDefaults standardUserDefaults] setObject:Success forKey:LoginStatus];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //        [MBProgressHUD hideHUD];
+        
+//        AppDelegate * de = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//        de.SwitchAccount = @"first";
+        RootViewController * root = [[RootViewController alloc] init];
+        [UIApplication sharedApplication].keyWindow.rootViewController = root;
+    });
+}
+
 
 
 - (void)WeiXinFailureToUserOrigin1{
