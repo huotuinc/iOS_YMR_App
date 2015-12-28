@@ -36,6 +36,7 @@
 		603A48EC1C2BEA5800D229E4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48EB1C2BEA5800D229E4 /* AdSupport.framework */; };
 		603A48EE1C2BEA6400D229E4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48ED1C2BEA6400D229E4 /* libsqlite3.tbd */; };
 		603A48F41C2BEB4E00D229E4 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A48F31C2BEB4E00D229E4 /* UserInfo.m */; };
+		604A6C7B1C31232900971FCA /* CrowdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 604A6C7A1C31232900971FCA /* CrowdModel.m */; };
 		609292901C22A04A0076D589 /* LevelUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6092928F1C22A04A0076D589 /* LevelUpView.m */; };
 		609292941C23A2080076D589 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609292921C23A2080076D589 /* ShareCell.m */; };
 		609292951C23A2080076D589 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609292931C23A2080076D589 /* ShareCell.xib */; };
@@ -329,6 +330,8 @@
 		603A48ED1C2BEA6400D229E4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		603A48F21C2BEB4E00D229E4 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		603A48F31C2BEB4E00D229E4 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		604A6C791C31232900971FCA /* CrowdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdModel.h; sourceTree = "<group>"; };
+		604A6C7A1C31232900971FCA /* CrowdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdModel.m; sourceTree = "<group>"; };
 		6092928E1C22A04A0076D589 /* LevelUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpView.h; sourceTree = "<group>"; };
 		6092928F1C22A04A0076D589 /* LevelUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUpView.m; sourceTree = "<group>"; };
 		609292911C23A2080076D589 /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
@@ -1449,6 +1452,8 @@
 			children = (
 				F211BC041C1819A00033B59E /* HT_Par_IteChociePickerNModel.h */,
 				F211BC051C1819A00033B59E /* HT_Par_IteChociePickerNModel.m */,
+				604A6C791C31232900971FCA /* CrowdModel.h */,
+				604A6C7A1C31232900971FCA /* CrowdModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -2056,6 +2061,7 @@
 				F27261F31C07FE9E0081EC95 /* HT_Infor_HeadCView.m in Sources */,
 				F2FAA9F61C1A7C4A00A90DA1 /* CallMeController.m in Sources */,
 				F2C9F8481C0C576500FC454B /* HT_HomePage_LeftBottomView.m in Sources */,
+				604A6C7B1C31232900971FCA /* CrowdModel.m in Sources */,
 				F259CF951C29305F0082A912 /* UIViewController+NAV.m in Sources */,
 				F21E44F51C102F0100657249 /* MMDrawerBarButtonItem.m in Sources */,
 				F263CA001C151C1C00EE78CA /* HT_Par_ItePaymentOrderCView.m in Sources */,

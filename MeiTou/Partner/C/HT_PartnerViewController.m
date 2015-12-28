@@ -15,7 +15,7 @@
 #import "HT_Par_SearchViewController.h"
 #import "UserLoginTool.h"
 #import "HT_Par_SearchCView.h"
-
+#import "CrowdModel.h"
 #import "MJExtension.h"
 
 
@@ -33,6 +33,10 @@ static NSString *cellMain = @"cellMain";
 
 
 @interface HT_PartnerViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) NSMutableArray *CrowdList;
+
+@property (nonatomic, strong) NSString *searchKey;
 
 @end
 
@@ -54,6 +58,8 @@ static NSString *cellMain = @"cellMain";
 
     [self createBarButtonItem];
     
+    [self getNewShareList];
+    
     
 }
 
@@ -62,13 +68,88 @@ static NSString *cellMain = @"cellMain";
     // Do any additional setup after loading the view.
     
 //    [_tableView registerNib:[UINib nibWithNibName:@"HT_Cpn_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
-
     
+    self.CrowdList = [NSMutableArray array];
     
+    self.searchKey = [NSString string];
     
     [self createTopView];
     [self createTableView];
 }
+
+#pragma mark 网络请求
+
+/**
+ *  下拉刷新
+ */
+- (void)getNewShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"lastId"] = nil;
+    dic[@"key"] = self.searchKey;
+    
+    
+    [UserLoginTool loginRequestGet:@"getCrowdFundingList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [CrowdModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.CrowdList removeAllObjects];
+            
+            [self.CrowdList addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    }];
+    
+}
+
+/**
+ *  上拉加载更多
+ */
+- (void)getMoreShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"key"] = self.searchKey;
+    CrowdModel *info = [self.CrowdList lastObject];
+    dic[@"lastId"] = info.pid;
+    
+    
+    [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [CrowdModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.CrowdList addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
     [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
