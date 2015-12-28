@@ -19,6 +19,8 @@
 #import "HT_Par_SearchCView.h"
 #import "InformationModel.h"
 
+#import "MJRefresh.h"
+#import "UIScrollView+MJRefresh.h"
 
 
 static NSString *cellIMain = @"cellIMain";
@@ -42,9 +44,8 @@ static NSString *cellIMain = @"cellIMain";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    [self createBarButtonItem];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIMain];
-    
+    [self createBarButtonItem];
     [self getNewShareList];
     
 }
@@ -54,10 +55,39 @@ static NSString *cellIMain = @"cellIMain";
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor cyanColor];
     self.shareList = [NSMutableArray array];
+    [self setupRefresh];
+    
     
     [self createTopView];
     [self createTableView];
     [self createBottomView];
+    
+    
+}
+- (void)setupRefresh
+{
+    
+    
+    MJRefreshNormalHeader * headRe = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getNewShareList)];
+    _tableView.mj_header = headRe;
+    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
+    //    [self.tableView addHeaderWithTarget:self action:@selector(getNewData)];
+    //#warning 自动刷新(一进入程序就下拉刷新)
+    //    [self.tableView headerBeginRefreshing];
+    // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
+    //    self.tableView.headerPullToRefreshText = @"下拉可以刷新了";
+    //    self.tableView.headerReleaseToRefreshText = @"松开马上刷新了";
+    //    self.tableView.headerRefreshingText = @"正在刷新最新数据,请稍等";
+    
+    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
+    
+    MJRefreshAutoNormalFooter * Footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(getMoreShareList)];
+    _tableView.mj_footer = Footer;
+    
+    //    [self.tableView addFooterWithTarget:self action:@selector(getMoreGoodList)];
+    
+    
+    
 }
 
 /**
@@ -71,7 +101,7 @@ static NSString *cellIMain = @"cellIMain";
     
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
-       
+        
         LWLog(@"%@",json);
         
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
@@ -84,6 +114,7 @@ static NSString *cellIMain = @"cellIMain";
             
             [_tableView reloadData];
         }
+        [_tableView.mj_header endRefreshing];
         
     } failure:^(NSError *error) {
         LWLog(@"%@",error);
@@ -104,7 +135,7 @@ static NSString *cellIMain = @"cellIMain";
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
         
-        LWLog(@"%@",json);
+        NSLog(@"%@",json);
         
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
             
@@ -114,7 +145,7 @@ static NSString *cellIMain = @"cellIMain";
             
             [_tableView reloadData];
         }
-        
+        [_tableView.mj_footer endRefreshing];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
@@ -138,13 +169,14 @@ static NSString *cellIMain = @"cellIMain";
 }
 
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/1100*70, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/1100*70, SCREEN_WITH , SCREEN_HEIGHT-64-SCREEN_HEIGHT/1100*(90+70)) style:UITableViewStyleGrouped];
+    NSLog(@"**************%f**********",_bottomView.frame.size.height);
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.backgroundColor = COLOR_BACK_MAIN;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
-   
+    [self setupRefresh];
 }
 -(void)createClearView{
     _clearView=[[UIView alloc]initWithFrame:CGRectMake(SCREEN_WITH/2-SCREEN_WITH/640*90/2, _bottomView.frame.origin.y-SCREEN_WITH/640*90/2, SCREEN_WITH/640*90, SCREEN_WITH/640*90/2)];
@@ -152,7 +184,7 @@ static NSString *cellIMain = @"cellIMain";
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheClearView)];
     [_clearView addGestureRecognizer:tap];
     [self.view insertSubview:_clearView aboveSubview:_bottomView];
-
+    
 }
 
 -(void)createBottomView{
@@ -164,8 +196,7 @@ static NSString *cellIMain = @"cellIMain";
     [_bottomView.imageVShare addGestureRecognizer:tapA];
     [self.view addSubview:_bottomView];
     [self createClearView];
-
-
+    
 }
 
 -(void)createTopView{
@@ -185,9 +216,8 @@ static NSString *cellIMain = @"cellIMain";
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)clickRightButton{
-    HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
-    [self.navigationController pushViewController:share animated:YES];
-
+    
+    
 }
 -(void)tapTheSearchView{
     HT_Infor_SearchViewController *search=[[HT_Infor_SearchViewController alloc]init];
@@ -199,34 +229,41 @@ static NSString *cellIMain = @"cellIMain";
     [self.navigationController pushViewController:share animated:YES];
 }
 -(void)tapTheShareView{
-    NSLog(@"dsfgdshfds***************");
     HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
     [self.navigationController pushViewController:share animated:YES];
 }
+
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-        HT_Infor_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIMain forIndexPath:indexPath];
-    if (indexPath.section==0) {
-        cell.imageVState.image=[UIImage imageNamed:@"zhiding"];
+    HT_Infor_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIMain forIndexPath:indexPath];
+    if (_shareList.count != 0) {
+        InformationModel *model =_shareList[indexPath.section];
+        if (model.top==YES) {
+            cell.imageVState.image=[UIImage imageNamed:@"zhiding"];
+        }
+        cell.labelDate.text=[self changeTheTimeStamps:(NSNumber *)model.time];
+        cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
+        cell.labelShare.text=[NSString stringWithFormat:@"%@",model.relayScore];
+        cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
+        cell.labelScore.attributedText=[self GetAttributedString:[NSString stringWithFormat:@"转发得%@分",model.relayScore] withKeyWord:[NSString stringWithFormat:@"%@分",model.relayScore]  KeyWordColor:COLOR_BUTTON_RED];
+        cell.labelCount.text=[NSString stringWithFormat:@"%@个赞",model.pid];
+        cell.labelContent.text=model.content;
+        cell.labelTitle.text = model.title;
+        [cell.imageVMain sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.img]] placeholderImage:[UIImage imageNamed:@""]];
+        [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.userHeadUrl]] placeholderImage:[UIImage imageNamed:@""]];
     }
-    if (indexPath.section==1) {
-    }
-    if (indexPath.section==2) {
-    }
-
+    
+    
     cell.backgroundColor=COLOR_BACK_MAIN;
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
-    
-    
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return _shareList.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return SCREEN_HEIGHT/1150*635 ;
@@ -245,8 +282,6 @@ static NSString *cellIMain = @"cellIMain";
         HT_Infor_GroupViewController *group=[[HT_Infor_GroupViewController alloc]init];
         [self.navigationController pushViewController:group animated:YES];
     }
-
-
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -264,6 +299,56 @@ static NSString *cellIMain = @"cellIMain";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma theMethodInTableViewCell
+
+/**
+ *  创建关键字高亮字体颜色的字符串
+ *
+ *  @param strText    原内容
+ *  @param strKeyWord 关键字
+ *  @param Color      关键字颜色
+ *
+ *  @return
+ */
+-(NSMutableAttributedString*)GetAttributedString:(NSString*)strText withKeyWord:(NSString*)strKeyWord KeyWordColor:(UIColor*)Color
+{
+    if (strText==nil || strKeyWord==nil || Color==nil)
+    {
+        return nil;
+    }
+    
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:strText];
+    if ( [strKeyWord isEqualToString:@""] )
+    {
+        return str;
+    }
+    
+    NSRange range = [strText rangeOfString:strKeyWord];
+    if (range.location == NSNotFound)
+    {
+        return str;
+    }
+    
+    [str addAttribute:NSForegroundColorAttributeName value:Color range:range];
+    
+    return str;
+}
+/**
+ *  13位时间戳转为正常时间(可设置样式)
+ *
+ *  @param time 时间戳
+ *
+ *  @return
+ */
+-(NSString *)changeTheTimeStamps:(NSNumber *)time{
+    //实例化一个NSDateFormatter对象
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //设定时间格式,这里可以设置成自己需要的格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    //将13位时间戳转为正常时间格式
+    NSString * str = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:[time longLongValue]/1000]];
+    return str;
 }
 
 /*

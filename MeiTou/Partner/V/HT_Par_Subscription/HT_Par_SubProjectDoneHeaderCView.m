@@ -18,6 +18,12 @@
     _imageVRight.image=[UIImage imageNamed:@"common_content_right_more"];
     _imageVState.image=[UIImage imageNamed:@"crowdfunding_content_center_success"];
     _imageVLineA.image=[UIImage imageNamed:@"line1"];
+    _imageVA.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVB.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVC.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVD.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVE.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVMore.image=[UIImage imageNamed:@"common_content_center_more"];
     
     _labelEnd.text=@"结束时间:";
     _labelStart.text=@"起购:";

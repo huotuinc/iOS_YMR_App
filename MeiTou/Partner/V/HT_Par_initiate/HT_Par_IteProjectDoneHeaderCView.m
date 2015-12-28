@@ -17,7 +17,12 @@
     _imageVRight.image=[UIImage imageNamed:@"common_content_right_more"];
     _imagevState.image=[UIImage imageNamed:@"crowdfunding_content_center_success"];
     _imageVLine.image=[UIImage imageNamed:@"line1"];
-    
+    _imageVA.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVB.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVC.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVD.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVE.image=[UIImage imageNamed:@"sides_menu_tou"];
+    _imageVMore.image=[UIImage imageNamed:@"common_content_center_more"];
     _labelEnd.text=@"结束时间:";
     _labelStart.text=@"起购:";
     _labelTarget.text=@"目标金额:";
@@ -55,7 +60,7 @@
     _labelSuccess.textColor=COLOR_TEXT_TITILE;
     
     _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(34)];
-    _labelSuccess.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
+    _labelSuccess.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelEnd.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelStart.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelTarget.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
@@ -66,17 +71,17 @@
     _labelPrice.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
     _labelTime.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    
-    for (int i=0; i<7; i++) {
-        UIImageView *imageV=[[UIImageView alloc]initWithFrame:CGRectMake((_viewHeadGroup.frame.size.width-30)/7*i,_viewHeadGroup.frame.size.height/2-_viewHeadGroup.frame.size.width/7/2 , _viewHeadGroup.frame.size.width/7, _viewHeadGroup.frame.size.width/7)];
-        imageV.image
-        =[UIImage imageNamed:@"sides_menu_tou"];
-        if (i==6) {
-//            imageV.image=[UIImage imageNamed:@"common_content_center_more"];
-            
-        }
-        [_viewHeadGroup addSubview:imageV];
-    }
+//    
+//    for (int i=0; i<7; i++) {
+//        UIImageView *imageV=[[UIImageView alloc]initWithFrame:CGRectMake((_viewHeadGroup.frame.size.width-30)/7*i,_viewHeadGroup.frame.size.height/2-_viewHeadGroup.frame.size.width/7/2 , _viewHeadGroup.frame.size.width/7, _viewHeadGroup.frame.size.width/7)];
+//        imageV.image
+//        =[UIImage imageNamed:@"sides_menu_tou"];
+//        if (i==6) {
+////            imageV.image=[UIImage imageNamed:@"common_content_center_more"];
+//            
+//        }
+//        [_viewHeadGroup addSubview:imageV];
+//    }
 
 }
 

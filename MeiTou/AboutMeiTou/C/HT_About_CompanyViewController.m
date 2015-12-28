@@ -25,7 +25,6 @@ static NSString *cellACom=@"cellACom";
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
     self.navigationController.navigationBar.barTintColor = COLOR_NAVBAR_A;
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_About_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellACom];
     
     [self createBarButtonItem];
 }
@@ -60,6 +59,7 @@ static NSString *cellACom=@"cellACom";
 
 -(void)createTableView{
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_About_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellACom];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     

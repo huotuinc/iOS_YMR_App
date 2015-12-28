@@ -33,5 +33,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageVRight;
 @property (weak, nonatomic) IBOutlet UIProgressView *viewProgress;
 @property (weak, nonatomic) IBOutlet UIView *viewHeadGroup;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVA;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVB;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVC;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVD;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVMore;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVE;
 
 @end

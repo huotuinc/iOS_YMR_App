@@ -24,7 +24,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelRest;
 @property (weak, nonatomic) IBOutlet UILabel *labelBoughtNO;
 
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageVA;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVB;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVC;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVD;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVE;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVMore;
 @property (weak, nonatomic) IBOutlet UIView *viewHeadGroup;
 @property (weak, nonatomic) IBOutlet UIImageView *imageVRight;
 

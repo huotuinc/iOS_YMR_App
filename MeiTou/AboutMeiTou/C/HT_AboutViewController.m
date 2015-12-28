@@ -26,7 +26,6 @@ static NSString *cellAbout=@"cellAbout";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=YES;
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_AboutTableViewCell" bundle:nil]forCellReuseIdentifier:cellAbout];
     [self createBarButtonItem];
     [self createNavgationBarTitle];
     
@@ -67,6 +66,8 @@ static NSString *cellAbout=@"cellAbout";
 
 -(void)createTableView{
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+    [_tableView registerNib:[UINib nibWithNibName:@"HT_AboutTableViewCell" bundle:nil]forCellReuseIdentifier:cellAbout];
+
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;

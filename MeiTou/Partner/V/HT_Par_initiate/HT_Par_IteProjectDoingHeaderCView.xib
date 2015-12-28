@@ -323,6 +323,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="line" width="180" height="180"/>
+        <image name="line" width="494" height="324"/>
     </resources>
 </document>

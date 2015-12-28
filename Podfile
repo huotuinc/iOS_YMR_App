@@ -1,4 +1,5 @@
 platform :ios, '7.0'
+pod 'MJRefresh', '~> 3.0.8'
 pod 'SHXMLParser','1.1.0'
 pod 'ASIHTTPRequest','1.8.1'
 pod 'SSToolkit', :git => 'https://github.com/soffes/sstoolkit.git', :commit => '1403f02cb98f8357f4b8e43c59d9c69d608d7bed'

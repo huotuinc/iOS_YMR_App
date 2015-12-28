@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -30,17 +30,20 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuY-fI-4sZ">
                                                         <rect key="frame" x="0.0" y="58" width="406" height="21"/>
+                                                        <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlC-z5-Evc">
                                                         <rect key="frame" x="183" y="12" width="41" height="41"/>
+                                                        <animations/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="nlC-z5-Evc" secondAttribute="height" multiplier="1:1" id="a8D-RW-g6f"/>
                                                         </constraints>
                                                     </button>
                                                 </subviews>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstItem="nlC-z5-Evc" firstAttribute="height" secondItem="Nld-Bd-2JL" secondAttribute="height" multiplier="62:136" id="6py-DD-on7"/>
                                                     <constraint firstItem="HuY-fI-4sZ" firstAttribute="leading" secondItem="Nld-Bd-2JL" secondAttribute="leading" id="Tbu-yU-PZD"/>
@@ -55,16 +58,19 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSK-Dx-Io6" userLabel="TitleLabel">
                                                         <rect key="frame" x="0.0" y="14" width="51" height="43"/>
+                                                        <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdO-RE-doc" userLabel="TitleText Field">
                                                         <rect key="frame" x="51" y="14" width="355" height="43"/>
+                                                        <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="cSK-Dx-Io6" firstAttribute="height" secondItem="LdO-RE-doc" secondAttribute="height" id="2X9-fG-7kX"/>
@@ -100,10 +106,12 @@
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-RU-tbV" userLabel="ContentText Field">
                                                         <rect key="frame" x="0.0" y="0.0" width="406" height="402"/>
+                                                        <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Q9C-RU-tbV" secondAttribute="trailing" id="POs-PH-Dg0"/>
@@ -120,6 +128,7 @@
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Slj-ka-C8I" userLabel="PhotoImage View">
                                                                 <rect key="frame" x="0.0" y="10" width="22" height="22"/>
+                                                                <animations/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="Slj-ka-C8I" secondAttribute="height" multiplier="1:1" id="Ejs-Cm-uig"/>
                                                                     <constraint firstAttribute="width" secondItem="Slj-ka-C8I" secondAttribute="height" multiplier="1:1" id="d7R-f8-0S4"/>
@@ -134,11 +143,13 @@
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="插入图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQP-IV-VK1" userLabel="PhotoLabel">
                                                                 <rect key="frame" x="24" y="12" width="99" height="18"/>
+                                                                <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstItem="Slj-ka-C8I" firstAttribute="height" secondItem="WqQ-tJ-tTr" secondAttribute="height" multiplier="40:75" id="3ft-Bt-IYh"/>
@@ -179,6 +190,7 @@
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-PA-1Hw" userLabel="EmotionImage View">
                                                                 <rect key="frame" x="0.0" y="8" width="26" height="26"/>
+                                                                <animations/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="AI8-PA-1Hw" secondAttribute="height" multiplier="1:1" id="FbM-Io-Iea"/>
                                                                     <constraint firstAttribute="width" secondItem="AI8-PA-1Hw" secondAttribute="height" multiplier="1:1" id="nFC-yy-c9J"/>
@@ -191,11 +203,13 @@
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiO-XP-6Jz">
                                                                 <rect key="frame" x="28" y="11" width="95" height="20"/>
+                                                                <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="DiO-XP-6Jz" secondAttribute="trailing" id="0hm-Lg-Zxk"/>
@@ -225,11 +239,13 @@
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLW-X1-9jD">
                                                         <rect key="frame" x="246" y="10" width="160" height="21"/>
+                                                        <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="HfA-cd-qWQ" firstAttribute="width" secondItem="WqQ-tJ-tTr" secondAttribute="width" id="1LK-bO-A9u"/>
@@ -258,6 +274,7 @@
                                                 </variation>
                                             </view>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="wcl-ge-KOr" firstAttribute="height" secondItem="ZUr-UC-1jQ" secondAttribute="height" multiplier="770:960" id="01C-TG-YzI"/>
@@ -347,6 +364,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="ZUr-UC-1jQ" firstAttribute="centerY" secondItem="QSQ-rN-UqY" secondAttribute="centerY" id="7nW-xs-VKE"/>
@@ -362,6 +380,7 @@
                                 </variation>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="QSQ-rN-UqY" secondAttribute="trailing" id="2TU-bF-3FZ"/>
@@ -387,6 +406,7 @@
                         </variation>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="hKK-GN-NWP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9d1-UW-Atz"/>
                     <constraint firstItem="hKK-GN-NWP" firstAttribute="left" secondItem="H2p-sc-9uM" secondAttribute="left" id="LjU-Ib-nJ6"/>
@@ -402,6 +422,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="buttonAdd" destination="nlC-z5-Evc" id="HmJ-Fc-2Dh"/>
                 <outlet property="imageVEmotion" destination="AI8-PA-1Hw" id="DuR-ca-DfN"/>

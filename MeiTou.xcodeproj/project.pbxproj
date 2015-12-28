@@ -160,8 +160,6 @@
 		F27261BD1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261BB1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.xib */; };
 		F27261C11C07FE240081EC95 /* HT_Par_IteResult_HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27261BF1C07FE240081EC95 /* HT_Par_IteResult_HeadView.m */; };
 		F27261C21C07FE240081EC95 /* HT_Par_IteResult_HeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261C01C07FE240081EC95 /* HT_Par_IteResult_HeadView.xib */; };
-		F27261CB1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27261C91C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.m */; };
-		F27261CC1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261CA1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.xib */; };
 		F27261D31C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27261CE1C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.m */; };
 		F27261D41C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261CF1C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.xib */; };
 		F27261DD1C07FE530081EC95 /* HT_Par_SubClaimCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27261D81C07FE530081EC95 /* HT_Par_SubClaimCView.m */; };
@@ -208,6 +206,10 @@
 		F2A019331C0B2F6A0017234F /* HT_HomePageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A019281C0B2F6A0017234F /* HT_HomePageCollectionViewCell.xib */; };
 		F2A019381C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A019301C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m */; };
 		F2A019391C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A019311C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib */; };
+		F2A19E081C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A19E061C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.m */; };
+		F2A19E091C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A19E071C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.xib */; };
+		F2A19E0D1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A19E0B1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.m */; };
+		F2A19E0E1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A19E0C1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.xib */; };
 		F2B168171C18264800517879 /* HT_Infor_NewsHeadCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B168151C18264800517879 /* HT_Infor_NewsHeadCView.m */; };
 		F2B168181C18264800517879 /* HT_Infor_NewsHeadCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B168161C18264800517879 /* HT_Infor_NewsHeadCView.xib */; };
 		F2B1681D1C1852AE00517879 /* HT_HomePage_PointsCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1681B1C1852AE00517879 /* HT_HomePage_PointsCView.m */; };
@@ -236,8 +238,6 @@
 		F2D91CB91C2004BA007778B8 /* HT_Par_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D91CB81C2004BA007778B8 /* HT_Par_SearchViewController.m */; };
 		F2E443431C187D9F0077B904 /* HT_Par_IteCooperationCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E443411C187D9F0077B904 /* HT_Par_IteCooperationCView.m */; };
 		F2E443441C187D9F0077B904 /* HT_Par_IteCooperationCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E443421C187D9F0077B904 /* HT_Par_IteCooperationCView.xib */; };
-		F2F9684A1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F968481C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m */; };
-		F2F9684B1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F968491C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.xib */; };
 		F2F9684F1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F9684D1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.m */; };
 		F2F968501C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F9684E1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib */; };
 		F2F968591C158511000045B1 /* HT_Par_SubBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F968571C158511000045B1 /* HT_Par_SubBottomView.m */; };
@@ -559,9 +559,6 @@
 		F27261BE1C07FE240081EC95 /* HT_Par_IteResult_HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_IteResult_HeadView.h; sourceTree = "<group>"; };
 		F27261BF1C07FE240081EC95 /* HT_Par_IteResult_HeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_IteResult_HeadView.m; sourceTree = "<group>"; };
 		F27261C01C07FE240081EC95 /* HT_Par_IteResult_HeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_IteResult_HeadView.xib; sourceTree = "<group>"; };
-		F27261C81C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_IteProjectDoneHeaderCView.h; sourceTree = "<group>"; };
-		F27261C91C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_IteProjectDoneHeaderCView.m; sourceTree = "<group>"; };
-		F27261CA1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_IteProjectDoneHeaderCView.xib; sourceTree = "<group>"; };
 		F27261CD1C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_IteProjectDoingHeaderCView.h; sourceTree = "<group>"; };
 		F27261CE1C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_IteProjectDoingHeaderCView.m; sourceTree = "<group>"; };
 		F27261CF1C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_IteProjectDoingHeaderCView.xib; sourceTree = "<group>"; };
@@ -639,6 +636,12 @@
 		F2A0192F1C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_LeftTableViewCell.h; sourceTree = "<group>"; };
 		F2A019301C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_LeftTableViewCell.m; sourceTree = "<group>"; };
 		F2A019311C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_LeftTableViewCell.xib; sourceTree = "<group>"; };
+		F2A19E051C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_IteProjectDoneHeaderCView.h; sourceTree = "<group>"; };
+		F2A19E061C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_IteProjectDoneHeaderCView.m; sourceTree = "<group>"; };
+		F2A19E071C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_IteProjectDoneHeaderCView.xib; sourceTree = "<group>"; };
+		F2A19E0A1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_SubProjectDoneHeaderCView.h; sourceTree = "<group>"; };
+		F2A19E0B1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_SubProjectDoneHeaderCView.m; sourceTree = "<group>"; };
+		F2A19E0C1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_SubProjectDoneHeaderCView.xib; sourceTree = "<group>"; };
 		F2B168141C18264800517879 /* HT_Infor_NewsHeadCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_NewsHeadCView.h; sourceTree = "<group>"; };
 		F2B168151C18264800517879 /* HT_Infor_NewsHeadCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_NewsHeadCView.m; sourceTree = "<group>"; };
 		F2B168161C18264800517879 /* HT_Infor_NewsHeadCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_NewsHeadCView.xib; sourceTree = "<group>"; };
@@ -685,9 +688,6 @@
 		F2E443401C187D9F0077B904 /* HT_Par_IteCooperationCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_IteCooperationCView.h; sourceTree = "<group>"; };
 		F2E443411C187D9F0077B904 /* HT_Par_IteCooperationCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_IteCooperationCView.m; sourceTree = "<group>"; };
 		F2E443421C187D9F0077B904 /* HT_Par_IteCooperationCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_IteCooperationCView.xib; sourceTree = "<group>"; };
-		F2F968471C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_SubProjectDoneHeaderCView.h; sourceTree = "<group>"; };
-		F2F968481C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_SubProjectDoneHeaderCView.m; sourceTree = "<group>"; };
-		F2F968491C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_SubProjectDoneHeaderCView.xib; sourceTree = "<group>"; };
 		F2F9684C1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_SubProjectDoingHeaderCView.h; sourceTree = "<group>"; };
 		F2F9684D1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_SubProjectDoingHeaderCView.m; sourceTree = "<group>"; };
 		F2F9684E1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_SubProjectDoingHeaderCView.xib; sourceTree = "<group>"; };
@@ -1534,12 +1534,12 @@
 				F2C00D7C1C1071180008833B /* HT_Par_IteBottomCView.h */,
 				F2C00D7D1C1071180008833B /* HT_Par_IteBottomCView.m */,
 				F2C00D7E1C1071180008833B /* HT_Par_IteBottomCView.xib */,
-				F27261C81C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.h */,
-				F27261C91C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.m */,
-				F27261CA1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.xib */,
 				F27261CD1C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.h */,
 				F27261CE1C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.m */,
 				F27261CF1C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.xib */,
+				F2A19E051C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.h */,
+				F2A19E061C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.m */,
+				F2A19E071C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.xib */,
 				F27261B41C07FDFE0081EC95 /* HT_Par_IteListTableViewCell.h */,
 				F27261B51C07FDFE0081EC95 /* HT_Par_IteListTableViewCell.m */,
 				F27261B61C07FDFE0081EC95 /* HT_Par_IteListTableViewCell.xib */,
@@ -1574,12 +1574,12 @@
 				F27261DA1C07FE530081EC95 /* HT_Par_SubListTableViewCell.h */,
 				F27261DB1C07FE530081EC95 /* HT_Par_SubListTableViewCell.m */,
 				F27261DC1C07FE530081EC95 /* HT_Par_SubListTableViewCell.xib */,
-				F2F968471C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.h */,
-				F2F968481C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m */,
-				F2F968491C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.xib */,
 				F2F9684C1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.h */,
 				F2F9684D1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.m */,
 				F2F9684E1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib */,
+				F2A19E0A1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.h */,
+				F2A19E0B1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.m */,
+				F2A19E0C1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.xib */,
 				F2F968561C158511000045B1 /* HT_Par_SubBottomView.h */,
 				F2F968571C158511000045B1 /* HT_Par_SubBottomView.m */,
 				F2F968581C158511000045B1 /* HT_Par_SubBottomView.xib */,
@@ -1818,6 +1818,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A19E091C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.xib in Resources */,
 				F29A25691C23DB8B001061EA /* HT_Infor_CommentCellHeaderView.xib in Resources */,
 				F27261BD1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.xib in Resources */,
 				F29085131C0EBD9200F779FA /* HT_Par_BuyHeaderView.xib in Resources */,
@@ -1825,7 +1826,6 @@
 				F214A6DB1C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib in Resources */,
 				F22B3A9C1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.xib in Resources */,
 				F2F968501C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib in Resources */,
-				F2F9684B1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.xib in Resources */,
 				603A48CD1C2BCFBC00D229E4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				F27261A91C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.xib in Resources */,
 				609292951C23A2080076D589 /* ShareCell.xib in Resources */,
@@ -1840,7 +1840,6 @@
 				F28E88371C192B3B00E75298 /* HT_Par_SearchCView.xib in Resources */,
 				F2FAA9FF1C1A7C4A00A90DA1 /* PraiseCell.xib in Resources */,
 				F27BFA951C18823E007D928A /* HT_Par_IteOrderCView.xib in Resources */,
-				F27261CC1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.xib in Resources */,
 				F27261A41C07FD510081EC95 /* HT_Par_MainTopView.xib in Resources */,
 				60DC99171C2CE0F500F50A5D /* LICENSE in Resources */,
 				F2E443441C187D9F0077B904 /* HT_Par_IteCooperationCView.xib in Resources */,
@@ -1859,6 +1858,7 @@
 				F211BC0B1C1819A00033B59E /* HT_Par_IteChoicePickerView.xib in Resources */,
 				F2D7AECD1C17121A00725B4E /* HT_Infor_BottomCView.xib in Resources */,
 				F27261F41C07FE9E0081EC95 /* HT_Infor_HeadCView.xib in Resources */,
+				F2A19E0E1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.xib in Resources */,
 				F2B168181C18264800517879 /* HT_Infor_NewsHeadCView.xib in Resources */,
 				F22453681C0EEF8100A12AF8 /* HT_Par_BuyBottomView.xib in Resources */,
 				603A48CF1C2BCFBC00D229E4 /* WeiboSDK.bundle in Resources */,
@@ -1994,6 +1994,7 @@
 				F2FAAA061C1AA04000A90DA1 /* HT_AboutTableViewCell.m in Sources */,
 				60DC99131C2CE0F500F50A5D /* AFURLConnectionOperation.m in Sources */,
 				F29085121C0EBD9200F779FA /* HT_Par_BuyHeaderView.m in Sources */,
+				F2A19E0D1C310E29008BA393 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */,
 				F259CF7E1C292DC20082A912 /* MJConst.m in Sources */,
 				F272615C1C07E61B0081EC95 /* AppDelegate.m in Sources */,
 				F27261C11C07FE240081EC95 /* HT_Par_IteResult_HeadView.m in Sources */,
@@ -2010,6 +2011,7 @@
 				F259CFA01C2930D30082A912 /* MD5Encryption.m in Sources */,
 				F21E44F81C102F0100657249 /* UIViewController+MMDrawerController.m in Sources */,
 				F21E45001C1039D900657249 /* HT_HomePage_LeftHeadView.m in Sources */,
+				F2A19E081C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.m in Sources */,
 				F27261BC1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.m in Sources */,
 				6095C29A1C2A7D1B00DBC029 /* InformationModel.m in Sources */,
 				60DC99111C2CE0F500F50A5D /* AFNetworkReachabilityManager.m in Sources */,
@@ -2026,7 +2028,6 @@
 				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,
 				F263CA231C157D5300EE78CA /* HT_Par_SubListViewController.m in Sources */,
 				F213A61F1C2A93C900966A97 /* HT_Infor_SearchViewController.m in Sources */,
-				F2F9684A1C15823A000045B1 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */,
 				F21C192D1C1EF2ED00E717A8 /* HT_Par_ChangePhoneViewController.m in Sources */,
 				F263CA161C1570E100EE78CA /* HT_Par_ItePaymentResultsCView.m in Sources */,
 				F2670CF41C0E950000CA70A2 /* HT_Par_BuyViewController.m in Sources */,
@@ -2068,7 +2069,6 @@
 				60DC99181C2CE0F500F50A5D /* README.md in Sources */,
 				F2D7AEDC1C172D5A00725B4E /* HT_About_TopCView.m in Sources */,
 				F2F9684F1C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.m in Sources */,
-				F27261CB1C07FE320081EC95 /* HT_Par_IteProjectDoneHeaderCView.m in Sources */,
 				F27261D31C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.m in Sources */,
 				F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */,
 				F259CF851C292DC20082A912 /* NSObject+MJCoding.m in Sources */,

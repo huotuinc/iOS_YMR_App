@@ -17,12 +17,12 @@
 #import <UIView+BlocksKit.h>
 #import "UserLoginTool.h"
 #import "MJExtension.h"
-
+#import "UIImageView+WebCache.h"
 #import "Font.h"
 
 
 
-#define MainUrl @"http://192.168.1.57:8080/ymr/app"
+#define MainUrl @"http://192.168.1.41:8080/ymr/app"
 #define MainUrlMK @"192.168.1.57:8080/ymr/app"
 
 //网络请求的固定参数
