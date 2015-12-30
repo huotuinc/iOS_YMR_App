@@ -15,6 +15,7 @@
 #import "HT_Par_MainTopView.h"
 #import "HT_Par_IteProjectDoingHeaderCView.h"
 #import "HT_Par_IteProjectDoneHeaderCView.h"
+#import "HT_HomePage_NavTitleCVIew.h"
 #import "HT_Par_BuyMainTableViewCell.h"
 #import "HT_Par_IteBottomCView.h"
 #import "LevelUpView.h"
@@ -30,6 +31,7 @@ static NSString *cellIte = @"cellIte";
     UIView *_bottomView;
     LevelUpView *_levelUpView;
     UIImageView *_imageVTop;
+    HT_HomePage_NavTitleCVIew *_navView;
 }
 
 
@@ -48,11 +50,24 @@ static NSString *cellIte = @"cellIte";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
-//    [self createTopView];
+    [self createNavTitleView];
     [self createHeadView];
     [self createTableView];
     [self createBottomView];
 }
+-(void)createNavTitleView{
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_NavTitleCVIew" owner:nil options:nil];
+    _navView=[nib firstObject];
+    _navView.labelA.text=@"项目状况";
+    _navView.labelB.text=@"预约人列表";
+    _navView.imageVLineC.hidden=YES;
+    _navView.imageVLineD.hidden=YES;
+    UITapGestureRecognizer * tapB = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheListView)];
+    [_navView.viewB addGestureRecognizer:tapB];
+    _navView.frame=CGRectMake(0, 0, 175, 44);
+    self.navigationItem.titleView=_navView;
+}
+
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
     [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
@@ -79,11 +94,7 @@ static NSString *cellIte = @"cellIte";
 
 }
 
--(void)createTopView{
-    _imageVTop=[[UIImageView alloc]initWithFrame: CGRectMake(0, 0,SCREEN_WITH , 20)];
-    _imageVTop.image=[UIImage imageNamed:@"xiant"];
-    [self.view addSubview:_imageVTop];
-}
+
 -(void)createHeadView{
     if (1) {
         NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteProjectDoneHeaderCView" owner:nil options:nil];
@@ -103,7 +114,7 @@ static NSString *cellIte = @"cellIte";
     
 }
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1100*(615+415)-10) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT -SCREEN_HEIGHT/1100*120) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
@@ -131,7 +142,7 @@ static NSString *cellIte = @"cellIte";
 /**
  *  tap事件
  */
--(void)tapThePersonView{
+-(void)tapTheListView{
     HT_Par_IteListViewController *list=[[HT_Par_IteListViewController alloc]init];
     [self.navigationController pushViewController:list animated:YES];
 }

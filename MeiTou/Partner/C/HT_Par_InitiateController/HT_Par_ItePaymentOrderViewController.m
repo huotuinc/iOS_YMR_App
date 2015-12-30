@@ -36,10 +36,10 @@
 -(void)createNavgationBarTitle{
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
     titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(36)];
-    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(34)];
+    titleLabel.textColor = [UIColor blackColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.text = @"支付订单";
+    titleLabel.text = @"积分充值";
     self.navigationItem.titleView = titleLabel;
 }
 

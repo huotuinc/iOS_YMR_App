@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  预约人列表
+ */
 @interface HT_Par_IteListViewController : UIViewController
 
 @end
