@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYo-FQ-PFo">
                         <rect key="frame" x="8" y="8" width="364" height="233"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Emx-Q8-3Zf" userLabel="TopImage View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Emx-Q8-3Zf" userLabel="TopImage View">
                                 <rect key="frame" x="0.0" y="0.0" width="364" height="23"/>
                                 <animations/>
                             </imageView>
@@ -322,7 +322,4 @@
             <point key="canvasLocation" x="335" y="262"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="line" width="494" height="324"/>
-    </resources>
 </document>

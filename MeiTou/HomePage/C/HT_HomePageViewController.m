@@ -95,7 +95,8 @@
 
     [self createScrollview];//创建 scrollview
     [self createData];
-    
+    NSLog(@"*** %f ***",self.navigationController.navigationBar.frame.size.height);
+
 
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToPartner) name:@"partner" object:nil];
@@ -167,7 +168,7 @@
     
     for (int i = 0; i < 3; i ++) {
         //在 contentsize 范围内创建2张图片
-        UIImageView *_imageV  = [[UIImageView alloc]initWithFrame:CGRectMake(i*SCREEN_WITH, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        UIImageView *_imageV  = [[UIImageView alloc]initWithFrame:CGRectMake(i*SCREEN_WITH, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*1050)];
         _imageV.userInteractionEnabled=YES;
         if (i==0) {
             _imageV.image=[UIImage imageNamed:@"meitou_home_a"];
@@ -198,19 +199,19 @@
     [_navView.viewA addGestureRecognizer:tapA];
     UITapGestureRecognizer * tapB = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheNewsView)];
     [_navView.viewB addGestureRecognizer:tapB];
-    _navView.frame=CGRectMake(0, 0, 175, 44);
+    _navView.frame=CGRectMake(0, 0, SCREEN_WITH/750*430, SCREEN_HEIGHT/1150*46);
     self.navigationItem.titleView=_navView;
 }
 -(void)createScrollview
 {
-    _scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, SCREEN_WITH, SCREEN_HEIGHT)];
+    _scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT)];
+    _scrollview.backgroundColor=[UIColor whiteColor];
     //设置 contentsize 等于3张图片大小
     _scrollview.contentSize = CGSizeMake(3*SCREEN_WITH, SCREEN_HEIGHT);
     _scrollview.pagingEnabled = YES;//按页滚动
     _scrollview.bounces = NO;
     _scrollview.delegate = self;
     NSLog(@"-------------- %f *****************",_scrollview.contentOffset.x);
-
     [self.view addSubview:_scrollview];
     
 }
@@ -219,7 +220,7 @@
     
     if (_leftOption == nil) {
         _leftOption = [[UIButton alloc] init];
-        _leftOption.frame = CGRectMake(0, 0, 25, 25);
+        _leftOption.frame = CGRectMake(0, 0, 18, 18);
         //        _leftOption.backgroundColor=[UIColor redColor];
         [_leftOption setBackgroundImage:[UIImage imageNamed:@"common_icon_catalog"] forState:UIControlStateNormal];        [_leftOption addTarget:self action:@selector(GoToLeft) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_leftOption];

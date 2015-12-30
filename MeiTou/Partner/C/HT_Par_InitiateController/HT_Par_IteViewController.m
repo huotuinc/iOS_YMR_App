@@ -64,7 +64,7 @@ static NSString *cellIte = @"cellIte";
     _navView.imageVLineD.hidden=YES;
     UITapGestureRecognizer * tapB = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheListView)];
     [_navView.viewB addGestureRecognizer:tapB];
-    _navView.frame=CGRectMake(0, 0, 175, 44);
+    _navView.frame=CGRectMake(0, 0, SCREEN_WITH/750*430, SCREEN_HEIGHT/1150*46);
     self.navigationItem.titleView=_navView;
 }
 
@@ -118,7 +118,7 @@ static NSString *cellIte = @"cellIte";
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;
-    _tableView.backgroundColor = COLOR_BACK_MAIN;
+    _tableView.backgroundColor=COLOR_BACK_MAIN;
     _tableView.showsVerticalScrollIndicator =NO;
     [self.view addSubview:_tableView];
     

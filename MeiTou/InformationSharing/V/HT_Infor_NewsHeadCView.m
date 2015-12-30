@@ -6,9 +6,9 @@
 //  Copyright © 2015年 车. All rights reserved.
 //
 
-#import "HT_Par_BuyHeaderView.h"
+#import "HT_Infor_NewsHeadCView.h"
 
-@implementation HT_Par_BuyHeaderView
+@implementation HT_Infor_NewsHeadCView
 
 - (void)awakeFromNib {
     // Initialization code
@@ -25,35 +25,29 @@
     
     for (int i=0; i<3; i++) {
         UILabel *label=(UILabel *)[self viewWithTag:110+i];
-        [self changeLabel:label AndFont:22 AndColor:[UIColor whiteColor]];
+        [self changeLabel:label AndFont:20 AndColor:[UIColor whiteColor]];
         label.backgroundColor=COLOR_BACK_TIME;
         label.layer.cornerRadius=2;
         label.layer.masksToBounds=YES;
     }
+    for (int i=0; i<3; i++) {
+        UIImageView *imageV=(UIImageView * )[self viewWithTag:500+i];
+        imageV.image=[UIImage imageNamed:@"line2"];
+        
+    }
     
-    _imageVTop.image=[UIImage imageNamed:@"line2"];
-    _imageVLine.image=[UIImage imageNamed:@"line1"];
- 
     [self changeLabel:_labelTitle AndFont:30 AndColor:COLOR_TEXT_TITILE];
     [self changeLabel:_labeEnd AndFont:26 AndColor:COLOR_TEXT_DATE];
-    [self changeLabel:_labelDone AndFont:26 AndColor:COLOR_TEXT_DATE];
-    [self changeLabel:_labelPerson AndFont:26 AndColor:COLOR_BUTTON_RED];
+    [self changeLabel:_labelStart AndFont:22 AndColor:COLOR_TEXT_DATE];
+    [self changeLabel:_labelStartM AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelTarget AndFont:22 AndColor:COLOR_TEXT_DATE];
+    [self changeLabel:_labelTargetM AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelScore AndFont:26 AndColor:COLOR_BUTTON_RED];
+    _imageVTop.image=[UIImage imageNamed:@"line2"];
+ 
     
-    
 
     
-
-
-
-    _viewProgress.transform=CGAffineTransformMakeScale(1.0f, 1.0f);
-    _viewProgress.layer.cornerRadius=5;
-    _viewProgress.clipsToBounds=YES;
-    //设置进度条颜色
-    _viewProgress.trackTintColor=COLOR_BACK_MAIN;
-    //设置进度默认值，这个相当于百分比，范围在0~1之间，不可以设置最大最小值
-    _viewProgress.progress=0.7;
-    //设置进度条上进度的颜色
-    _viewProgress.progressTintColor=COLOR_BUTTON_ORANGE;
     
 
     

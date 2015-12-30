@@ -42,7 +42,7 @@ static NSString *cellIMain = @"cellIMain";
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden=NO;
+    [self.navigationController setNavigationBarHidden:NO animated:NO]; 
     self.navigationController.navigationBar.translucent=NO;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIMain];
     [self createBarButtonItem];
@@ -67,7 +67,7 @@ static NSString *cellIMain = @"cellIMain";
 -(void)createNavgationBarTitle{
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
     titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(34)];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(32)];
     titleLabel.textColor = [UIColor blackColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = @"爱美容";

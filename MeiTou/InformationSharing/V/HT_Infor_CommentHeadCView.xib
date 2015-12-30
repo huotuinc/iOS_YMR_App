@@ -70,7 +70,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePX-W5-phf" userLabel="BView">
                                 <rect key="frame" x="0.0" y="65" width="360" height="170"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-qP-VuO" userLabel="MainImage View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-qP-VuO" userLabel="MainImage View">
                                         <rect key="frame" x="0.0" y="3" width="360" height="167"/>
                                         <animations/>
                                     </imageView>
@@ -202,7 +202,4 @@
             <point key="canvasLocation" x="260" y="194.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Main" width="650" height="352"/>
-    </resources>
 </document>

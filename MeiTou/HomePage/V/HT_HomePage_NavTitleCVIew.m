@@ -17,8 +17,8 @@
     _imageVLineC.image=[UIImage imageNamed:@"xians"];
     _imageVLineD.image=[UIImage imageNamed:@"xians"];
     
-    [self changeLabel:_labelA AndFont:28 AndColor:COLOR_TEXT_TITILE];
-    [self changeLabel:_labelB AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelA AndFont:26 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelB AndFont:26 AndColor:COLOR_TEXT_TITILE];
 
 }
 

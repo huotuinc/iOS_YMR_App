@@ -148,8 +148,8 @@
     }
     if(indexPath.section==2){
         if (indexPath.row==2) {
-            HT_HomePage_PhoneViewController *phone=[[HT_HomePage_PhoneViewController alloc]init];
-            [self.navigationController pushViewController:phone animated:YES];
+//            HT_HomePage_PhoneViewController *phone=[[HT_HomePage_PhoneViewController alloc]init];
+//            [self.navigationController pushViewController:phone animated:YES];
         }
     }
     

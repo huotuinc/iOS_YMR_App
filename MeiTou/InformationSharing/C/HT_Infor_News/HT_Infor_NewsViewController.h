@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  众筹咨询
+ */
 @interface HT_Infor_NewsViewController : UIViewController
 
 @end

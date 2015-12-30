@@ -28,8 +28,10 @@
         UILabel *label=(UILabel *)[self viewWithTag:110+i];
         [self changeLabel:label AndFont:22 AndColor:[UIColor whiteColor]];
         label.backgroundColor=COLOR_BACK_TIME;
-        label.layer.cornerRadius=5;
+        label.layer.cornerRadius=2;
         label.layer.masksToBounds=YES;
+        [self changeLabel:label AndFont:20 AndColor:[UIColor whiteColor]];
+        
     }
     for (int i=0; i<6; i++) {
         UIImageView *imageV=(UIImageView *)[self viewWithTag:300+i];
@@ -41,13 +43,21 @@
         
     }
     
+    [self changeLabel:_labelTitle AndFont:30 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelEnd AndFont:26 AndColor:COLOR_TEXT_DATE];
+    [self changeLabel:_labelStartM AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelTargetM AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelDoneM AndFont:28 AndColor:COLOR_BUTTON_RED];
+    [self changeLabel:_labelAttendM AndFont:28 AndColor:COLOR_BUTTON_RED];
+    [self changeLabel:_labelSymbolA AndFont:20 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelSymbolB AndFont:20 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelResulet AndFont:24 AndColor:COLOR_TEXT_DATE];
+    [self changeLabel:_labelSuccess AndFont:24 AndColor:COLOR_TEXT_DATE];
+    
     _imageVTop.image=[UIImage imageNamed:@"line2"];
     _imagevState.image=[UIImage imageNamed:@"crowdfunding_content_center_success"];
     _imageVRight.image=[UIImage imageNamed:@"common_content_right_more"];
- 
-
     
- 
     
     _viewProgress.transform=CGAffineTransformMakeScale(1.0f, 1.0f);
     _viewProgress.layer.cornerRadius=5;
@@ -59,12 +69,12 @@
     //设置进度条上进度的颜色
     _viewProgress.progressTintColor=COLOR_BUTTON_ORANGE;
     
-
     
-
-
-
-
+    
+    
+    
+    
+    
 }
 /**
  *  设置label的字体大小和颜色

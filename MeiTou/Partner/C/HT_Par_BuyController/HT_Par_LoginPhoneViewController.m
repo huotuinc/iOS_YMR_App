@@ -35,7 +35,7 @@
 -(void)createNavgationBarTitle{
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
     titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(36)];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(32)];
     titleLabel.textColor = [UIColor blackColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = @"手机授权登陆";

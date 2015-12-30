@@ -12,6 +12,14 @@
 
 - (void)awakeFromNib {
     // Initialization code
+//    @property (weak, nonatomic) IBOutlet UILabel *title;
+//    @property (weak, nonatomic) IBOutlet UILabel *time;
+//    @property (weak, nonatomic) IBOutlet UILabel *integral;
+//    @property (weak, nonatomic) IBOutlet UIButton *success;
+//    @property (weak, nonatomic) IBOutlet UIImageView *titleImage;
+//    @property (weak, nonatomic) IBOutlet UILabel *details;
+    
+    _titleImage.image=[UIImage imageNamed:@"aaa"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

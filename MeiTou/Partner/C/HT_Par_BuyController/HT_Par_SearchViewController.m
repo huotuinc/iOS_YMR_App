@@ -19,7 +19,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden=YES;
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.navigationController.navigationBar.translucent = NO;
 
 }
@@ -77,6 +77,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidDisAppear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    self.navigationController.navigationBar.hidden=NO;
+    
+}
 /*
 #pragma mark - Navigation
 

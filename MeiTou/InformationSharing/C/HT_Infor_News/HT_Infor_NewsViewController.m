@@ -38,7 +38,7 @@ static NSString *cellIBuy=@"cellIBuy";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
-
+    [self createNavgationBarTitle];
     [self createHeadView];
     [self createTableView];
     [self createBottomView];
@@ -50,6 +50,16 @@ static NSString *cellIBuy=@"cellIBuy";
     
     
 }
+-(void)createNavgationBarTitle{
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(32)];
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"众筹资讯";
+    self.navigationItem.titleView = titleLabel;
+}
+
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
     [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
@@ -76,7 +86,7 @@ static NSString *cellIBuy=@"cellIBuy";
 -(void)createHeadView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_NewsHeadCView" owner:nil options:nil];
     HT_Infor_NewsHeadCView *headerView=[nib firstObject];
-    headerView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*170);
+    headerView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*252);
     _headerView=headerView;
 }
 

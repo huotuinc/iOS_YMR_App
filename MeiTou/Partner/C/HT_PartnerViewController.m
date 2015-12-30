@@ -48,9 +48,8 @@ static NSString *cellMain = @"cellMain";
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden=NO;
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
     self.navigationController.navigationBar.translucent=NO;
-    self.navigationController.navigationBar.barTintColor = COLOR_NAVBAR_A;
 
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
     

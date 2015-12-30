@@ -27,7 +27,7 @@ static NSString *commentIdentify = @"commentsIdentify";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self createBarButtonItem];
     [self.tableView registerNib:[UINib nibWithNibName:@"CommentsCell" bundle:nil] forCellReuseIdentifier:commentIdentify];
     
     self.selectV = [[selectView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WITH, 111) AndSelectTag:0];
@@ -42,7 +42,7 @@ static NSString *commentIdentify = @"commentsIdentify";
     [_titleButton setImage:[UIImage imageNamed:@"heda"] forState:UIControlStateNormal];
     [_titleButton setTitle:@"我的评论" forState:UIControlStateNormal];
     [_titleButton layoutIfNeeded];
-    [_titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_titleButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -16, 0, 16)];
     [_titleButton setImageEdgeInsets:UIEdgeInsetsMake(0, _titleButton.titleLabel.bounds.size.width, 0, -_titleButton.titleLabel.bounds.size.width)];
     self.navigationItem.titleView = _titleButton;
@@ -59,10 +59,35 @@ static NSString *commentIdentify = @"commentsIdentify";
     
 }
 
+-(void)createBarButtonItem{
+    UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonL setBackgroundImage:[UIImage imageNamed:@"common_title_top_back"] forState:UIControlStateNormal];
+    [buttonL addTarget:self action:@selector(clickLightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
+    self.navigationItem.leftBarButtonItem=bbiL;
+    
+    UIButton *buttonR=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonR setBackgroundImage:[UIImage imageNamed:@"common_title_top_more"]forState:UIControlStateNormal];
+    [buttonR addTarget:self action:@selector(clickRightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiR=[[UIBarButtonItem alloc]initWithCustomView:buttonR];
+    self.navigationItem.rightBarButtonItem=bbiR;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
    
 }
+
+/**
+ *
+ */
+-(void)clickLightButton{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)clickRightButton{
+    
+}
+
 
 #pragma mark tableView
 

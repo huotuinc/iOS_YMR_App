@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ckn-2O-O10">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ckn-2O-O10">
                         <rect key="frame" x="10" y="10" width="28" height="28"/>
                         <animations/>
                         <constraints>
@@ -61,7 +61,7 @@
                                 <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="VcM-kc-eEm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VcM-kc-eEm">
                                 <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                 <animations/>
                                 <constraints>
@@ -201,8 +201,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="2" width="131" height="131"/>
-        <image name="22" width="56" height="56"/>
         <image name="common_comment" width="20" height="20"/>
         <image name="common_share" width="20" height="20"/>
         <image name="common_zan_a" width="20" height="20"/>

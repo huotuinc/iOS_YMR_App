@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _labelNotice.text=@"系统消息: 系统消息系统消息系统消息系统消息";
+    _labelDate.text=@"2015-10-10";
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

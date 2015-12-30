@@ -46,7 +46,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="eYR-KM-HUF" userLabel="NiceImage View">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eYR-KM-HUF" userLabel="NiceImage View">
                                                 <rect key="frame" x="255" y="1" width="18" height="18"/>
                                                 <animations/>
                                                 <constraints>
@@ -100,7 +100,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-qP-VuO" userLabel="MainImage View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-qP-VuO" userLabel="MainImage View">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="142"/>
                                         <animations/>
                                     </imageView>
@@ -151,8 +151,4 @@
             <point key="canvasLocation" x="261" y="335"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="1" width="494" height="324"/>
-        <image name="Main" width="650" height="352"/>
-    </resources>
 </document>

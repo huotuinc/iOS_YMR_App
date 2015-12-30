@@ -66,7 +66,7 @@ static NSString *cellBuy = @"cellBuy";
     _navView.imageVLineD.hidden=YES;
     UITapGestureRecognizer * tapB = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheListView)];
     [_navView.viewB addGestureRecognizer:tapB];
-    _navView.frame=CGRectMake(0, 0, 175, 44);
+    _navView.frame=CGRectMake(0, 0, SCREEN_WITH/750*430, SCREEN_HEIGHT/1150*46);
     self.navigationItem.titleView=_navView;
 }
 

@@ -10,4 +10,7 @@
 
 @interface SystemMessageCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *labelNotice;
+@property (weak, nonatomic) IBOutlet UILabel *labelDate;
+
 @end

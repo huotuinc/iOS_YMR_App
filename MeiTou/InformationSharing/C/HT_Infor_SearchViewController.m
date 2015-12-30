@@ -24,7 +24,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden=YES;
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.navigationController.navigationBar.translucent = NO;
     
 }
@@ -138,7 +138,10 @@
     [self.navigationController popViewControllerAnimated:YES];
     
 }
-
+-(void)viewDidDisAppear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
