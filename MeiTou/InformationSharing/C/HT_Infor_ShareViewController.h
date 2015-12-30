@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  我要分享
+ */
 @interface HT_Infor_ShareViewController : UIViewController
 
 @end

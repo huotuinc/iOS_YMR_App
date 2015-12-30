@@ -64,6 +64,15 @@ static NSString *cellIMain = @"cellIMain";
     
     
 }
+-(void)createNavgationBarTitle{
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(34)];
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"爱美容";
+    self.navigationItem.titleView = titleLabel;
+}
 - (void)setupRefresh
 {
     
@@ -237,20 +246,20 @@ static NSString *cellIMain = @"cellIMain";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HT_Infor_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIMain forIndexPath:indexPath];
     if (_shareList.count != 0) {
-        InformationModel *model =_shareList[indexPath.section];
-        if (model.top==YES) {
-            cell.imageVState.image=[UIImage imageNamed:@"zhiding"];
-        }
-        cell.labelDate.text=[self changeTheTimeStamps:(NSNumber *)model.time];
-        cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
-        cell.labelShare.text=[NSString stringWithFormat:@"%@",model.relayScore];
-        cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
-        cell.labelScore.attributedText=[self GetAttributedString:[NSString stringWithFormat:@"转发得%@分",model.relayScore] withKeyWord:[NSString stringWithFormat:@"%@分",model.relayScore]  KeyWordColor:COLOR_BUTTON_RED];
-        cell.labelCount.text=[NSString stringWithFormat:@"%@个赞",model.pid];
-        cell.labelContent.text=model.content;
-        cell.labelTitle.text = model.title;
-        [cell.imageVMain sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.img]] placeholderImage:[UIImage imageNamed:@""]];
-        [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.userHeadUrl]] placeholderImage:[UIImage imageNamed:@""]];
+//        InformationModel *model =_shareList[indexPath.section];
+//        if (model.top==YES) {
+//            cell.imageVState.image=[UIImage imageNamed:@"zhiding"];
+//        }
+//        cell.labelDate.text=[self changeTheTimeStamps:(NSNumber *)model.time];
+//        cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
+//        cell.labelShare.text=[NSString stringWithFormat:@"%@",model.relayScore];
+//        cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
+//        cell.labelScore.attributedText=[self GetAttributedString:[NSString stringWithFormat:@"转发得%@分",model.relayScore] withKeyWord:[NSString stringWithFormat:@"%@分",model.relayScore]  KeyWordColor:COLOR_BUTTON_RED];
+//        cell.labelCount.text=[NSString stringWithFormat:@"%@个赞",model.pid];
+//        cell.labelContent.text=model.content;
+//        cell.labelTitle.text = model.title;
+//        [cell.imageVMain sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.img]] placeholderImage:[UIImage imageNamed:@""]];
+//        [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.userHeadUrl]] placeholderImage:[UIImage imageNamed:@""]];
     }
     
     
@@ -263,7 +272,8 @@ static NSString *cellIMain = @"cellIMain";
     return 1;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return _shareList.count;
+//    return _shareList.count;
+    return 3;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return SCREEN_HEIGHT/1150*635 ;

@@ -15,7 +15,7 @@
 #import "HT_Par_SubProjectDoneHeaderCView.h"
 #import "HT_Par_SubBottomView.h"
 #import "HT_Par_BuyMainTableViewCell.h"
-
+#import "HT_HomePage_NavTitleCVIew.h"
 static NSString *cellSub = @"cellSub";
 
 @interface HT_Par_SubViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -27,6 +27,7 @@ static NSString *cellSub = @"cellSub";
     UIView *_topView;//顶部视图
     UIView *_headerView;//_tableV 的headerV
     UIView *_bottomView;//底部视图
+    HT_HomePage_NavTitleCVIew *_navView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -38,10 +39,23 @@ static NSString *cellSub = @"cellSub";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self createTopView];
+    [self createNavTitleView];
     [self createHeadView];
     [self createTableView];
     [self createBottomView];
+}
+
+-(void)createNavTitleView{
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_NavTitleCVIew" owner:nil options:nil];
+    _navView=[nib firstObject];
+    _navView.labelA.text=@"项目状况";
+    _navView.labelB.text=@"预约人列表";
+    _navView.imageVLineC.hidden=YES;
+    _navView.imageVLineD.hidden=YES;
+    UITapGestureRecognizer * tapB = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheListView)];
+    [_navView.viewB addGestureRecognizer:tapB];
+    _navView.frame=CGRectMake(0, 0, 175, 44);
+    self.navigationItem.titleView=_navView;
 }
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
@@ -66,18 +80,7 @@ static NSString *cellSub = @"cellSub";
     
 }
 
--(void)createTopView{
-    
-    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_MainTopView" owner:nil options:nil];
-    HT_Par_MainTopView *topView=[nib firstObject];
-    topView.frame=CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1100*80);
-    
-    UITapGestureRecognizer * tapPerson = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapThePersonView)];
-    [topView.ViewPerson addGestureRecognizer:tapPerson];
-    _topView=topView;
-    [self.view addSubview:_topView];
-    
-}
+
 -(void)createHeadView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_SubProjectDoneHeaderCView" owner:nil options:nil];
     HT_Par_SubProjectDoneHeaderCView *headerView=[nib firstObject];
@@ -105,7 +108,7 @@ static NSString *cellSub = @"cellSub";
 }
 //原来250是222
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT/1100*(615+250)) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0,0, SCREEN_WITH , SCREEN_HEIGHT-_bottomView.frame.size.height) style:UITableViewStylePlain];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellSub];
     _tableView.delegate=self;
     _tableView.dataSource=self;
@@ -119,7 +122,7 @@ static NSString *cellSub = @"cellSub";
  *  tap事件
  */
 
--(void)tapThePersonView{
+-(void)tapTheListView{
     HT_Par_SubListViewController *list=[[HT_Par_SubListViewController alloc]init];
     [self.navigationController pushViewController:list animated:YES];
 }
