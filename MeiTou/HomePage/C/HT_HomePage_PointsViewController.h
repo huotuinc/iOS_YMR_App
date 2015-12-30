@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  我的美投积分
+ */
 @interface HT_HomePage_PointsViewController : UIViewController
 
 @end

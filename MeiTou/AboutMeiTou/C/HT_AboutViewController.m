@@ -25,7 +25,7 @@ static NSString *cellAbout=@"cellAbout";
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
-    self.navigationController.navigationBar.translucent=YES;
+    self.navigationController.navigationBar.translucent=NO;
     [self createBarButtonItem];
     [self createNavgationBarTitle];
     
@@ -41,7 +41,7 @@ static NSString *cellAbout=@"cellAbout";
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(36)];
-    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textColor = [UIColor blackColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = @"关于美投";
     self.navigationItem.titleView = titleLabel;
@@ -53,7 +53,11 @@ static NSString *cellAbout=@"cellAbout";
     UIBarButtonItem *bbiL=[[UIBarButtonItem alloc]initWithCustomView:buttonL];
     self.navigationItem.leftBarButtonItem=bbiL;
     
-
+    UIButton *buttonR=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
+    [buttonR setBackgroundImage:[UIImage imageNamed:@"common_title_top_more"]forState:UIControlStateNormal];
+    [buttonR addTarget:self action:@selector(clickRightButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bbiR=[[UIBarButtonItem alloc]initWithCustomView:buttonR];
+    self.navigationItem.rightBarButtonItem=bbiR;
 }
 /**
  *
@@ -62,7 +66,9 @@ static NSString *cellAbout=@"cellAbout";
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)clickRightButton{
 
+}
 
 -(void)createTableView{
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
@@ -78,6 +84,7 @@ static NSString *cellAbout=@"cellAbout";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HT_AboutTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellAbout forIndexPath:indexPath];
     cell.imageVMain.image=[UIImage imageNamed:_imageArray[indexPath.row]];
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
     
     
@@ -104,6 +111,7 @@ static NSString *cellAbout=@"cellAbout";
     if (indexPath.row==3) {
         NSLog(@"点击了第4个");
     }
+    
     
 }
 

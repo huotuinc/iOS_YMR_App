@@ -9,6 +9,7 @@
 #import "HT_Par_BuyViewController.h"
 #import "HT_Par_BuyListViewController.h"
 #import "HT_Par_BoundPhoneViewController.h"
+#import "HT_HomePage_NavTitleCVIew.h"
 #import "HT_Par_MainTopView.h"
 #import "HT_Par_BuyHeaderView.h"
 #import "HT_Par_BuyBottomView.h"
@@ -27,6 +28,7 @@ static NSString *cellBuy = @"cellBuy";
     UIView *_headerView;//_tableV 的headerV
     UIView *_bottomView;//底部视图
     UIImageView *_imageV;
+    HT_HomePage_NavTitleCVIew *_navView;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -35,14 +37,13 @@ static NSString *cellBuy = @"cellBuy";
     
 
     [self createBarButtonItem];
-//    [self createNavgationBarTitle];
     
     
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self createNavTitleView];
     [self createTopView];
     [self createHeadView];
     [self createTableView];
@@ -55,15 +56,21 @@ static NSString *cellBuy = @"cellBuy";
     
     
 }
-//-(void)createNavgationBarTitle{
-//    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
-//    titleLabel.backgroundColor = [UIColor clearColor];
-//    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(36)];
-//    titleLabel.textColor = [UIColor whiteColor];
-//    titleLabel.textAlignment = NSTextAlignmentCenter;
-//    titleLabel.text = @"支付现金";
-//    self.navigationItem.titleView = titleLabel;
-//}
+
+
+-(void)createNavTitleView{
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_NavTitleCVIew" owner:nil options:nil];
+    _navView=[nib firstObject];
+    _navView.labelA.text=@"项目状况";
+    _navView.labelB.text=@"预约人列表";
+    _navView.imageVLineC.hidden=YES;
+    _navView.imageVLineD.hidden=YES;
+    UITapGestureRecognizer * tapB = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheListView)];
+    [_navView.viewB addGestureRecognizer:tapB];
+    _navView.frame=CGRectMake(0, 0, 175, 44);
+    self.navigationItem.titleView=_navView;
+}
+
 
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
@@ -134,7 +141,7 @@ static NSString *cellBuy = @"cellBuy";
  *  tap事件
  */
 
--(void)tapThePersonView{
+-(void)tapTheListView{
     HT_Par_BuyListViewController *list=[[HT_Par_BuyListViewController alloc]init];
     [self.navigationController pushViewController:list animated:YES];
 }

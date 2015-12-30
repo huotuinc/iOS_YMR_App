@@ -26,10 +26,10 @@ static NSString *cellIte = @"cellIte";
 
 @implementation HT_Par_IteViewController{
     UITableView *_tableView;
-    UIView *_topView;
     UIView *_headerView;
     UIView *_bottomView;
     LevelUpView *_levelUpView;
+    UIImageView *_imageVTop;
 }
 
 
@@ -37,6 +37,7 @@ static NSString *cellIte = @"cellIte";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent = NO;
+    self.view.backgroundColor=COLOR_BACK_MAIN;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_BuyMainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIte];
     [self createBarButtonItem];
     
@@ -47,8 +48,7 @@ static NSString *cellIte = @"cellIte";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
-    
-    [self createTopView];
+//    [self createTopView];
     [self createHeadView];
     [self createTableView];
     [self createBottomView];
@@ -78,18 +78,12 @@ static NSString *cellIte = @"cellIte";
     [[UIApplication sharedApplication].keyWindow addSubview:_levelUpView];
 
 }
--(void)createTopView{
-    
-    NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_MainTopView" owner:nil options:nil];
-    HT_Par_MainTopView *topView=[nib firstObject];
-    topView.frame=CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1100*80);
-    
-    UITapGestureRecognizer * tapPerson = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapThePersonView)];
-    [topView.ViewPerson addGestureRecognizer:tapPerson];
-    _topView=topView;
-    [self.view addSubview:_topView];
-}
 
+-(void)createTopView{
+    _imageVTop=[[UIImageView alloc]initWithFrame: CGRectMake(0, 0,SCREEN_WITH , 20)];
+    _imageVTop.image=[UIImage imageNamed:@"xiant"];
+    [self.view addSubview:_imageVTop];
+}
 -(void)createHeadView{
     if (1) {
         NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteProjectDoneHeaderCView" owner:nil options:nil];
@@ -109,7 +103,7 @@ static NSString *cellIte = @"cellIte";
     
 }
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT/1100*(615+250)-10) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT/1100*(615+415)-10) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headerView;

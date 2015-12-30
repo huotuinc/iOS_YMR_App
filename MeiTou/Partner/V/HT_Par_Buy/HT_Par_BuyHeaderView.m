@@ -23,28 +23,21 @@
 //    @property (weak, nonatomic) IBOutlet UILabel *labelPerson;
 //    @property (weak, nonatomic) IBOutlet UIView *viewProgress;
     
-
-    _imageVTop.image=[UIImage imageNamed:@"xdd"];
+    for (int i=0; i<3; i++) {
+        UILabel *label=(UILabel *)[self viewWithTag:110+i];
+        [self changeLabel:label AndFont:22 AndColor:[UIColor whiteColor]];
+        label.backgroundColor=COLOR_BACK_TIME;
+        label.layer.cornerRadius=5;
+        label.layer.masksToBounds=YES;
+    }
+    
+    _imageVTop.image=[UIImage imageNamed:@"line2"];
     _imageVLine.image=[UIImage imageNamed:@"line1"];
-    _labelTitle.text=@"众筹会议类";
-    _labeEnd.text=@"结束时间";
-    _labelDone.text=@"已预约";
-    _labelTime.text=@"18:00 - 20:00";
-    _labelDate.text=@"10-10";
-    _labelPerson.text=@"20/100人";
+ 
     
-    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(34)];
-    _labeEnd.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelDone.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelTime.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelPerson.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
+
     
-    _labelTitle.textColor=COLOR_TEXT_TITILE;
-    _labeEnd.textColor=COLOR_TEXT_DATE;
-    _labelDate.textColor=COLOR_TEXT_CONTENT;
-    _labelDone.textColor=COLOR_TEXT_DATE;
-    _labelPerson.textColor=COLOR_BUTTON_RED;
+
 
 
     _viewProgress.transform=CGAffineTransformMakeScale(1.0f, 1.0f);
@@ -61,7 +54,17 @@
     
 }
 
-
+/**
+ *  设置label的字体大小和颜色
+ *
+ *  @param label 更改的label
+ *  @param font  整形(相对效果图的像素大小)
+ *  @param color 颜色
+ */
+-(void)changeLabel:(UILabel *) label AndFont:(NSInteger) font AndColor:(UIColor *) color{
+    label.font=[UIFont systemFontOfSize:FONT_SIZE(font)];
+    label.textColor=color;
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

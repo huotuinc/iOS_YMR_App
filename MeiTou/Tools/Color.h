@@ -70,11 +70,16 @@
 #define COLOR_BACK_MAIN [UIColor colorWithRed:242/255.0f green:242/255.0f blue:242/255.0f alpha:1]
 //底色 紫红底色_侧滑页背景
 #define COLOR_BACK_LEFT [UIColor colorWithRed:25/255.0f green:19/255.0f blue:53/255.0f alpha:1]
+//底色 倒计时label
+#define COLOR_BACK_TIME [UIColor colorWithRed:72/255.0f green:75/255.0f blue:84/255.0f alpha:1]
 
 
 
 //左抽屉 字体颜色
 #define COLOR_LEFTVC_Main [UIColor colorWithRed:138/255.0f green:116/255.0f blue:126/255.0f alpha:1]
 //左抽屉 cell分割线
-#define COLOR_LEFTVC_CELLS [UIColor colorWithRed:163/255.0f green:56/255.0f blue:103/255.0f alpha:1]
+#define COLOR_LEFTVC_CELLS [UIColor colorWithRed:202/255.0f green:202/255.0f blue:202/255.0f alpha:1]
+//左抽屉 头像边缘颜色
+#define COLOR_LEFTVC_HEAD [UIColor colorWithRed:228/255.0f green:228/255.0f blue:228/255.0f alpha:1]
+
 #endif /* Color_h */

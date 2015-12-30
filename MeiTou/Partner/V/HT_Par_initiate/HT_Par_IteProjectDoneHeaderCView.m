@@ -12,28 +12,42 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _imageVTop.image=[UIImage imageNamed:@"xdd"];
-    _imageVline.image=[UIImage imageNamed:@"line1"];
-    _imageVRight.image=[UIImage imageNamed:@"common_content_right_more"];
-    _imagevState.image=[UIImage imageNamed:@"crowdfunding_content_center_success"];
-    _imageVLine.image=[UIImage imageNamed:@"line1"];
-    _imageVA.image=[UIImage imageNamed:@"sides_menu_tou"];
-    _imageVB.image=[UIImage imageNamed:@"sides_menu_tou"];
-    _imageVC.image=[UIImage imageNamed:@"sides_menu_tou"];
-    _imageVD.image=[UIImage imageNamed:@"sides_menu_tou"];
-    _imageVE.image=[UIImage imageNamed:@"sides_menu_tou"];
-    _imageVMore.image=[UIImage imageNamed:@"common_content_center_more"];
-    _labelEnd.text=@"结束时间:";
-    _labelStart.text=@"起购:";
-    _labelTarget.text=@"目标金额:";
-    _labelAttend.text=@"参与:";
-    _labelDone.text=@"已筹集:";
     
-    _labelEnd.textColor=COLOR_TEXT_DATE;
-    _labelStart.textColor=COLOR_TEXT_DATE;
-    _labelTarget.textColor=COLOR_TEXT_DATE;
-    _labelAttend.textColor=COLOR_TEXT_DATE;
-    _labelDone.textColor=COLOR_TEXT_DATE;
+    
+    for (int i=0; i<8; i++) {
+        UIImageView *imageV=(UIImageView *)[self viewWithTag:200+i];
+        imageV.image=[UIImage imageNamed:@"line2"];
+    }
+    
+    for (int i=0; i<4; i++) {
+        UILabel *label=(UILabel *)[self viewWithTag:100+i];
+        [self changeLabel:label AndFont:22 AndColor:COLOR_TEXT_DATE];
+    }
+    
+    for (int i=0; i<3; i++) {
+        UILabel *label=(UILabel *)[self viewWithTag:110+i];
+        [self changeLabel:label AndFont:22 AndColor:[UIColor whiteColor]];
+        label.backgroundColor=COLOR_BACK_TIME;
+        label.layer.cornerRadius=5;
+        label.layer.masksToBounds=YES;
+    }
+    for (int i=0; i<6; i++) {
+        UIImageView *imageV=(UIImageView *)[self viewWithTag:300+i];
+        if (i==5) {
+            imageV.image=[UIImage imageNamed:@"common_content_center_more"];
+        }else{
+            imageV.image=[UIImage imageNamed:@"sides_menu_tou"];
+        }
+        
+    }
+    
+    _imageVTop.image=[UIImage imageNamed:@"line2"];
+    _imagevState.image=[UIImage imageNamed:@"crowdfunding_content_center_success"];
+    _imageVRight.image=[UIImage imageNamed:@"common_content_right_more"];
+ 
+
+    
+ 
     
     _viewProgress.transform=CGAffineTransformMakeScale(1.0f, 1.0f);
     _viewProgress.layer.cornerRadius=5;
@@ -45,44 +59,23 @@
     //设置进度条上进度的颜色
     _viewProgress.progressTintColor=COLOR_BUTTON_ORANGE;
     
-    _labelMoney.text=@"100万";
-    _labelPerson.text=@"23人";
-    _labelTip.text=@"100万";
-    _labelPrice.text=@"5万";
-    _labelDate.text=@"10-02";
-    _labelTime.text=@"18:00-20:00";
-    
-    _labelMoney.textColor=COLOR_TEXT_TITILE;
-    _labelPerson.textColor=COLOR_BUTTON_RED;
-    _labelTip.textColor=COLOR_TEXT_TITILE;
-    _labelPrice.textColor=COLOR_BUTTON_RED;
-    _labelTitle.textColor=COLOR_TEXT_TITILE;
-    _labelSuccess.textColor=COLOR_TEXT_TITILE;
-    
-    _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(34)];
-    _labelSuccess.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelEnd.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelStart.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelTarget.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelAttend.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelDone.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelPerson.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelTip.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelPrice.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelDate.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-    _labelTime.font=[UIFont systemFontOfSize:FONT_SIZE(22)];
-//    
-//    for (int i=0; i<7; i++) {
-//        UIImageView *imageV=[[UIImageView alloc]initWithFrame:CGRectMake((_viewHeadGroup.frame.size.width-30)/7*i,_viewHeadGroup.frame.size.height/2-_viewHeadGroup.frame.size.width/7/2 , _viewHeadGroup.frame.size.width/7, _viewHeadGroup.frame.size.width/7)];
-//        imageV.image
-//        =[UIImage imageNamed:@"sides_menu_tou"];
-//        if (i==6) {
-////            imageV.image=[UIImage imageNamed:@"common_content_center_more"];
-//            
-//        }
-//        [_viewHeadGroup addSubview:imageV];
-//    }
 
+    
+
+
+
+
+}
+/**
+ *  设置label的字体大小和颜色
+ *
+ *  @param label 更改的label
+ *  @param font  整形(相对效果图的像素大小)
+ *  @param color 颜色
+ */
+-(void)changeLabel:(UILabel *) label AndFont:(NSInteger) font AndColor:(UIColor *) color{
+    label.font=[UIFont systemFontOfSize:FONT_SIZE(font)];
+    label.textColor=color;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

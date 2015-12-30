@@ -43,7 +43,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     
-     _imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sides_menu_nndd"]];
+     _imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"xiand"]];
     _imageV.frame = self.view.bounds;
     _imageV.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.view insertSubview:_imageV atIndex:0];

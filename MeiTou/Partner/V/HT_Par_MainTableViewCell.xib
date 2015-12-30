@@ -24,7 +24,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6Y-yA-EGe" userLabel="AView">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="152"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="tt1-17-Czn" userLabel="HeadImage View">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tt1-17-Czn" userLabel="HeadImage View">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="152"/>
                                                 <animations/>
                                             </imageView>
@@ -311,7 +311,4 @@
             <point key="canvasLocation" x="253" y="252.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="1" width="494" height="324"/>
-    </resources>
 </document>

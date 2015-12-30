@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  个人中心
+ */
 @interface HT_HomePage_PersonViewTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *ImageVHead;
