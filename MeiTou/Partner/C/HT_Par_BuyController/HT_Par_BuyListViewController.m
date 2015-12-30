@@ -8,11 +8,14 @@
 
 #import "HT_Par_BuyListViewController.h"
 #import "HT_Par_BuyListTableViewCell.h"
+#import "BuyModel.h"
 
 static NSString *cellMain = @"cellMain";
 
 
 @interface HT_Par_BuyListViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) NSMutableArray *buyList;
 
 @end
 
@@ -34,7 +37,76 @@ static NSString *cellMain = @"cellMain";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createTableView];
+    
+    self.buyList = [NSMutableArray array];
 }
+
+
+#pragma mark 网络请求
+
+/**
+ *  下拉刷新
+ */
+- (void)getNewShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"lastId"] = nil;
+    dic[@"crowdId"] = @1;
+#warning 修改id
+    
+    [UserLoginTool loginRequestGet:@"getBookingList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [BuyModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            //
+            [self.buyList removeAllObjects];
+            
+            [self.buyList addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    }];
+    
+}
+
+/**
+ *  上拉加载更多
+ */
+- (void)getMoreShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    BuyModel *info = [self.buyList lastObject];
+    dic[@"lastId"] = info.pid;
+    dic[@"crowdId"] = @63;
+#warning 修改id
+    
+    [UserLoginTool loginRequestGet:@"getBookingList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [BuyModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.buyList addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+
+
 -(void)createNavgationBarTitle{
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
     titleLabel.backgroundColor = [UIColor clearColor];

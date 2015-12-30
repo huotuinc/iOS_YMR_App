@@ -51,9 +51,6 @@ static NSString *cellBuy = @"cellBuy";
 //    NSLog(@"*****************************");
 //    NSLog(@"%f",SCREEN_HEIGHT/1100*1000);
  
-
-    
-    
 }
 
 
