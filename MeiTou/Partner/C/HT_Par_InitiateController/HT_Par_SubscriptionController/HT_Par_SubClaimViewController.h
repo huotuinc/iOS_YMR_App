@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  我要认购
+ */
 @interface HT_Par_SubClaimViewController : UIViewController
 
 @end

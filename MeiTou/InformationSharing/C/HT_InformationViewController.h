@@ -8,7 +8,7 @@
 
 #import "HT_BaseViewController.h"
 /**
- *  我要分享
+ *  爱美容
  */
 @interface HT_InformationViewController : HT_BaseViewController
 

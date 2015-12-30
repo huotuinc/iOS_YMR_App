@@ -863,7 +863,6 @@
                 <outlet property="imageVTop" destination="Pp1-5b-ZG6" id="ZuZ-PA-GEa"/>
                 <outlet property="imageVline" destination="A4V-WU-Axj" id="WA2-Iv-PgD"/>
                 <outlet property="imagevState" destination="TYr-2R-x6H" id="eUG-TC-1ep"/>
-                <outlet property="labelAttendM" destination="yrf-W1-m9S" id="Hvs-V9-jI7"/>
                 <outlet property="labelDone" destination="v1Y-HC-hOG" id="gSz-J0-6Kn"/>
                 <outlet property="labelDoneM" destination="jtt-5C-yhS" id="Rl5-7P-ZBt"/>
                 <outlet property="labelEnd" destination="ufT-Yq-mRp" id="Eqe-rz-W72"/>

@@ -33,15 +33,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self createNavgationBarTitle];
     [self createMainView];
     
     self.showHeadUrl = [NSString string];
     self.returnHeadUrl = [NSString string];
     
 }
+-(void)createNavgationBarTitle{
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE(36)];
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"我要分享";
+    self.navigationItem.titleView = titleLabel;
+}
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH/640*110 , 30)];
-    [buttonL setBackgroundColor:COLOR_NAVBAR_A];
+    [buttonL setBackgroundColor:[UIColor clearColor]];
     [buttonL setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
      [buttonL setTitle:@"取消" forState:UIControlStateNormal];
     [buttonL addTarget:self action:@selector(clickLightButton) forControlEvents:UIControlEventTouchUpInside];
