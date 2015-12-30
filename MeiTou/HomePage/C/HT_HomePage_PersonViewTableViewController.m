@@ -27,7 +27,7 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    self.navigationController.navigationBar.barTintColor = COLOR_NAVBAR_A;
+    [self changeNavigationBarLineHidden:NO];
     [self createBarButtonItem];
     
     
@@ -40,6 +40,28 @@
     self.navigationController.navigationBar.translucent=NO;
     [self setLabelTextAlignment];
     [self createNavgationBarTitle];
+}
+/**
+ *  隐藏导航栏下面那条线
+ *
+ *  @param hidden <#hidden description#>
+ */
+- (void)changeNavigationBarLineHidden:(BOOL)hidden {
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
+        NSArray *list = self.navigationController.navigationBar.subviews;
+        for (id obj in list) {
+            if ([obj isKindOfClass:[UIImageView class]]) {
+                UIImageView *imageView = (UIImageView *)obj;
+                NSArray *list2 = imageView.subviews;
+                for (id obj2 in list2) {
+                    if ([obj2 isKindOfClass:[UIImageView class]]) {
+                        UIImageView *imageView2 = (UIImageView *)obj2;
+                        imageView2.hidden = hidden;
+                    }
+                }
+            }
+        }
+    }
 }
 
 -(void)createNavgationBarTitle{

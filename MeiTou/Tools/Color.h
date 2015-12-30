@@ -44,7 +44,8 @@
 #define COLOR_BUTTON_OUTDATE [UIColor colorWithRed:168/255.0f green:168/255.0f blue:168/255.0f alpha:1]
 //按钮 充值成功
 #define COLOR_BUTTON_SUCCESS [UIColor colorWithRed:3/255.0f green:207/255.0f blue:37/255.0f alpha:1]
-
+//按钮 首页
+#define COLOR_BUTTON_HOME [UIColor colorWithRed:214/255.0f green:194/255.0f blue:154/255.0f alpha:1]
 /**
  *  文字颜色
  */

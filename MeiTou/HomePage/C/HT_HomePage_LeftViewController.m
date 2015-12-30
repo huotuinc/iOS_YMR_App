@@ -79,7 +79,7 @@
  */
 -(void)createLocalData{
     _iconArray=[NSMutableArray arrayWithArray:@[@"SlidingMenu_content_left_home",@"SlidingMenu_content_left_account",@"SlidingMenu_content_left_meitou",@"SlidingMenu_content_left_partner",@"SlidingMenu_content_left_cosmetology",@"SlidingMenu_content_left_qiehuan"]];
-    _titleArray=[NSMutableArray arrayWithArray:@[@"首页",@"账户",@"关于美投",@"合伙人",@"爱美容",@"账户切换"]];
+    _titleArray=[NSMutableArray arrayWithArray:@[@"首页",@"账户",@"关于美投",@"财经资讯",@"美容资讯",@"账户切换"]];
 }
 
 

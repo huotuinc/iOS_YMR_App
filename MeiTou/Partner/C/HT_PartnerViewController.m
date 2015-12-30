@@ -50,7 +50,7 @@ static NSString *cellMain = @"cellMain";
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     self.navigationController.navigationBar.translucent=NO;
-
+    [self navigationBarLineHidden:NO];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellMain];
     
 
@@ -74,6 +74,29 @@ static NSString *cellMain = @"cellMain";
     
     [self createTopView];
     [self createTableView];
+}
+
+/**
+ *  隐藏导航栏下面那条线
+ *
+ *  @param hidden <#hidden description#>
+ */
+- (void)navigationBarLineHidden:(BOOL)hidden {
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
+        NSArray *list = self.navigationController.navigationBar.subviews;
+        for (id obj in list) {
+            if ([obj isKindOfClass:[UIImageView class]]) {
+                UIImageView *imageView = (UIImageView *)obj;
+                NSArray *list2 = imageView.subviews;
+                for (id obj2 in list2) {
+                    if ([obj2 isKindOfClass:[UIImageView class]]) {
+                        UIImageView *imageView2 = (UIImageView *)obj2;
+                        imageView2.hidden = hidden;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #pragma mark 网络请求
@@ -194,7 +217,7 @@ static NSString *cellMain = @"cellMain";
 }
 
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT-64) style:UITableViewStyleGrouped];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, _topView.frame.origin.y+_topView.frame.size.height, SCREEN_WITH , SCREEN_HEIGHT-SCREEN_HEIGHT/1100*70-64) style:UITableViewStyleGrouped];
     _tableView.showsHorizontalScrollIndicator=NO;
     _tableView.delegate=self;
     _tableView.dataSource=self;
@@ -207,10 +230,26 @@ static NSString *cellMain = @"cellMain";
  *  tap事件
  */
 -(void)tapTheSearchView{
+    NSLog(@"1111111111111222222");
     HT_Par_SearchViewController *search=[[HT_Par_SearchViewController alloc]init];
     [self.navigationController pushViewController:search animated:YES];
 
 }
+-(void)goToBuy{
+    HT_Par_BuyViewController *buy=[[HT_Par_BuyViewController alloc]init];
+    [self.navigationController pushViewController:buy animated:YES];
+    
+}
+-(void)gotToIte{
+    HT_Par_IteViewController *ite=[[HT_Par_IteViewController alloc]init];
+    [self.navigationController pushViewController:ite animated:YES];
+}
+-(void)gotToSub{
+    HT_Par_SubViewController *sub=[[HT_Par_SubViewController alloc]init];
+    [self.navigationController pushViewController:sub animated:YES];
+}
+
+
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *_cell;
@@ -221,7 +260,8 @@ static NSString *cellMain = @"cellMain";
         cell.labelContent.text=@"12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）";
         cell.labelRight.text=@"20/50人预约";
         cell.labelLeft.text=@"预约金$1500";
-        [cell.ButtonGo setTitle:@"我要购买" forState:UIControlStateNormal];
+        [cell.ButtonGo setTitle:@"我要预约" forState:UIControlStateNormal];
+        [cell.ButtonGo addTarget:self action:@selector(goToBuy) forControlEvents:UIControlEventTouchUpInside];
         [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_RED];
         _cell=cell;
         
@@ -235,6 +275,7 @@ static NSString *cellMain = @"cellMain";
         cell.labelRight.text=@"剩余100万";
         [cell.ButtonGo setTitle:@"我要发起" forState:UIControlStateNormal];
         [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_INITIATE];
+        [cell.ButtonGo addTarget:self action:@selector(gotToIte) forControlEvents:UIControlEventTouchUpInside];
         _cell=cell;
         
     }
@@ -246,6 +287,7 @@ static NSString *cellMain = @"cellMain";
         cell.labelRight.text=@"起购5万";
         [cell.ButtonGo setTitle:@"我要认购" forState:UIControlStateNormal];
         [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_ORANGE];
+        [cell.ButtonGo addTarget:self action:@selector(gotToSub) forControlEvents:UIControlEventTouchUpInside];
         _cell=cell;
         
     }

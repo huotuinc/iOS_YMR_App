@@ -20,6 +20,16 @@
     _labelCount.text=@"333个赞";
     _labelScore.text=@"转发得55分";
     
+    for (int i=0; i<9; i++) {
+        
+        UIImageView *imageV=(UIImageView *)[self viewWithTag:1000+i];
+        if (i==8) {
+            imageV.image=[UIImage imageNamed:@"common_content_center_more"];
+        }else{
+            imageV.image=[UIImage imageNamed:@"sides_menu_tou"];
+        }
+    }
+    
     _labelTitle.font=[UIFont systemFontOfSize:FONT_SIZE(32)];
     _labelScore.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
     _labelContent.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
@@ -45,7 +55,7 @@
     _labelContent.text=@"但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是但是的萨达犯得上犯得上方式但双方的事发生大师傅士大夫是";
     _labelContent.numberOfLines=3;
     
-    _viewHeadGroup.backgroundColor=[UIColor yellowColor];
+
 
     _imageVNice.image=[UIImage imageNamed:@"common_zan_a"];
     _imageVComment.image=[UIImage imageNamed:@"common_comment"];

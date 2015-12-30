@@ -12,7 +12,6 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _imageVLine.image=[UIImage imageNamed:@"line1"];
     
     [_buttonCooperation setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_buttonCooperation setBackgroundColor:COLOR_BUTTON_ORANGE];

@@ -44,6 +44,7 @@ static NSString *cellIMain = @"cellIMain";
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO]; 
     self.navigationController.navigationBar.translucent=NO;
+    [self changeNavigationBarLineHidden:NO];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIMain];
     [self createBarButtonItem];
     [self getNewShareList];
@@ -58,11 +59,33 @@ static NSString *cellIMain = @"cellIMain";
     [self setupRefresh];
     
     
-    [self createTopView];
+//    [self createTopView];
     [self createTableView];
     [self createBottomView];
     
     
+}
+/**
+ *  隐藏导航栏下面那条线
+ *
+ *  @param hidden <#hidden description#>
+ */
+- (void)changeNavigationBarLineHidden:(BOOL)hidden {
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
+        NSArray *list = self.navigationController.navigationBar.subviews;
+        for (id obj in list) {
+            if ([obj isKindOfClass:[UIImageView class]]) {
+                UIImageView *imageView = (UIImageView *)obj;
+                NSArray *list2 = imageView.subviews;
+                for (id obj2 in list2) {
+                    if ([obj2 isKindOfClass:[UIImageView class]]) {
+                        UIImageView *imageView2 = (UIImageView *)obj2;
+                        imageView2.hidden = hidden;
+                    }
+                }
+            }
+        }
+    }
 }
 -(void)createNavgationBarTitle{
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
@@ -178,7 +201,7 @@ static NSString *cellIMain = @"cellIMain";
 }
 
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/1100*70, SCREEN_WITH , SCREEN_HEIGHT-64-SCREEN_HEIGHT/1100*(90+70)) style:UITableViewStyleGrouped];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT-64-SCREEN_HEIGHT/1100*(90)) style:UITableViewStyleGrouped];
     NSLog(@"**************%f**********",_bottomView.frame.size.height);
     _tableView.delegate=self;
     _tableView.dataSource=self;
@@ -203,6 +226,9 @@ static NSString *cellIMain = @"cellIMain";
     _bottomView.imageVShare.userInteractionEnabled=YES;
     UITapGestureRecognizer * tapA = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheShareView)];
     [_bottomView.imageVShare addGestureRecognizer:tapA];
+    _bottomView.imageVSearch.userInteractionEnabled=YES;
+    UITapGestureRecognizer * tapB = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheSearchView)];
+    [_bottomView.imageVSearch addGestureRecognizer:tapB];
     [self.view addSubview:_bottomView];
     [self createClearView];
     

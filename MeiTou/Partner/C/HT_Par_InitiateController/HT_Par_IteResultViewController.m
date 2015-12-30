@@ -9,6 +9,7 @@
 #import "HT_Par_IteResultViewController.h"
 #import "HT_Par_IteResultTableViewCell.h"
 
+#import "HT_Par_IteResult_HeadView.h"
 static NSString *cellIResult = @"cellIResult";
 
 @interface HT_Par_IteResultViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -22,6 +23,8 @@ static NSString *cellIResult = @"cellIResult";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
+    [self changeNavigationBarLineHidden:NO];
+    self.view.backgroundColor=[UIColor whiteColor];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_IteResultTableViewCell" bundle:nil]forCellReuseIdentifier:cellIResult];
     [self createBarButtonItem];
     
@@ -32,6 +35,28 @@ static NSString *cellIResult = @"cellIResult";
     // Do any additional setup after loading the view.
     [self createNavgationBarTitle];
     [self createTableView];
+}
+/**
+ *  隐藏导航栏下面那条线
+ *
+ *  @param hidden <#hidden description#>
+ */
+- (void)changeNavigationBarLineHidden:(BOOL)hidden {
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
+        NSArray *list = self.navigationController.navigationBar.subviews;
+        for (id obj in list) {
+            if ([obj isKindOfClass:[UIImageView class]]) {
+                UIImageView *imageView = (UIImageView *)obj;
+                NSArray *list2 = imageView.subviews;
+                for (id obj2 in list2) {
+                    if ([obj2 isKindOfClass:[UIImageView class]]) {
+                        UIImageView *imageView2 = (UIImageView *)obj2;
+                        imageView2.hidden = hidden;
+                    }
+                }
+            }
+        }
+    }
 }
 
 -(void)createNavgationBarTitle{
@@ -72,6 +97,15 @@ _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     UITableViewCell *_cell;
     HT_Par_IteResultTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIResult forIndexPath:indexPath];
     
+    
+    for (int i=0; i<5; i++) {
+        NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
+        HT_Par_IteResult_HeadView *headV=[nib firstObject];
+        headV.frame=CGRectMake(cell.ViewHeadGroup.frame.origin.x+cell.ViewHeadGroup.frame.size.width/5*i, 0, cell.ViewHeadGroup.frame.size.width/5, cell.ViewHeadGroup.frame.size.height);
+        //        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*(i%5), height*(i/5), _ViewHeadGroup.frame.size.width/5, height);
+//        [cell.ViewHeadGroup layoutIfNeeded];
+        [cell.ViewHeadGroup addSubview:headV];
+    }
     
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     _cell=cell;

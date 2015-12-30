@@ -34,6 +34,7 @@ static NSString *cellBuy = @"cellBuy";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent = NO;
+    [self changeNavigationBarLineHidden:YES];
     
 
     [self createBarButtonItem];
@@ -53,7 +54,28 @@ static NSString *cellBuy = @"cellBuy";
  
 }
 
-
+/**
+ *  隐藏导航栏下面那条线
+ *
+ *  @param hidden <#hidden description#>
+ */
+- (void)changeNavigationBarLineHidden:(BOOL)hidden {
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
+        NSArray *list = self.navigationController.navigationBar.subviews;
+        for (id obj in list) {
+            if ([obj isKindOfClass:[UIImageView class]]) {
+                UIImageView *imageView = (UIImageView *)obj;
+                NSArray *list2 = imageView.subviews;
+                for (id obj2 in list2) {
+                    if ([obj2 isKindOfClass:[UIImageView class]]) {
+                        UIImageView *imageView2 = (UIImageView *)obj2;
+                        imageView2.hidden = hidden;
+                    }
+                }
+            }
+        }
+    }
+}
 -(void)createNavTitleView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_NavTitleCVIew" owner:nil options:nil];
     _navView=[nib firstObject];
@@ -101,7 +123,7 @@ static NSString *cellBuy = @"cellBuy";
 -(void)createBottomView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_BuyBottomView" owner:nil options:nil];
     HT_Par_BuyBottomView *bottomView=[nib firstObject];
-    bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*120)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*120);
+    bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*100)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*100);
     [bottomView.buttonSubscription addTarget:self action:@selector(clickButtonSubscription) forControlEvents:UIControlEventTouchUpInside];
     
        _bottomView=bottomView;
@@ -150,11 +172,27 @@ static NSString *cellBuy = @"cellBuy";
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return [self sizeToFont:[UIFont systemFontOfSize:FONT_SIZE(24)] WithWidth:SCREEN_WITH lineWidth:1].height;
+//    return [self sizeToFont:[UIFont systemFontOfSize:FONT_SIZE(24)] WithWidth:SCREEN_WITH lineWidth:1].height;
+     NSString *str=@"大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,大事了多久啊了解到哦啊简单,阿斯大家阿斯哦降低啊是假的哦啊,但撒娇哦啊是假的哦撒娇的哦爱激动,sdajidjasoidjasjdaos,好烦地沟还是的价格哦都是减肥企鹅万恶我去问额外企鹅我去恶趣味额前往俄我去恶趣味额前往俄千万额外企鹅去额外企鹅我去恶趣味好烦地沟还是的价格哦都是减肥企鹅万恶我去问额外企鹅我去恶趣味额前往俄我去恶趣味额前往俄千万额外企鹅去额外企鹅我去恶趣味好烦地沟还是的价格哦都是减肥企鹅万恶我去问额外企鹅我去恶趣味额前往俄我去恶趣味额前往俄千万额外企鹅去额外企鹅我去恶趣味好烦地沟还是的价格哦都是减肥企鹅万恶我去问额外企鹅我去恶趣味额前往俄我去恶趣味额前往俄千万额外企鹅去额外企鹅我去恶趣味好烦地沟还是的价格哦都是减肥企鹅万恶我去问额外企鹅我去恶趣味额前往俄我去恶趣味额前往俄千万额外企鹅去额外企鹅我去恶趣味好烦地沟还是的价格哦都是减肥企鹅万恶我去问额外企鹅我去恶趣味额前往俄我去恶趣味额前往俄千万额外企鹅去额外企鹅我去恶趣味哈哈哈哈哈哈哈哈哈哈哈额额额额额";
+    return [self boundingRectWithSize:CGSizeMake(SCREEN_WITH/640*600, 0) font:[UIFont systemFontOfSize:FONT_SIZE(22)] string:str].height +1.0;
 
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
    
+}
+
+
+- (CGSize)boundingRectWithSize:(CGSize)size font:(UIFont *)font string:(NSString *)str
+{
+    NSDictionary *attribute = @{NSFontAttributeName : font};
+    CGSize retSize = [str boundingRectWithSize:size
+                                       options:
+                      NSStringDrawingUsesLineFragmentOrigin |
+                      NSStringDrawingUsesFontLeading
+                                    attributes:attribute
+                                       context:nil].size;
+    
+    return retSize;
 }
 /**
  *  计算label的高度
@@ -175,7 +213,13 @@ static NSString *cellBuy = @"cellBuy";
     size=[str boundingRectWithSize:CGSizeMake(SCREEN_WITH, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:dic context:nil].size;
     return size;
 }
-
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, 50)];
+    return view;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 130.0f;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

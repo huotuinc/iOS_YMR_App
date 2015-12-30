@@ -35,18 +35,20 @@
     _imageVHead.layer.masksToBounds=YES;
     ////
 }
+
+
 - (void)layoutSubviews {
     [super layoutSubviews];
 //    NSInteger height=_ViewHeadGroup.frame.size.height;
 
-    for (int i=0; i<5; i++) {
-        NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
-        HT_Par_IteResult_HeadView *headV=[nib firstObject];
-        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*i, 0, _ViewHeadGroup.frame.size.width/5, _ViewHeadGroup.frame.size.height);
-//        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*(i%5), height*(i/5), _ViewHeadGroup.frame.size.width/5, height);
-        [self.ViewHeadGroup layoutIfNeeded];
-        [self.ViewHeadGroup addSubview:headV];
-    }
+//    for (int i=0; i<5; i++) {
+//        NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
+//        HT_Par_IteResult_HeadView *headV=[nib firstObject];
+//        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*i, 0, _ViewHeadGroup.frame.size.width/5, _ViewHeadGroup.frame.size.height);
+////        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*(i%5), height*(i/5), _ViewHeadGroup.frame.size.width/5, height);
+//        [self.ViewHeadGroup layoutIfNeeded];
+//        [self.ViewHeadGroup addSubview:headV];
+//    }
     
 }
 

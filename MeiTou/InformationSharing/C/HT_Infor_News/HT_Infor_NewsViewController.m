@@ -27,7 +27,6 @@ static NSString *cellIBuy=@"cellIBuy";
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent = NO;
-    
 
     [self createBarButtonItem];
     
@@ -50,6 +49,8 @@ static NSString *cellIBuy=@"cellIBuy";
     
     
 }
+
+
 -(void)createNavgationBarTitle{
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
     titleLabel.backgroundColor = [UIColor clearColor];

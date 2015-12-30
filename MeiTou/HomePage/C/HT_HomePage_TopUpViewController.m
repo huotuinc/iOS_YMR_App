@@ -76,7 +76,7 @@
 
     _mainView.viewLevelUp.hidden=YES;
     _mainView.buttonPay.selected=YES;
-    _mainView.labelUp.textColor=COLOR_BUTTON_RED;
+    _mainView.labelMore.textColor=COLOR_BUTTON_RED;
     _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
 //    _mainView=mainView;
     [self.view addSubview:_mainView];
@@ -121,7 +121,7 @@
     for (int i=0; i<2; i++) {
         UIView *view=(UIView *)[self.view viewWithTag:200+i];
         view.hidden=YES;
-        if (view.tag==200) {
+        if (view.tag==201) {
             view.hidden=NO;
         }
     }
@@ -133,7 +133,7 @@
     for (int i=0; i<2; i++) {
         UIView *view=(UIView *)[self.view viewWithTag:200+i];
         view.hidden=YES;
-        if (view.tag==201) {
+        if (view.tag==200) {
             view.hidden=NO;
         }
     }

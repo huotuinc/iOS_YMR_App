@@ -12,6 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonCooperation;
 @property (weak, nonatomic) IBOutlet UIButton *buttonOrder
 ;
-@property (weak, nonatomic) IBOutlet UIImageView *imageVLine;
 
 @end

@@ -53,16 +53,20 @@
 //    self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
     
     
-//    [self navigationBarLineHidden:YES];
+    [self navigationBarLineHidden:YES];
     
-    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+//    UINavigationBar *navigationBar = self.navigationController.navigationBar;
 //     white.png图片自己下载个纯白色的色块，或者自己ps做一个
-    [navigationBar setBackgroundImage:[UIImage imageNamed:@"xiand"]
-                       forBarPosition:UIBarPositionAny
-                           barMetrics:UIBarMetricsDefault];
-    [navigationBar setShadowImage:[UIImage new]];
+//    [navigationBar setBackgroundImage:[UIImage imageNamed:@"xiand"]
+//                       forBarPosition:UIBarPositionAny
+//                           barMetrics:UIBarMetricsDefault];
+//    [navigationBar setShadowImage:[UIImage new]];
 }
-
+/**
+ *  隐藏导航栏下面那条线
+ *
+ *  @param hidden <#hidden description#>
+ */
 - (void)navigationBarLineHidden:(BOOL)hidden {
     if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
         NSArray *list = self.navigationController.navigationBar.subviews;
@@ -168,20 +172,50 @@
     
     for (int i = 0; i < 3; i ++) {
         //在 contentsize 范围内创建2张图片
-        UIImageView *_imageV  = [[UIImageView alloc]initWithFrame:CGRectMake(i*SCREEN_WITH, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*1050)];
+        UIImageView *_imageV  = [[UIImageView alloc]initWithFrame:CGRectMake(i*SCREEN_WITH, 0, SCREEN_WITH, SCREEN_HEIGHT)];
         _imageV.userInteractionEnabled=YES;
         if (i==0) {
-            _imageV.image=[UIImage imageNamed:@"meitou_home_a"];
+            _imageV.image=[UIImage imageNamed:@"home3"];
+            UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WITH/2-SCREEN_WITH/750*(386/2), SCREEN_HEIGHT/1335*(1335-400), SCREEN_WITH/750*386, SCREEN_HEIGHT/1335*77)];
+            button.layer.cornerRadius=3;
+            button.layer.borderWidth=1;
+            button.layer.borderColor=[COLOR_BUTTON_HOME CGColor];
+            button.layer.masksToBounds=YES;
+            [button setTitle:@"了解资讯" forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            button.titleLabel.font=[UIFont systemFontOfSize:FONT_SIZE(36)];
             UITapGestureRecognizer * tapImageVA = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushToInformation)];
-            [_imageV addGestureRecognizer:tapImageVA];
+            [button addGestureRecognizer:tapImageVA];
+            [_imageV addSubview:button];
+
         }
         if (i==1) {
-            _imageV.image=[UIImage imageNamed:@"meitou_home_b"];
-            UITapGestureRecognizer * tapImageVB = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushToPartner)];
-            [_imageV addGestureRecognizer:tapImageVB];
+            _imageV.image=[UIImage imageNamed:@"home-b3"];
+            UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WITH/2-SCREEN_WITH/750*(386/2), SCREEN_HEIGHT/1335*(1335-400), SCREEN_WITH/750*386, SCREEN_HEIGHT/1335*77)];
+            button.layer.cornerRadius=3;
+            button.layer.borderWidth=1;
+            button.layer.borderColor=[COLOR_BUTTON_HOME CGColor];
+            button.layer.masksToBounds=YES;
+            [button setTitle:@"了解投资" forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            button.titleLabel.font=[UIFont systemFontOfSize:FONT_SIZE(36)];
+            UITapGestureRecognizer * tapImageVA = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushToPartner)];
+            [button addGestureRecognizer:tapImageVA];
+            [_imageV addSubview:button];
         }
         if (i==2) {
-            _imageV.image=[UIImage imageNamed:@"meitou_home_a"];
+            _imageV.image=[UIImage imageNamed:@"home3"];
+            UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WITH/2-SCREEN_WITH/750*(386/2), SCREEN_HEIGHT/1335*(1335-400), SCREEN_WITH/750*386, SCREEN_HEIGHT/1335*77)];
+            button.layer.cornerRadius=3;
+            button.layer.borderWidth=1;
+            button.layer.borderColor=[COLOR_BUTTON_HOME CGColor];
+            button.layer.masksToBounds=YES;
+            [button setTitle:@"了解资讯" forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            button.titleLabel.font=[UIFont systemFontOfSize:FONT_SIZE(36)];
+            UITapGestureRecognizer * tapImageVA = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushToInformation)];
+            [button addGestureRecognizer:tapImageVA];
+            [_imageV addSubview:button];
 
         }
 
@@ -191,7 +225,7 @@
 -(void)createNavTitleView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_NavTitleCVIew" owner:nil options:nil];
     _navView=[nib firstObject];
-    _navView.labelA.text=@"美容咨询";
+    _navView.labelA.text=@"美容资讯";
     _navView.labelB.text=@"财经资讯";
     _navView.imageVLineC.hidden=YES;
     _navView.imageVLineD.hidden=YES;

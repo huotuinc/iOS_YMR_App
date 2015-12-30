@@ -29,5 +29,6 @@
 @property (weak, nonatomic) IBOutlet UIView *viewNice;
 @property (weak, nonatomic) IBOutlet UIView *viewComment;
 @property (weak, nonatomic) IBOutlet UIView *viewShare;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVA;
 
 @end
