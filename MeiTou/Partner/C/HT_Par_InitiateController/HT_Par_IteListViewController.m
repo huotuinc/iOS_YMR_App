@@ -8,10 +8,13 @@
 
 #import "HT_Par_IteListViewController.h"
 #import "HT_Par_IteListTableViewCell.h"
+#import "RaiseModel.h"
 
 static NSString *cellIList = @"cellIList";
 
 @interface HT_Par_IteListViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) NSMutableArray *raiseArray;
 
 @end
 
@@ -25,7 +28,7 @@ static NSString *cellIList = @"cellIList";
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Par_IteListTableViewCell" bundle:nil]forCellReuseIdentifier:cellIList];
     [self createBarButtonItem];
     
-    
+    [self getNewShareList];
     
 }
 - (void)viewDidLoad {
@@ -33,6 +36,72 @@ static NSString *cellIList = @"cellIList";
     // Do any additional setup after loading the view.
     [self createNavgationBarTitle];
     [self createTableView];
+    
+    self.raiseArray = [NSMutableArray array];
+}
+
+
+#pragma mark 网络请求
+
+/**
+ *  下拉刷新
+ */
+- (void)getNewShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"lastId"] = nil;
+    dic[@"crowdId"] = @1;
+#warning 修改id
+    
+    [UserLoginTool loginRequestGet:@"getRaiseCooperationList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [RaiseModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.raiseArray removeAllObjects];
+
+            [self.raiseArray addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    }];
+    
+}
+
+/**
+ *  上拉加载更多
+ */
+- (void)getMoreShareList {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    RaiseModel *info = [self.raiseArray  lastObject];
+    dic[@"lastId"] = info.pid;
+    dic[@"crowdId"] = @63;
+#warning 修改id
+    
+    [UserLoginTool loginRequestGet:@"getRaiseCooperationList" parame:dic success:^(id json) {
+        
+        LWLog(@"%@",json);
+        
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            
+            NSArray *temp = [RaiseModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+            
+            [self.raiseArray addObjectsFromArray:temp];
+            
+            [_tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
 }
 
 -(void)createNavgationBarTitle{

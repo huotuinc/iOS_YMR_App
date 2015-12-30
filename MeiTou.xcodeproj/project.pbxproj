@@ -11,6 +11,8 @@
 		60304A241C2D153C00AE1AA1 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60304A231C2D153C00AE1AA1 /* CommentModel.m */; };
 		60304A271C2D159D00AE1AA1 /* ReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60304A261C2D159D00AE1AA1 /* ReplyModel.m */; };
 		60304A2A1C2D175500AE1AA1 /* LevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60304A291C2D175500AE1AA1 /* LevelModel.m */; };
+		60353DC51C33742E008E1172 /* BuyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60353DC21C33742E008E1172 /* BuyModel.m */; };
+		60353DC61C33742E008E1172 /* RaiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60353DC41C33742E008E1172 /* RaiseModel.m */; };
 		603A48AA1C2BCC4300D229E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A48A91C2BCC4300D229E4 /* LoginViewController.m */; };
 		603A48CC1C2BCFBC00D229E4 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A48AE1C2BCFBC00D229E4 /* TencentOpenAPI.framework */; };
 		603A48CD1C2BCFBC00D229E4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 603A48AF1C2BCFBC00D229E4 /* TencentOpenApi_IOS_Bundle.bundle */; };
@@ -288,6 +290,10 @@
 		60304A261C2D159D00AE1AA1 /* ReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyModel.m; sourceTree = "<group>"; };
 		60304A281C2D175500AE1AA1 /* LevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelModel.h; sourceTree = "<group>"; };
 		60304A291C2D175500AE1AA1 /* LevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelModel.m; sourceTree = "<group>"; };
+		60353DC11C33742E008E1172 /* RaiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaiseModel.h; sourceTree = "<group>"; };
+		60353DC21C33742E008E1172 /* BuyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyModel.m; sourceTree = "<group>"; };
+		60353DC31C33742E008E1172 /* BuyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyModel.h; sourceTree = "<group>"; };
+		60353DC41C33742E008E1172 /* RaiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaiseModel.m; sourceTree = "<group>"; };
 		603A48A81C2BCC4300D229E4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		603A48A91C2BCC4300D229E4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		603A48AE1C2BCFBC00D229E4 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -1459,6 +1465,10 @@
 				F211BC051C1819A00033B59E /* HT_Par_IteChociePickerNModel.m */,
 				604A6C791C31232900971FCA /* CrowdModel.h */,
 				604A6C7A1C31232900971FCA /* CrowdModel.m */,
+				60353DC11C33742E008E1172 /* RaiseModel.h */,
+				60353DC41C33742E008E1172 /* RaiseModel.m */,
+				60353DC21C33742E008E1172 /* BuyModel.m */,
+				60353DC31C33742E008E1172 /* BuyModel.h */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1979,6 +1989,7 @@
 				F21C19261C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.m in Sources */,
 				F2CE739F1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.m in Sources */,
 				F259CF821C292DC20082A912 /* MJMethod.m in Sources */,
+				60353DC51C33742E008E1172 /* BuyModel.m in Sources */,
 				F28E883A1C19A0C300E75298 /* HT_HomePage_ChangeViewController.m in Sources */,
 				F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */,
 				60DC99141C2CE0F500F50A5D /* AFURLRequestSerialization.m in Sources */,
@@ -2033,6 +2044,7 @@
 				F257F0231C32AD03006A2C23 /* HT_Par_SubProjectDoneHeaderCView.m in Sources */,
 				F21E44F61C102F0100657249 /* MMDrawerController.m in Sources */,
 				F2D7AEE11C172DC500725B4E /* HT_About_HeaderCView.m in Sources */,
+				60353DC61C33742E008E1172 /* RaiseModel.m in Sources */,
 				F259CF801C292DC20082A912 /* MJIvar.m in Sources */,
 				F2FAA9FC1C1A7C4A00A90DA1 /* CommentsCell.m in Sources */,
 				F29C69581C166B16000A8C29 /* HT_Infor_GroupTableViewCell.m in Sources */,

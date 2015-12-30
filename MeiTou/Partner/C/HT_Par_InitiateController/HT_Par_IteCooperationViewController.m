@@ -32,6 +32,32 @@
     // Do any additional setup after loading the view.
     [self createMainView];
 }
+/*
+money - 金额
+name - 姓名
+phone - 联系电话
+remark - 备注
+crowdId - 众筹id
+crowdPublicId - 合作发起人id
+#pragma mark 合作网络请求
+*/
+- (void)goCooperation {
+    NSMutableDictionary *parme = [NSMutableDictionary dictionary];
+    parme[@"name"] = @"luohaibo";
+    parme[@"phone"] = @"13857560740";
+    parme[@"money"] = @"50000";
+    parme[@"remark"] = @"约炮找徐和康";
+    parme[@"crowdId"] = @2;
+    parme[@"crowdPublicId"] = @1234;
+    
+    [UserLoginTool loginRequestPostWithFile:@"goCooperation" parame:parme success:^(id json) {
+        LWLog(@"%@",json);
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    } withFileKey:nil];
+    
+}
+
 
 -(void)createNavgationBarTitle{
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
@@ -85,8 +111,11 @@
     
 }
 -(void)goToPayView{
-    HT_Par_ItePaymentOrderViewController *pay=[[HT_Par_ItePaymentOrderViewController alloc]init];
-    [self.navigationController pushViewController:pay animated:YES];
+
+    [self goCooperation];
+    
+//    HT_Par_ItePaymentOrderViewController *pay=[[HT_Par_ItePaymentOrderViewController alloc]init];
+//    [self.navigationController pushViewController:pay animated:YES];
     
 }
 
