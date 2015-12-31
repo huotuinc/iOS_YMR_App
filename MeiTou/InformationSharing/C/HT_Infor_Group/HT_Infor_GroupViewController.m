@@ -86,6 +86,8 @@ static NSString *cellGMain = @"cellGMain";
     HT_Infor_BottomCView *bottomView=[nib firstObject];
     bottomView.frame=CGRectMake(0, SCREEN_HEIGHT/1150*(1150-90)-64, SCREEN_WITH, SCREEN_HEIGHT/1150*90);
     [bottomView.buttonGo addTarget:self action:@selector(clickButtonGo) forControlEvents:UIControlEventTouchUpInside];
+    [bottomView.buttonGo setTitle:@"去拼团" forState:UIControlStateNormal];
+
     _bottomView=bottomView;
     [self.view addSubview:_bottomView];
 

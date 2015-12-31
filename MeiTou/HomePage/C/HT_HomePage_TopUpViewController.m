@@ -90,8 +90,7 @@
  */
 
 -(void)goToPayView{
-    HT_HomePage_PointsViewController *point=[[HT_HomePage_PointsViewController alloc]init];
-    [self.navigationController pushViewController:point animated:YES];
+    
     
 }
 

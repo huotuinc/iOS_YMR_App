@@ -213,6 +213,8 @@ static NSString *cellIComment=@"cellIComment";
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_BottomCView" owner:nil options:nil];
     _bottomView=[nib firstObject];
     _bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*90)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*90);
+    [_bottomView.buttonGo setTitle:@"说点什么" forState:UIControlStateNormal];
+
     [self.view addSubview:_bottomView];
     
 }

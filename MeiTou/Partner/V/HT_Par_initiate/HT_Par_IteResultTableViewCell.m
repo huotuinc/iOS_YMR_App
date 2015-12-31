@@ -34,6 +34,19 @@
     _imageVHead.layer.cornerRadius=_imageVHead.frame.size.height/2;
     _imageVHead.layer.masksToBounds=YES;
     ////
+    for (int i=0; i<5; i++) {
+        UIImageView *imageV=(UIImageView *)[self viewWithTag:100+i];
+        imageV.image=[UIImage imageNamed:@"sides_menu_tou"];
+        imageV.layer.cornerRadius=imageV.frame.size.width/2;
+        imageV.layer.masksToBounds=YES;
+    }
+    for (int i=0; i<5; i++) {
+        UIImageView *imageV=(UIImageView *)[self viewWithTag:110+i];
+        imageV.image=[UIImage imageNamed:@"common_LV2"];
+        imageV.layer.cornerRadius=imageV.frame.size.width/2;
+        imageV.layer.masksToBounds=YES;
+    }
+
 }
 
 

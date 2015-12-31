@@ -27,7 +27,7 @@
         [self addSubview:showView];
         
         UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 240, 323)];
-        image.image = [UIImage imageNamed:@"bnm"];
+        image.image = [UIImage imageNamed:@"pop windows_a"];
         [showView addSubview:image];
         
         

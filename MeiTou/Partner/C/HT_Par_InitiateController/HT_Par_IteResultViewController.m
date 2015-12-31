@@ -85,7 +85,7 @@ static NSString *cellIResult = @"cellIResult";
     
 }
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 5, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 5, SCREEN_WITH , SCREEN_HEIGHT-64) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
 _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
@@ -96,16 +96,58 @@ _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *_cell;
     HT_Par_IteResultTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIResult forIndexPath:indexPath];
-    
-    
-    for (int i=0; i<5; i++) {
-        NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
-        HT_Par_IteResult_HeadView *headV=[nib firstObject];
-        headV.frame=CGRectMake(cell.ViewHeadGroup.frame.origin.x+cell.ViewHeadGroup.frame.size.width/5*i, 0, cell.ViewHeadGroup.frame.size.width/5, cell.ViewHeadGroup.frame.size.height);
-        //        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*(i%5), height*(i/5), _ViewHeadGroup.frame.size.width/5, height);
-//        [cell.ViewHeadGroup layoutIfNeeded];
-        [cell.ViewHeadGroup addSubview:headV];
+    if (indexPath.row==0) {
+        for (int i=1; i<4; i++) {
+            UIImageView *imageV=(UIImageView * )[cell viewWithTag:101+i];
+            imageV.hidden=YES;
+            
+        }
+        for (int i=1; i<4; i++) {
+            UIImageView *imageV=(UIImageView * )[cell viewWithTag:111+i];
+            imageV.hidden=YES;
+            
+        }
     }
+    if (indexPath.row==1) {
+        UIImageView *imageV=(UIImageView * )[cell viewWithTag:104];
+        imageV.hidden=YES;
+        UIImageView *imageVA=(UIImageView * )[cell viewWithTag:114];
+        imageVA.hidden=YES;
+        
+    }
+    if (indexPath.row==2) {
+        for (int i=2; i<4; i++) {
+            UIImageView *imageV=(UIImageView * )[cell viewWithTag:101+i];
+            imageV.hidden=YES;
+
+        }
+        for (int i=2; i<4; i++) {
+            UIImageView *imageV=(UIImageView * )[cell viewWithTag:111+i];
+            imageV.hidden=YES;
+            
+        }
+    }
+    if (indexPath.row==3) {
+        for (int i=1; i<4; i++) {
+            UIImageView *imageV=(UIImageView * )[cell viewWithTag:101+i];
+            imageV.hidden=YES;
+            
+        }
+        for (int i=1; i<4; i++) {
+            UIImageView *imageV=(UIImageView * )[cell viewWithTag:111+i];
+            imageV.hidden=YES;
+            
+        }
+    }
+    
+//    for (int i=0; i<5; i++) {
+//        NSArray  *nib= [[NSBundle mainBundle]loadNibNamed:@"HT_Par_IteResult_HeadView" owner:nil options:nil];
+//        HT_Par_IteResult_HeadView *headV=[nib firstObject];
+//        headV.frame=CGRectMake(cell.ViewHeadGroup.frame.origin.x+cell.ViewHeadGroup.frame.size.width/5*i, 0, cell.ViewHeadGroup.frame.size.width/5, cell.ViewHeadGroup.frame.size.height);
+//        //        headV.frame=CGRectMake(_ViewHeadGroup.frame.origin.x+_ViewHeadGroup.frame.size.width/5*(i%5), height*(i/5), _ViewHeadGroup.frame.size.width/5, height);
+////        [cell.ViewHeadGroup layoutIfNeeded];
+//        [cell.ViewHeadGroup addSubview:headV];
+//    }
     
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     _cell=cell;
@@ -115,7 +157,7 @@ _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return 5;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return SCREEN_HEIGHT/1100*187;

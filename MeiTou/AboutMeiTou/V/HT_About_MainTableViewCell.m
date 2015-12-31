@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     // Initialization code
     _imageVNext.image=[UIImage imageNamed:@"common_content_right_more"];
-    _imageVWatch.image=[UIImage imageNamed:@"article_content_right_browse-1"];
+    _imageVWatch.image=[UIImage imageNamed:@"article_content_right_browse"];
     _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
     
     
