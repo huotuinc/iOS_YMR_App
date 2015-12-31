@@ -15,7 +15,7 @@
     _labelTitle.text=@"这是一个文章的标题";
     _labelDate.text=@"2015/10/10 10:10:10";
     _labelScore.text=@"100/1000分";
-    _labelContent.text=@"我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,";
+    _labelContent.text=@"我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人,我要分享一本自己写的书叫时代的稻草人";
     _labelContent.numberOfLines=3;
     
     _labelTitle.textColor=COLOR_TEXT_TITILE;
@@ -31,7 +31,7 @@
     _imageVMain.image=[UIImage imageNamed:@"aaa"];
     _imageVLineA.image=[UIImage imageNamed:@"line1"];
     _imageVLineB.image=[UIImage imageNamed:@"line1"];
-    _imageVBack.backgroundColor=COLOR_BACK_MAIN;
+//    _imageVBack.backgroundColor=COLOR_BACK_MAIN;
     
 }
 

@@ -8,10 +8,12 @@
 
 #import "HT_Infor_GroupViewController.h"
 #import "HT_Infor_GroupWebViewController.h"
+#import "HT_Par_BuyViewController.h"
 
 #import "HT_Infor_HeadCView.h"
 #import "HT_Infor_GroupTableViewCell.h"
 #import "HT_Infor_BottomCView.h"
+#import <BlocksKit+UIKit.h>
 
 static NSString *cellGMain = @"cellGMain";
 
@@ -31,6 +33,8 @@ static NSString *cellGMain = @"cellGMain";
     self.navigationController.navigationBar.translucent=NO;
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_GroupTableViewCell" bundle:nil]forCellReuseIdentifier:cellGMain];
     [self createBarButtonItem];
+    
+    
 
 }
 
@@ -93,9 +97,9 @@ static NSString *cellGMain = @"cellGMain";
 
 }
 -(void)clickButtonGo{
-    HT_Infor_GroupWebViewController *web=[[HT_Infor_GroupWebViewController alloc]init];
-    [self.navigationController pushViewController:web animated:YES];
-    NSLog(@"111");
+//    HT_Par_BuyViewController *web=[[HT_Par_BuyViewController alloc]init];
+//    [self.navigationController pushViewController:web animated:YES];
+//    NSLog(@"111");
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

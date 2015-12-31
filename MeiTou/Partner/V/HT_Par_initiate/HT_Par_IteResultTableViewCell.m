@@ -22,6 +22,7 @@
     _imageVpoint.image=[UIImage imageNamed:@"oiu"];
     _imageVlevel.image=[UIImage imageNamed:@"common_LV2"];
     
+    _viewBase.backgroundColor=COLOR_BACK_MAIN;
     _viewBase.layer.cornerRadius=3;
     _viewBase.layer.borderWidth=1;
     _viewBase.layer.borderColor=[COLOR_BACK_MAIN CGColor];

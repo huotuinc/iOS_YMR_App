@@ -18,4 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIView *viewBase;
 @property (weak, nonatomic) IBOutlet UIImageView *imageVpoint;
 
+
+
 @end

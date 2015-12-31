@@ -9,6 +9,8 @@
 #import "HT_Par_SubViewController.h"
 #import "HT_Par_SubListViewController.h"
 #import "HT_Par_SubClaimViewController.h"
+#import "HT_Par_IteResultViewController.h"
+
 
 #import "HT_Par_MainTopView.h"
 #import "HT_Par_SubProjectDoingHeaderCView.h"
@@ -108,6 +110,8 @@ static NSString *cellSub = @"cellSub";
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Par_SubProjectDoneHeaderCView" owner:nil options:nil];
     HT_Par_SubProjectDoneHeaderCView *headerView=[nib firstObject];
     headerView.frame=CGRectMake(0, 0, SCREEN_WITH,SCREEN_HEIGHT/1100*250/190*270);
+    UITapGestureRecognizer * tapHeadGroup = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHeadGroup)];
+    [headerView.viewHeadGroup addGestureRecognizer:tapHeadGroup];
     _headerView=headerView;
 }
 
@@ -153,6 +157,10 @@ static NSString *cellSub = @"cellSub";
     HT_Par_SubClaimViewController *claim=[[HT_Par_SubClaimViewController alloc]init];
     [self.navigationController pushViewController:claim animated:YES];
     
+}
+-(void)tapTheHeadGroup{
+    HT_Par_IteResultViewController *result=[[HT_Par_IteResultViewController alloc]init];
+    [self.navigationController pushViewController:result animated:YES];
 }
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

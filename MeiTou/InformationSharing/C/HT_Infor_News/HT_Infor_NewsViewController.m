@@ -8,6 +8,7 @@
 
 #import "HT_Infor_NewsViewController.h"
 #import "HT_Infor_ShareViewController.h"
+#import "HT_Par_BuyViewController.h"
 
 #import "HT_Infor_NewsHeadCView.h"
 #import "HT_Infor_BottomCView.h"
@@ -111,8 +112,9 @@ static NSString *cellIBuy=@"cellIBuy";
     [self.view addSubview:_tableView];
 }
 -(void)clickButtonGo{
-    HT_Infor_ShareViewController *share=[[HT_Infor_ShareViewController alloc]init];
-    [self.navigationController pushViewController:share animated:YES];
+    HT_Par_BuyViewController *web=[[HT_Par_BuyViewController alloc]init];
+    [self.navigationController pushViewController:web animated:YES];
+    NSLog(@"111");
 }
 
 #pragma mark UITableViewDelegate

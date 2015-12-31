@@ -164,14 +164,15 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==1) {
         if (indexPath.row==0) {
-            HT_HomePage_TopUpViewController *point=[[HT_HomePage_TopUpViewController alloc]init];
+            HT_HomePage_PointsViewController *point=[[HT_HomePage_PointsViewController alloc]init];
             [self.navigationController pushViewController:point animated:YES];
-        }
+                    }
     }
     if(indexPath.section==1){
         if (indexPath.row==1) {
-                       HT_HomePage_PointsViewController *point=[[HT_HomePage_PointsViewController alloc]init];
+            HT_HomePage_TopUpViewController *point=[[HT_HomePage_TopUpViewController alloc]init];
             [self.navigationController pushViewController:point animated:YES];
+
         }
     }
     

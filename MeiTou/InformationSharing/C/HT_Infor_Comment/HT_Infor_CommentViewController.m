@@ -194,10 +194,10 @@ static NSString *cellIComment=@"cellIComment";
     
 }
 -(void)createFooterView{
-    _footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, 300)];
+    _footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, 65)];
 }
 -(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT-64) style:UITableViewStyleGrouped];
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_CommentTableViewCell" bundle:nil]forCellReuseIdentifier:cellIComment];
 
     _tableView.delegate=self;

@@ -74,9 +74,9 @@
     UITapGestureRecognizer *tapViewMore=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheViewMore)];
     [_mainView.viewMore addGestureRecognizer:tapViewMore];
 
-    _mainView.viewLevelUp.hidden=YES;
+    _mainView.viewMore.hidden=NO;
     _mainView.buttonPay.selected=YES;
-    _mainView.labelMore.textColor=COLOR_BUTTON_RED;
+    _mainView.labelUp.textColor=COLOR_BUTTON_RED;
     _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT);
 //    _mainView=mainView;
     [self.view addSubview:_mainView];

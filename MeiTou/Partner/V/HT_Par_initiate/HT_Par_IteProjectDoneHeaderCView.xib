@@ -696,6 +696,11 @@
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDo-W2-vFp">
+                                                <rect key="frame" x="15" y="41" width="610" height="66"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -707,13 +712,17 @@
                                             <constraint firstAttribute="bottom" secondItem="iRP-uB-w8v" secondAttribute="bottom" id="MWq-OC-RMz"/>
                                             <constraint firstItem="iRP-uB-w8v" firstAttribute="top" secondItem="A4V-WU-Axj" secondAttribute="bottom" id="OuR-eq-u6U"/>
                                             <constraint firstItem="M4b-n0-qc7" firstAttribute="leading" secondItem="dhF-M2-FwO" secondAttribute="leading" id="PZK-0Z-vpe"/>
+                                            <constraint firstItem="XDo-W2-vFp" firstAttribute="centerY" secondItem="iRP-uB-w8v" secondAttribute="centerY" id="T59-5F-Py9"/>
                                             <constraint firstItem="M4b-n0-qc7" firstAttribute="width" secondItem="dhF-M2-FwO" secondAttribute="width" multiplier="610:640" id="X7q-HS-X7R"/>
                                             <constraint firstItem="M4b-n0-qc7" firstAttribute="height" secondItem="dhF-M2-FwO" secondAttribute="height" multiplier="40:105" id="ezO-qw-Gyb"/>
                                             <constraint firstItem="A4V-WU-Axj" firstAttribute="top" secondItem="M4b-n0-qc7" secondAttribute="bottom" id="flR-Hi-Z5r"/>
+                                            <constraint firstItem="XDo-W2-vFp" firstAttribute="height" secondItem="iRP-uB-w8v" secondAttribute="height" id="ge8-Gx-Mde"/>
                                             <constraint firstItem="M4b-n0-qc7" firstAttribute="centerX" secondItem="dhF-M2-FwO" secondAttribute="centerX" id="lz1-Pb-QSa"/>
                                             <constraint firstItem="iRP-uB-w8v" firstAttribute="leading" secondItem="dhF-M2-FwO" secondAttribute="leading" id="opw-5E-Zhf"/>
                                             <constraint firstItem="M4b-n0-qc7" firstAttribute="top" secondItem="dhF-M2-FwO" secondAttribute="top" id="sct-xF-TzS"/>
                                             <constraint firstAttribute="trailing" secondItem="A4V-WU-Axj" secondAttribute="trailing" id="wa0-oS-XKK"/>
+                                            <constraint firstItem="XDo-W2-vFp" firstAttribute="centerX" secondItem="iRP-uB-w8v" secondAttribute="centerX" id="yJU-EK-qO7"/>
+                                            <constraint firstItem="XDo-W2-vFp" firstAttribute="width" secondItem="iRP-uB-w8v" secondAttribute="width" id="ybY-cg-bVm"/>
                                             <constraint firstItem="iRP-uB-w8v" firstAttribute="width" secondItem="dhF-M2-FwO" secondAttribute="width" multiplier="610:640" id="z4H-zr-cv1"/>
                                         </constraints>
                                         <variation key="default">
@@ -879,7 +888,7 @@
                 <outlet property="labelTarget" destination="jtt-5C-yhS" id="x0S-yy-dX3"/>
                 <outlet property="labelTargetM" destination="v1Y-HC-hOG" id="Rn3-ny-dMN"/>
                 <outlet property="labelTitle" destination="WZY-4z-nDi" id="UsM-vM-I67"/>
-                <outlet property="viewHeadGroup" destination="n6Y-dG-nL2" id="hAf-XE-LUg"/>
+                <outlet property="viewHeadGroup" destination="XDo-W2-vFp" id="hjx-Yi-0XH"/>
                 <outlet property="viewProgress" destination="GMp-G3-w9e" id="2NH-PR-W4t"/>
             </connections>
             <point key="canvasLocation" x="340" y="265.5"/>
