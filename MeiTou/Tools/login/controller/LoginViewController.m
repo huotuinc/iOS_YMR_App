@@ -175,10 +175,20 @@
             tempUser.province = user.province;
             tempUser.unionid = user.unionid;
 
+            /**
+             *  <#Description#>
+             *
+             *  @param NSDocumentDirectory <#NSDocumentDirectory description#>
+             *  @param NSUserDomainMask    <#NSUserDomainMask description#>
+             *  @param YES                 <#YES description#>
+             *
+             *  @return <#return value description#>
+             */
             NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
             NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
             [NSKeyedArchiver archiveRootObject:tempUser toFile:fileName];
             
+//            UserInfo *user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
             
             
             [self UserLoginSuccess];

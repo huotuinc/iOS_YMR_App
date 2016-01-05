@@ -67,6 +67,7 @@ static NSString *cellIComment=@"cellIComment";
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = @0;
     dic[@"shareId"] = @2;
+//    dic[@"userId"] = user.userId;
 #warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
         
@@ -74,7 +75,7 @@ static NSString *cellIComment=@"cellIComment";
         
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
             [self.commentList removeAllObjects];
-            
+             
             NSArray *temp = [CommentModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
             
             
