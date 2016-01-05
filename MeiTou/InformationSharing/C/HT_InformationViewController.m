@@ -271,21 +271,23 @@ static NSString *cellIMain = @"cellIMain";
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HT_Infor_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIMain forIndexPath:indexPath];
+    NSLog(@"%ld*******************",_shareList.count);
     if (_shareList.count != 0) {
-//        InformationModel *model =_shareList[indexPath.section];
-//        if (model.top==YES) {
-//            cell.imageVState.image=[UIImage imageNamed:@"zhiding"];
-//        }
-//        cell.labelDate.text=[self changeTheTimeStamps:(NSNumber *)model.time];
-//        cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
-//        cell.labelShare.text=[NSString stringWithFormat:@"%@",model.relayScore];
-//        cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
-//        cell.labelScore.attributedText=[self GetAttributedString:[NSString stringWithFormat:@"转发得%@分",model.relayScore] withKeyWord:[NSString stringWithFormat:@"%@分",model.relayScore]  KeyWordColor:COLOR_BUTTON_RED];
-//        cell.labelCount.text=[NSString stringWithFormat:@"%@个赞",model.pid];
-//        cell.labelContent.text=model.content;
-//        cell.labelTitle.text = model.title;
-//        [cell.imageVMain sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.img]] placeholderImage:[UIImage imageNamed:@""]];
-//        [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.userHeadUrl]] placeholderImage:[UIImage imageNamed:@""]];
+        InformationModel *model =_shareList[indexPath.section];
+        if (model.top==YES) {
+            cell.imageVState.image=[UIImage imageNamed:@"zhiding"];
+        }
+        cell.labelDate.text=[self changeTheTimeStamps:(NSNumber *)model.time];
+        cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
+        NSLog(@"%@***************************",model.praiseQuantity);
+        cell.labelShare.text=[NSString stringWithFormat:@"%@",model.relayScore];
+        cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
+        cell.labelScore.attributedText=[self GetAttributedString:[NSString stringWithFormat:@"转发得%@分",model.relayScore] withKeyWord:[NSString stringWithFormat:@"%@分",model.relayScore]  KeyWordColor:COLOR_BUTTON_RED];
+        cell.labelCount.text=[NSString stringWithFormat:@"%@个赞",model.pid];
+        cell.labelContent.text=model.content;
+        cell.labelTitle.text = model.title;
+        [cell.imageVMain sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.img]] placeholderImage:[UIImage imageNamed:@""]];
+        [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.userHeadUrl]] placeholderImage:[UIImage imageNamed:@""]];
     }
     
     
