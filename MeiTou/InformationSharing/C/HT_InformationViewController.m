@@ -18,6 +18,7 @@
 #import "HT_Infor_BottomTabBarCView.h"
 #import "HT_Par_SearchCView.h"
 #import "InformationModel.h"
+#import "UserInfo.h"
 
 #import "MJRefresh.h"
 #import "UIScrollView+MJRefresh.h"
@@ -29,6 +30,8 @@ static NSString *cellIMain = @"cellIMain";
 @property (nonatomic, strong) NSString *searchKey;
 
 @property (nonatomic, strong) NSMutableArray *shareList;
+
+@property (nonatomic, strong) UserInfo *user;
 
 @end
 
@@ -45,10 +48,15 @@ static NSString *cellIMain = @"cellIMain";
     [self.navigationController setNavigationBarHidden:NO animated:NO]; 
     self.navigationController.navigationBar.translucent=NO;
     [self changeNavigationBarLineHidden:NO];
+    
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
+    
     [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_MainTableViewCell" bundle:nil]forCellReuseIdentifier:cellIMain];
     [self createBarButtonItem];
-    [self getNewShareList];
     
+    [self getNewShareList];
 }
 
 - (void)viewDidLoad {
@@ -56,6 +64,9 @@ static NSString *cellIMain = @"cellIMain";
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor cyanColor];
     self.shareList = [NSMutableArray array];
+    
+
+    
     [self setupRefresh];
     
     
@@ -169,7 +180,7 @@ static NSString *cellIMain = @"cellIMain";
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
         
-        NSLog(@"%@",json);
+        LWLog(@"%@",json);
         
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
             
@@ -181,7 +192,7 @@ static NSString *cellIMain = @"cellIMain";
         }
         [_tableView.mj_footer endRefreshing];
     } failure:^(NSError *error) {
-        NSLog(@"%@",error);
+        LWLog (@"%@",error);
     }];
     
 }

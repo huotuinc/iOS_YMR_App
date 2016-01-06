@@ -8,12 +8,15 @@
 
 #import "HT_Infor_SearchViewController.h"
 #import "InformationModel.h"
+#import "UserInfo.h"
 
 @interface HT_Infor_SearchViewController ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) NSString *searchKey;
 
 @property (nonatomic, strong) NSMutableArray *shareList;
+
+@property (nonatomic, strong) UserInfo *user;
 
 @end
 
@@ -27,6 +30,9 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.navigationController.navigationBar.translucent = NO;
     
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
 }
 
 - (void)viewDidLoad {
@@ -35,6 +41,8 @@
     self.view.backgroundColor=[UIColor whiteColor];
     [self createSearchBar];
     self.shareList = [NSMutableArray array];
+    
+    
 }
 
 /**
