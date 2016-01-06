@@ -180,7 +180,7 @@ static NSString *cellIMain = @"cellIMain";
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
         
-        NSLog(@"%@",json);
+        LWLog(@"%@",json);
         
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
             
@@ -192,7 +192,7 @@ static NSString *cellIMain = @"cellIMain";
         }
         [_tableView.mj_footer endRefreshing];
     } failure:^(NSError *error) {
-        NSLog(@"%@",error);
+        LWLog (@"%@",error);
     }];
     
 }

@@ -59,7 +59,7 @@
 //
     
     NSString * login = [[NSUserDefaults standardUserDefaults] objectForKey:LoginStatus];
-    //    AQuthModel * AQuth = [AccountTool account];
+
     if ([login isEqualToString:Success]) {
         self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         self.window.backgroundColor = [UIColor whiteColor];
