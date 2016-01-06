@@ -184,7 +184,7 @@
             [self UserLoginSuccess];
         }
     } failure:^(NSError *error) {
-
+        LWLog(@"%@",error);
     }withFileKey:nil];
     
 }

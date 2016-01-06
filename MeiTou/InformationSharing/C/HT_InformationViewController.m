@@ -130,7 +130,7 @@ static NSString *cellIMain = @"cellIMain";
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = @0;
     dic[@"key"] = self.searchKey;
-    
+    dic[@"userId"]=@8399;
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
         
@@ -163,6 +163,8 @@ static NSString *cellIMain = @"cellIMain";
     dic[@"key"] = self.searchKey;
     InformationModel *info = [self.shareList lastObject];
     dic[@"lastId"] = info.pid;
+    dic[@"userId"]=@8399;
+
     
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
