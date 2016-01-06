@@ -11,11 +11,21 @@
 #import "HT_Infor_CommentTableViewCell.h"
 #import "HT_Infor_BottomCView.h"
 #import "HT_Infor_CommentCellHeaderView.h"
+#import "HT_Infor_CommentHeaderTableViewCell.h"
+#import "HT_Infor_CommentFooterTableViewCell.h"
+
 #import "CommentModel.h"
 #import "UserInfo.h"
 
 
 static NSString *cellIComment=@"cellIComment";
+static NSString *cellStatus=@"cellStatus";
+static NSString *cellFoot=@"cellFoot";
+static NSString *cellHead=@"cellHead";
+
+
+
+
 @interface HT_Infor_CommentViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
 @property (nonatomic, strong) NSMutableArray *commentList;
@@ -28,8 +38,24 @@ static NSString *cellIComment=@"cellIComment";
     UITableView *_tableView;
     HT_Infor_CommentHeadCView *_headView;
     HT_Infor_BottomCView *_bottomView;
+    
     HT_Infor_CommentCellHeaderView *_headerView;
     UIView *_footerView;
+    UIView * _replyView;
+    UITextView *_textView;
+    UIView *_viewBack;
+
+    NSMutableArray *_replyArray;//回复数组
+    NSMutableArray *_statusArray;//说说数组
+    
+    CGFloat _time;//键盘弹起耗时
+    CGFloat _height;//键盘弹起高度
+    CGFloat _celly;//点击cell的y
+    CGFloat _cellHeight;//点击cell的height
+    
+    NSIndexPath *_cellIndex;
+
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -38,7 +64,6 @@ static NSString *cellIComment=@"cellIComment";
     self.navigationController.navigationBar.translucent=NO;
     //    self.navigationController.navigationBar.barTintColor = [];
     [self createBarButtonItem];
-    
     [self getNewShareList];
 }
 
@@ -46,15 +71,55 @@ static NSString *cellIComment=@"cellIComment";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor cyanColor];
+    [self createDataArray];
+    [self createHeadArray];
     [self createHeadView];
-    [self createFooterView];
-    [self createTableView];
     [self createBottomView];
+
+//    [self createFooterView];
+    [self crateTableView];
     
     
     NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
     self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
+}
+
+-(void)createDataArray{
+    _replyArray=[NSMutableArray array];
+    //    NSArray *arrA=@[@"小车 : 生来彷徨"];
+    NSArray *arrA=[[NSArray alloc]init];
+    NSArray *arrB=@[@"小车 : 生来彷徨",
+                    @"小明 回复 小车 : 雨后有车驶来,驶过暮色苍白,旧铁皮往南开,恋人已不在"];
+    NSArray *arrC=@[@"小车 : 生来彷徨",
+                    @"小明 回复 小车 : 雨后有车驶来,驶过暮色苍白,旧铁皮往南开,恋人已不在",
+                    @"小明 回复 小车 : 一一一",
+                    @"小明 回复 小车 : 正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正"];
+    NSArray *arrD=@[@"小车 : 我化尘埃飞扬,追寻赤裸飞翔",
+                    @"小明 回复 小车 : 我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
+                    @"小明 回复 小车 : 我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
+                    @"小明 回复 小车 : 一"];
+    
+    [_replyArray addObject:arrA];
+    [_replyArray addObject:arrB];
+    [_replyArray addObject:arrC];
+    [_replyArray addObject:arrD];
+    [_replyArray addObject:arrA];
+    [_replyArray addObject:arrB];
+    [_replyArray addObject:arrC];
+    [_replyArray addObject:arrD];
+    
+}
+
+-(void)createHeadArray{
+    _statusArray=[NSMutableArray arrayWithArray:@[@"我化尘埃飞扬,追寻赤裸飞翔",
+                                                  @"我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
+                                                  @"我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
+                                                  @"一",
+                                                  @"我化尘埃飞扬,追寻赤裸飞翔",
+                                                  @"我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
+                                                  @"我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
+                                                  @"一"]];
 }
 
 
@@ -172,7 +237,35 @@ static NSString *cellIComment=@"cellIComment";
     dic[@"content"] = @"啊啊啊啊啊啊啊";
 }
 
-
+-(void)createTextView{
+    
+    _viewBack=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT)];
+    _viewBack.backgroundColor=[UIColor clearColor];
+    [_viewBack bk_whenTapped:^{
+        [_textView resignFirstResponder];
+    }];
+    
+    _replyView=[[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WITH, 50)];
+    _replyView.backgroundColor=[UIColor greenColor];
+    _textView.textAlignment = NSTextAlignmentLeft;
+    _textView=[[UITextView alloc]initWithFrame:CGRectMake(10, 10, SCREEN_WITH-20, 30)];
+    _textView.backgroundColor=[UIColor grayColor];
+    //    _textView.borderStyle = UITextBorderStyleRoundedRect;
+    _textView.font = [UIFont systemFontOfSize:20];
+    
+    
+    [_replyView addSubview:_textView];
+    
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    [_viewBack addSubview:_replyView];
+    [self.view addSubview:_viewBack];
+    
+    
+    
+}
 
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
@@ -194,17 +287,17 @@ static NSString *cellIComment=@"cellIComment";
     
 }
 -(void)createFooterView{
-    _footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, 65)];
+    _footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, _bottomView.frame.size.height+20)];
 }
--(void)createTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH , SCREEN_HEIGHT-64) style:UITableViewStyleGrouped];
-    [_tableView registerNib:[UINib nibWithNibName:@"HT_Infor_CommentTableViewCell" bundle:nil]forCellReuseIdentifier:cellIComment];
 
+-(void)crateTableView{
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,SCREEN_WITH,SCREEN_HEIGHT-64-_bottomView.frame.size.height) style:UITableViewStyleGrouped];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headView;
     _tableView.tableFooterView=_footerView;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    _tableView.backgroundColor=[UIColor redColor];
     [self.view addSubview:_tableView];
     
 }
@@ -229,83 +322,93 @@ static NSString *cellIComment=@"cellIComment";
     
 }
 
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex== 0) {
-        
-    }else if(buttonIndex == 1){
-        
-#warning 回复评论
-        [self addCommentWithInformation];
-        
-    }else if(buttonIndex == 2){
-#warning 对评论进行回复
-        [self addReplyWithComment];
-    }else{
-        
-    }
-}
+
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HT_Infor_CommentTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIComment forIndexPath:indexPath];
-    if (indexPath.section==0) {
-        NSLog(@"111111111");
-    }
-    if (indexPath.section==1) {
-        for (int i=0; i<2; i++) {
-            UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(0, cell.viewBase.frame.size.height/2*i, SCREEN_WITH, cell.viewBase.frame.size.height/2)];
-            if (i==0) {
-                label.text=@"  小丽: 奋斗第大佛个话题有人疼";
+    UITableView *_cell;
+    
+    if ([_replyArray[indexPath.section] count]==0) {
+        HT_Infor_CommentCellHeaderView * cell = [tableView dequeueReusableCellWithIdentifier:cellStatus];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentCellHeaderView" owner:nil options:nil] lastObject];
+            cell.labelContent.text=_statusArray[indexPath.section];
+            cell.selectionStyle=UITableViewCellSelectionStyleNone;
+            _cell=cell;
+        }
+        return _cell;
+    }else {
+        if (indexPath.row == 0) {
+            HT_Infor_CommentCellHeaderView * cell = [tableView dequeueReusableCellWithIdentifier:cellStatus];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentCellHeaderView" owner:nil options:nil] lastObject];
+                cell.labelContent.text=_statusArray[indexPath.section];
+                cell.selectionStyle=UITableViewCellSelectionStyleNone;
+                _cell=cell;
             }
-            if(i==1){
-                label.text=@"  东东回复小丽 :但是减肥各地舒服";
+        }else if (indexPath.row==1){
+            HT_Infor_CommentHeaderTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellHead];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentHeaderTableViewCell" owner:nil options:nil] lastObject];
+                 cell.selectionStyle=UITableViewCellSelectionStyleNone;
+                _cell=cell;
             }
-            label.backgroundColor=[UIColor clearColor];
-            label.font=[UIFont systemFontOfSize:FONT_SIZE(26)];
-            label.textColor=COLOR_TEXT_DATE;
-            [cell.viewBase addSubview:label];
+            
+        }else if (([_replyArray[indexPath.section] count] + 2   ) == indexPath.row){
+            HT_Infor_CommentTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIComment];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentFooterTableViewCell" owner:nil options:nil] lastObject];
+//                cell.labelMain.text= @"";
+                cell.selectionStyle=UITableViewCellSelectionStyleNone;
+                _cell=cell;
+            }
+        }else {
+            HT_Infor_CommentTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellFoot];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentTableViewCell" owner:nil options:nil] lastObject];
+                cell.labelMain.text=_replyArray[indexPath.section][indexPath.row -2 ];
+                cell.selectionStyle=UITableViewCellSelectionStyleNone;
+                _cell=cell;
+            }
+            
         }
     }
-    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     
-    
-    return cell;
-    
+    return _cell;
     
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
-}
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2  ;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section==0) {
-        return 0;
+    if ([_replyArray[section] count]==0) {
+//        NSLog(@"#####  %ld",[_replyArray[section] count]);
+        return 0 + 1;
     }else{
-        return SCREEN_HEIGHT/1150*100;
-
+//        NSLog(@"***** %lu ****",[_replyArray[section] count]+2 +1);
+        return [_replyArray[section] count]+2 +1 ;
     }
-    
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"回复",@"举报", nil];
-    [sheet showInView:self.view];
-    
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return SCREEN_HEIGHT/1150*190;
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    NSLog(@"***** %ld ----",[_statusArray count]);
+    return [_statusArray count]  ;
 }
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentCellHeaderView" owner:nil options:nil];
-    _headView=[nib firstObject];
-    return _headView;
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([_replyArray[indexPath.section] count]==0) {
+        return SCREEN_WITH/640*60 + SCREEN_WITH/640*60/5*3 + 16 +[self boundingRectWithSize:CGSizeMake(SCREEN_WITH-70, 0) font:[UIFont systemFontOfSize:17] string:_statusArray[indexPath.section]].height +1.0;
+    }else {
+        if (indexPath.row == 0) {
+            return SCREEN_WITH/640*60 + SCREEN_WITH/640*60/5*3 + 16 + [self boundingRectWithSize:CGSizeMake(SCREEN_WITH-70, 0) font:[UIFont systemFontOfSize:17] string:_statusArray[indexPath.section]].height +1.0;
+        }else if (indexPath.row==1){
+            return 8.0f;
+        }else if (([_replyArray[indexPath.section] count] + 2) == indexPath.row){
+            return 5;
+        }else {
+            return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:17] string:_replyArray[indexPath.section][indexPath.row - 2]].height + 1.0;
+        }
+    }
 }
+
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     UIImageView *imageV=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, 1)];
     imageV.image=[UIImage imageNamed:@"line1"];
@@ -313,6 +416,166 @@ static NSString *cellIComment=@"cellIComment";
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 1.00;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view=[[UIView alloc]init];
+    return view;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 1.0f;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"回复",@"举报", nil];
+    sheet.tag=1000;
+    [sheet showInView:self.view];
+    
+    CGRect  popoverRect = [tableView convertRect:[tableView rectForRowAtIndexPath:indexPath] toView:[tableView superview]];
+    
+    //    NSLog(@"%f **** %f **** %f ***** %f",popoverRect.origin.x,popoverRect.origin.y,popoverRect.size.width,popoverRect.size.height);
+    _celly=popoverRect.origin.y;
+    _cellHeight=popoverRect.size.height;
+    NSLog(@"_celly --- %f   -cellH ---- %f",_celly,_cellHeight);
+    //        if (indexPath.row > 0 ) {
+    NSLog(@"%ld",indexPath.row);
+    
+    
+    _cellIndex =indexPath;
+    
+    
+    UITableViewCell *cell=(UITableViewCell *) [_tableView cellForRowAtIndexPath:indexPath];
+    
+    
+
+    
+}
+
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (actionSheet.tag==1000) {
+        if (buttonIndex== 0) {
+            
+        }else if(buttonIndex == 1){
+            [self createTextView];
+            //动画效果
+            [UIView animateWithDuration:_time animations:^{
+                [_textView becomeFirstResponder];
+                _bottomView.hidden=YES;
+                NSLog(@"%f *** %f ---- %f",_celly,_cellHeight,_celly+_cellHeight);
+                NSLog(@"%f ==== %f",_height,SCREEN_HEIGHT-_height-50);
+                if (_celly+_cellHeight < SCREEN_HEIGHT-_height-64) {
+//                    _replyView.frame      = CGRectMake(0, SCREEN_HEIGHT-50-64, SCREEN_WITH, 50);
+                    _replyView.frame=CGRectMake(0, SCREEN_HEIGHT-_height-64-50, SCREEN_WITH, 50);
+
+                }else{
+//                    _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight)-50-64);
+                    _tableView.contentOffset=CGPointMake(0, _celly+_cellHeight-_height);
+                    // 设置view弹出来的位置
+                    _replyView.frame      = CGRectMake(0, SCREEN_HEIGHT-50-64, SCREEN_WITH, 50);
+                
+                }
+                
+                
+                //            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(viewShow) userInfo:nil repeats:NO];
+            }];
+#warning 回复评论
+            NSLog(@"评论");
+        }else if(buttonIndex == 2){
+#warning 对评论进行回复
+            NSLog(@"回复");
+        }else{
+            
+        }
+    }else if (actionSheet.tag==1001) {
+        if (buttonIndex== 0) {
+            
+        }else if(buttonIndex == 1){
+            [self createTextView];
+            //动画效果
+            [UIView animateWithDuration:_time animations:^{
+                [_textView becomeFirstResponder];
+#warning
+                NSLog(@"%f *** %f",_celly,_cellHeight);
+//                _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight)-50);
+//                _tableView.contentOffset=CGPointMake(0, _celly+_cellHeight)
+                // 设置view弹出来的位置
+                _replyView.frame      = CGRectMake(0, SCREEN_HEIGHT-50, SCREEN_WITH, 50);
+                
+                //            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(viewShow) userInfo:nil repeats:NO];
+            }];
+#warning 回复评论
+            NSLog(@"评论");
+        }else if(buttonIndex == 2){
+#warning 对评论进行回复
+            NSLog(@"回复");
+        }else{
+            
+        }
+    }
+    
+}
+
+
+-(void)KeyboardWillShow:(NSNotification *)sender
+{
+    CGRect rect  = [[sender.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue];
+    CGFloat height =  rect.size.height;
+    _height=height;
+    [UIView beginAnimations:nil context:nil];
+    _time= [[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]; //获取动画时间;
+    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]
+     ];
+    if (_celly+_cellHeight > SCREEN_HEIGHT-_height-50) {
+        self.view.transform = CGAffineTransformMakeTranslation(0, -_height);
+    }
+    //        _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight));
+    [UIView commitAnimations];//开始执行动画
+}
+
+-(void)KeyboardWillHide:(NSNotification *)sender
+{
+    CGRect rect  = [[sender.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue];
+    CGFloat height =  rect.size.height;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]];
+    
+    UITableViewCell *cell=(UITableViewCell *) [_tableView cellForRowAtIndexPath:_cellIndex];
+    //    cell.transform = CGAffineTransformIdentity; //重置状态
+    //    _tableView.contentOffset = CGPointZero;
+    _tableView.transform = CGAffineTransformIdentity; //重置状态
+    //    _tableView.contentOffset = CGPointZero
+
+    self.view.transform = CGAffineTransformIdentity; //重置状态
+    _viewBack.hidden=YES;
+    _bottomView.hidden=NO;
+
+    [UIView commitAnimations];
+    
+}
+
+/**
+ *  计算label高度
+ *
+ *  @param size <#size description#>
+ *  @param font <#font description#>
+ *  @param str  <#str description#>
+ *
+ *  @return <#return value description#>
+ */
+- (CGSize)boundingRectWithSize:(CGSize)size font:(UIFont *)font string:(NSString *)str
+{
+    NSDictionary *attribute = @{NSFontAttributeName : font};
+    CGSize retSize = [str boundingRectWithSize:size
+                                       options:
+                      NSStringDrawingUsesLineFragmentOrigin |
+                      NSStringDrawingUsesFontLeading
+                                    attributes:attribute
+                                       context:nil].size;
+    
+    return retSize;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

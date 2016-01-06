@@ -106,6 +106,12 @@
 		F21E44FC1C10346A00657249 /* HT_LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21E44FB1C10346A00657249 /* HT_LeftViewController.m */; };
 		F21E45001C1039D900657249 /* HT_HomePage_LeftHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21E44FE1C1039D900657249 /* HT_HomePage_LeftHeadView.m */; };
 		F21E45011C1039D900657249 /* HT_HomePage_LeftHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21E44FF1C1039D900657249 /* HT_HomePage_LeftHeadView.xib */; };
+		F21F74591C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F74571C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.m */; };
+		F21F745A1C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21F74581C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.xib */; };
+		F21F745E1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F745C1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.m */; };
+		F21F745F1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21F745D1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.xib */; };
+		F21F74631C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F74611C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.m */; };
+		F21F74641C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21F74621C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.xib */; };
 		F22453671C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22453651C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m */; };
 		F22453681C0EEF8100A12AF8 /* HT_Par_BuyBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22453661C0EEF8100A12AF8 /* HT_Par_BuyBottomView.xib */; };
 		F22824921C337D62003C674B /* HT_Infor_NewsHeadCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22824901C337D62003C674B /* HT_Infor_NewsHeadCView.m */; };
@@ -180,8 +186,6 @@
 		F27261E51C07FE810081EC95 /* HT_About_MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261E31C07FE810081EC95 /* HT_About_MainTableViewCell.xib */; };
 		F27261EF1C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27261E71C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.m */; };
 		F27261F01C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261E81C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.xib */; };
-		F27261F11C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27261EA1C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.m */; };
-		F27261F21C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261EB1C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.xib */; };
 		F27261F31C07FE9E0081EC95 /* HT_Infor_HeadCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27261ED1C07FE9E0081EC95 /* HT_Infor_HeadCView.m */; };
 		F27261F41C07FE9E0081EC95 /* HT_Infor_HeadCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261EE1C07FE9E0081EC95 /* HT_Infor_HeadCView.xib */; };
 		F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BFA921C18823E007D928A /* HT_Par_IteOrderCView.m */; };
@@ -463,6 +467,15 @@
 		F21E44FD1C1039D900657249 /* HT_HomePage_LeftHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_LeftHeadView.h; sourceTree = "<group>"; };
 		F21E44FE1C1039D900657249 /* HT_HomePage_LeftHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_LeftHeadView.m; sourceTree = "<group>"; };
 		F21E44FF1C1039D900657249 /* HT_HomePage_LeftHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_LeftHeadView.xib; sourceTree = "<group>"; };
+		F21F74561C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_CommentTableViewCell.h; sourceTree = "<group>"; };
+		F21F74571C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_CommentTableViewCell.m; sourceTree = "<group>"; };
+		F21F74581C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_CommentTableViewCell.xib; sourceTree = "<group>"; };
+		F21F745B1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_CommentHeaderTableViewCell.h; sourceTree = "<group>"; };
+		F21F745C1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_CommentHeaderTableViewCell.m; sourceTree = "<group>"; };
+		F21F745D1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_CommentHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		F21F74601C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_CommentFooterTableViewCell.h; sourceTree = "<group>"; };
+		F21F74611C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_CommentFooterTableViewCell.m; sourceTree = "<group>"; };
+		F21F74621C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_CommentFooterTableViewCell.xib; sourceTree = "<group>"; };
 		F22453641C0EEF8100A12AF8 /* HT_Par_BuyBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyBottomView.h; sourceTree = "<group>"; };
 		F22453651C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyBottomView.m; sourceTree = "<group>"; };
 		F22453661C0EEF8100A12AF8 /* HT_Par_BuyBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_BuyBottomView.xib; sourceTree = "<group>"; };
@@ -595,9 +608,6 @@
 		F27261E61C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_MainTableViewCell.h; sourceTree = "<group>"; };
 		F27261E71C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_MainTableViewCell.m; sourceTree = "<group>"; };
 		F27261E81C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_MainTableViewCell.xib; sourceTree = "<group>"; };
-		F27261E91C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_CommentTableViewCell.h; sourceTree = "<group>"; };
-		F27261EA1C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_CommentTableViewCell.m; sourceTree = "<group>"; };
-		F27261EB1C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_CommentTableViewCell.xib; sourceTree = "<group>"; };
 		F27261EC1C07FE9E0081EC95 /* HT_Infor_HeadCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_HeadCView.h; sourceTree = "<group>"; };
 		F27261ED1C07FE9E0081EC95 /* HT_Infor_HeadCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_HeadCView.m; sourceTree = "<group>"; };
 		F27261EE1C07FE9E0081EC95 /* HT_Infor_HeadCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_HeadCView.xib; sourceTree = "<group>"; };
@@ -1411,9 +1421,15 @@
 				F29A25651C23DB8B001061EA /* HT_Infor_CommentCellHeaderView.h */,
 				F29A25661C23DB8B001061EA /* HT_Infor_CommentCellHeaderView.m */,
 				F29A25671C23DB8B001061EA /* HT_Infor_CommentCellHeaderView.xib */,
-				F27261E91C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.h */,
-				F27261EA1C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.m */,
-				F27261EB1C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.xib */,
+				F21F745B1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.h */,
+				F21F745C1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.m */,
+				F21F745D1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.xib */,
+				F21F74561C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.h */,
+				F21F74571C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.m */,
+				F21F74581C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.xib */,
+				F21F74601C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.h */,
+				F21F74611C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.m */,
+				F21F74621C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.xib */,
 				F27261EC1C07FE9E0081EC95 /* HT_Infor_HeadCView.h */,
 				F27261ED1C07FE9E0081EC95 /* HT_Infor_HeadCView.m */,
 				F27261EE1C07FE9E0081EC95 /* HT_Infor_HeadCView.xib */,
@@ -1854,6 +1870,7 @@
 				F27261E51C07FE810081EC95 /* HT_About_MainTableViewCell.xib in Resources */,
 				F2A019331C0B2F6A0017234F /* HT_HomePageCollectionViewCell.xib in Resources */,
 				F21E45011C1039D900657249 /* HT_HomePage_LeftHeadView.xib in Resources */,
+				F21F74641C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.xib in Resources */,
 				F27261C21C07FE240081EC95 /* HT_Par_IteResult_HeadView.xib in Resources */,
 				F2A019391C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib in Resources */,
 				F2C9F8491C0C576500FC454B /* HT_HomePage_LeftBottomView.xib in Resources */,
@@ -1876,6 +1893,8 @@
 				F2D7AED81C172BDA00725B4E /* HT_About_IntroTableViewCell.xib in Resources */,
 				F29A25641C239E96001061EA /* HT_Infor_CommentHeadCView.xib in Resources */,
 				F280268F1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.xib in Resources */,
+				F21F745F1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.xib in Resources */,
+				F21F745A1C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.xib in Resources */,
 				F211BC0B1C1819A00033B59E /* HT_Par_IteChoicePickerView.xib in Resources */,
 				F2D7AECD1C17121A00725B4E /* HT_Infor_BottomCView.xib in Resources */,
 				F257F0241C32AD03006A2C23 /* HT_Par_SubProjectDoneHeaderCView.xib in Resources */,
@@ -1901,7 +1920,6 @@
 				F29C69541C166653000A8C29 /* HT_News_HeadTableViewCell.xib in Resources */,
 				F2B1681E1C1852AE00517879 /* HT_HomePage_PointsCView.xib in Resources */,
 				F27261D41C07FE3B0081EC95 /* HT_Par_IteProjectDoingHeaderCView.xib in Resources */,
-				F27261F21C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.xib in Resources */,
 				F21C191D1C1E9A1F00E717A8 /* HT_HomePage_BoundPhoneCView.xib in Resources */,
 				F2137BB91C17BBC10030E7D8 /* HT_Par_MainPickerCView.xib in Resources */,
 				F21A1D061C1124D5006FD426 /* HT_HomePage_PhoneCView.xib in Resources */,
@@ -2018,6 +2036,7 @@
 				F272615C1C07E61B0081EC95 /* AppDelegate.m in Sources */,
 				F27261C11C07FE240081EC95 /* HT_Par_IteResult_HeadView.m in Sources */,
 				F259CF811C292DC20082A912 /* MJMember.m in Sources */,
+				F21F745E1C3CE07F00ACD6BE /* HT_Infor_CommentHeaderTableViewCell.m in Sources */,
 				F2FAAA0D1C1AA9D200A90DA1 /* HT_About_CompanyViewController.m in Sources */,
 				F263CA0A1C1527E100EE78CA /* HT_Par_ItePaymentOrderViewController.m in Sources */,
 				F259CF871C292DC20082A912 /* NSObject+MJMember.m in Sources */,
@@ -2061,7 +2080,6 @@
 				F21C19131C1E906600E717A8 /* HT_HomePage_LevelUpViewController.m in Sources */,
 				F22453671C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m in Sources */,
 				F21C19211C1E9C3100E717A8 /* HT_Par_LoginPhoneCView.m in Sources */,
-				F27261F11C07FE9E0081EC95 /* HT_Infor_CommentTableViewCell.m in Sources */,
 				60DC99161C2CE0F500F50A5D /* AFURLSessionManager.m in Sources */,
 				60DC990E1C2CE0F500F50A5D /* AFHTTPRequestOperation.m in Sources */,
 				60DC991D1C2CE0F500F50A5D /* UIImageView+AFNetworking.m in Sources */,
@@ -2095,6 +2113,7 @@
 				F20697A21C15B70000ED2017 /* HT_Infor_CommentViewController.m in Sources */,
 				F259CF851C292DC20082A912 /* NSObject+MJCoding.m in Sources */,
 				F27D67311C0B30A900EE6C4F /* HT_HomePageLayout.m in Sources */,
+				F21F74591C3CDFF700ACD6BE /* HT_Infor_CommentTableViewCell.m in Sources */,
 				609292941C23A2080076D589 /* ShareCell.m in Sources */,
 				F257EFCD1C322820006A2C23 /* HT_HomePage_NavTitleCVIew.m in Sources */,
 				F21C19101C1E670700E717A8 /* HT_HomePage_TopUpViewController.m in Sources */,
@@ -2123,6 +2142,7 @@
 				F263CA041C15278700EE78CA /* HT_Par_IteCooperationViewController.m in Sources */,
 				F2C00D7F1C1071180008833B /* HT_Par_IteBottomCView.m in Sources */,
 				F21A4B851C0D84C600C1F098 /* HT_HomePage_PhoneViewController.m in Sources */,
+				F21F74631C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.m in Sources */,
 				F21C19301C1EF30300E717A8 /* HT_Par_LoginPhoneViewController.m in Sources */,
 				F288685D1C109AEF0024D6AD /* HT_Par_BoundPhoneViewController.m in Sources */,
 				F259CF931C29305F0082A912 /* NSDictionary+HuoBanMallSign.m in Sources */,
