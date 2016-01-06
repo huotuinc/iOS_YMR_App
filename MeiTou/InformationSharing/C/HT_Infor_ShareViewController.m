@@ -7,7 +7,7 @@
 //
 
 #import "HT_Infor_ShareViewController.h"
-
+#import "UserInfo.h"
 #import "HT_Infor_ShareCView.h"
 
 @interface HT_Infor_ShareViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate>
@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSString *showHeadUrl;
 
 @property (nonatomic, strong) NSString *returnHeadUrl;
+
+@property (nonatomic, strong) UserInfo *user;
 
 @end
 
@@ -29,6 +31,10 @@
     self.view.backgroundColor=[UIColor whiteColor];
     [self createBarButtonItem];
     
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +44,8 @@
     
     self.showHeadUrl = [NSString string];
     self.returnHeadUrl = [NSString string];
+    
+    
     
 }
 -(void)createNavgationBarTitle{
@@ -201,8 +209,8 @@
     dic[@"title"] = @"12312312";
     dic[@"content"] = @"hello world！";
     dic[@"imgUrl"] = self.returnHeadUrl;
-    dic[@"userId"] = @5678;
-#warning 用户id修改
+    dic[@"userId"] = self.user.userId;
+//#warning 用户id修改
     
     [UserLoginTool  loginRequestPostWithFile:@"addShare" parame:dic success:^(id json) {
         LWLog(@"%@",json);

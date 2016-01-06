@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString *img;
 @property (nonatomic, strong) NSString *intro;
 @property (nonatomic, strong) NSNumber *pid;
+@property (nonatomic, assign) BOOL praise;
 @property (nonatomic, strong) NSNumber *praiseQuantity;
 @property (nonatomic, strong) NSNumber *relayQuantity;
 @property (nonatomic, strong) NSNumber *relayScore;
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) NSNumber *time;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, assign) BOOL top;
+@property (nonatomic, strong) NSString *transmitUrl;
 @property (nonatomic, strong) NSString *userHeadUrl;
 
 @end

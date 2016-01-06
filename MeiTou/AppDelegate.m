@@ -56,18 +56,28 @@
 //    } failure:^(NSError *error) {//
 //        NSLog(@"%@",error);
 //    }];
-//    
-//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    LoginViewController *login = [story instantiateViewControllerWithIdentifier:@"LoginViewController"];
-//    self.window.rootViewController = login;
+//
+    
+    NSString * login = [[NSUserDefaults standardUserDefaults] objectForKey:LoginStatus];
+    //    AQuthModel * AQuth = [AccountTool account];
+    if ([login isEqualToString:Success]) {
+        self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        self.window.backgroundColor = [UIColor whiteColor];
+        RootViewController *root=[[RootViewController alloc]init];
+        self.window.rootViewController=root;
+    }else{
+        self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        self.window.backgroundColor = [UIColor whiteColor];
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *login = [story instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        self.window.rootViewController = login;
+    }
     
     
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    RootViewController *root=[[RootViewController alloc]init];
-    self.window.rootViewController=root;
+    
+    
+    
+    
     
     _maskLayer = [CALayer layer];
     [_maskLayer setFrame:CGRectMake(SCREEN_WITH, 0, 0, SCREEN_HEIGHT)];

@@ -37,6 +37,11 @@ static NSString *cellIComment=@"cellIComment";
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
     //    self.navigationController.navigationBar.barTintColor = [];
+    
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
+    
     [self createBarButtonItem];
     
     [self getNewShareList];
@@ -66,8 +71,8 @@ static NSString *cellIComment=@"cellIComment";
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = @0;
-    dic[@"shareId"] = @2;
-//    dic[@"userId"] = user.userId;
+    dic[@"shareId"] = @1;
+    dic[@"userId"] = self.user.userId;
 #warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
         
@@ -99,7 +104,8 @@ static NSString *cellIComment=@"cellIComment";
     CommentModel *model = [self.commentList lastObject];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = model.pid;
-    dic[@"shareId"] = @2;
+    dic[@"shareId"] = @1;
+    dic[@"userId"] = self.user.userId;
 #warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
         
