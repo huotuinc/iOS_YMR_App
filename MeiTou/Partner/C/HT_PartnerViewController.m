@@ -40,6 +40,7 @@ static NSString *cellMain = @"cellMain";
 
 @end
 
+
 @implementation HT_PartnerViewController{
     HT_Par_SearchCView *_topView;
     UITableView *_tableView;
@@ -253,48 +254,53 @@ static NSString *cellMain = @"cellMain";
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *_cell;
-    if (indexPath.section==0) {
-        HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
-        cell.labelDate.text=@"10-10";
-        cell.LabelTitle.text=@"众筹会议项目名称";
-        cell.labelContent.text=@"12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）";
-        cell.labelRight.text=@"20/50人预约";
-        cell.labelLeft.text=@"预约金$1500";
-        [cell.ButtonGo setTitle:@"我要预约" forState:UIControlStateNormal];
-        [cell.ButtonGo addTarget:self action:@selector(goToBuy) forControlEvents:UIControlEventTouchUpInside];
-        [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_RED];
-        _cell=cell;
+    
+    
+    HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
+    if (_CrowdList.count != 0) {
+        CrowdModel *model =_CrowdList[indexPath.section];
         
-
-    }
-    if (indexPath.section==1) {
-        HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
-        cell.labelDate.text=@"10-10";
-        cell.LabelTitle.text=@"众筹合作项目名称";
-        cell.labelLeft.text=@"目标金额150万";
-        cell.labelRight.text=@"剩余100万";
-        [cell.ButtonGo setTitle:@"我要发起" forState:UIControlStateNormal];
-        [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_INITIATE];
-        [cell.ButtonGo addTarget:self action:@selector(gotToIte) forControlEvents:UIControlEventTouchUpInside];
-        _cell=cell;
-        
-    }
-    if (indexPath.section==2) {
-        HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
-        cell.labelDate.text=@"10-10";
-        cell.LabelTitle.text=@"众筹认购项目名称";
-        cell.labelLeft.text=@"目标金额150万";
-        cell.labelRight.text=@"起购5万";
-        [cell.ButtonGo setTitle:@"我要认购" forState:UIControlStateNormal];
-        [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_ORANGE];
-        [cell.ButtonGo addTarget:self action:@selector(gotToSub) forControlEvents:UIControlEventTouchUpInside];
-        _cell=cell;
-        
+        if (indexPath.section==0) {
+            [cell.imageVTop sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.puctureUrl]] placeholderImage:[UIImage imageNamed:@""]];
+             cell.labelDate.text=@"10-10";
+             cell.LabelTitle.text=@"众筹会议项目名称";
+             cell.labelContent.text=@"12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）";
+             cell.labelRight.text=@"20/50人预约";
+             cell.labelLeft.text=@"预约金$1500";
+             [cell.ButtonGo setTitle:@"我要预约" forState:UIControlStateNormal];
+             [cell.ButtonGo addTarget:self action:@selector(goToBuy) forControlEvents:UIControlEventTouchUpInside];
+             [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_RED];
+             _cell=cell;
+             
+             
+             }
+             if (indexPath.section==1) {
+                 HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
+                 cell.labelDate.text=@"10-10";
+                 cell.LabelTitle.text=@"众筹合作项目名称";
+                 cell.labelLeft.text=@"目标金额150万";
+                 cell.labelRight.text=@"剩余100万";
+                 [cell.ButtonGo setTitle:@"我要发起" forState:UIControlStateNormal];
+                 [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_INITIATE];
+                 [cell.ButtonGo addTarget:self action:@selector(gotToIte) forControlEvents:UIControlEventTouchUpInside];
+                 _cell=cell;
+                 
+             }
+             if (indexPath.section==2) {
+                 HT_Par_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellMain forIndexPath:indexPath];
+                 cell.labelDate.text=@"10-10";
+                 cell.LabelTitle.text=@"众筹认购项目名称";
+                 cell.labelLeft.text=@"目标金额150万";
+                 cell.labelRight.text=@"起购5万";
+                 [cell.ButtonGo setTitle:@"我要认购" forState:UIControlStateNormal];
+                 [cell.ButtonGo setBackgroundColor:COLOR_BUTTON_ORANGE];
+                 [cell.ButtonGo addTarget:self action:@selector(gotToSub) forControlEvents:UIControlEventTouchUpInside];
+                 _cell=cell;
+                 
+             }
     }
     return _cell;
 
-    
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
