@@ -14,7 +14,7 @@
 #import "LoginViewController.h"
 //
 //#import "MJExtension.h"
-//#import "UserModel.h"
+#import "UserModel.h"
 
 
 
@@ -64,10 +64,10 @@
 //    self.window.rootViewController = login;
 //
     
-//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    RootViewController *root=[[RootViewController alloc]init];
-//    self.window.rootViewController=root;
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    RootViewController *root=[[RootViewController alloc]init];
+    self.window.rootViewController=root;
 //
     _maskLayer = [CALayer layer];
     [_maskLayer setFrame:CGRectMake(SCREEN_WITH, 0, 0, SCREEN_HEIGHT)];

@@ -452,7 +452,7 @@ static NSString *cellHead=@"cellHead";
     _cellIndex =indexPath;
     
     
-    UITableViewCell *cell=(UITableViewCell *) [_tableView cellForRowAtIndexPath:indexPath];
+//    UITableViewCell *cell=(UITableViewCell *) [_tableView cellForRowAtIndexPath:indexPath];
     
     
 
@@ -479,9 +479,9 @@ static NSString *cellHead=@"cellHead";
 
                 }else{
 //                    _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight)-50-64);
-                    _tableView.contentOffset=CGPointMake(0, _celly+_cellHeight-_height);
+//                    _tableView.contentOffset=CGPointMake(0, _celly+_cellHeight-_height-50);
                     // 设置view弹出来的位置
-                    _replyView.frame      = CGRectMake(0, SCREEN_HEIGHT-50-64, SCREEN_WITH, 50);
+//                    _replyView.frame      = CGRectMake(0, SCREEN_HEIGHT-50-64, SCREEN_WITH, 50);
                 
                 }
                 
@@ -536,9 +536,12 @@ static NSString *cellHead=@"cellHead";
     [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]
      ];
     if (_celly+_cellHeight > SCREEN_HEIGHT-_height-50) {
-        self.view.transform = CGAffineTransformMakeTranslation(0, -_height);
+//        self.view.transform = CGAffineTransformMakeTranslation(0, -_height);
+        
+        _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight));
+
     }
-    //        _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight));
+            _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight));
     [UIView commitAnimations];//开始执行动画
 }
 
