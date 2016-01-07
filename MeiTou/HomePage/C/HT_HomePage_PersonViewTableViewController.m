@@ -12,11 +12,11 @@
 #import "HT_HomePageViewController.h"
 #import "HT_HomePage_PhoneViewController.h"
 #import "HT_HomePage_TopUpViewController.h"
-
+#import "UserInfo.h"
 #import "MMDrawerBarButtonItem.h"
 @interface HT_HomePage_PersonViewTableViewController ()
 @property (strong, nonatomic) NSArray *tasks;
-
+@property (nonatomic, strong) UserInfo *user;
 
 @end
 
@@ -30,7 +30,9 @@
     [self changeNavigationBarLineHidden:NO];
     [self createBarButtonItem];
     
-    
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -152,12 +154,15 @@
 
 #pragma mark 网络请求
 
-- (void)changeUserName{
+- (void)changeUserProfile{
     
     NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+//    profileType - 上传类型：0：图片，1：昵称，2：姓名，3：性别，4：联系电话(绑定手机)，5：定位
+    dict[@"profileType"] = @1;
+    dict[@"profileData"] = @"luohaibo";
+    dict[@"userId"] = self.user.userId;
     
-    
-    [UserLoginTool loginRequestGet:@"init" parame:dict success:^(NSDictionary* json) {//
+    [UserLoginTool loginRequestGet:@"updateUserProfile" parame:dict success:^(NSDictionary* json) {//
         LWLog(@"init----%@",json);
         
         //        NSArray * users = [UserModel objectArrayWithKeyValuesArray:json[@"Userlist"]];
@@ -195,6 +200,11 @@
             HT_HomePage_TopUpViewController *point=[[HT_HomePage_TopUpViewController alloc]init];
             [self.navigationController pushViewController:point animated:YES];
 
+        }
+    }
+    if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            [self changeUserProfile];
         }
     }
     
