@@ -48,7 +48,6 @@
     _labelNice.textColor=COLOR_TEXT_DATE;
     _labelShare.textColor=COLOR_TEXT_DATE;
     
-//    _imageVHead.image=[UIImage imageNamed:]
     _imageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
     _imageVMain.image=[UIImage imageNamed:@"aaa"];
     _imageLine.image=[UIImage imageNamed:@"line1"];
