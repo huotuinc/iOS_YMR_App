@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _imageVLine.image=[UIImage imageNamed:@"xian_bottom"];
+//    _imageVLine.image=[UIImage imageNamed:@"xian_bottom"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
