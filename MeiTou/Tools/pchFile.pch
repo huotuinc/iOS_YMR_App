@@ -23,7 +23,7 @@
 
 
 #define MainUrl @"http://192.168.1.57:8080/ymr/app"
-#define MainUrlMK @"192.168.1.57:8080/ymr/app,"
+#define MainUrlMK @"192.168.1.57:8080/ymr/app"
 //网络请求的固定参数
 #define HTYMRSCREAT @"1165a8d240b29af3f418b8d10599d0da"  //火图安全网络请求安全协议
 
