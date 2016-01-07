@@ -136,7 +136,7 @@ static NSString *cellHead=@"cellHead";
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = @0;
-    dic[@"shareId"] = @1;
+    dic[@"shareId"] = @4;
     dic[@"userId"] = self.user.userId;
 #warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
@@ -169,7 +169,7 @@ static NSString *cellHead=@"cellHead";
     CommentModel *model = [self.commentList lastObject];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = model.pid;
-    dic[@"shareId"] = @1;
+    dic[@"shareId"] = @4;
     dic[@"userId"] = self.user.userId;
 #warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
