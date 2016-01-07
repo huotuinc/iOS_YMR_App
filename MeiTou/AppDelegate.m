@@ -21,7 +21,7 @@
 @interface AppDelegate ()<WXApiDelegate>
 
 
-//@property(nonatomic,strong) NSArray * users;
+@property(nonatomic,strong) NSArray * users;
 
 
 @end
