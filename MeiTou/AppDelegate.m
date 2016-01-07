@@ -42,20 +42,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    [self initAppFromServer];
     
-//    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-//    dict[@"name"] = @"123";
-//    dict[@"passwd"] = @"122";
-//    
-//    [UserLoginTool loginRequestGet:@"init" parame:dict success:^(NSDictionary* json) {//
-//        NSLog(@"init----%@",json);
-//        
-//        NSArray * users = [UserModel objectArrayWithKeyValuesArray:json[@"Userlist"]];
-//        self.users = users;
-//        
-//    } failure:^(NSError *error) {//
-//        NSLog(@"%@",error);
-//    }];
 ////
     NSString * login = [[NSUserDefaults standardUserDefaults] objectForKey:LoginStatus];
     if ([login isEqualToString:Success]) {
@@ -189,5 +177,25 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+- (void)initAppFromServer {
+    
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+
+    
+    [UserLoginTool loginRequestGet:@"init" parame:dict success:^(NSDictionary* json) {//
+        LWLog(@"init----%@",json);
+        
+//        NSArray * users = [UserModel objectArrayWithKeyValuesArray:json[@"Userlist"]];
+
+        
+    } failure:^(NSError *error) {//
+        LWLog(@"%@",error);
+    }];
+    
+}
+
+
 
 @end

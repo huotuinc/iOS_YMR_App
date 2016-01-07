@@ -149,6 +149,28 @@
     
 
 }
+
+#pragma mark 网络请求
+
+- (void)changeUserName{
+    
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+    
+    
+    [UserLoginTool loginRequestGet:@"init" parame:dict success:^(NSDictionary* json) {//
+        LWLog(@"init----%@",json);
+        
+        //        NSArray * users = [UserModel objectArrayWithKeyValuesArray:json[@"Userlist"]];
+        
+        
+    } failure:^(NSError *error) {//
+        LWLog(@"%@",error);
+    }];
+    
+}
+
+
+
 /**
  *  设置label的字体大小和颜色
  *
