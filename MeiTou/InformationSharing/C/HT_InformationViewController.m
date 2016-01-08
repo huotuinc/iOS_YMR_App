@@ -40,7 +40,7 @@ static NSString *cellIMain = @"cellIMain";
     HT_Par_SearchCView *_topView;//搜索框
     HT_Infor_BottomTabBarCView *_bottomView;
     UIView *_clearView;//用于添加imageVShare的tap事件
-    
+    NSNumber * _goWhere;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -127,8 +127,7 @@ static NSString *cellIMain = @"cellIMain";
     MJRefreshAutoNormalFooter * Footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(getMoreShareList)];
     _tableView.mj_footer = Footer;
     
-    //    [self.tableView addFooterWithTarget:self action:@selector(getMoreGoodList)];
-    
+//        [_tableView addFooterWithTarget:self action:@selector(getMoreGoodList)];
     
     
 }
@@ -141,7 +140,7 @@ static NSString *cellIMain = @"cellIMain";
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = @0;
     dic[@"key"] = self.searchKey;
-    dic[@"userId"]=@8399;
+    dic[@"userId"]= self.user.userId;
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
         
@@ -174,8 +173,8 @@ static NSString *cellIMain = @"cellIMain";
     dic[@"key"] = self.searchKey;
     InformationModel *info = [self.shareList lastObject];
     dic[@"lastId"] = info.pid;
-    dic[@"userId"]=@8399;
-
+    dic[@"userId"]= self.user.userId;
+    
     
     
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
@@ -284,7 +283,6 @@ static NSString *cellIMain = @"cellIMain";
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HT_Infor_MainTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIMain forIndexPath:indexPath];
-    NSLog(@"%ld*******************",_shareList.count);
     if (_shareList.count != 0) {
         InformationModel *model =_shareList[indexPath.section];
         if (model.top==YES) {
@@ -292,7 +290,6 @@ static NSString *cellIMain = @"cellIMain";
         }
         cell.labelDate.text=[self changeTheTimeStamps:(NSNumber *)model.time];
         cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
-        NSLog(@"%@***************************",model.praiseQuantity);
         cell.labelShare.text=[NSString stringWithFormat:@"%@",model.relayScore];
         cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
         cell.labelScore.attributedText=[self GetAttributedString:[NSString stringWithFormat:@"转发得%@分",model.relayScore] withKeyWord:[NSString stringWithFormat:@"%@分",model.relayScore]  KeyWordColor:COLOR_BUTTON_RED];
@@ -300,6 +297,7 @@ static NSString *cellIMain = @"cellIMain";
         cell.labelContent.text=model.content;
         cell.labelTitle.text = model.title;
         [cell.imageVMain sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.img]] placeholderImage:[UIImage imageNamed:@""]];
+        
         [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.userHeadUrl]] placeholderImage:[UIImage imageNamed:@""]];
     }
     
@@ -321,18 +319,27 @@ static NSString *cellIMain = @"cellIMain";
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section==0) {
-        HT_Infor_NewsViewController *news=[[HT_Infor_NewsViewController alloc]init];
-        [self.navigationController pushViewController:news animated:YES];
-    }
-    if (indexPath.section==1) {
+    InformationModel *model =_shareList[indexPath.section];
+    _goWhere=model.shareType.value;
+    NSLog(@"------------=======%@",_goWhere);
+//    NSLog(@"/////////// %@ \\\\\\\\",[NSNumber numberWithInt:1]);
+    if ([_goWhere isEqualToNumber:[NSNumber numberWithInt:0]]||[_goWhere isEqualToNumber:[NSNumber numberWithInt:2]]) {
+//        HT_Infor_NewsViewController *news=[[HT_Infor_NewsViewController alloc]init];
+//        [self.navigationController pushViewController:news animated:YES];
         HT_Infor_CommentViewController *comment=[[HT_Infor_CommentViewController alloc]init];
+        comment.shareId=model.pid;
+//        NSLog(@"%f",comment.shareId);
         [self.navigationController pushViewController:comment animated:YES];
     }
-    if (indexPath.section==2) {
+    
+    if ([_goWhere isEqualToNumber:[NSNumber numberWithInt:1]]||[_goWhere isEqualToNumber:[NSNumber numberWithInt:3]]) {
         HT_Infor_GroupViewController *group=[[HT_Infor_GroupViewController alloc]init];
         [self.navigationController pushViewController:group animated:YES];
     }
+//    if ([_goWhere isEqualToNumber:[NSNumber numberWithInt:2]]) {
+//        HT_Infor_GroupViewController *group=[[HT_Infor_GroupViewController alloc]init];
+//        [self.navigationController pushViewController:group animated:YES];
+//    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

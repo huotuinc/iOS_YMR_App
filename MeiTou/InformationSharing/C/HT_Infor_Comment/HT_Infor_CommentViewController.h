@@ -10,4 +10,8 @@
 
 @interface HT_Infor_CommentViewController : UIViewController
 
+
+@property (nonatomic, assign) NSNumber *  shareId;
+
+
 @end

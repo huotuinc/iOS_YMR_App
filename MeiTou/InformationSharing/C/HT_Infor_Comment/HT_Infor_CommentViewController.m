@@ -28,6 +28,7 @@ static NSString *cellHead=@"cellHead";
 
 @interface HT_Infor_CommentViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
+
 @property (nonatomic, strong) NSMutableArray *commentList;
 
 @property (nonatomic, strong) UserInfo *user;
@@ -76,6 +77,7 @@ static NSString *cellHead=@"cellHead";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor cyanColor];
+    _commentList=[NSMutableArray array];
     [self createDataArray];
     [self createHeadArray];
     [self createHeadView];
@@ -127,7 +129,30 @@ static NSString *cellHead=@"cellHead";
                                                   @"一"]];
 }
 
-
+- (void)setupRefresh
+{
+    
+    
+    MJRefreshNormalHeader * headRe = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getNewShareList)];
+    _tableView.mj_header = headRe;
+    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
+    //    [self.tableView addHeaderWithTarget:self action:@selector(getNewData)];
+    //#warning 自动刷新(一进入程序就下拉刷新)
+    //    [self.tableView headerBeginRefreshing];
+    // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
+    //    self.tableView.headerPullToRefreshText = @"下拉可以刷新了";
+    //    self.tableView.headerReleaseToRefreshText = @"松开马上刷新了";
+    //    self.tableView.headerRefreshingText = @"正在刷新最新数据,请稍等";
+    
+    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
+    
+    MJRefreshAutoNormalFooter * Footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(getMoreShareList)];
+    _tableView.mj_footer = Footer;
+    
+    //        [_tableView addFooterWithTarget:self action:@selector(getMoreGoodList)];
+    
+    
+}
 #pragma mark 网络请求列表数据
 /**
  *  下拉刷新
@@ -136,7 +161,7 @@ static NSString *cellHead=@"cellHead";
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = @0;
-    dic[@"shareId"] = @4;
+    dic[@"shareId"] = self.shareId;
     dic[@"userId"] = self.user.userId;
 #warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
@@ -155,6 +180,7 @@ static NSString *cellHead=@"cellHead";
             [_tableView reloadData];
         }
         
+        
     } failure:^(NSError *error) {
         LWLog(@"%@",error);
     }];
@@ -169,7 +195,9 @@ static NSString *cellHead=@"cellHead";
     CommentModel *model = [self.commentList lastObject];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = model.pid;
-    dic[@"shareId"] = @4;
+//    dic[@"shareId"] = @4;
+    dic[@"shareId"] = self.shareId;
+
     dic[@"userId"] = self.user.userId;
 #warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
@@ -306,7 +334,7 @@ static NSString *cellHead=@"cellHead";
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     _tableView.backgroundColor=[UIColor redColor];
     [self.view addSubview:_tableView];
-    
+    [self setupRefresh];
 }
 
 -(void)createBottomView{
@@ -333,12 +361,17 @@ static NSString *cellHead=@"cellHead";
 #pragma mark UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableView *_cell;
-    
-    if ([_replyArray[indexPath.section] count]==0) {
+    CommentModel *model=_commentList[indexPath.section];
+    if ([model.replyModels count]==0) {
         HT_Infor_CommentCellHeaderView * cell = [tableView dequeueReusableCellWithIdentifier:cellStatus];
         if (!cell) {
             cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentCellHeaderView" owner:nil options:nil] lastObject];
-            cell.labelContent.text=_statusArray[indexPath.section];
+            cell.labelContent.text=model.content;
+            cell.labelDate.text=[self changeTheTimeStamps:model.time];
+            cell.labelName.text=model.name;
+            cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
+            cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
+            [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:model.userHeadUrl]];
             cell.selectionStyle=UITableViewCellSelectionStyleNone;
             _cell=cell;
         }
@@ -348,7 +381,12 @@ static NSString *cellHead=@"cellHead";
             HT_Infor_CommentCellHeaderView * cell = [tableView dequeueReusableCellWithIdentifier:cellStatus];
             if (!cell) {
                 cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentCellHeaderView" owner:nil options:nil] lastObject];
-                cell.labelContent.text=_statusArray[indexPath.section];
+                cell.labelContent.text=model.content;
+                cell.labelDate.text=[self changeTheTimeStamps:model.time];
+                cell.labelName.text=model.name;
+                cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
+                cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
+                [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:model.userHeadUrl]];
                 cell.selectionStyle=UITableViewCellSelectionStyleNone;
                 _cell=cell;
             }
@@ -360,7 +398,7 @@ static NSString *cellHead=@"cellHead";
                 _cell=cell;
             }
             
-        }else if (([_replyArray[indexPath.section] count] + 2   ) == indexPath.row){
+        }else if (([model.replyModels count] + 2) == indexPath.row){
             HT_Infor_CommentTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIComment];
             if (!cell) {
                 cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentFooterTableViewCell" owner:nil options:nil] lastObject];
@@ -370,9 +408,12 @@ static NSString *cellHead=@"cellHead";
             }
         }else {
             HT_Infor_CommentTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellFoot];
+            
             if (!cell) {
                 cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentTableViewCell" owner:nil options:nil] lastObject];
-                cell.labelMain.text=_replyArray[indexPath.section][indexPath.row -2 ];
+                ReplyModel *reply=model.replyModels[indexPath.row -2];
+                cell.labelMain.text=[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content];
+//                cell.labelMain.text=reply.content;
                 cell.selectionStyle=UITableViewCellSelectionStyleNone;
                 _cell=cell;
             }
@@ -386,32 +427,43 @@ static NSString *cellHead=@"cellHead";
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if ([_replyArray[section] count]==0) {
-//        NSLog(@"#####  %ld",[_replyArray[section] count]);
-        return 0 + 1;
-    }else{
-//        NSLog(@"***** %lu ****",[_replyArray[section] count]+2 +1);
-        return [_replyArray[section] count]+2 +1 ;
-    }
+//    if ([_replyArray[section] count]==0) {
+////        NSLog(@"#####  %ld",[_replyArray[section] count]);
+//        return 0 + 1;
+//    }else{
+//        NSLog(@"***** %ld ****",[_commentList[section][@"replyModels"] count]+2 +1);
+    
+    NSLog(@"section %ld",(long)section);
+    CommentModel *model=_commentList[section];
+    NSLog(@"cpunt %ld",[model.replyModels count]);
+    return [model.replyModels count]+2 +1 ;
+//    }
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    NSLog(@"***** %ld ----",[_statusArray count]);
-    return [_statusArray count]  ;
+    NSLog(@"section ------ %ld ----",(unsigned long)[_commentList count]);
+    
+    return [_commentList count]  ;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([_replyArray[indexPath.section] count]==0) {
-        return SCREEN_WITH/640*60 + SCREEN_WITH/640*60/5*3 + 16 +[self boundingRectWithSize:CGSizeMake(SCREEN_WITH-70, 0) font:[UIFont systemFontOfSize:17] string:_statusArray[indexPath.section]].height +1.0;
+    CommentModel *model=_commentList[indexPath.section];
+
+    if ([model.replyModels count]==0) {
+        NSLog(@"1--%@",model.content);
+        return SCREEN_WITH/640*60 + SCREEN_WITH/640*60/5*3 + 16 +[self boundingRectWithSize:CGSizeMake(SCREEN_WITH-70, 0) font:[UIFont systemFontOfSize:17] string:model.content].height +1.0;
     }else {
         if (indexPath.row == 0) {
-            return SCREEN_WITH/640*60 + SCREEN_WITH/640*60/5*3 + 16 + [self boundingRectWithSize:CGSizeMake(SCREEN_WITH-70, 0) font:[UIFont systemFontOfSize:17] string:_statusArray[indexPath.section]].height +1.0;
+            NSLog(@"1---%@",model.content);
+            return SCREEN_WITH/640*60 + SCREEN_WITH/640*60/5*3 + 16 + [self boundingRectWithSize:CGSizeMake(SCREEN_WITH-70, 0) font:[UIFont systemFontOfSize:17] string:model.content].height +1.0;
         }else if (indexPath.row==1){
             return 8.0f;
-        }else if (([_replyArray[indexPath.section] count] + 2) == indexPath.row){
+        }else if (([model.replyModels count] + 2) == indexPath.row){
             return 5;
         }else {
-            return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:17] string:_replyArray[indexPath.section][indexPath.row - 2]].height + 1.0;
+            ReplyModel *reply=model.replyModels[indexPath.row -2];
+            NSLog(@"2---%@",reply.content);
+            return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:17] string:[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content]].height + 1.0;
         }
     }
 }
@@ -586,6 +638,23 @@ static NSString *cellHead=@"cellHead";
                                        context:nil].size;
     
     return retSize;
+}
+
+/**
+ *  13位时间戳转为正常时间(可设置样式)
+ *
+ *  @param time 时间戳
+ *
+ *  @return
+ */
+-(NSString *)changeTheTimeStamps:(NSNumber *)time{
+    //实例化一个NSDateFormatter对象
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //设定时间格式,这里可以设置成自己需要的格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    //将13位时间戳转为正常时间格式
+    NSString * str = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:[time longLongValue]/1000]];
+    return str;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
