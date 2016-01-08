@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString *replyName;
 @property (nonatomic, strong) NSString *rid;
 @property (nonatomic, strong) NSString *toReplyName;
-
+@property (nonatomic, strong) NSNumber *userId;
+@property (nonatomic, strong) NSNumber *replyId;
 @end
