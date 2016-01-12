@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -24,14 +24,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLM-3Z-Qdy" userLabel="TitleLabel">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="28"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMW-oa-Z75" userLabel="DateLabel">
                                         <rect key="frame" x="0.0" y="28" width="42" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -41,20 +39,17 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4k7-w6-AdO" userLabel="CountLabel">
                                                 <rect key="frame" x="276" y="0.0" width="42" height="21"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eYR-KM-HUF" userLabel="NiceImage View">
                                                 <rect key="frame" x="255" y="1" width="18" height="18"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="eYR-KM-HUF" secondAttribute="height" multiplier="1:1" id="n4I-H8-aEh"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="eYR-KM-HUF" firstAttribute="height" secondItem="p08-cW-oot" secondAttribute="height" multiplier="25:30" id="51w-eq-QqO"/>
@@ -66,7 +61,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="p08-cW-oot" firstAttribute="top" secondItem="Y91-Xw-s6M" secondAttribute="top" id="5gg-UC-wcX"/>
@@ -95,17 +89,14 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuU-7I-WaC" userLabel="ContentLabel">
                                         <rect key="frame" x="0.0" y="142" width="360" height="56"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-qP-VuO" userLabel="MainImage View">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="142"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="E4u-qP-VuO" secondAttribute="trailing" id="A8R-wO-Yh7"/>
@@ -125,7 +116,6 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Y91-Xw-s6M" firstAttribute="leading" secondItem="Lsi-G5-gYg" secondAttribute="leading" id="5Aw-be-IZW"/>
@@ -139,7 +129,6 @@
                         </constraints>
                     </view>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="Lsi-G5-gYg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3gW-Dl-l3B"/>
                     <constraint firstItem="Lsi-G5-gYg" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="42:45" id="78o-yM-N5d"/>
@@ -147,7 +136,6 @@
                     <constraint firstItem="Lsi-G5-gYg" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="aGD-cK-Ma6"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <point key="canvasLocation" x="261" y="335"/>
         </tableViewCell>
     </objects>

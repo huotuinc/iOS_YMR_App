@@ -13,5 +13,6 @@
 
 @property (nonatomic, assign) NSNumber *  shareId;
 
+@property (nonatomic, assign) BOOL NICE;
 
 @end

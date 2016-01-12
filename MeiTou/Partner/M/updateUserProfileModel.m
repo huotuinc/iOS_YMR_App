@@ -8,6 +8,9 @@
 
 #import "updateUserProfileModel.h"
 
+/**
+ *  更新用户个人信息
+ */
 @implementation updateUserProfileModel
 
 @end

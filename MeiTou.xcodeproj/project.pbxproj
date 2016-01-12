@@ -77,6 +77,13 @@
 		F213A61F1C2A93C900966A97 /* HT_Infor_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F213A61E1C2A93C900966A97 /* HT_Infor_SearchViewController.m */; };
 		F214A6DA1C0D4BC40096D523 /* HT_Par_MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F214A6D81C0D4BC40096D523 /* HT_Par_MainTableViewCell.m */; };
 		F214A6DB1C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F214A6D91C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib */; };
+		F2183A2B1C4345CF00591870 /* getBeForwardedListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2183A2A1C4345CF00591870 /* getBeForwardedListModel.m */; };
+		F2183A2E1C43461200591870 /* getCommentListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2183A2D1C43461200591870 /* getCommentListModel.m */; };
+		F2183A311C43469400591870 /* getPraiseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2183A301C43469400591870 /* getPraiseListModel.m */; };
+		F2183A341C43473B00591870 /* getUserShareListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2183A331C43473B00591870 /* getUserShareListModel.m */; };
+		F2183A371C4347C700591870 /* CheckType.m in Sources */ = {isa = PBXBuildFile; fileRef = F2183A361C4347C700591870 /* CheckType.m */; };
+		F2183A3A1C43485700591870 /* updateUserProfileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2183A391C43485700591870 /* updateUserProfileModel.m */; };
+		F2183A3D1C4349CB00591870 /* UserLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2183A3C1C4349CB00591870 /* UserLevel.m */; };
 		F21A1D051C1124D5006FD426 /* HT_HomePage_PhoneCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A1D031C1124D5006FD426 /* HT_HomePage_PhoneCView.m */; };
 		F21A1D061C1124D5006FD426 /* HT_HomePage_PhoneCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21A1D041C1124D5006FD426 /* HT_HomePage_PhoneCView.xib */; };
 		F21A4B791C0D7F6B00C1F098 /* HT_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21A4B781C0D7F6B00C1F098 /* HT_BaseViewController.m */; };
@@ -120,6 +127,7 @@
 		F22B23F11C1178730009CCF4 /* HT_Par_IteResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B23F01C1178730009CCF4 /* HT_Par_IteResultViewController.m */; };
 		F22B3A9B1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B3A991C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m */; };
 		F22B3A9C1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22B3A9A1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.xib */; };
+		F23FD0421C3F5BA900B2F4D3 /* ShareInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F23FD0411C3F5BA900B2F4D3 /* ShareInfoModel.m */; };
 		F257EFCD1C322820006A2C23 /* HT_HomePage_NavTitleCVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = F257EFCB1C322820006A2C23 /* HT_HomePage_NavTitleCVIew.m */; };
 		F257EFCE1C322820006A2C23 /* HT_HomePage_NavTitleCVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = F257EFCC1C322820006A2C23 /* HT_HomePage_NavTitleCVIew.xib */; };
 		F257EFD11C322F5C006A2C23 /* HT_HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F257EFD01C322F5C006A2C23 /* HT_HomePageViewController.m */; };
@@ -417,6 +425,20 @@
 		F214A6D71C0D4BC40096D523 /* HT_Par_MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_MainTableViewCell.h; sourceTree = "<group>"; };
 		F214A6D81C0D4BC40096D523 /* HT_Par_MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_MainTableViewCell.m; sourceTree = "<group>"; };
 		F214A6D91C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_MainTableViewCell.xib; sourceTree = "<group>"; };
+		F2183A291C4345CF00591870 /* getBeForwardedListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getBeForwardedListModel.h; sourceTree = "<group>"; };
+		F2183A2A1C4345CF00591870 /* getBeForwardedListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getBeForwardedListModel.m; sourceTree = "<group>"; };
+		F2183A2C1C43461200591870 /* getCommentListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getCommentListModel.h; sourceTree = "<group>"; };
+		F2183A2D1C43461200591870 /* getCommentListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCommentListModel.m; sourceTree = "<group>"; };
+		F2183A2F1C43469400591870 /* getPraiseListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPraiseListModel.h; sourceTree = "<group>"; };
+		F2183A301C43469400591870 /* getPraiseListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPraiseListModel.m; sourceTree = "<group>"; };
+		F2183A321C43473B00591870 /* getUserShareListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getUserShareListModel.h; sourceTree = "<group>"; };
+		F2183A331C43473B00591870 /* getUserShareListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getUserShareListModel.m; sourceTree = "<group>"; };
+		F2183A351C4347C700591870 /* CheckType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckType.h; sourceTree = "<group>"; };
+		F2183A361C4347C700591870 /* CheckType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckType.m; sourceTree = "<group>"; };
+		F2183A381C43485700591870 /* updateUserProfileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updateUserProfileModel.h; sourceTree = "<group>"; };
+		F2183A391C43485700591870 /* updateUserProfileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updateUserProfileModel.m; sourceTree = "<group>"; };
+		F2183A3B1C4349CB00591870 /* UserLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLevel.h; sourceTree = "<group>"; };
+		F2183A3C1C4349CB00591870 /* UserLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLevel.m; sourceTree = "<group>"; };
 		F21A1D021C1124D5006FD426 /* HT_HomePage_PhoneCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_PhoneCView.h; sourceTree = "<group>"; };
 		F21A1D031C1124D5006FD426 /* HT_HomePage_PhoneCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_PhoneCView.m; sourceTree = "<group>"; };
 		F21A1D041C1124D5006FD426 /* HT_HomePage_PhoneCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_PhoneCView.xib; sourceTree = "<group>"; };
@@ -489,6 +511,8 @@
 		F22B3A981C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_BuyMainTableViewCell.h; sourceTree = "<group>"; };
 		F22B3A991C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_BuyMainTableViewCell.m; sourceTree = "<group>"; };
 		F22B3A9A1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_BuyMainTableViewCell.xib; sourceTree = "<group>"; };
+		F23FD0401C3F5BA900B2F4D3 /* ShareInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareInfoModel.h; sourceTree = "<group>"; };
+		F23FD0411C3F5BA900B2F4D3 /* ShareInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareInfoModel.m; sourceTree = "<group>"; };
 		F257EFCA1C322820006A2C23 /* HT_HomePage_NavTitleCVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_HomePage_NavTitleCVIew.h; sourceTree = "<group>"; };
 		F257EFCB1C322820006A2C23 /* HT_HomePage_NavTitleCVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_HomePage_NavTitleCVIew.m; sourceTree = "<group>"; };
 		F257EFCC1C322820006A2C23 /* HT_HomePage_NavTitleCVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_HomePage_NavTitleCVIew.xib; sourceTree = "<group>"; };
@@ -931,6 +955,8 @@
 				60304A231C2D153C00AE1AA1 /* CommentModel.m */,
 				60304A251C2D159D00AE1AA1 /* ReplyModel.h */,
 				60304A261C2D159D00AE1AA1 /* ReplyModel.m */,
+				F23FD0401C3F5BA900B2F4D3 /* ShareInfoModel.h */,
+				F23FD0411C3F5BA900B2F4D3 /* ShareInfoModel.m */,
 			);
 			name = M;
 			path = C/M;
@@ -1037,6 +1063,23 @@
 			);
 			name = HT_Infor_NewsController;
 			path = HT_Infor_News;
+			sourceTree = "<group>";
+		};
+		F2183A281C4345A400591870 /* m */ = {
+			isa = PBXGroup;
+			children = (
+				F2183A291C4345CF00591870 /* getBeForwardedListModel.h */,
+				F2183A2A1C4345CF00591870 /* getBeForwardedListModel.m */,
+				F2183A2C1C43461200591870 /* getCommentListModel.h */,
+				F2183A2D1C43461200591870 /* getCommentListModel.m */,
+				F2183A2F1C43469400591870 /* getPraiseListModel.h */,
+				F2183A301C43469400591870 /* getPraiseListModel.m */,
+				F2183A321C43473B00591870 /* getUserShareListModel.h */,
+				F2183A331C43473B00591870 /* getUserShareListModel.m */,
+				F2183A351C4347C700591870 /* CheckType.h */,
+				F2183A361C4347C700591870 /* CheckType.m */,
+			);
+			path = m;
 			sourceTree = "<group>";
 		};
 		F21E44E71C102F0100657249 /* MMDrawerController */ = {
@@ -1485,6 +1528,10 @@
 				60353DC41C33742E008E1172 /* RaiseModel.m */,
 				60353DC21C33742E008E1172 /* BuyModel.m */,
 				60353DC31C33742E008E1172 /* BuyModel.h */,
+				F2183A381C43485700591870 /* updateUserProfileModel.h */,
+				F2183A391C43485700591870 /* updateUserProfileModel.m */,
+				F2183A3B1C4349CB00591870 /* UserLevel.h */,
+				F2183A3C1C4349CB00591870 /* UserLevel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1690,7 +1737,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FAA9DD1C1A7C4A00A90DA1 /* controller */,
-				F2FAA9E61C1A7C4A00A90DA1 /* model */,
+				F2183A281C4345A400591870 /* m */,
 				F2FAA9E71C1A7C4A00A90DA1 /* view */,
 			);
 			path = personalCenter;
@@ -1711,13 +1758,6 @@
 				609292971C23E02E0076D589 /* ShareController.m */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		F2FAA9E61C1A7C4A00A90DA1 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		F2FAA9E71C1A7C4A00A90DA1 /* view */ = {
@@ -2002,6 +2042,7 @@
 				F2FAAA0A1C1AA0BC00A90DA1 /* HT_AboutViewController.m in Sources */,
 				F21A4B7C1C0D7FA100C1F098 /* HT_PartnerViewController.m in Sources */,
 				60DC99191C2CE0F500F50A5D /* AFNetworkActivityIndicatorManager.m in Sources */,
+				F2183A2B1C4345CF00591870 /* getBeForwardedListModel.m in Sources */,
 				F2FAA9F91C1A7C4A00A90DA1 /* SystemMessageController.m in Sources */,
 				609292981C23E02E0076D589 /* ShareController.m in Sources */,
 				F21C19261C1E9EC900E717A8 /* HT_Par_ChangePhoneCView.m in Sources */,
@@ -2010,6 +2051,7 @@
 				60353DC51C33742E008E1172 /* BuyModel.m in Sources */,
 				F28E883A1C19A0C300E75298 /* HT_HomePage_ChangeViewController.m in Sources */,
 				F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */,
+				F2183A3D1C4349CB00591870 /* UserLevel.m in Sources */,
 				60DC99141C2CE0F500F50A5D /* AFURLRequestSerialization.m in Sources */,
 				F27261A81C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.m in Sources */,
 				F20697A51C15B71800ED2017 /* HT_Infor_GroupViewController.m in Sources */,
@@ -2021,6 +2063,7 @@
 				F27261DF1C07FE530081EC95 /* HT_Par_SubListTableViewCell.m in Sources */,
 				F2F968591C158511000045B1 /* HT_Par_SubBottomView.m in Sources */,
 				F259CF841C292DC20082A912 /* MJTypeEncoding.m in Sources */,
+				F2183A311C43469400591870 /* getPraiseListModel.m in Sources */,
 				F2A019381C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.m in Sources */,
 				F21E44F91C102F0100657249 /* README.md in Sources */,
 				F259CF7D1C292DC20082A912 /* MJArgument.m in Sources */,
@@ -2046,6 +2089,7 @@
 				60DC99101C2CE0F500F50A5D /* AFHTTPSessionManager.m in Sources */,
 				F29944A11C084D9600823E75 /* HT_Infor_ShareCView.m in Sources */,
 				F259CFA31C293EAB0082A912 /* UserModel.m in Sources */,
+				F2183A2E1C43461200591870 /* getCommentListModel.m in Sources */,
 				F259CFA01C2930D30082A912 /* MD5Encryption.m in Sources */,
 				F21E44F81C102F0100657249 /* UIViewController+MMDrawerController.m in Sources */,
 				F21E45001C1039D900657249 /* HT_HomePage_LeftHeadView.m in Sources */,
@@ -2077,6 +2121,7 @@
 				F259CF831C292DC20082A912 /* MJType.m in Sources */,
 				60DC991C1C2CE0F500F50A5D /* UIButton+AFNetworking.m in Sources */,
 				F22B3A9B1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m in Sources */,
+				F2183A3A1C43485700591870 /* updateUserProfileModel.m in Sources */,
 				F21C19131C1E906600E717A8 /* HT_HomePage_LevelUpViewController.m in Sources */,
 				F22453671C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m in Sources */,
 				F21C19211C1E9C3100E717A8 /* HT_Par_LoginPhoneCView.m in Sources */,
@@ -2103,6 +2148,7 @@
 				F259CF9F1C2930D30082A912 /* GTMBase64.m in Sources */,
 				609292901C22A04A0076D589 /* LevelUpView.m in Sources */,
 				F27261EF1C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.m in Sources */,
+				F2183A341C43473B00591870 /* getUserShareListModel.m in Sources */,
 				F263CA071C1527B100EE78CA /* HT_Par_IteOrderViewController.m in Sources */,
 				F259CF8B1C2930120082A912 /* UserLoginTool.m in Sources */,
 				F27261A31C07FD510081EC95 /* HT_Par_MainTopView.m in Sources */,
@@ -2140,6 +2186,7 @@
 				F21A1D051C1124D5006FD426 /* HT_HomePage_PhoneCView.m in Sources */,
 				F259CF941C29305F0082A912 /* UITableView+CJ.m in Sources */,
 				F263CA041C15278700EE78CA /* HT_Par_IteCooperationViewController.m in Sources */,
+				F2183A371C4347C700591870 /* CheckType.m in Sources */,
 				F2C00D7F1C1071180008833B /* HT_Par_IteBottomCView.m in Sources */,
 				F21A4B851C0D84C600C1F098 /* HT_HomePage_PhoneViewController.m in Sources */,
 				F21F74631C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.m in Sources */,
@@ -2160,6 +2207,7 @@
 				F29A25631C239E96001061EA /* HT_Infor_CommentHeadCView.m in Sources */,
 				F2D7AED71C172BDA00725B4E /* HT_About_IntroTableViewCell.m in Sources */,
 				F21A4B7F1C0D7FD300C1F098 /* HT_InformationViewController.m in Sources */,
+				F23FD0421C3F5BA900B2F4D3 /* ShareInfoModel.m in Sources */,
 				60DC990F1C2CE0F500F50A5D /* AFHTTPRequestOperationManager.m in Sources */,
 				6095C2A01C2A842700DBC029 /* ShareType.m in Sources */,
 				F21C191C1C1E9A1F00E717A8 /* HT_HomePage_BoundPhoneCView.m in Sources */,

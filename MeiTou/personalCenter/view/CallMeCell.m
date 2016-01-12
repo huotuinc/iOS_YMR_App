@@ -35,6 +35,13 @@
 //    @property (weak, nonatomic) IBOutlet UIButton *reback;
     _userLogo.image=[UIImage imageNamed:@"sides_menu_tou"];
     _articleLogo.image=[UIImage imageNamed:@"aaa"];
+    
+    [self changeLabel:_time AndFont:22 AndColor:COLOR_TEXT_DATE];
+    [self changeLabel:_articleDetail AndFont:22 AndColor:COLOR_TEXT_DATE];
+    [self changeLabel:_userName AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_articleTitle AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_detail AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    
 }
 
 - (void)layoutSubviews {
@@ -43,6 +50,18 @@
     self.reback.layer.cornerRadius = 5;
     self.reback.layer.borderColor = [UIColor colorWithWhite:0.894 alpha:1.000].CGColor;
     self.reback.layer.borderWidth = 1;
+}
+
+/**
+ *  设置label的字体大小和颜色
+ *
+ *  @param label 更改的label
+ *  @param font  整形(相对效果图的像素大小)
+ *  @param color 颜色
+ */
+-(void)changeLabel:(UILabel *) label AndFont:(NSInteger) font AndColor:(UIColor *) color{
+    label.font=[UIFont systemFontOfSize:FONT_SIZE(font)];
+    label.textColor=color;
 }
 
 @end

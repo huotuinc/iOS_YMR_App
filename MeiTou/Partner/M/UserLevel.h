@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  用户级别
+ */
 @interface UserLevel : NSObject
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *value;
 
 @end

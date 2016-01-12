@@ -323,19 +323,26 @@ static NSString *cellIMain = @"cellIMain";
     _goWhere=model.shareType.value;
     NSLog(@"------------=======%@",_goWhere);
 //    NSLog(@"/////////// %@ \\\\\\\\",[NSNumber numberWithInt:1]);
-    if ([_goWhere isEqualToNumber:[NSNumber numberWithInt:0]]||[_goWhere isEqualToNumber:[NSNumber numberWithInt:2]]) {
+//    if ([_goWhere isEqualToNumber:[NSNumber numberWithInt:0]]||[_goWhere isEqualToNumber:[NSNumber numberWithInt:2]]) {
 //        HT_Infor_NewsViewController *news=[[HT_Infor_NewsViewController alloc]init];
 //        [self.navigationController pushViewController:news animated:YES];
         HT_Infor_CommentViewController *comment=[[HT_Infor_CommentViewController alloc]init];
         comment.shareId=model.pid;
+    if (model.praise==1) {
+        comment.NICE=YES;
+        
+    }else{
+        comment.NICE=NO;
+
+    }
 //        NSLog(@"%f",comment.shareId);
         [self.navigationController pushViewController:comment animated:YES];
-    }
-    
-    if ([_goWhere isEqualToNumber:[NSNumber numberWithInt:1]]||[_goWhere isEqualToNumber:[NSNumber numberWithInt:3]]) {
-        HT_Infor_GroupViewController *group=[[HT_Infor_GroupViewController alloc]init];
-        [self.navigationController pushViewController:group animated:YES];
-    }
+//    }
+//    
+//    if ([_goWhere isEqualToNumber:[NSNumber numberWithInt:1]]||[_goWhere isEqualToNumber:[NSNumber numberWithInt:3]]) {
+//        HT_Infor_GroupViewController *group=[[HT_Infor_GroupViewController alloc]init];
+//        [self.navigationController pushViewController:group animated:YES];
+//    }
 //    if ([_goWhere isEqualToNumber:[NSNumber numberWithInt:2]]) {
 //        HT_Infor_GroupViewController *group=[[HT_Infor_GroupViewController alloc]init];
 //        [self.navigationController pushViewController:group animated:YES];

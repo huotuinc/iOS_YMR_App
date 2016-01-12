@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  审核类型
+ */
 @interface CheckType : NSObject
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *value;
 
 @end

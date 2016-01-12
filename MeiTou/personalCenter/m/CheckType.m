@@ -9,5 +9,6 @@
 #import "CheckType.h"
 
 @implementation CheckType
+MJCodingImplementation
 
 @end

@@ -15,6 +15,7 @@
 #import "HT_Infor_CommentFooterTableViewCell.h"
 
 #import "CommentModel.h"
+#import "ShareInfoModel.h"
 #import "UserInfo.h"
 
 
@@ -30,6 +31,7 @@ static NSString *cellHead=@"cellHead";
 
 
 @property (nonatomic, strong) NSMutableArray *commentList;
+@property (nonatomic, strong) NSMutableArray *shareInfo;
 
 @property (nonatomic, strong) UserInfo *user;
 
@@ -70,6 +72,7 @@ static NSString *cellHead=@"cellHead";
     self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
     
     [self createBarButtonItem];
+    [self getHeadData];
     [self getNewShareList];
 }
 
@@ -78,56 +81,48 @@ static NSString *cellHead=@"cellHead";
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor cyanColor];
     _commentList=[NSMutableArray array];
-    [self createDataArray];
-    [self createHeadArray];
-    [self createHeadView];
-    [self createBottomView];
+    _shareInfo=[NSMutableArray array];
+
+//    [self createHeadView];
+//    [self createBottomView];
 
 //    [self createFooterView];
-    [self crateTableView];
+//    [self crateTableView];
     
     
     NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
     self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
 }
+-(void)getHeadData{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"shareId"]=self.shareId;
+    
+    [UserLoginTool loginRequestGet:@"getShareInfo" parame:dict success:^(id json) {
+        LWLog(@"%@",json);
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            [self.shareInfo removeAllObjects];
+            
+            ShareInfoModel *infoModel = [ShareInfoModel objectWithKeyValues:json[@"resultData"][@"data"]];
+            
+            
+            
+            [self.shareInfo addObject:infoModel];
+            NSLog(@"%@",_shareInfo);
+            
+                [self createHeadView];
+                [self createBottomView];
 
--(void)createDataArray{
-    _replyArray=[NSMutableArray array];
-    //    NSArray *arrA=@[@"小车 : 生来彷徨"];
-    NSArray *arrA=[[NSArray alloc]init];
-    NSArray *arrB=@[@"小车 : 生来彷徨",
-                    @"小明 回复 小车 : 雨后有车驶来,驶过暮色苍白,旧铁皮往南开,恋人已不在"];
-    NSArray *arrC=@[@"小车 : 生来彷徨",
-                    @"小明 回复 小车 : 雨后有车驶来,驶过暮色苍白,旧铁皮往南开,恋人已不在",
-                    @"小明 回复 小车 : 一一一",
-                    @"小明 回复 小车 : 正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正正"];
-    NSArray *arrD=@[@"小车 : 我化尘埃飞扬,追寻赤裸飞翔",
-                    @"小明 回复 小车 : 我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
-                    @"小明 回复 小车 : 我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
-                    @"小明 回复 小车 : 一"];
-    
-    [_replyArray addObject:arrA];
-    [_replyArray addObject:arrB];
-    [_replyArray addObject:arrC];
-    [_replyArray addObject:arrD];
-    [_replyArray addObject:arrA];
-    [_replyArray addObject:arrB];
-    [_replyArray addObject:arrC];
-    [_replyArray addObject:arrD];
-    
+            [_tableView reloadData];
+        }
+        
+        
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    }];
 }
 
--(void)createHeadArray{
-    _statusArray=[NSMutableArray arrayWithArray:@[@"我化尘埃飞扬,追寻赤裸飞翔",
-                                                  @"我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
-                                                  @"我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
-                                                  @"一",
-                                                  @"我化尘埃飞扬,追寻赤裸飞翔",
-                                                  @"我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
-                                                  @"我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往我欲乘风破浪,踏遍黄沙海洋,与其误会一场,也要不负勇往",
-                                                  @"一"]];
-}
+
 
 - (void)setupRefresh
 {
@@ -163,6 +158,9 @@ static NSString *cellHead=@"cellHead";
     dic[@"lastId"] = @0;
     dic[@"shareId"] = self.shareId;
     dic[@"userId"] = self.user.userId;
+    
+    
+    
 #warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
         
@@ -176,6 +174,7 @@ static NSString *cellHead=@"cellHead";
             
             [self.commentList addObjectsFromArray:temp];
             
+            NSLog(@"%@",_commentList);
             
             [_tableView reloadData];
         }
@@ -184,6 +183,7 @@ static NSString *cellHead=@"cellHead";
     } failure:^(NSError *error) {
         LWLog(@"%@",error);
     }];
+    
     
 }
 
@@ -227,6 +227,9 @@ static NSString *cellHead=@"cellHead";
     dic[@"userId"] = self.user.userId;
     dic[@"shareId"] = @2;
     dic[@"content"] =  @"哈哈哈哈哈哈哈哈哈哈哈哈";
+    
+
+    
 #warning 修改shareId 以及content
     [UserLoginTool loginRequestPostWithFile:@"addComment" parame:dic success:^(id json) {
         LWLog(@"%@",json);
@@ -319,7 +322,16 @@ static NSString *cellHead=@"cellHead";
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentHeadCView" owner:nil options:nil];
     _headView=[nib firstObject];
     _headView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*500);
+    ShareInfoModel *model=_shareInfo[0];
+//    NSLog(@"%@",[_shareInfo[0] title]);
     
+    _headView.labelTitle.text=model.title;
+    _headView.labelDate.text=[self changeTheTimeStamps:(NSNumber *)model.time];
+    _headView.labelScore.text=[NSString stringWithFormat:@"%@/%@分",model.useIntegral,model.totalIntegral];
+    _headView.labelContent.text=model.content;
+    [_headView.imageVMain sd_setImageWithURL:[NSURL URLWithString:model.img]];
+        [self crateTableView];
+
 }
 -(void)createFooterView{
     _footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, _bottomView.frame.size.height+20)];
@@ -332,7 +344,7 @@ static NSString *cellHead=@"cellHead";
     _tableView.tableHeaderView=_headView;
     _tableView.tableFooterView=_footerView;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-    _tableView.backgroundColor=[UIColor redColor];
+//    _tableView.backgroundColor=[UIColor redColor];
     [self.view addSubview:_tableView];
     [self setupRefresh];
 }
@@ -342,7 +354,17 @@ static NSString *cellHead=@"cellHead";
     _bottomView=[nib firstObject];
     _bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*90)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*90);
     [_bottomView.buttonGo setTitle:@"说点什么" forState:UIControlStateNormal];
-
+    ShareInfoModel *model=_shareInfo[0];
+    [_bottomView.buttonScore setTitle:[NSString stringWithFormat:@"转发奖励%@积分",model.relayReward] forState:UIControlStateNormal];
+    if (self.NICE == YES) {
+        _bottomView.imageVNice.image=[UIImage imageNamed:@"common_zanred_b"];
+    }else{
+        _bottomView.imageVNice.image=[UIImage imageNamed:@"common_zanred_a"];
+    }
+    [_bottomView.imageVShare bk_whenTapped:^{
+        LWLog(@"点击了分享");
+    }];
+    
     [self.view addSubview:_bottomView];
     
 }
@@ -485,6 +507,7 @@ static NSString *cellHead=@"cellHead";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     
     //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"回复",@"举报", nil];
