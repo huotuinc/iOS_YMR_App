@@ -11,6 +11,7 @@
 #import "HT_HomePage_LeftViewController.h"
 #import "HT_HomePageCollectionViewCell.h"
 #import "HT_PartnerViewController.h"
+#import "HT_AboutMTViewController.h"
 #import "HT_InformationViewController.h"
 #import "HT_AboutViewController.h"
 #import "HT_HomePage_ChangeViewController.h"
@@ -115,8 +116,10 @@
     [self.navigationController pushViewController:person animated:YES];
 }
 -(void)pushToAbout{
-    HT_AboutViewController *about = [[HT_AboutViewController alloc] init];
+    HT_AboutMTViewController *about=[[HT_AboutMTViewController alloc]init];
     [self.navigationController pushViewController:about animated:YES];
+//    HT_AboutViewController *about = [[HT_AboutViewController alloc] init];
+//    [self.navigationController pushViewController:about animated:YES];
 }
 - (void)pushToPartner {
     HT_PartnerViewController *partner = [[HT_PartnerViewController alloc] init];

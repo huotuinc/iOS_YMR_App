@@ -9,8 +9,8 @@
 #import "HT_Infor_ShareViewController.h"
 #import "UserInfo.h"
 #import "HT_Infor_ShareCView.h"
-
-@interface HT_Infor_ShareViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate>
+#import "ImageHandleView.h"
+@interface HT_Infor_ShareViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate,UITextFieldDelegate,UITextViewDelegate>
 
 @property (nonatomic, strong) NSString *showHeadUrl;
 
@@ -18,22 +18,30 @@
 
 @property (nonatomic, strong) UserInfo *user;
 
+@property (nonatomic, strong) ImageHandleView *temView;
 @end
 
 @implementation HT_Infor_ShareViewController{
     HT_Infor_ShareCView *_mainView;
+    
+    CGFloat _height;
+    CGFloat _time;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
     self.navigationController.navigationBar.translucent=NO;
-    self.view.backgroundColor=[UIColor whiteColor];
+    self.view.backgroundColor=COLOR_BACK_MAIN;
     [self createBarButtonItem];
     
     NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
     self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
 }
 - (void)viewDidLoad {
@@ -41,6 +49,8 @@
     // Do any additional setup after loading the view.
     [self createNavgationBarTitle];
     [self createMainView];
+//    self.temView=[[ImageHandleView alloc]initWithFrame:self.view.frame image:[UIImage imageNamed:@"aboutMT1"] isCircle:YES];
+//    [self.view addSubview:_temView];
     
     self.showHeadUrl = [NSString string];
     self.returnHeadUrl = [NSString string];
@@ -91,8 +101,12 @@
     
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_ShareCView" owner:nil options:nil];
     _mainView=[nib firstObject];
-    _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT-64);
+    _mainView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*800);
     [_mainView.buttonAdd addTarget:self action:@selector(addImageClick) forControlEvents:UIControlEventTouchUpInside];
+//    _mainView.textFTitle.delegate=self;
+//    _mainView.textV.delegate=self;
+    
+    
     [self.view addSubview:_mainView];
     
 }
@@ -187,6 +201,7 @@
         pc.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
         pc.delegate = self;
         pc.allowsEditing = YES;
+       
         [self presentViewController:pc animated:YES completion:nil];
         
     }else if(buttonIndex == 1) {
@@ -229,7 +244,101 @@
     
     
 }
+-(void)KeyboardWillShow:(NSNotification *)sender
+{
+    CGRect rect  = [[sender.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue];
+    CGFloat height =  rect.size.height;
+    NSLog(@"height--------%f",height);
+    //    UIKeyboardAnimationDurationUserInfoKey 获取键盘升起动画时间
+    [UIView beginAnimations:nil context:nil];
+    //    [[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue] 获取动画时间;
+    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]
+     ];
+//    self.view.transform = CGAffineTransformMakeTranslation(0, -height);
+    [UIView commitAnimations];//开始执行动画
+    //    UITextField *textField  = (id)[self.view viewWithTag:TextTag];
+    //    textField.frame = CGRectMake(10, screenH-45-rect.size.height, screenW-20, 45);
+}
+-(void)KeyboardWillHide:(NSNotification *)sender
+{
+    CGRect rect  = [[sender.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue];
+    CGFloat height =  rect.size.height;
+    NSLog(@"height--------%f",height);
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]];
+    self.view.transform = CGAffineTransformIdentity; //重置状态
+    [UIView commitAnimations];
+    //    UITextField *textField  = (id)[self.view viewWithTag:TextTag];
+    //    textField.frame = CGRectMake(10, screenH-45, screenW-20, 45);
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+//    [_mainView.textFTitle resignFirstResponder];
+//    [_mainView.textV resignFirstResponder];
+    UITextField *text  = [_mainView viewWithTag:200];
+    [text resignFirstResponder];
+    
+    
+    
+}
+-(void)logoClick{
+    UIImagePickerController *imageP=[[UIImagePickerController alloc]init];
+    imageP.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+    imageP.allowsEditing=YES;
+    imageP.delegate=self;
+    [self presentViewController:imageP animated:YES completion:nil];
+}
+//-(void)textFieldDidEndEditing:(UITextField *)textField{
+//    [textField resignFirstResponder];
+//}
 
+///**
+// *  键盘监听
+// *
+// *  @param sender <#sender description#>
+// */
+//-(void)KeyboardWillShow:(NSNotification *)sender
+//{
+//    CGRect rect  = [[sender.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue];
+//    CGFloat height =  rect.size.height;
+//    _height=height;
+//    [UIView beginAnimations:nil context:nil];
+//    _time= [[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]; //获取动画时间;
+//    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]
+//     ];
+//    [UIView commitAnimations];//开始执行动画
+//}
+//
+//-(void)KeyboardWillHide:(NSNotification *)sender
+//{
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]];
+//    [UIView commitAnimations];
+//    
+//}
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    [_mainView.textFTitle resignFirstResponder];
+//    [_mainView.textV resignFirstResponder];
+//}
+//-(void)textViewDidBeginEditing:(UITextView *)textView{
+//    [UIView animateWithDuration:_time animations:^{
+//        [_mainView.textV becomeFirstResponder];
+////        _replyView.frame=CGRectMake(0, SCREEN_HEIGHT-_height-50-64, SCREEN_WITH, 50);
+////        _bottomView.hidden=YES;
+////        [_tableView setContentOffset:CGPointMake(0, _allCellHeight-_height-50) animated:YES];
+//    }];
+//
+//
+//}
+//-(void)textFieldDidBeginEditing:(UITextField *)textField{
+////    [UIView animateWithDuration:_time animations:^{
+////        [_mainView.textFTitle becomeFirstResponder];
+////
+////    }];
+//
+//
+//}
 
 
 

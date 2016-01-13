@@ -196,6 +196,9 @@
 		F27261F01C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261E81C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.xib */; };
 		F27261F31C07FE9E0081EC95 /* HT_Infor_HeadCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27261ED1C07FE9E0081EC95 /* HT_Infor_HeadCView.m */; };
 		F27261F41C07FE9E0081EC95 /* HT_Infor_HeadCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27261EE1C07FE9E0081EC95 /* HT_Infor_HeadCView.xib */; };
+		F27415331C462FE500C623B0 /* HT_Infor_ShareThirdCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27415311C462FE500C623B0 /* HT_Infor_ShareThirdCView.m */; };
+		F27415341C462FE500C623B0 /* HT_Infor_ShareThirdCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27415321C462FE500C623B0 /* HT_Infor_ShareThirdCView.xib */; };
+		F27415371C4643F000C623B0 /* ImageHandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27415361C4643F000C623B0 /* ImageHandleView.m */; };
 		F27BFA941C18823E007D928A /* HT_Par_IteOrderCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27BFA921C18823E007D928A /* HT_Par_IteOrderCView.m */; };
 		F27BFA951C18823E007D928A /* HT_Par_IteOrderCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27BFA931C18823E007D928A /* HT_Par_IteOrderCView.xib */; };
 		F27D67311C0B30A900EE6C4F /* HT_HomePageLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D67301C0B30A900EE6C4F /* HT_HomePageLayout.m */; };
@@ -241,6 +244,15 @@
 		F2C9F8491C0C576500FC454B /* HT_HomePage_LeftBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C9F8471C0C576500FC454B /* HT_HomePage_LeftBottomView.xib */; };
 		F2CE739F1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CE739D1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.m */; };
 		F2CE73A01C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CE739E1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.xib */; };
+		F2CFB8CE1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB8CC1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.m */; };
+		F2CFB8CF1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CFB8CD1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.xib */; };
+		F2CFB8D61C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB8D41C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.m */; };
+		F2CFB8D71C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CFB8D51C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.xib */; };
+		F2CFB8DB1C4527E000E3C5DD /* HT_AboutMTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB8D91C4527E000E3C5DD /* HT_AboutMTViewController.m */; };
+		F2CFB8DC1C4527E000E3C5DD /* HT_AboutMTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CFB8DA1C4527E000E3C5DD /* HT_AboutMTViewController.xib */; };
+		F2CFB8E61C45284300E3C5DD /* HT_AboutMTLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB8E51C45284300E3C5DD /* HT_AboutMTLayout.m */; };
+		F2CFB8EA1C45285400E3C5DD /* HT_AboutMTCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB8E81C45285400E3C5DD /* HT_AboutMTCView.m */; };
+		F2CFB8EB1C45285400E3C5DD /* HT_AboutMTCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CFB8E91C45285400E3C5DD /* HT_AboutMTCView.xib */; };
 		F2D7AECC1C17121A00725B4E /* HT_Infor_BottomCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D7AECA1C17121A00725B4E /* HT_Infor_BottomCView.m */; };
 		F2D7AECD1C17121A00725B4E /* HT_Infor_BottomCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D7AECB1C17121A00725B4E /* HT_Infor_BottomCView.xib */; };
 		F2D7AED01C171D4B00725B4E /* HT_Infor_GroupWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D7AECF1C171D4B00725B4E /* HT_Infor_GroupWebViewController.m */; };
@@ -635,6 +647,11 @@
 		F27261EC1C07FE9E0081EC95 /* HT_Infor_HeadCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_HeadCView.h; sourceTree = "<group>"; };
 		F27261ED1C07FE9E0081EC95 /* HT_Infor_HeadCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_HeadCView.m; sourceTree = "<group>"; };
 		F27261EE1C07FE9E0081EC95 /* HT_Infor_HeadCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_HeadCView.xib; sourceTree = "<group>"; };
+		F27415301C462FE500C623B0 /* HT_Infor_ShareThirdCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_ShareThirdCView.h; sourceTree = "<group>"; };
+		F27415311C462FE500C623B0 /* HT_Infor_ShareThirdCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_ShareThirdCView.m; sourceTree = "<group>"; };
+		F27415321C462FE500C623B0 /* HT_Infor_ShareThirdCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_ShareThirdCView.xib; sourceTree = "<group>"; };
+		F27415351C4643F000C623B0 /* ImageHandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandleView.h; sourceTree = "<group>"; };
+		F27415361C4643F000C623B0 /* ImageHandleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHandleView.m; sourceTree = "<group>"; };
 		F27BFA911C18823E007D928A /* HT_Par_IteOrderCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Par_IteOrderCView.h; sourceTree = "<group>"; };
 		F27BFA921C18823E007D928A /* HT_Par_IteOrderCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Par_IteOrderCView.m; sourceTree = "<group>"; };
 		F27BFA931C18823E007D928A /* HT_Par_IteOrderCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Par_IteOrderCView.xib; sourceTree = "<group>"; };
@@ -713,6 +730,20 @@
 		F2CE739C1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HT_Infor_BottomTabBarCView.h; path = ../../AboutMeiTou/V/HT_Infor_BottomTabBarCView.h; sourceTree = "<group>"; };
 		F2CE739D1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HT_Infor_BottomTabBarCView.m; path = ../../AboutMeiTou/V/HT_Infor_BottomTabBarCView.m; sourceTree = "<group>"; };
 		F2CE739E1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HT_Infor_BottomTabBarCView.xib; path = ../../AboutMeiTou/V/HT_Infor_BottomTabBarCView.xib; sourceTree = "<group>"; };
+		F2CFB8CB1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_CommentTextCView.h; sourceTree = "<group>"; };
+		F2CFB8CC1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_CommentTextCView.m; sourceTree = "<group>"; };
+		F2CFB8CD1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_CommentTextCView.xib; sourceTree = "<group>"; };
+		F2CFB8D31C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_CommentReplyCView.h; sourceTree = "<group>"; };
+		F2CFB8D41C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_CommentReplyCView.m; sourceTree = "<group>"; };
+		F2CFB8D51C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_CommentReplyCView.xib; sourceTree = "<group>"; };
+		F2CFB8D81C4527E000E3C5DD /* HT_AboutMTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_AboutMTViewController.h; sourceTree = "<group>"; };
+		F2CFB8D91C4527E000E3C5DD /* HT_AboutMTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_AboutMTViewController.m; sourceTree = "<group>"; };
+		F2CFB8DA1C4527E000E3C5DD /* HT_AboutMTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_AboutMTViewController.xib; sourceTree = "<group>"; };
+		F2CFB8E41C45284300E3C5DD /* HT_AboutMTLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_AboutMTLayout.h; sourceTree = "<group>"; };
+		F2CFB8E51C45284300E3C5DD /* HT_AboutMTLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_AboutMTLayout.m; sourceTree = "<group>"; };
+		F2CFB8E71C45285300E3C5DD /* HT_AboutMTCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_AboutMTCView.h; sourceTree = "<group>"; };
+		F2CFB8E81C45285400E3C5DD /* HT_AboutMTCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_AboutMTCView.m; sourceTree = "<group>"; };
+		F2CFB8E91C45285400E3C5DD /* HT_AboutMTCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_AboutMTCView.xib; sourceTree = "<group>"; };
 		F2D7AEC91C17121A00725B4E /* HT_Infor_BottomCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT_Infor_BottomCView.h; sourceTree = "<group>"; };
 		F2D7AECA1C17121A00725B4E /* HT_Infor_BottomCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT_Infor_BottomCView.m; sourceTree = "<group>"; };
 		F2D7AECB1C17121A00725B4E /* HT_Infor_BottomCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HT_Infor_BottomCView.xib; sourceTree = "<group>"; };
@@ -1293,7 +1324,7 @@
 			isa = PBXGroup;
 			children = (
 				F272618B1C07E95F0081EC95 /* C */,
-				F272618C1C07E95F0081EC95 /* M */,
+				F2CFB8E31C45281C00E3C5DD /* M */,
 				F272618D1C07E95F0081EC95 /* V */,
 			);
 			path = AboutMeiTou;
@@ -1302,6 +1333,9 @@
 		F272618B1C07E95F0081EC95 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				F2CFB8D81C4527E000E3C5DD /* HT_AboutMTViewController.h */,
+				F2CFB8D91C4527E000E3C5DD /* HT_AboutMTViewController.m */,
+				F2CFB8DA1C4527E000E3C5DD /* HT_AboutMTViewController.xib */,
 				F2FAAA081C1AA0BC00A90DA1 /* HT_AboutViewController.h */,
 				F2FAAA091C1AA0BC00A90DA1 /* HT_AboutViewController.m */,
 				F2D7AED11C172BAB00725B4E /* HT_About_IntroViewController.h */,
@@ -1312,16 +1346,12 @@
 			path = C;
 			sourceTree = "<group>";
 		};
-		F272618C1C07E95F0081EC95 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
 		F272618D1C07E95F0081EC95 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				F2CFB8E71C45285300E3C5DD /* HT_AboutMTCView.h */,
+				F2CFB8E81C45285400E3C5DD /* HT_AboutMTCView.m */,
+				F2CFB8E91C45285400E3C5DD /* HT_AboutMTCView.xib */,
 				F27261E11C07FE810081EC95 /* HT_About_MainTableViewCell.h */,
 				F27261E21C07FE810081EC95 /* HT_About_MainTableViewCell.m */,
 				F27261E31C07FE810081EC95 /* HT_About_MainTableViewCell.xib */,
@@ -1454,6 +1484,8 @@
 		F27261951C07E95F0081EC95 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				F27415351C4643F000C623B0 /* ImageHandleView.h */,
+				F27415361C4643F000C623B0 /* ImageHandleView.m */,
 				F2B168131C1825F500517879 /* HT_Infor_NewsView */,
 				F27261E61C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.h */,
 				F27261E71C07FE9E0081EC95 /* HT_Infor_MainTableViewCell.m */,
@@ -1473,6 +1505,9 @@
 				F21F74601C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.h */,
 				F21F74611C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.m */,
 				F21F74621C3CE14A00ACD6BE /* HT_Infor_CommentFooterTableViewCell.xib */,
+				F2CFB8CB1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.h */,
+				F2CFB8CC1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.m */,
+				F2CFB8CD1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.xib */,
 				F27261EC1C07FE9E0081EC95 /* HT_Infor_HeadCView.h */,
 				F27261ED1C07FE9E0081EC95 /* HT_Infor_HeadCView.m */,
 				F27261EE1C07FE9E0081EC95 /* HT_Infor_HeadCView.xib */,
@@ -1491,6 +1526,12 @@
 				F2CE739C1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.h */,
 				F2CE739D1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.m */,
 				F2CE739E1C1AB81800E663D0 /* HT_Infor_BottomTabBarCView.xib */,
+				F2CFB8D31C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.h */,
+				F2CFB8D41C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.m */,
+				F2CFB8D51C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.xib */,
+				F27415301C462FE500C623B0 /* HT_Infor_ShareThirdCView.h */,
+				F27415311C462FE500C623B0 /* HT_Infor_ShareThirdCView.m */,
+				F27415321C462FE500C623B0 /* HT_Infor_ShareThirdCView.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1733,6 +1774,15 @@
 			path = HT_Par_InitiateController;
 			sourceTree = "<group>";
 		};
+		F2CFB8E31C45281C00E3C5DD /* M */ = {
+			isa = PBXGroup;
+			children = (
+				F2CFB8E41C45284300E3C5DD /* HT_AboutMTLayout.h */,
+				F2CFB8E51C45284300E3C5DD /* HT_AboutMTLayout.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
 		F2FAA9DC1C1A7C4A00A90DA1 /* personalCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1897,11 +1947,14 @@
 				F2A19E091C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.xib in Resources */,
 				F29A25691C23DB8B001061EA /* HT_Infor_CommentCellHeaderView.xib in Resources */,
 				F27261BD1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.xib in Resources */,
+				F2CFB8DC1C4527E000E3C5DD /* HT_AboutMTViewController.xib in Resources */,
 				F29085131C0EBD9200F779FA /* HT_Par_BuyHeaderView.xib in Resources */,
+				F2CFB8EB1C45285400E3C5DD /* HT_AboutMTCView.xib in Resources */,
 				F2C00D7B1C1054880008833B /* HT_Par_BuyPayCView.xib in Resources */,
 				F214A6DB1C0D4BC40096D523 /* HT_Par_MainTableViewCell.xib in Resources */,
 				F22B3A9C1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.xib in Resources */,
 				F2F968501C1583DB000045B1 /* HT_Par_SubProjectDoingHeaderCView.xib in Resources */,
+				F2CFB8D71C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.xib in Resources */,
 				603A48CD1C2BCFBC00D229E4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				F27261A91C07FDA50081EC95 /* HT_Par_BuyListTableViewCell.xib in Resources */,
 				609292951C23A2080076D589 /* ShareCell.xib in Resources */,
@@ -1914,6 +1967,7 @@
 				F27261C21C07FE240081EC95 /* HT_Par_IteResult_HeadView.xib in Resources */,
 				F2A019391C0B2F6A0017234F /* HT_HomePage_LeftTableViewCell.xib in Resources */,
 				F2C9F8491C0C576500FC454B /* HT_HomePage_LeftBottomView.xib in Resources */,
+				F27415341C462FE500C623B0 /* HT_Infor_ShareThirdCView.xib in Resources */,
 				F28E88371C192B3B00E75298 /* HT_Par_SearchCView.xib in Resources */,
 				F2FAA9FF1C1A7C4A00A90DA1 /* PraiseCell.xib in Resources */,
 				F27BFA951C18823E007D928A /* HT_Par_IteOrderCView.xib in Resources */,
@@ -1926,6 +1980,7 @@
 				F2FAA9FD1C1A7C4A00A90DA1 /* CommentsCell.xib in Resources */,
 				F29944A21C084D9600823E75 /* HT_Infor_ShareCView.xib in Resources */,
 				603A48D11C2BCFBC00D229E4 /* read_me.txt in Resources */,
+				F2CFB8CF1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.xib in Resources */,
 				F27261B81C07FDFE0081EC95 /* HT_Par_IteListTableViewCell.xib in Resources */,
 				F29C69591C166B16000A8C29 /* HT_Infor_GroupTableViewCell.xib in Resources */,
 				F27261641C07E61B0081EC95 /* Assets.xcassets in Resources */,
@@ -2090,11 +2145,13 @@
 				F29944A11C084D9600823E75 /* HT_Infor_ShareCView.m in Sources */,
 				F259CFA31C293EAB0082A912 /* UserModel.m in Sources */,
 				F2183A2E1C43461200591870 /* getCommentListModel.m in Sources */,
+				F27415371C4643F000C623B0 /* ImageHandleView.m in Sources */,
 				F259CFA01C2930D30082A912 /* MD5Encryption.m in Sources */,
 				F21E44F81C102F0100657249 /* UIViewController+MMDrawerController.m in Sources */,
 				F21E45001C1039D900657249 /* HT_HomePage_LeftHeadView.m in Sources */,
 				F2A19E081C310DD7008BA393 /* HT_Par_IteProjectDoneHeaderCView.m in Sources */,
 				F27261BC1C07FE1B0081EC95 /* HT_Par_IteResultTableViewCell.m in Sources */,
+				F2CFB8DB1C4527E000E3C5DD /* HT_AboutMTViewController.m in Sources */,
 				6095C29A1C2A7D1B00DBC029 /* InformationModel.m in Sources */,
 				60DC99111C2CE0F500F50A5D /* AFNetworkReachabilityManager.m in Sources */,
 				F280268E1C0C75C2007247FA /* HT_HomePage_PersonTableViewCell.m in Sources */,
@@ -2122,16 +2179,19 @@
 				60DC991C1C2CE0F500F50A5D /* UIButton+AFNetworking.m in Sources */,
 				F22B3A9B1C1C006600BE4578 /* HT_Par_BuyMainTableViewCell.m in Sources */,
 				F2183A3A1C43485700591870 /* updateUserProfileModel.m in Sources */,
+				F27415331C462FE500C623B0 /* HT_Infor_ShareThirdCView.m in Sources */,
 				F21C19131C1E906600E717A8 /* HT_HomePage_LevelUpViewController.m in Sources */,
 				F22453671C0EEF8100A12AF8 /* HT_Par_BuyBottomView.m in Sources */,
 				F21C19211C1E9C3100E717A8 /* HT_Par_LoginPhoneCView.m in Sources */,
 				60DC99161C2CE0F500F50A5D /* AFURLSessionManager.m in Sources */,
+				F2CFB8D61C44D1B800E3C5DD /* HT_Infor_CommentReplyCView.m in Sources */,
 				60DC990E1C2CE0F500F50A5D /* AFHTTPRequestOperation.m in Sources */,
 				60DC991D1C2CE0F500F50A5D /* UIImageView+AFNetworking.m in Sources */,
 				F2FAA9FA1C1A7C4A00A90DA1 /* CallMeCell.m in Sources */,
 				F2137BB81C17BBC10030E7D8 /* HT_Par_MainPickerCView.m in Sources */,
 				F22B23EE1C116EC40009CCF4 /* HT_Par_IteListViewController.m in Sources */,
 				603A48F41C2BEB4E00D229E4 /* UserInfo.m in Sources */,
+				F2CFB8CE1C44CD0800E3C5DD /* HT_Infor_CommentTextCView.m in Sources */,
 				F290850E1C0E9E3F00F779FA /* HT_Par_BuyListViewController.m in Sources */,
 				60DC99201C2CE0F500F50A5D /* UIWebView+AFNetworking.m in Sources */,
 				F28E88321C19285E00E75298 /* HT_Infor_ShareViewController.m in Sources */,
@@ -2151,6 +2211,7 @@
 				F2183A341C43473B00591870 /* getUserShareListModel.m in Sources */,
 				F263CA071C1527B100EE78CA /* HT_Par_IteOrderViewController.m in Sources */,
 				F259CF8B1C2930120082A912 /* UserLoginTool.m in Sources */,
+				F2CFB8EA1C45285400E3C5DD /* HT_AboutMTCView.m in Sources */,
 				F27261A31C07FD510081EC95 /* HT_Par_MainTopView.m in Sources */,
 				60DC99181C2CE0F500F50A5D /* README.md in Sources */,
 				F2D7AEDC1C172D5A00725B4E /* HT_About_TopCView.m in Sources */,
@@ -2173,6 +2234,7 @@
 				60DC991B1C2CE0F500F50A5D /* UIAlertView+AFNetworking.m in Sources */,
 				60DC991A1C2CE0F500F50A5D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				60DC99151C2CE0F500F50A5D /* AFURLResponseSerialization.m in Sources */,
+				F2CFB8E61C45284300E3C5DD /* HT_AboutMTLayout.m in Sources */,
 				F29944821C082B0D00823E75 /* RootViewController.m in Sources */,
 				F2D7AECC1C17121A00725B4E /* HT_Infor_BottomCView.m in Sources */,
 				F263CA261C157E6500EE78CA /* HT_Par_SubViewController.m in Sources */,

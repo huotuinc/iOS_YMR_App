@@ -311,8 +311,7 @@ static NSString *cellIMain = @"cellIMain";
     return 1;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    return _shareList.count;
-    return 3;
+    return _shareList.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return SCREEN_HEIGHT/1150*635 ;
@@ -328,6 +327,7 @@ static NSString *cellIMain = @"cellIMain";
 //        [self.navigationController pushViewController:news animated:YES];
         HT_Infor_CommentViewController *comment=[[HT_Infor_CommentViewController alloc]init];
         comment.shareId=model.pid;
+//    comment.replyId=model.pid;
     if (model.praise==1) {
         comment.NICE=YES;
         

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -19,10 +19,8 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-ba-UgM" userLabel="MainImage View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
-                                <animations/>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TVr-ba-UgM" secondAttribute="trailing" id="7ox-Mc-43S"/>
@@ -32,7 +30,6 @@
                         </constraints>
                     </view>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="p3G-U0-rL6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7I9-2u-dxp"/>
                     <constraint firstItem="p3G-U0-rL6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="H6Z-eu-gim"/>
@@ -40,7 +37,6 @@
                     <constraint firstAttribute="trailing" secondItem="p3G-U0-rL6" secondAttribute="trailing" id="gK4-jt-a2g"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="imageVMain" destination="TVr-ba-UgM" id="F7H-B0-i5I"/>
             </connections>

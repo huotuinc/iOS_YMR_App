@@ -7,12 +7,16 @@
 //
 
 #import "HT_Infor_CommentViewController.h"
+
 #import "HT_Infor_CommentHeadCView.h"
 #import "HT_Infor_CommentTableViewCell.h"
 #import "HT_Infor_BottomCView.h"
 #import "HT_Infor_CommentCellHeaderView.h"
 #import "HT_Infor_CommentHeaderTableViewCell.h"
 #import "HT_Infor_CommentFooterTableViewCell.h"
+#import "HT_Infor_CommentTextCView.h"
+#import "HT_Infor_CommentReplyCView.h"
+#import "HT_Infor_ShareThirdCView.h"
 
 #import "CommentModel.h"
 #import "ShareInfoModel.h"
@@ -42,21 +46,25 @@ static NSString *cellHead=@"cellHead";
     HT_Infor_CommentHeadCView *_headView;
     HT_Infor_BottomCView *_bottomView;
     
+    HT_Infor_CommentReplyCView *_comReplyView;//评论框
     HT_Infor_CommentCellHeaderView *_headerView;
+    HT_Infor_ShareThirdCView *_shareThirdView;
     UIView *_footerView;
-    UIView * _replyView;
-    UITextView *_textView;
+    HT_Infor_CommentTextCView * _replyView;//回复框
     UIView *_viewBack;
+    UIView *_viewBackCom;
+    UIView *_viewBackShare;
 
-    NSMutableArray *_replyArray;//回复数组
-    NSMutableArray *_statusArray;//说说数组
+
     
     CGFloat _time;//键盘弹起耗时
     CGFloat _height;//键盘弹起高度
-    CGFloat _celly;//点击cell的y
-    CGFloat _cellHeight;//点击cell的height
-    
+
+    CGFloat _allCellHeight;//点击cell距离上面的height
+    NSNumber *_replyId;//回复id
     NSIndexPath *_cellIndex;
+    
+    
 
 
 }
@@ -158,10 +166,7 @@ static NSString *cellHead=@"cellHead";
     dic[@"lastId"] = @0;
     dic[@"shareId"] = self.shareId;
     dic[@"userId"] = self.user.userId;
-    
-    
-    
-#warning 修改shareId
+
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
         
         LWLog(@"%@",json);
@@ -195,11 +200,8 @@ static NSString *cellHead=@"cellHead";
     CommentModel *model = [self.commentList lastObject];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"lastId"] = model.pid;
-//    dic[@"shareId"] = @4;
     dic[@"shareId"] = self.shareId;
-
     dic[@"userId"] = self.user.userId;
-#warning 修改shareId
     [UserLoginTool loginRequestGet:@"searchShareCommentList" parame:dic success:^(id json) {
         
         LWLog(@"%@",json);
@@ -220,46 +222,46 @@ static NSString *cellHead=@"cellHead";
     
 }
 
-#pragma mark  网络请求回复评论
+#pragma mark  网络请求回复
 
 -(void)addCommentWithInformation {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"userId"] = self.user.userId;
-    dic[@"shareId"] = @2;
-    dic[@"content"] =  @"哈哈哈哈哈哈哈哈哈哈哈哈";
-    
+    dic[@"parentId"] = _ridComment;
+    dic[@"content"] = _replyView.viewText.text;
 
-    
-#warning 修改shareId 以及content
-    [UserLoginTool loginRequestPostWithFile:@"addComment" parame:dic success:^(id json) {
+    [UserLoginTool loginRequestPostWithFile:@"addReply" parame:dic success:^(id json) {
         LWLog(@"%@",json);
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
-            LWLog(@"%@",json[@"systemResultDescription"]);
+            LWLog(@"%@",json[@"resultDescription"]);
         }else {
-            LWLog(@"%@",json[@"systemResultDescription"]);
+            LWLog(@"%@",json[@"resultDescription"]);
         }
         
     } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+
         
     } withFileKey:nil];
     
     
 }
 
-#pragma mark 网络请求增加评论
+#pragma mark 网络请求评论
 
 - (void)addReplyWithComment {
+    NSLog(@"%@",_comReplyView.viewText.text);
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"userId"] = self.user.userId;
-    dic[@"parentId"] = @1;
-    dic[@"content"] = @"啊啊啊啊啊啊啊";
-#warning 修改parentId 以及content
-    [UserLoginTool loginRequestPostWithFile:@"addReply" parame:dic success:^(id json) {
+    dic[@"shareId"] = self.shareId;
+    dic[@"content"] = _comReplyView.viewText.text;
+    
+    [UserLoginTool loginRequestPostWithFile:@"addComment" parame:dic success:^(id json) {
         LWLog(@"%@",json);
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
             LWLog(@"%@",json[@"resultDescription"]);
         }else {
-            LWLog(@"%@",json[@"systemResultDescription"]);
+            LWLog(@"%@",json[@"resultDescription"]);
         }
     } failure:^(NSError *error) {
         LWLog(@"%@",error);
@@ -268,41 +270,125 @@ static NSString *cellHead=@"cellHead";
 
 #pragma mark 为文章点赞
 
-- (void)clickPraiseWithShare {
+- (void)clickPraiseWithNews {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"userId"] = self.user.userId;
-    dic[@"parentId"] = @1;
-    dic[@"content"] = @"啊啊啊啊啊啊啊";
+    dic[@"shareId"] = self.shareId;
+    dic[@"data"] = self.praiseQuantityNews;
+    
+    [UserLoginTool loginRequestPostWithFile:@"clickPraise" parame:dic success:^(id json) {
+        LWLog(@"%@",json);
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }else {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    } withFileKey:nil];
+}
+
+#pragma mark 为评论点赞
+
+- (void)clickPraiseWithReply {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"userId"] = self.user.userId;
+    dic[@"shareId"] = self.shareId;
+    dic[@"data"] = self.praiseQuantityReply;
+    
+    [UserLoginTool loginRequestPostWithFile:@"clickPraise" parame:dic success:^(id json) {
+        LWLog(@"%@",json);
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }else {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    } withFileKey:nil];
+}
+#pragma mark  文章分享
+
+-(void)addShareWithInformation {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"userId"] = self.user.userId;
+    dic[@"title"] = self.title;
+    dic[@"content"] =self.content;
+    dic[@"imgUrl"] = self.imgUrl;
+
+    [UserLoginTool loginRequestPostWithFile:@"addShare" parame:dic success:^(id json) {
+        LWLog(@"%@",json);
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }else {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }
+        
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+        
+        
+    } withFileKey:nil];
+    
+    
+}
+-(void)createShareView{
+    _viewBackShare=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT)];
+    _viewBackShare.backgroundColor=[UIColor grayColor];
+    _viewBackShare.alpha=0.5;
+    [_viewBackShare bk_whenTapped:^{
+        NSLog(@"点击了");
+        _viewBackShare.hidden=YES;
+        _shareThirdView.hidden=YES;
+    }];
+    
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_ShareThirdCView" owner:nil options:nil];
+    _shareThirdView=[nib firstObject];
+    _shareThirdView.frame=CGRectMake(0, SCREEN_HEIGHT-SCREEN_HEIGHT/1150*300-64, SCREEN_WITH, SCREEN_HEIGHT/1150*300);
+    _shareThirdView.imageVQQ.userInteractionEnabled=YES;
+    [_shareThirdView.imageVQQ bk_whenTapped:^{
+        
+    }];
+    
+    _shareThirdView.imageVWei.userInteractionEnabled=YES;
+    [_shareThirdView.imageVWei bk_whenTapped:^{
+        
+    }];
+    
+    _shareThirdView.imageVTwitter.userInteractionEnabled=YES;
+    [_shareThirdView.imageVTwitter bk_whenTapped:^{
+        
+    }];
+    [self.view addSubview:_viewBackShare];
+    [self.view addSubview:_shareThirdView];
+
+
 }
 
 -(void)createTextView{
-    
     _viewBack=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT)];
     _viewBack.backgroundColor=[UIColor clearColor];
     [_viewBack bk_whenTapped:^{
-        [_textView resignFirstResponder];
+        [_replyView.viewText resignFirstResponder];
+        _replyView.hidden=YES;
+        _viewBack.hidden=YES;
     }];
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentTextCView" owner:nil options:nil];
+    _replyView=[nib firstObject];
+    _replyView.frame=CGRectMake(0, SCREEN_HEIGHT-50-64, SCREEN_WITH, 50);
     
-    _replyView=[[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WITH, 50)];
-    _replyView.backgroundColor=[UIColor greenColor];
-    _textView.textAlignment = NSTextAlignmentLeft;
-    _textView=[[UITextView alloc]initWithFrame:CGRectMake(10, 10, SCREEN_WITH-20, 30)];
-    _textView.backgroundColor=[UIColor grayColor];
-    //    _textView.borderStyle = UITextBorderStyleRoundedRect;
-    _textView.font = [UIFont systemFontOfSize:20];
-    
-    
-    [_replyView addSubview:_textView];
-    
-    
+    [_replyView.buttonSend bk_whenTapped:^{
+        [self addCommentWithInformation];
+        [_replyView.viewText resignFirstResponder];
+        _replyView.hidden=YES;
+        _viewBack.hidden=YES;
+    }];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
-    [_viewBack addSubview:_replyView];
     [self.view addSubview:_viewBack];
-    
-    
-    
+    [self.view addSubview:_replyView];
+
 }
 
 -(void)createBarButtonItem{
@@ -321,7 +407,7 @@ static NSString *cellHead=@"cellHead";
 -(void)createHeadView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentHeadCView" owner:nil options:nil];
     _headView=[nib firstObject];
-    _headView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*500);
+    _headView.frame=CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT/1150*500+10);
     ShareInfoModel *model=_shareInfo[0];
 //    NSLog(@"%@",[_shareInfo[0] title]);
     
@@ -330,23 +416,50 @@ static NSString *cellHead=@"cellHead";
     _headView.labelScore.text=[NSString stringWithFormat:@"%@/%@分",model.useIntegral,model.totalIntegral];
     _headView.labelContent.text=model.content;
     [_headView.imageVMain sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    
+    self.title=model.title;
+    self.content=model.content;
+    self.imgUrl=model.img;
         [self crateTableView];
 
 }
--(void)createFooterView{
-    _footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, _bottomView.frame.size.height+20)];
+/**
+ *  评论框
+ */
+-(void)createComReplyView{
+    _viewBackCom=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WITH, SCREEN_HEIGHT)];
+    _viewBackCom.backgroundColor=[UIColor clearColor];
+   
+    
+    NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentReplyCView" owner:nil options:nil];
+    _comReplyView=[nib firstObject];
+    _comReplyView.frame=CGRectMake(0 , 20 , SCREEN_WITH, SCREEN_HEIGHT/1150*450);
+    [_comReplyView.viewText becomeFirstResponder];
+    [_comReplyView.buttonCancel bk_whenTapped:^{
+        _comReplyView.hidden=YES;
+        _viewBackCom.hidden=YES;
+        [_comReplyView.viewText resignFirstResponder];
+    }];
+    [_comReplyView.buttonSend bk_whenTapped:^{
+        [self addReplyWithComment];
+        _comReplyView.hidden=YES;
+        _viewBackCom.hidden=YES;
+        [_comReplyView.viewText resignFirstResponder];
+    }];
+    [self.view addSubview:_viewBackCom];
+    [self.view addSubview:_comReplyView];
 }
 
 -(void)crateTableView{
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,SCREEN_WITH,SCREEN_HEIGHT-64-_bottomView.frame.size.height) style:UITableViewStyleGrouped];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,SCREEN_WITH,SCREEN_HEIGHT-64-_bottomView.frame.size.height) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableHeaderView=_headView;
-    _tableView.tableFooterView=_footerView;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-//    _tableView.backgroundColor=[UIColor redColor];
+    //    _tableView.backgroundColor=[UIColor redColor];
     [self.view addSubview:_tableView];
     [self setupRefresh];
+
 }
 
 -(void)createBottomView{
@@ -355,16 +468,29 @@ static NSString *cellHead=@"cellHead";
     _bottomView.frame=CGRectMake(0,SCREEN_HEIGHT-(SCREEN_HEIGHT/1100*90)-64, SCREEN_WITH, SCREEN_HEIGHT/1100*90);
     [_bottomView.buttonGo setTitle:@"说点什么" forState:UIControlStateNormal];
     ShareInfoModel *model=_shareInfo[0];
+    _praiseQuantityNews=model.praiseQuantity;
     [_bottomView.buttonScore setTitle:[NSString stringWithFormat:@"转发奖励%@积分",model.relayReward] forState:UIControlStateNormal];
     if (self.NICE == YES) {
         _bottomView.imageVNice.image=[UIImage imageNamed:@"common_zanred_b"];
     }else{
         _bottomView.imageVNice.image=[UIImage imageNamed:@"common_zanred_a"];
     }
+/*为文章点赞*/
+    _bottomView.imageVNice.userInteractionEnabled=YES;
+    [_bottomView.imageVNice bk_whenTapped:^{
+        _bottomView.imageVNice.image=[UIImage imageNamed:@"common_zanred_b"];
+        [self clickPraiseWithNews];
+    }];
+/*为文章分享*/
+    _bottomView.imageVShare.userInteractionEnabled=YES;
     [_bottomView.imageVShare bk_whenTapped:^{
-        LWLog(@"点击了分享");
+//        [self addShareWithInformation];
+        [self createShareView];
     }];
     
+    [_bottomView.buttonGo bk_whenTapped:^{
+        [self createComReplyView];
+    }];
     [self.view addSubview:_bottomView];
     
 }
@@ -384,7 +510,7 @@ static NSString *cellHead=@"cellHead";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableView *_cell;
     CommentModel *model=_commentList[indexPath.section];
-    if ([model.replyModels count]==0) {
+    if ([model.replyModels count]==0 || indexPath.row==0) {
         HT_Infor_CommentCellHeaderView * cell = [tableView dequeueReusableCellWithIdentifier:cellStatus];
         if (!cell) {
             cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentCellHeaderView" owner:nil options:nil] lastObject];
@@ -394,25 +520,22 @@ static NSString *cellHead=@"cellHead";
             cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
             cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
             [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:model.userHeadUrl]];
+            cell.imageVComment.userInteractionEnabled=YES;
+            [cell.imageVComment bk_whenTapped:^{
+                _replyId=model.pid;
+                [self changeTableViewWithIndexPath:indexPath];
+            }];
+            cell.imageVNice.userInteractionEnabled=YES;
+            [cell.imageVNice bk_whenTapped:^{
+                cell.imageVNice.image=[UIImage imageNamed:@"common_zan_b"];
+                _praiseQuantityReply=model.commentQuantity;
+                [self clickPraiseWithReply];
+            }];
             cell.selectionStyle=UITableViewCellSelectionStyleNone;
             _cell=cell;
         }
         return _cell;
-    }else {
-        if (indexPath.row == 0) {
-            HT_Infor_CommentCellHeaderView * cell = [tableView dequeueReusableCellWithIdentifier:cellStatus];
-            if (!cell) {
-                cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentCellHeaderView" owner:nil options:nil] lastObject];
-                cell.labelContent.text=model.content;
-                cell.labelDate.text=[self changeTheTimeStamps:model.time];
-                cell.labelName.text=model.name;
-                cell.labelNice.text=[NSString stringWithFormat:@"%@",model.praiseQuantity];
-                cell.labelComment.text=[NSString stringWithFormat:@"%@",model.commentQuantity];
-                [cell.imageVHead sd_setImageWithURL:[NSURL URLWithString:model.userHeadUrl]];
-                cell.selectionStyle=UITableViewCellSelectionStyleNone;
-                _cell=cell;
-            }
-        }else if (indexPath.row==1){
+    }else if (indexPath.row==1){
             HT_Infor_CommentHeaderTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellHead];
             if (!cell) {
                 cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentHeaderTableViewCell" owner:nil options:nil] lastObject];
@@ -434,36 +557,53 @@ static NSString *cellHead=@"cellHead";
             if (!cell) {
                 cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentTableViewCell" owner:nil options:nil] lastObject];
                 ReplyModel *reply=model.replyModels[indexPath.row -2];
-                cell.labelMain.text=[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content];
-//                cell.labelMain.text=reply.content;
+                if ([reply.userId isEqualToNumber:reply.replyId]) {
+                    cell.labelMain.text=[NSString stringWithFormat:@"%@ : %@",reply.replyName,reply.content];
+
+                }else{
+                    cell.labelMain.text=[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content];
+                }
+                
                 cell.selectionStyle=UITableViewCellSelectionStyleNone;
                 _cell=cell;
             }
-            
-        }
     }
-    
     return _cell;
-    
-    
 }
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    if ([_replyArray[section] count]==0) {
-////        NSLog(@"#####  %ld",[_replyArray[section] count]);
-//        return 0 + 1;
-//    }else{
-//        NSLog(@"***** %ld ****",[_commentList[section][@"replyModels"] count]+2 +1);
-    
-    NSLog(@"section %ld",(long)section);
-    CommentModel *model=_commentList[section];
-    NSLog(@"cpunt %ld",[model.replyModels count]);
-    return [model.replyModels count]+2 +1 ;
-//    }
+    //    if ([_replyArray[section] count]==0) {
+    ////        NSLog(@"#####  %ld",[_replyArray[section] count]);
+    //        return 0 + 1;
+    //    }else{
+    //        NSLog(@"***** %ld ****",[_commentList[section][@"replyModels"] count]+2 +1);
+    if ([_commentList[section] replyModels].count==0) {
+        return 1;
+    }else{
+        //    NSLog(@"section %ld",(long)section);
+        CommentModel *model=_commentList[section];
+        //    NSLog(@"cpunt %ld",[model.replyModels count]);
+        return [model.replyModels count]+2 +1 ;
+    }
+    //    }
 }
+//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+////    if ([_replyArray[section] count]==0) {
+//////        NSLog(@"#####  %ld",[_replyArray[section] count]);
+////        return 0 + 1;
+////    }else{
+////        NSLog(@"***** %ld ****",[_commentList[section][@"replyModels"] count]+2 +1);
+//    
+//    NSLog(@"section %ld",(long)section);
+//    CommentModel *model=_commentList[section];
+//    NSLog(@"cpunt %ld",[model.replyModels count]);
+//    return [model.replyModels count]+2 +1 ;
+////    }
+//}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    NSLog(@"section ------ %ld ----",(unsigned long)[_commentList count]);
+//    NSLog(@"section ------ %ld ----",(unsigned long)[_commentList count]);
     
     return [_commentList count]  ;
 }
@@ -485,6 +625,10 @@ static NSString *cellHead=@"cellHead";
         }else {
             ReplyModel *reply=model.replyModels[indexPath.row -2];
             NSLog(@"2---%@",reply.content);
+            NSLog(@"model.pid---%@ reply.replyId---%@",model.pid,reply.replyId);
+            if ([reply.userId isEqualToNumber:reply.replyId]) {
+                return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:17] string:[NSString stringWithFormat:@"%@ : %@",reply.replyName,reply.content]].height + 1.0;
+            }
             return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:17] string:[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content]].height + 1.0;
         }
     }
@@ -496,47 +640,88 @@ static NSString *cellHead=@"cellHead";
     return imageV;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 1.00;
+    return 1.0f;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view=[[UIView alloc]init];
     return view;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 1.0f;
+    return 0.0f;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"======");
+    /**
+     *  要回复的id
+     */
+    CommentModel *model=_commentList[indexPath.section];
+    ReplyModel *reply=model.replyModels[indexPath.row -2];
+    _ridComment=reply.rid;
     
-    
-    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"回复",@"举报", nil];
-    sheet.tag=1000;
-    [sheet showInView:self.view];
-    
-    CGRect  popoverRect = [tableView convertRect:[tableView rectForRowAtIndexPath:indexPath] toView:[tableView superview]];
-    
-    //    NSLog(@"%f **** %f **** %f ***** %f",popoverRect.origin.x,popoverRect.origin.y,popoverRect.size.width,popoverRect.size.height);
-    _celly=popoverRect.origin.y;
-    _cellHeight=popoverRect.size.height;
-    NSLog(@"_celly --- %f   -cellH ---- %f",_celly,_cellHeight);
-    //        if (indexPath.row > 0 ) {
-    NSLog(@"%ld",indexPath.row);
-    
-    
-    _cellIndex =indexPath;
-    
-    
-//    UITableViewCell *cell=(UITableViewCell *) [_tableView cellForRowAtIndexPath:indexPath];
-    
-    
-
-    
+    _allCellHeight =_headView.frame.size.height+10;
+    if (indexPath.row==0 || indexPath.row==1 || indexPath.row == [_tableView numberOfRowsInSection:indexPath.section]-1) {
+    }else{
+        for (int i= 0 ; i<=indexPath.section; i++) {
+            NSInteger rowCount=[_tableView numberOfRowsInSection:i];
+            if (i<indexPath.section) {
+                for (int j=0; j<=rowCount; j++) {
+                    NSIndexPath *indexP = [NSIndexPath indexPathForRow:j inSection:i];
+                    CGRect rect = [_tableView rectForRowAtIndexPath:indexP];
+                    _allCellHeight=_allCellHeight+rect.size.height;
+                }
+            }else{
+                for (int j=0; j<=indexPath.row; j++) {
+                    NSIndexPath *indexP = [NSIndexPath indexPathForRow:j inSection:i];
+                    CGRect rect = [_tableView rectForRowAtIndexPath:indexP];
+                    _allCellHeight=_allCellHeight+rect.size.height;
+                    if (j== rowCount-2) {
+                        _allCellHeight+=5;
+                    }
+                }
+            }
+            _allCellHeight+=1;
+        }
+        UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"回复",@"举报", nil];
+        sheet.tag=1000;
+        [sheet showInView:self.view];
+    }
 }
 
-
+-(void)changeTableViewWithIndexPath :(NSIndexPath *)indexPath{
+    _allCellHeight =_headView.frame.size.height+10;
+    for (int i= 0 ; i<=indexPath.section; i++) {
+        NSInteger rowCount=[_tableView numberOfRowsInSection:i];
+        if (i<indexPath.section) {
+            for (int j=0; j<=rowCount; j++) {
+                NSIndexPath *indexP = [NSIndexPath indexPathForRow:j inSection:i];
+                CGRect rect = [_tableView rectForRowAtIndexPath:indexP];
+                _allCellHeight=_allCellHeight+rect.size.height;
+            }
+        }else{
+            for (int j=0; j<=indexPath.row; j++) {
+                NSIndexPath *indexP = [NSIndexPath indexPathForRow:j inSection:i];
+                CGRect rect = [_tableView rectForRowAtIndexPath:indexP];
+                //                    NSLog(@"rect.size.height  %f",rect.size.height);
+                _allCellHeight=_allCellHeight+rect.size.height;
+                //                    NSLog(@"j--%d rowCount---%ld",j,rowCount);
+                if (j== rowCount-2) {
+                    _allCellHeight+=5;
+                }
+            }
+        }
+        _allCellHeight+=1;
+    }
+    UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"评论",@"举报", nil];
+    sheet.tag=1001;
+    [sheet showInView:self.view];
+    
+}
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    /**
+     *  回复-回复
+     */
     if (actionSheet.tag==1000) {
         if (buttonIndex== 0) {
             
@@ -544,62 +729,43 @@ static NSString *cellHead=@"cellHead";
             [self createTextView];
             //动画效果
             [UIView animateWithDuration:_time animations:^{
-                [_textView becomeFirstResponder];
+                [_replyView.viewText becomeFirstResponder];
+                _replyView.frame=CGRectMake(0, SCREEN_HEIGHT-_height-50-64, SCREEN_WITH, 50);
                 _bottomView.hidden=YES;
-                NSLog(@"%f *** %f ---- %f",_celly,_cellHeight,_celly+_cellHeight);
-                NSLog(@"%f ==== %f",_height,SCREEN_HEIGHT-_height-50);
-                if (_celly+_cellHeight < SCREEN_HEIGHT-_height-64) {
-//                    _replyView.frame      = CGRectMake(0, SCREEN_HEIGHT-50-64, SCREEN_WITH, 50);
-                    _replyView.frame=CGRectMake(0, SCREEN_HEIGHT-_height-64-50, SCREEN_WITH, 50);
-
-                }else{
-//                    _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight)-50-64);
-//                    _tableView.contentOffset=CGPointMake(0, _celly+_cellHeight-_height-50);
-                    // 设置view弹出来的位置
-//                    _replyView.frame      = CGRectMake(0, SCREEN_HEIGHT-50-64, SCREEN_WITH, 50);
-                
-                }
-                
-                
-                //            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(viewShow) userInfo:nil repeats:NO];
+                [_tableView setContentOffset:CGPointMake(0, _allCellHeight-_height-50) animated:YES];
             }];
-#warning 回复评论
             NSLog(@"评论");
         }else if(buttonIndex == 2){
-#warning 对评论进行回复
             NSLog(@"回复");
         }else{
             
         }
-    }else if (actionSheet.tag==1001) {
+    }
+    /**
+     *  回复-评论
+     */
+    if (actionSheet.tag==1001) {
         if (buttonIndex== 0) {
             
         }else if(buttonIndex == 1){
             [self createTextView];
             //动画效果
             [UIView animateWithDuration:_time animations:^{
-                [_textView becomeFirstResponder];
-#warning
-                NSLog(@"%f *** %f",_celly,_cellHeight);
-//                _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight)-50);
-//                _tableView.contentOffset=CGPointMake(0, _celly+_cellHeight)
-                // 设置view弹出来的位置
-                _replyView.frame      = CGRectMake(0, SCREEN_HEIGHT-50, SCREEN_WITH, 50);
-                
-                //            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(viewShow) userInfo:nil repeats:NO];
+                [_replyView.viewText becomeFirstResponder];
+                _replyView.frame=CGRectMake(0, SCREEN_HEIGHT-_height-50-64, SCREEN_WITH, 50);
+                _bottomView.hidden=YES;
+                [_tableView setContentOffset:CGPointMake(0, _allCellHeight-_height-50) animated:YES];
             }];
-#warning 回复评论
             NSLog(@"评论");
         }else if(buttonIndex == 2){
-#warning 对评论进行回复
             NSLog(@"回复");
         }else{
             
         }
     }
     
+    
 }
-
 
 -(void)KeyboardWillShow:(NSNotification *)sender
 {
@@ -610,33 +776,16 @@ static NSString *cellHead=@"cellHead";
     _time= [[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]; //获取动画时间;
     [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]
      ];
-    if (_celly+_cellHeight > SCREEN_HEIGHT-_height-50) {
-//        self.view.transform = CGAffineTransformMakeTranslation(0, -_height);
-        
-        _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight));
-
-    }
-            _tableView.transform = CGAffineTransformMakeTranslation(0,_replyView.frame.origin.y-(_celly+_cellHeight));
     [UIView commitAnimations];//开始执行动画
 }
 
 -(void)KeyboardWillHide:(NSNotification *)sender
 {
-    CGRect rect  = [[sender.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue];
-    CGFloat height =  rect.size.height;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]];
-    
-    UITableViewCell *cell=(UITableViewCell *) [_tableView cellForRowAtIndexPath:_cellIndex];
-    //    cell.transform = CGAffineTransformIdentity; //重置状态
-    //    _tableView.contentOffset = CGPointZero;
-    _tableView.transform = CGAffineTransformIdentity; //重置状态
-    //    _tableView.contentOffset = CGPointZero
-
-    self.view.transform = CGAffineTransformIdentity; //重置状态
     _viewBack.hidden=YES;
     _bottomView.hidden=NO;
-
+    
     [UIView commitAnimations];
     
 }
