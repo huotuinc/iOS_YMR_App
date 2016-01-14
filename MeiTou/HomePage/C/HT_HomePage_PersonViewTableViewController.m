@@ -40,6 +40,10 @@
     MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
     [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
     self.navigationController.navigationBar.translucent=NO;
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
+    
     [self setLabelTextAlignment];
     [self createNavgationBarTitle];
 }
@@ -116,19 +120,36 @@
     /**
      *  假数据
      */
-    _labelName.text=@"小美008biu";
-    _labelScore.text=@"666";
-    _labelRealName.text=@"发生";
-    _labelSex.text=@"nan";
-    _labelTel.text=@"1999999999";
-    _labelLocation.text=@"浙江-杭州";
-    _ImageVHead.image=[UIImage imageNamed:@"sides_menu_tou"];
-    _imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV2"];
+    _labelName.text=self.user.name;
+    _labelScore.text=[NSString stringWithFormat:@"%@",self.user.score];
+    _labelRealName.text=self.user.userName;
+    if ([self.user.sex isEqualToNumber:[NSNumber numberWithInteger:1]] ) {
+        _labelSex.text=@"未知";
+    }else if ([self.user.sex isEqualToNumber:[NSNumber numberWithInteger:2]]){
+        _labelSex.text=@"女";
+    }else if ([self.user.sex isEqualToNumber:[NSNumber numberWithInteger:3]]){
+        _labelSex.text=@"男";
+    }
+    if ([self.user.isBindMobile isEqualToString:@"0"]) {
+        _labelTel.text=@"未绑定手机";
+    }else{
+        _labelTel.text=self.user.mobile;
+    }
+//    _labelLocation.text=self.user.name;
+    [_ImageVHead sd_setImageWithURL:[NSURL URLWithString:self.user.headimgurl]];
+    if ([self.user.userLevel.value isEqualToNumber:[NSNumber numberWithInteger:0]]) {
+        _imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV1"];
+    }else if( [self.user.userLevel.value isEqualToNumber:[NSNumber numberWithInteger:1]]){
+        _imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV2"];
+    }else if( [self.user.userLevel.value isEqualToNumber:[NSNumber numberWithInteger:2]]){
+        _imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV3"];
+    }
     _ImageVHead.layer.cornerRadius=_ImageVHead.frame.size.width/2;
     
     /**
      *  设置label样式
      */
+   
     [self changeLabel:_labelName AndFont:26 AndColor:COLOR_TEXT_TITILE];
     [self changeLabel:_labelA AndFont:28 AndColor:COLOR_TEXT_TITILE];
     [self changeLabel:_labelB AndFont:28 AndColor:COLOR_TEXT_TITILE];
@@ -142,11 +163,11 @@
     [self changeLabel:_labelJ AndFont:28 AndColor:COLOR_TEXT_TITILE];
     [self changeLabel:_labelK AndFont:28 AndColor:COLOR_TEXT_TITILE];
     [self changeLabel:_labelL AndFont:28 AndColor:COLOR_TEXT_TITILE];
-    [self changeLabel:_label1 AndFont:28 AndColor:COLOR_TEXT_TITILE];
-    [self changeLabel:_label2 AndFont:28 AndColor:COLOR_TEXT_TITILE];
-    [self changeLabel:_label3 AndFont:28 AndColor:COLOR_TEXT_TITILE];
-    [self changeLabel:_label4 AndFont:28 AndColor:COLOR_TEXT_TITILE];
-    [self changeLabel:_label5 AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelTel AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelSex AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelScore AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelTel AndFont:28 AndColor:COLOR_TEXT_TITILE];
+    [self changeLabel:_labelRealName AndFont:28 AndColor:COLOR_TEXT_TITILE];
 
     
 

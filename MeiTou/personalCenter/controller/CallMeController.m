@@ -61,6 +61,31 @@ static NSString *callMeIdentify = @"callMeIdentify";
     
 }
 
+//#pragma mark  文章分享
+//
+//-(void)addShareWithInformation {
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+//    dic[@"userId"] = self.user.userId;
+//    dic[@"title"] = self.title;
+//    dic[@"content"] =self.content;
+//    dic[@"imgUrl"] = self.imgUrl;
+//    
+//    [UserLoginTool loginRequestPostWithFile:@"addShare" parame:dic success:^(id json) {
+//        LWLog(@"%@",json);
+//        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+//            LWLog(@"%@",json[@"resultDescription"]);
+//        }else {
+//            LWLog(@"%@",json[@"resultDescription"]);
+//        }
+//        
+//    } failure:^(NSError *error) {
+//        LWLog(@"%@",error);
+//        
+//        
+//    } withFileKey:nil];
+//    
+//    
+//}
 
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];

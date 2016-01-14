@@ -8,10 +8,15 @@
 
 #import "SystemMessageController.h"
 #import "SystemMessageCell.h"
-
+#import "UserInfo.h"
 @interface SystemMessageController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic, strong) NSMutableArray *shareList;
+@property (nonatomic, strong) UserInfo *user;
+
 @end
+
+
 
 @implementation SystemMessageController
 
@@ -31,6 +36,70 @@ static NSString *SysIndentify = @"SysIndentify";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/**
+ *  下拉刷新
+ */
+//- (void)getCommentList {
+//    
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+//    dic[@"lastId"] = @0;
+//    dic[@"list"] = self.searchKey;
+//    dic[@"userId"]= self.user.userId;
+//    
+//    [UserLoginTool loginRequestGet:@"getCommentList" parame:dic success:^(id json) {
+//        
+//        LWLog(@"%@",json);
+//        
+//        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+//            
+//            NSArray *temp = [getCommentListModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+//            
+//            [self.commentList removeAllObjects];
+//            
+//            [self.commentList addObjectsFromArray:temp];
+//            
+//            [_tableView reloadData];
+//        }
+//        [_tableView.mj_header endRefreshing];
+//        
+//    } failure:^(NSError *error) {
+//        LWLog(@"%@",error);
+//    }];
+//    
+//}
+//
+///**
+// *  上拉加载更多
+// */
+//- (void)getMoreCommentList {
+//    
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+//    dic[@"key"] = self.searchKey;
+//    getCommentListModel *info = [self.shareList lastObject];
+//    dic[@"lastId"] = info.pid;
+//    dic[@"userId"]= self.user.userId;
+//    
+//    
+//    
+//    [UserLoginTool loginRequestGet:@"getCommentList" parame:dic success:^(id json) {
+//        
+//        LWLog(@"%@",json);
+//        
+//        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+//            
+//            NSArray *temp = [getCommentListModel objectArrayWithKeyValuesArray:json[@"resultData"][@"list"]];
+//            
+//            [self.commentList addObjectsFromArray:temp];
+//            
+//            [_tableView reloadData];
+//        }
+//        [_tableView.mj_footer endRefreshing];
+//    } failure:^(NSError *error) {
+//        LWLog (@"%@",error);
+//    }];
+//    
+//}
 
 -(void)createBarButtonItem{
     UIButton *buttonL=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];

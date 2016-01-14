@@ -75,9 +75,42 @@
     _viewTop.backgroundColor=COLOR_BACK_MAIN;
     _textFTitle.backgroundColor=COLOR_BACK_MAIN;
     _textV.backgroundColor=COLOR_BACK_MAIN;
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 
+
+/**
+ *  键盘监听
+ *
+ *  @param sender <#sender description#>
+ */
+-(void)KeyboardWillShow:(NSNotification *)sender
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]
+     ];
+    [UIView commitAnimations];//开始执行动画
+}
+-(void)KeyboardWillHide:(NSNotification *)sender
+{
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:[[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]doubleValue]];
+    self.transform = CGAffineTransformIdentity; //重置状态
+    [UIView commitAnimations];
+    
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [_textFTitle resignFirstResponder];
+    [_textV resignFirstResponder];
+    
+    
+    
+}
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

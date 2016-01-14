@@ -13,6 +13,8 @@
 @interface CommentModel : NSObject
 
 @property (nonatomic, strong) NSNumber *commentQuantity;
+@property (nonatomic, strong) NSNumber *commentUserId;
+
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic, strong) LevelModel *level;
 @property (nonatomic, strong) NSString *name;
@@ -21,6 +23,6 @@
 @property (nonatomic, strong) NSNumber *time;
 @property (nonatomic, strong) NSArray *replyModels;
 @property (nonatomic, strong) NSString *userHeadUrl;
-
+@property (nonatomic, strong) NSNumber *commentId;
 
 @end

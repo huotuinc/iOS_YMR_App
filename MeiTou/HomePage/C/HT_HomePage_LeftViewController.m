@@ -19,16 +19,16 @@
 #import "HT_HomePage_LeftHeadView.h"
 #import "UIViewController+MMDrawerController.h"
 
-
+#import "UserInfo.h"
 
 @interface HT_HomePage_LeftViewController ()<NSXMLParserDelegate,UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic, strong) UserInfo *user;
 
 
 @end
 
 @implementation HT_HomePage_LeftViewController{
-    UIView *_headView;
     UITableView *_tableView;
     UIView *_baseView;
     UIImageView *_imageV;
@@ -37,11 +37,15 @@
 //    HT_HomePage_LeftHeadView *_headView;
     
     NSMutableArray *_titleArray;
-    
+    HT_HomePage_LeftHeadView *_headView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
+    
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
     
      _imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"xiand"]];
     _imageV.frame = self.view.bounds;
@@ -68,7 +72,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [path stringByAppendingPathComponent:WeiXinUserInfo];
+    self.user = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
     [self createLocalData];
     [self createHeadView];
     [self createTableView];
@@ -85,13 +91,22 @@
 
 -(void)createHeadView{
     NSArray *nib=[[NSBundle mainBundle]loadNibNamed:@"HT_HomePage_LeftHeadView" owner:nil options:nil];
-    HT_HomePage_LeftHeadView *headView=[nib firstObject];
-    headView.frame=CGRectMake(0, 0, SCREEN_WITH * SplitScreenRate, SCREEN_HEIGHT/1100*460);
+    _headView=[nib firstObject];
+    _headView.frame=CGRectMake(0, 0, SCREEN_WITH * SplitScreenRate, SCREEN_HEIGHT/1100*460);
     UITapGestureRecognizer * tapHead= [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHeadView)];
-    [headView.headView addGestureRecognizer:tapHead];
+    [_headView.headView addGestureRecognizer:tapHead];
     UITapGestureRecognizer * tapHelp = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapTheHelpView)];
-    [headView.viewHelp addGestureRecognizer:tapHelp];
-    _headView=headView;
+    [_headView.viewHelp addGestureRecognizer:tapHelp];
+    
+    [_headView.imageVHead sd_setImageWithURL:[NSURL URLWithString:self.user.headimgurl]];
+    _headView.LabelName.text=self.user.name;
+    if ([self.user.userLevel.value isEqualToNumber:[NSNumber numberWithInteger:0]]) {
+        _headView.imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV1"];
+    }else if( [self.user.userLevel.value isEqualToNumber:[NSNumber numberWithInteger:1]]){
+        _headView.imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV2"];
+    }else if( [self.user.userLevel.value isEqualToNumber:[NSNumber numberWithInteger:2]]){
+        _headView.imageVLevel.image=[UIImage imageNamed:@"SlidingMenu_content_LV3"];
+    }
     _headView.backgroundColor=[UIColor clearColor];//
     [self.view addSubview:_headView];
 }

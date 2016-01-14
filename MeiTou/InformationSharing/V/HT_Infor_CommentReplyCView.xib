@@ -26,14 +26,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKs-L0-SoW">
-                                <rect key="frame" x="286" y="155" width="24" height="15"/>
+                                <rect key="frame" x="276" y="155" width="24" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dKs-L0-SoW" secondAttribute="height" multiplier="1:0.613" id="E09-rE-Z5F"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgQ-l5-oMN">
-                                <rect key="frame" x="10" y="155" width="24" height="15"/>
+                                <rect key="frame" x="20" y="155" width="24" height="15"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
@@ -42,14 +42,14 @@
                             <constraint firstItem="dKs-L0-SoW" firstAttribute="top" secondItem="YxG-aJ-2XS" secondAttribute="bottom" constant="10" id="4Xu-bq-0wa"/>
                             <constraint firstItem="dKs-L0-SoW" firstAttribute="width" secondItem="Psu-KH-j2K" secondAttribute="height" multiplier="2" id="7Mg-no-12E"/>
                             <constraint firstItem="VgQ-l5-oMN" firstAttribute="width" secondItem="dKs-L0-SoW" secondAttribute="width" id="7QK-eK-XjH"/>
-                            <constraint firstItem="VgQ-l5-oMN" firstAttribute="leading" secondItem="Psu-KH-j2K" secondAttribute="leading" constant="10" id="AYg-fh-dru"/>
+                            <constraint firstItem="VgQ-l5-oMN" firstAttribute="leading" secondItem="Psu-KH-j2K" secondAttribute="leading" constant="20" id="AYg-fh-dru"/>
                             <constraint firstItem="YxG-aJ-2XS" firstAttribute="centerX" secondItem="Psu-KH-j2K" secondAttribute="centerX" id="Jxb-3o-adR"/>
                             <constraint firstItem="dKs-L0-SoW" firstAttribute="top" secondItem="YxG-aJ-2XS" secondAttribute="bottom" constant="10" id="OYA-Ko-Usm"/>
                             <constraint firstItem="YxG-aJ-2XS" firstAttribute="leading" secondItem="Psu-KH-j2K" secondAttribute="leading" constant="10" id="P1i-c4-JhP"/>
                             <constraint firstAttribute="bottom" secondItem="dKs-L0-SoW" secondAttribute="bottom" constant="10" id="X8E-S8-dE1"/>
                             <constraint firstItem="YxG-aJ-2XS" firstAttribute="height" secondItem="Psu-KH-j2K" secondAttribute="height" multiplier="75:100" id="aa8-bY-I0x"/>
                             <constraint firstAttribute="bottom" secondItem="VgQ-l5-oMN" secondAttribute="bottom" constant="10" id="aqc-SE-f70"/>
-                            <constraint firstAttribute="trailing" secondItem="dKs-L0-SoW" secondAttribute="trailing" constant="10" id="fhB-vu-eMa"/>
+                            <constraint firstAttribute="trailing" secondItem="dKs-L0-SoW" secondAttribute="trailing" constant="20" id="fhB-vu-eMa"/>
                             <constraint firstItem="YxG-aJ-2XS" firstAttribute="width" secondItem="Psu-KH-j2K" secondAttribute="width" multiplier="600:640" id="gqN-lJ-1Bf"/>
                             <constraint firstItem="YxG-aJ-2XS" firstAttribute="top" secondItem="Psu-KH-j2K" secondAttribute="top" constant="10" id="kgb-pL-CCf"/>
                             <constraint firstItem="VgQ-l5-oMN" firstAttribute="top" secondItem="YxG-aJ-2XS" secondAttribute="bottom" constant="10" id="kgd-fW-2GL"/>

@@ -14,7 +14,8 @@
 - (void)awakeFromNib {
     // Initialization code
     _labelMain.numberOfLines=0;
-    _labelMain.font=[UIFont systemFontOfSize:17];
+    _labelMain.font=[UIFont systemFontOfSize:15];
+    _labelMain.textColor=COLOR_TEXT_CONTENT;
     _viewBack.backgroundColor=COLOR_BACK_MAIN;
 //    _imageVLineA.image=[UIImage imageNamed:@"xians"];
 //    _imageVLineB.image=[UIImage imageNamed:@"xians"];

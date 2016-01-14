@@ -14,6 +14,8 @@
 @property (nonatomic, assign) NSNumber *  shareId;
 @property (nonatomic, assign) NSNumber *  praiseQuantityNews;//被点赞数 文章
 @property (nonatomic, assign) NSNumber *  praiseQuantityReply;//被点赞数 评论
+@property (nonatomic, assign) NSNumber *  commentId;//被点赞数 评论
+@property (nonatomic, assign) NSNumber *  commentUserId;//发布评论人的id
 @property (nonatomic,strong) NSString *content;//分享 内容
 @property (nonatomic,strong) NSString *imgUrl;//分享 封面图片
 @property (nonatomic,strong) NSString *title;//分享 标题

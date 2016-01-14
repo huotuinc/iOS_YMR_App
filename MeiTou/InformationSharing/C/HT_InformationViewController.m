@@ -174,9 +174,7 @@ static NSString *cellIMain = @"cellIMain";
     InformationModel *info = [self.shareList lastObject];
     dic[@"lastId"] = info.pid;
     dic[@"userId"]= self.user.userId;
-    
-    
-    
+
     [UserLoginTool loginRequestGet:@"searchShareList" parame:dic success:^(id json) {
         
         LWLog(@"%@",json);

@@ -123,7 +123,7 @@ static NSString *cellHead=@"cellHead";
 
             [_tableView reloadData];
         }
-        
+        [_tableView.mj_header endRefreshing];
         
     } failure:^(NSError *error) {
         LWLog(@"%@",error);
@@ -183,7 +183,8 @@ static NSString *cellHead=@"cellHead";
             
             [_tableView reloadData];
         }
-        
+        [_tableView.mj_header endRefreshing];
+
         
     } failure:^(NSError *error) {
         LWLog(@"%@",error);
@@ -215,6 +216,8 @@ static NSString *cellHead=@"cellHead";
             
             [_tableView reloadData];
         }
+        [_tableView.mj_footer endRefreshing];
+
         
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
@@ -229,7 +232,7 @@ static NSString *cellHead=@"cellHead";
     dic[@"userId"] = self.user.userId;
     dic[@"parentId"] = _ridComment;
     dic[@"content"] = _replyView.viewText.text;
-
+    dic[@"commentId"] = _commentId;
     [UserLoginTool loginRequestPostWithFile:@"addReply" parame:dic success:^(id json) {
         LWLog(@"%@",json);
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
@@ -297,6 +300,24 @@ static NSString *cellHead=@"cellHead";
     dic[@"data"] = self.praiseQuantityReply;
     
     [UserLoginTool loginRequestPostWithFile:@"clickPraise" parame:dic success:^(id json) {
+        LWLog(@"%@",json);
+        if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }else {
+            LWLog(@"%@",json[@"resultDescription"]);
+        }
+    } failure:^(NSError *error) {
+        LWLog(@"%@",error);
+    } withFileKey:nil];
+}
+#pragma mark 删除评论
+
+- (void)deleteCommentWithReply {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"userId"] = self.user.userId;
+    dic[@"commentId"] = self.ridComment;
+    
+    [UserLoginTool loginRequestPostWithFile:@"deleteComment" parame:dic success:^(id json) {
         LWLog(@"%@",json);
         if ([json[@"systemResultCode"] intValue] == 1 && [json[@"resultCode"] intValue] == 1) {
             LWLog(@"%@",json[@"resultDescription"]);
@@ -523,6 +544,9 @@ static NSString *cellHead=@"cellHead";
             cell.imageVComment.userInteractionEnabled=YES;
             [cell.imageVComment bk_whenTapped:^{
                 _replyId=model.pid;
+                _ridComment=model.pid;
+                _commentId=model.pid;
+
                 [self changeTableViewWithIndexPath:indexPath];
             }];
             cell.imageVNice.userInteractionEnabled=YES;
@@ -557,11 +581,18 @@ static NSString *cellHead=@"cellHead";
             if (!cell) {
                 cell = [[[NSBundle mainBundle]loadNibNamed:@"HT_Infor_CommentTableViewCell" owner:nil options:nil] lastObject];
                 ReplyModel *reply=model.replyModels[indexPath.row -2];
-                if ([reply.userId isEqualToNumber:reply.replyId]) {
-                    cell.labelMain.text=[NSString stringWithFormat:@"%@ : %@",reply.replyName,reply.content];
+                if ([reply.toReplyId isEqualToNumber:model.commentUserId]) {
+                    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ : %@",reply.replyName,reply.content]];
+                    [attString addAttribute:NSForegroundColorAttributeName value:COLOR_TEXT_TITILE range:NSMakeRange(0, reply.replyName.length)];
+                    cell.labelMain.attributedText = attString;
 
                 }else{
-                    cell.labelMain.text=[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content];
+                    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content]];
+                    [attString addAttribute:NSForegroundColorAttributeName value:COLOR_TEXT_TITILE range:NSMakeRange(0, reply.replyName.length)];
+                    [attString addAttribute:NSForegroundColorAttributeName value:COLOR_TEXT_TITILE range:NSMakeRange(reply.replyName.length+4, reply.toReplyName.length)];
+                    cell.labelMain.attributedText = attString;
+                    
+                    
                 }
                 
                 cell.selectionStyle=UITableViewCellSelectionStyleNone;
@@ -626,10 +657,13 @@ static NSString *cellHead=@"cellHead";
             ReplyModel *reply=model.replyModels[indexPath.row -2];
             NSLog(@"2---%@",reply.content);
             NSLog(@"model.pid---%@ reply.replyId---%@",model.pid,reply.replyId);
-            if ([reply.userId isEqualToNumber:reply.replyId]) {
-                return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:17] string:[NSString stringWithFormat:@"%@ : %@",reply.replyName,reply.content]].height + 1.0;
+            if ([reply.toReplyId isEqualToNumber:model.commentUserId]) {
+                return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:15] string:[NSString stringWithFormat:@"%@ : %@",reply.replyName,reply.content]].height + 1.0;
+            }else{
+                return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:15] string:[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content]].height + 1.0;
+                
             }
-            return [self boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 70, 0) font:[UIFont systemFontOfSize:17] string:[NSString stringWithFormat:@"%@ 回复 %@ : %@",reply.replyName,reply.toReplyName,reply.content]].height + 1.0;
+            
         }
     }
 }
@@ -658,9 +692,11 @@ static NSString *cellHead=@"cellHead";
     CommentModel *model=_commentList[indexPath.section];
     ReplyModel *reply=model.replyModels[indexPath.row -2];
     _ridComment=reply.rid;
+    _commentId=model.pid;
     
     _allCellHeight =_headView.frame.size.height+10;
     if (indexPath.row==0 || indexPath.row==1 || indexPath.row == [_tableView numberOfRowsInSection:indexPath.section]-1) {
+        
     }else{
         for (int i= 0 ; i<=indexPath.section; i++) {
             NSInteger rowCount=[_tableView numberOfRowsInSection:i];
@@ -682,7 +718,7 @@ static NSString *cellHead=@"cellHead";
             }
             _allCellHeight+=1;
         }
-        UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"回复",@"举报", nil];
+        UIActionSheet *sheet  = [[UIActionSheet alloc]initWithTitle:nil delegate: self  cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"复制",@"回复",@"删除",@"举报", nil];
         sheet.tag=1000;
         [sheet showInView:self.view];
     }
@@ -724,6 +760,7 @@ static NSString *cellHead=@"cellHead";
      */
     if (actionSheet.tag==1000) {
         if (buttonIndex== 0) {
+            //复制
             
         }else if(buttonIndex == 1){
             [self createTextView];
@@ -734,10 +771,13 @@ static NSString *cellHead=@"cellHead";
                 _bottomView.hidden=YES;
                 [_tableView setContentOffset:CGPointMake(0, _allCellHeight-_height-50) animated:YES];
             }];
-            NSLog(@"评论");
         }else if(buttonIndex == 2){
-            NSLog(@"回复");
-        }else{
+            [self deleteCommentWithReply];
+            //删除
+        }else if(buttonIndex == 3){
+            //举报
+        }
+        else{
             
         }
     }

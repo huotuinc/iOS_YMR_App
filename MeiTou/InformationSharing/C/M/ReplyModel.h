@@ -12,8 +12,10 @@
 
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic, strong) NSString *replyName;
-@property (nonatomic, strong) NSString *rid;
+@property (nonatomic, strong) NSNumber *rid;
 @property (nonatomic, strong) NSString *toReplyName;
 @property (nonatomic, strong) NSNumber *userId;
 @property (nonatomic, strong) NSNumber *replyId;
+@property (nonatomic, strong) NSNumber *toReplyId;
+
 @end
